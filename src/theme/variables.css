@@ -1,6 +1,72 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-Italic.ttf') format('truetype');
+  font-style: Italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../assets/fonts/Montserrat-BoldItalic.ttf') format('truetype');
+  font-style: Italic;
+  font-weight: bold;
+}
+
+/** **/
+
+@font-face {
+  font-family: 'ElMessiri';
+  src: url('../assets/fonts/ElMessiri-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ElMessiri';
+  src: url('../assets/fonts/ElMessiri-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'ElMessiri';
+  src: url('../assets/fonts/ElMessiri-Medium.ttf') format('truetype');
+  font-style: Italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ElMessiri';
+  src: url('../assets/fonts/ElMessiri-SemiBold.ttf') format('truetype');
+  font-style: Italic;
+  font-weight: bold;
+}
+/** **/
+
+@font-face {
+  font-family: 'WhateverItTakes';
+  src: url('../assets/fonts/WhateverItTakes-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/

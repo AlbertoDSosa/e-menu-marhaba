@@ -1,0 +1,7 @@
+.modal {
+  --width: 1600px;
+  --height: 900px;
+}
+.imageItem {
+  --min-height: 840px;
+}

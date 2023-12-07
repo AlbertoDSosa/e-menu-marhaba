@@ -1,0 +1,17 @@
+.justifyTitle {
+  justify-self: center;
+}
+
+.modal {
+  --width: 1000px;
+  --height: 710px;
+}
+
+.allergenic {
+  padding: .5em;
+  display: block;
+}
+
+.allergenic img {
+  margin: 0 auto;
+}

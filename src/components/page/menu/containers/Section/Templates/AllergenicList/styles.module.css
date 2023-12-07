@@ -1,0 +1,19 @@
+.tableRows {
+  border-width: 2px 2px 0px 2px;
+  border-style: solid;
+  height: 100%;
+}
+
+.tableCols {
+  border-width: 0px 2px 0px 0px;
+  border-style: solid;
+  height: 5.1em;
+}
+
+.tableRows:last-child {
+  border-bottom: solid 2px;
+}
+
+.tableCols:nth-child(7) {
+  border-right: none;
+}

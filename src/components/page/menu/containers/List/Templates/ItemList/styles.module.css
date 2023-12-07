@@ -1,0 +1,9 @@
+.justifyTitle {
+  justify-self: center;
+}
+
+.modal {
+  --width: 1000px;
+  --height: 800px;
+  align-items: center ;
+}

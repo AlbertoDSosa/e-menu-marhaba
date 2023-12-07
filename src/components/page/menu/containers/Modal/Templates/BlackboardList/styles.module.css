@@ -1,0 +1,12 @@
+.continer {
+  position: relative;
+}
+
+.list {
+  color: rgb(245, 240, 240);
+  font-family: "WhateverItTakes";
+  position: absolute;
+  top: 0;
+  width: 1000px;
+  height: 600px;
+}
