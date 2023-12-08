@@ -128,17 +128,6 @@ export const images: { [key: string]: Image } = {
     full: { title: 'Whith the Hands', src: 'assets/img/menus/hands-1.png' },
     thumbnail: { title: 'Whith the Hands', src: 'assets/img/menus/hands-1.png' }
   },
-  'image->menus->sea-and-montain-1': {
-    id: 'image->menus->sea-and-montain-1',
-    full: {
-      title: 'Sea and Montain',
-      src: 'assets/img/menus/sea-and-montain-1.png'
-    },
-    thumbnail: {
-      title: 'Sea and Montain',
-      src: 'assets/img/menus/sea-and-montain-1.png'
-    }
-  },
   'image->menus->share-snack-1': {
     id: 'image->menus->share-snack-1',
     full: {
@@ -153,119 +142,142 @@ export const images: { [key: string]: Image } = {
   'image->menus->children-1': {
     id: 'image->menus->children-1',
     full: {
-      title: 'King of the house',
+      title: '',
       src: 'assets/img/menus/children-1.png'
     },
     thumbnail: {
-      title: 'King of the house',
+      title: '',
       src: 'assets/img/menus/children-1.png'
     }
   },
-  'image->menus->on-request-1': {
-    id: 'image->menus->on-request-1',
-    full: { title: 'On Request', src: 'assets/img/menus/on-request-1.png' },
-    thumbnail: { title: 'On Request', src: 'assets/img/menus/on-request-1.png' }
-  },
-  'image->menus->fittings-1': {
-    id: 'image->menus->fittings-1',
+  'image->menus->garnishes-or-side-dishes-1': {
+    id: 'image->menus->garnishes-or-side-dishes-1',
     full: { title: 'Fittings', src: 'assets/img/menus/fittings-1.png' },
     thumbnail: {
       title: 'Fittings',
       src: 'assets/img/menus/fittings-1.png'
     }
   },
-  'image->menus->snack-and-brunch-1': {
-    id: 'image->menus->snack-and-brunch-1',
-    full: { title: 'Fittings', src: 'assets/img/menus/snack-and-brunch-1.png' },
-    thumbnail: {
-      title: 'Fittings',
-      src: 'assets/img/menus/snack-and-brunch-1.png'
-    }
-  },
-  'image->menus->suggestions-1': {
-    id: 'image->menus->suggestions-1',
-    full: {
-      title: 'Suggestions of the Day',
-      src: 'assets/img/menus/suggestions-1.png'
-    },
-    thumbnail: {
-      title: 'Suggestions of the Day',
-      src: 'assets/img/menus/suggestions-1.png'
-    }
-  },
   'image->menus->smoothies-1': {
     id: 'image->menus->smoothies-1',
     full: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/smoothies-1.png'
     },
     thumbnail: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/smoothies-1.png'
     }
   },
   'image->menus->appetizers-1': {
     id: 'image->menus->appetizers-1',
     full: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/appetizers-1.png'
     },
     thumbnail: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/appetizers-1.png'
     }
   },
   'image->menus->refreshments-1': {
     id: 'image->menus->refreshments-1',
     full: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/refreshments-1.png'
     },
     thumbnail: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/refreshments-1.png'
     }
   },
-  'image->qr->qr-flag': {
-    id: 'image->qr->qr-flag',
-    full: { title: 'QR Flag', src: 'assets/img/qr/qr-flag.png' },
-    thumbnail: { title: 'QR Flag', src: 'assets/img/qr/qr-flag.png' }
+  'image->menus->tajin-1': {
+    id: 'image->menus->tajin-1',
+    full: {
+      title: '',
+      src: 'assets/img/menus/tajin-1.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/menus/tajin-1.png'
+    }
   },
-  'image->qr->qr-flag-bw': {
-    id: 'image->qr->qr-flag-bw',
-    full: { title: 'QR Flag', src: 'assets/img/qr/qr-flag-bw.png' },
-    thumbnail: { title: 'QR Flag', src: 'assets/img/qr/qr-flag-bw.png' }
+  'image->menus->cous-cous-1': {
+    id: 'image->menus->cous-cous-1',
+    full: {
+      title: '',
+      src: 'assets/img/menus/cous-cous-1.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/menus/cous-cous-1.png'
+    }
+  },
+  'image->menus->skewers-1': {
+    id: 'image->menus->skewers-1',
+    full: {
+      title: '',
+      src: 'assets/img/menus/skewers-1.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/menus/skewers-1.png'
+    }
+  },
+  'image->menus->starters-1': {
+    id: 'image->menus->starters-1',
+    full: {
+      title: '',
+      src: 'assets/img/menus/starters-1.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/menus/starters-1.png'
+    }
+  },
+  'image->qr->qr-web': {
+    id: 'image->qr->qr-web',
+    full: { title: 'QR Web', src: 'assets/img/qr/qr-web.png' },
+    thumbnail: { title: 'QR Web', src: 'assets/img/qr/qr-web.png' }
+  },
+  'image->qr->qr-tripadvisor': {
+    id: 'image->qr->qr-tripadvisor',
+    full: { title: 'QR Tripadvisor', src: 'assets/img/qr/qr-tripadvisor.png' },
+    thumbnail: {
+      title: 'QR Tripadvisor',
+      src: 'assets/img/qr/qr-tripadvisor.png'
+    }
   },
   'image->menus->coffee-shop-1': {
     id: 'image->menus->coffee-shop-1',
     full: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/coffee-shop-1.png'
     },
     thumbnail: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/coffee-shop-1.png'
     }
   },
   'image->menus->beers-1': {
     id: 'image->menus->beers-1',
     full: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/beers-1.png'
     },
     thumbnail: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/beers-1.png'
     }
   },
   'image->menus->bar-1': {
     id: 'image->menus->bar-1',
     full: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/bar-1.png'
     },
     thumbnail: {
-      title: 'Suggestions of the Day',
+      title: '',
       src: 'assets/img/menus/bar-1.png'
     }
   },
@@ -390,147 +402,290 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/screensaver/default-1.png'
     }
   },
-  'image->screensaver->logo-1': {
-    id: 'image->screensaver->logo-1',
+  'image->slide->screensaver->logo-1': {
+    id: 'image->slide->screensaver->logo-1',
     full: {
-      title: 'Logo By Rocio',
+      title: '',
       src: 'assets/img/screensaver/logo-1.png'
     },
     thumbnail: {
-      title: 'Logo By Rocio',
+      title: '',
       src: 'assets/img/screensaver/logo-1.png'
     }
   },
-  'image->screensaver->capacity-1': {
-    id: 'image->screensaver->capacity-1',
+  'image->slide->screensaver->marhaba-1': {
+    id: 'image->slide->screensaver->marhaba-1',
     full: {
-      title: 'Aforo',
-      src: 'assets/img/screensaver/capacity-1.png'
+      title: '',
+      src: 'assets/img/screensaver/marhaba-1.png'
     },
     thumbnail: {
-      title: 'Aforo',
-      src: 'assets/img/screensaver/capacity-1.png'
+      title: '',
+      src: 'assets/img/screensaver/marhaba-1.png'
     }
   },
-  'image->screensaver->capacity-toilet-1': {
-    id: 'image->screensaver->capacity-toilet-1',
+  'image->slide->screensaver->marhaba-2': {
+    id: 'image->slide->screensaver->marhaba-2',
     full: {
-      title: 'Aforo',
-      src: 'assets/img/screensaver/capacity-toilet-1.png'
+      title: '',
+      src: 'assets/img/screensaver/marhaba-2.png'
     },
     thumbnail: {
-      title: 'Aforo',
-      src: 'assets/img/screensaver/capacity-toilet-1.png'
+      title: '',
+      src: 'assets/img/screensaver/marhaba-2.png'
     }
   },
-  'image->screensaver->good-practice-1': {
-    id: 'image->screensaver->good-practice-1',
+  'image->slide->screensaver->marhaba-3': {
+    id: 'image->slide->screensaver->marhaba-3',
     full: {
       title: '',
-      src: 'assets/img/screensaver/good-practice-1.png'
+      src: 'assets/img/screensaver/marhaba-3.png'
     },
     thumbnail: {
       title: '',
-      src: 'assets/img/screensaver/good-practice-1.png'
+      src: 'assets/img/screensaver/marhaba-3.png'
     }
   },
-  'image->screensaver->terrace-1': {
-    id: 'image->screensaver->terrace-1',
+  'image->slide->screensaver->marhaba-4': {
+    id: 'image->slide->screensaver->marhaba-4',
     full: {
       title: '',
-      src: 'assets/img/screensaver/terrace-1.png'
+      src: 'assets/img/screensaver/marhaba-4.png'
     },
     thumbnail: {
       title: '',
-      src: 'assets/img/screensaver/terrace-1.png'
+      src: 'assets/img/screensaver/marhaba-4.png'
     }
   },
-  'image->screensaver->smoke-1': {
-    id: 'image->screensaver->smoke-1',
+  'image->slide->screensaver->marhaba-5': {
+    id: 'image->slide->screensaver->marhaba-5',
     full: {
       title: '',
-      src: 'assets/img/screensaver/smoke-1.png'
+      src: 'assets/img/screensaver/marhaba-5.png'
     },
     thumbnail: {
       title: '',
-      src: 'assets/img/screensaver/smoke-1.png'
+      src: 'assets/img/screensaver/marhaba-5.png'
     }
   },
-  'image->screensaver->basic-rules-1': {
-    id: 'image->screensaver->basic-rules-1',
+  'image->slide->screensaver->marhaba-6': {
+    id: 'image->slide->screensaver->marhaba-6',
     full: {
       title: '',
-      src: 'assets/img/screensaver/basic-rules-1.png'
+      src: 'assets/img/screensaver/marhaba-6.png'
     },
     thumbnail: {
       title: '',
-      src: 'assets/img/screensaver/basic-rules-1.png'
+      src: 'assets/img/screensaver/marhaba-6.png'
     }
   },
-  'image->screensaver->allergens-1': {
-    id: 'image->screensaver->allergens-1',
+  'image->slide->screensaver->marhaba-7': {
+    id: 'image->slide->screensaver->marhaba-7',
     full: {
       title: '',
-      src: 'assets/img/screensaver/allergens-1.png'
+      src: 'assets/img/screensaver/marhaba-7.png'
     },
     thumbnail: {
       title: '',
-      src: 'assets/img/screensaver/allergens-1.png'
+      src: 'assets/img/screensaver/marhaba-7.png'
     }
   },
-  'image->screensaver->live-music-1': {
-    id: 'image->screensaver->live-music-1',
+  'image->slide->screensaver->marhaba-8': {
+    id: 'image->slide->screensaver->marhaba-8',
     full: {
       title: '',
-      src: 'assets/img/screensaver/live-music-1.png'
+      src: 'assets/img/screensaver/marhaba-8.png'
     },
     thumbnail: {
       title: '',
-      src: 'assets/img/screensaver/live-music-1.png'
+      src: 'assets/img/screensaver/marhaba-8.png'
     }
   },
-  'image->screensaver->certificated-covid-1': {
-    id: 'image->screensaver->certificated-covid-1',
+  'image->slide->screensaver->marhaba-9': {
+    id: 'image->slide->screensaver->marhaba-9',
     full: {
       title: '',
-      src: 'assets/img/screensaver/certificated-covid-1.png'
+      src: 'assets/img/screensaver/marhaba-9.png'
     },
     thumbnail: {
       title: '',
-      src: 'assets/img/screensaver/certificated-covid-1.png'
+      src: 'assets/img/screensaver/marhaba-9.png'
     }
   },
-  'image->screensaver->smoothies-1': {
-    id: 'image->screensaver->smoothies-1',
+  'image->slide->screensaver->marhaba-10': {
+    id: 'image->slide->screensaver->marhaba-10',
     full: {
       title: '',
-      src: 'assets/img/screensaver/smoothies-1.png'
+      src: 'assets/img/screensaver/marhaba-10.png'
     },
     thumbnail: {
       title: '',
-      src: 'assets/img/screensaver/smoothies-1.png'
+      src: 'assets/img/screensaver/marhaba-10.png'
     }
   },
-  'image->screensaver->breakfasts-1': {
-    id: 'image->screensaver->breakfasts-1',
+  'image->slide->screensaver->marhaba-11': {
+    id: 'image->slide->screensaver->marhaba-11',
     full: {
       title: '',
-      src: 'assets/img/screensaver/breakfasts-1.png'
+      src: 'assets/img/screensaver/marhaba-11.png'
     },
     thumbnail: {
       title: '',
-      src: 'assets/img/screensaver/breakfasts-1.png'
+      src: 'assets/img/screensaver/marhaba-11.png'
     }
   },
-  'image->screensaver->breakfasts-2': {
-    id: 'image->screensaver->breakfasts-2',
+  'image->slide->screensaver->marhaba-12': {
+    id: 'image->slide->screensaver->marhaba-12',
     full: {
       title: '',
-      src: 'assets/img/screensaver/breakfasts-2.png'
+      src: 'assets/img/screensaver/marhaba-12.png'
     },
     thumbnail: {
       title: '',
-      src: 'assets/img/screensaver/breakfasts-2.png'
+      src: 'assets/img/screensaver/marhaba-12.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-13': {
+    id: 'image->slide->screensaver->marhaba-13',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-13.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-13.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-14': {
+    id: 'image->slide->screensaver->marhaba-14',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-14.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-14.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-15': {
+    id: 'image->slide->screensaver->marhaba-15',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-15.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-15.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-16': {
+    id: 'image->slide->screensaver->marhaba-16',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-16.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-16.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-17': {
+    id: 'image->slide->screensaver->marhaba-17',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-17.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-17.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-18': {
+    id: 'image->slide->screensaver->marhaba-18',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-18.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-18.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-19': {
+    id: 'image->slide->screensaver->marhaba-19',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-19.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-19.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-20': {
+    id: 'image->slide->screensaver->marhaba-20',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-20.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-20.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-21': {
+    id: 'image->slide->screensaver->marhaba-21',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-21.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-21.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-22': {
+    id: 'image->slide->screensaver->marhaba-22',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-22.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-22.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-23': {
+    id: 'image->slide->screensaver->marhaba-23',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-23.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-23.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-24': {
+    id: 'image->slide->screensaver->marhaba-24',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-24.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-24.png'
+    }
+  },
+  'image->slide->screensaver->marhaba-25': {
+    id: 'image->slide->screensaver->marhaba-25',
+    full: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-25.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/screensaver/marhaba-25.png'
     }
   },
   'image->section->aside-750-2-default': {
@@ -610,37 +765,15 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/section/aside-750-2-white-wine.png'
     }
   },
-  // 'image->section->aside-750-2-starters': {
-  //   id: 'image->section->aside-750-2-starters',
-  //   full: {
-  //     title: 'Aside Dummy',
-  //     src: 'assets/img/section/aside-750-2-starters.png'
-  //   },
-  //   thumbnail: {
-  //     title: 'Aside Dummy',
-  //     src: 'assets/img/section/aside-750-2-starters.png'
-  //   }
-  // },
-  'image->section->aside-750-2-sea-and-montain': {
-    id: 'image->section->aside-750-2-sea-and-montain',
+  'image->section->aside-750-2-starters': {
+    id: 'image->section->aside-750-2-starters',
     full: {
       title: 'Aside Dummy',
-      src: 'assets/img/section/aside-750-2-sea-and-montain.png'
+      src: 'assets/img/section/aside-750-2-starters.png'
     },
     thumbnail: {
       title: 'Aside Dummy',
-      src: 'assets/img/section/aside-750-2-sea-and-montain.png'
-    }
-  },
-  'image->section->aside-750-2-our-chef-s-suggestions': {
-    id: 'image->section->aside-750-2-our-chef-s-suggestions',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-750-2-our-chef-s-suggestions.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-750-2-our-chef-s-suggestions.png'
+      src: 'assets/img/section/aside-750-2-starters.png'
     }
   },
   'image->section->aside-650-750-default': {
@@ -665,6 +798,39 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/section/aside-650-750-starters.png'
     }
   },
+  'image->section->aside-650-750-starters-1': {
+    id: 'image->section->aside-650-750-starters-1',
+    full: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-650-750-starters-1.png'
+    },
+    thumbnail: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-650-750-starters-1.png'
+    }
+  },
+  'image->section->aside-650-750-starters-2': {
+    id: 'image->section->aside-650-750-starters-2',
+    full: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-650-750-starters-2.png'
+    },
+    thumbnail: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-650-750-starters-2.png'
+    }
+  },
+  'image->section->aside-650-750-starters-3': {
+    id: 'image->section->aside-650-750-starters-3',
+    full: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-650-750-starters-3.png'
+    },
+    thumbnail: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-650-750-starters-3.png'
+    }
+  },
   'image->section->aside-650-750-red-wine': {
     id: 'image->section->aside-650-750-red-wine',
     full: {
@@ -674,6 +840,17 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Aside Dummy',
       src: 'assets/img/section/aside-650-750-red-wine.png'
+    }
+  },
+  'image->section->aside-650-750-red-wine-1': {
+    id: 'image->section->aside-650-750-red-wine-1',
+    full: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-650-750-red-wine-1.png'
+    },
+    thumbnail: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-650-750-red-wine-1.png'
     }
   },
   'image->section->aside-650-750-white-wine': {
@@ -797,17 +974,6 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/section/aside-1500-300-refreshments.png'
     }
   },
-  'image->section->aside-1500-300-brunch': {
-    id: 'image->section->aside-1500-300-brunch',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-brunch.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-brunch.png'
-    }
-  },
   'image->section->aside-1500-350-default': {
     id: 'image->section->aside-1500-350-default',
     full: {
@@ -907,6 +1073,39 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/section/aside-1500-400-spoon-dishes.png'
     }
   },
+  'image->section->aside-1500-400-skewers': {
+    id: 'image->section->aside-1500-400-skewers',
+    full: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-1500-400-skewers.png'
+    },
+    thumbnail: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-1500-400-skewers.png'
+    }
+  },
+  'image->section->aside-1500-400-cous-cous': {
+    id: 'image->section->aside-1500-400-cous-cous',
+    full: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-1500-400-cous-cous.png'
+    },
+    thumbnail: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-1500-400-cous-cous.png'
+    }
+  },
+  'image->section->aside-1500-400-tajin': {
+    id: 'image->section->aside-1500-400-tajin',
+    full: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-1500-400-tajin.png'
+    },
+    thumbnail: {
+      title: 'Aside Dummy',
+      src: 'assets/img/section/aside-1500-400-tajin.png'
+    }
+  },
   'image->section->aside-1500-400-salads': {
     id: 'image->section->aside-1500-400-salads',
     full: {
@@ -916,17 +1115,6 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Aside Dummy',
       src: 'assets/img/section/aside-1500-400-salads.png'
-    }
-  },
-  'image->section->aside-1500-400-childrens': {
-    id: 'image->section->aside-1500-400childrenss',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-400-childrens.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-400-childrens.png'
     }
   },
   'image->section->aside-1500-450-default': {
@@ -1072,17 +1260,6 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/section/aside-1000-420-default.png'
     }
   },
-  // 'image->section->aside-1000-420-hands': {
-  //   id: 'image->section->aside-1000-420-hands',
-  //   full: {
-  //     title: 'Aside Dummy',
-  //     src: 'assets/img/section/aside-1000-420-hands.png'
-  //   },
-  //   thumbnail: {
-  //     title: 'Aside Dummy',
-  //     src: 'assets/img/section/aside-1000-420-hands.png'
-  //   }
-  // },
   'image->section->aside-500-420-default': {
     id: 'image->section->aside-500-420-default',
     full: {
@@ -1094,17 +1271,6 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/section/aside-500-420-default.png'
     }
   },
-  // 'image->section->aside-500-420-side-dishes': {
-  //   id: 'image->section->aside-500-420-side-dishes',
-  //   full: {
-  //     title: 'Aside Dummy',
-  //     src: 'assets/img/section/aside-500-420-side-dishes.png'
-  //   },
-  //   thumbnail: {
-  //     title: 'Aside Dummy',
-  //     src: 'assets/img/section/aside-500-420-side-dishes.png'
-  //   }
-  // },
   'image->item->info->info-card-250-2-default': {
     id: 'image->item->info->info-card-250-2-default',
     full: {
@@ -1147,17 +1313,6 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Aside Dummy',
       src: 'assets/img/item/product/250-2-smoothi-6.png'
-    }
-  },
-  'image->modal->400-2-garnish-1': {
-    id: 'image->modal->400-2-garnish-1',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/modal/aside-400-2-garnish-1.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/modal/aside-400-2-garnish-1.png'
     }
   },
   'image->item->info->info-card-250-2-sanitary-measures-1': {
@@ -1369,92 +1524,389 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/item/product/thumbnail/default-1.png'
     }
   },
-  'image->item->product->lubina-1': {
-    id: 'image->item->product->lubina-1',
+  'image->item->product->sopa-harera-1': {
+    id: 'image->item->product->sopa-harera-1',
     full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/full/lubina-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/sopa-harera-1.png'
     },
     thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/thumbnail/lubina-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/sopa-harera-1.png'
     }
   },
-  'image->item->product->bacalao-1': {
-    id: 'image->item->product->bacalao-1',
+  'image->item->product->briwat-queso-miel-1': {
+    id: 'image->item->product->briwat-queso-miel-1',
     full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/full/bacalao-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/briwat-queso-miel-1.png'
     },
     thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/thumbnail/bacalao-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/briwat-queso-miel-1.png'
     }
   },
-  'image->item->product->cordero-1': {
-    id: 'image->item->product->cordero-1',
+  'image->item->product->briwat-pollo-1': {
+    id: 'image->item->product->briwat-pollo-1',
     full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/full/cordero-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/briwat-pollo-1.png'
     },
     thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/thumbnail/cordero-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/briwat-pollo-1.png'
     }
   },
-  'image->item->product->arenque-1': {
-    id: 'image->item->product->arenque-1',
+  'image->item->product->briwat-carne-1': {
+    id: 'image->item->product->briwat-carne-1',
     full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/full/arenque-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/briwat-carne-1.png'
     },
     thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/thumbnail/arenque-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/briwat-carne-1.png'
     }
   },
-  'image->item->product->chuleton-1': {
-    id: 'image->item->product->chuleton-1',
+  'image->item->product->briwat-espinacas-1': {
+    id: 'image->item->product->briwat-espinacas-1',
     full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/full/chuleton-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/briwat-espinacas-1.png'
     },
     thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/thumbnail/chuleton-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/briwat-espinacas-1.png'
     }
   },
-  'image->item->product->tuna-tartar-1': {
-    id: 'image->item->product->tuna-tartar-1',
+  'image->item->product->briwat-verduras-1': {
+    id: 'image->item->product->briwat-verduras-1',
     full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/full/tuna-tartar-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/briwat-verduras-1.png'
     },
     thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/thumbnail/tuna-tartar-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/briwat-verduras-1.png'
     }
   },
-  'image->item->product->som-tam-salad-1': {
-    id: 'image->item->product->som-tam-salad-1',
+  'image->item->product->pastelas-marisco-1': {
+    id: 'image->item->product->pastelas-marisco-1',
     full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/full/som-tam-salad-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/pastelas-marisco-1.png'
     },
     thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/thumbnail/som-tam-salad-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/pastelas-marisco-1.png'
     }
   },
-  'image->item->product->smoked-salmon-salad-1': {
-    id: 'image->item->product->smoked-salmon-salad-1',
+  'image->item->product->croqueta-espinacas-1': {
+    id: 'image->item->product->croqueta-espinacas-1',
     full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/full/smoked-salmon-salad-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/croqueta-espinacas-1.png'
     },
     thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/thumbnail/smoked-salmon-salad-1.png'
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/croqueta-espinacas-1.png'
+    }
+  },
+  'image->item->product->croqueta-cordero-1': {
+    id: 'image->item->product->croqueta-cordero-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/croqueta-cordero-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/croqueta-cordero-1.png'
+    }
+  },
+  'image->item->product->falafel-1': {
+    id: 'image->item->product->falafel-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/falafel-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/falafel-1.png'
+    }
+  },
+  'image->item->product->hummus-1': {
+    id: 'image->item->product->hummus-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/hummus-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/hummus-1.png'
+    }
+  },
+  'image->item->product->hummus-lentejas-1': {
+    id: 'image->item->product->hummus-lentejas-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/hummus-lentejas-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/hummus-lentejas-1.png'
+    }
+  },
+  'image->item->product->zaaluk-1': {
+    id: 'image->item->product->zaaluk-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/zaaluk-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/zaaluk-1.png'
+    }
+  },
+  'image->item->product->ensalada-cous-cous-1': {
+    id: 'image->item->product->ensalada-cous-cous-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/ensalada-cous-cous-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/ensalada-cous-cous-1.png'
+    }
+  },
+  'image->item->product->ensalada-pollo-crujiente-1': {
+    id: 'image->item->product->ensalada-pollo-crujiente-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/ensalada-pollo-crujiente-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/ensalada-pollo-crujiente-1.png'
+    }
+  },
+  'image->item->product->ensalada-gourmet-1': {
+    id: 'image->item->product->ensalada-gourmet-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/ensalada-gourmet-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/ensalada-gourmet-1.png'
+    }
+  },
+  'image->item->product->queso-ahumado-1': {
+    id: 'image->item->product->queso-ahumado-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/queso-ahumado-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/queso-ahumado-1.png'
+    }
+  },
+  'image->item->product->berengenas-miel-1': {
+    id: 'image->item->product->berengenas-miel-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/berengenas-miel-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/berengenas-miel-1.png'
+    }
+  },
+  'image->item->product->berengena-rellena-1': {
+    id: 'image->item->product->berengena-rellena-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/berengena-rellena-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/berengena-rellena-1.png'
+    }
+  },
+  'image->item->product->chistorras-1': {
+    id: 'image->item->product->chistorras-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/chistorras-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/chistorras-1.png'
+    }
+  },
+  'image->item->product->marchica-1': {
+    id: 'image->item->product->marchica-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/marchica-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/marchica-1.png'
+    }
+  },
+  'image->item->product->gambas-pil-pil-1': {
+    id: 'image->item->product->gambas-pil-pil-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/gambas-pil-pil-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/gambas-pil-pil-1.png'
+    }
+  },
+  'image->item->product->pinchos-ternera-1': {
+    id: 'image->item->product->pinchos-ternera-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/pinchos-ternera-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/pinchos-ternera-1.png'
+    }
+  },
+  'image->item->product->pinchos-pollo-1': {
+    id: 'image->item->product->pinchos-pollo-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/pinchos-pollo-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/pinchos-pollo-1.png'
+    }
+  },
+  'image->item->product->pinchos-cordero-1': {
+    id: 'image->item->product->pinchos-cordero-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/pinchos-cordero-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/pinchos-cordero-1.png'
+    }
+  },
+  'image->item->product->cous-cous-verduras-1': {
+    id: 'image->item->product->cous-cous-verduras-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/cous-cous-verduras-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/cous-cous-verduras-1.png'
+    }
+  },
+  'image->item->product->cous-cous-cordero-1': {
+    id: 'image->item->product->cous-cous-cordero-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/cous-cous-cordero-1.png  '
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/cous-cous-cordero-1.png'
+    }
+  },
+  'image->item->product->cous-cous-pollo-1': {
+    id: 'image->item->product->cous-cous-pollo-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/cous-cous-pollo-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/cous-cous-pollo-1.png'
+    }
+  },
+  'image->item->product->cous-cous-verduras-tofu-1': {
+    id: 'image->item->product->cous-cous-verduras-tofu-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/cous-cous-verduras-tofu-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/cous-cous-verduras-tofu-1.png'
+    }
+  },
+  'image->item->product->tajin-verduras-tofu-1': {
+    id: 'image->item->product->tajin-verduras-tofu-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/tajin-verduras-tofu-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/tajin-verduras-tofu-1.png'
+    }
+  },
+  'image->item->product->tajin-albondigas-1': {
+    id: 'image->item->product->tajin-albondigas-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/tajin-albondigas-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/tajin-albondigas-1.png'
+    }
+  },
+  'image->item->product->tajin-pollo-verduras-1': {
+    id: 'image->item->product->tajin-pollo-verduras-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/tajin-pollo-verduras-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/tajin-pollo-verduras-1.png'
+    }
+  },
+  'image->item->product->tajin-ternera-huevo-1': {
+    id: 'image->item->product->tajin-ternera-huevo-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/tajin-ternera-huevo-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/tajin-ternera-huevo-1.png'
+    }
+  },
+  'image->item->product->tajin-cordero-verduras-1': {
+    id: 'image->item->product->tajin-cordero-verduras-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/tajin-cordero-verduras-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/tajin-cordero-verduras-1.png'
+    }
+  },
+  'image->item->product->tajin-pollo-limon-1': {
+    id: 'image->item->product->tajin-pollo-limon-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/tajin-pollo-limon-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/tajin-pollo-limon-1.png'
     }
   }
 };

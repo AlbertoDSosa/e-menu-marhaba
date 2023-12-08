@@ -10,7 +10,8 @@ import {
   IonLabel,
   IonTextarea,
   IonButton,
-  IonIcon
+  IonIcon,
+  IonLoading
 } from '@ionic/react';
 import { Slide, DisplayInfo } from 'definitions/models';
 
@@ -29,7 +30,16 @@ interface SlideDetailProps
 
 const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
   const key = match.params.key;
-  const { update, get } = useData();
+  const { update, get, loading } = useData();
+
+  if (loading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
 
   const slides = get({ collection: 'slides', from: 'state' });
   const slide: Slide = slides.dictionary[key];

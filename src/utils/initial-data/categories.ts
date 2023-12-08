@@ -6,6 +6,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     type: 'product',
     active: true,
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Postres',
@@ -46,8 +47,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
       'item->product->desserts->trompe-l-oeil-ferrero-rocher-3',
       'item->product->desserts->banana-ice-cream-4',
       'item->product->desserts->homemade-ice-cream-5',
-      'item->product->desserts->our-chef-s-suggested-sweet-6',
-      'item->product->desserts->cold-berry-soup-with-yogurt-7'
+      'item->product->desserts->our-chef-s-suggested-sweet-6'
     ]
   },
   'category->meals->starters': {
@@ -55,54 +55,56 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
-        title: 'Para Compartir o Picar',
-        slug: 'para-compartir-o-picar'
+        title: 'Entrantes',
+        slug: 'entrantes'
       },
       en: {
-        title: 'To share or snack',
-        slug: 'to-share-or-snack'
+        title: 'Starters',
+        slug: 'starters'
       },
       de: {
-        title: 'Zum Teilen Oder Kleinigkeit Essen',
-        slug: 'zum-teilen-oder-kleinigkeit-essen'
+        title: 'Vorspeisen',
+        slug: 'vorspeisen'
       },
       nb: {
-        title: 'Å Dele Eller Som Snack',
-        slug: 'a-dele-eller-som-snack'
+        title: 'Forretter',
+        slug: 'forretter'
       },
       da: {
-        title: 'Til at Dele Eller Til at Nippe Til',
-        slug: 'til-at-dele-eller-til-at-nippe-til'
+        title: 'Forretter',
+        slug: 'forretter'
       },
       sv: {
-        title: 'Att Dela Eller Mellanmål',
-        slug: 'att-dela-eller-mellanmal'
+        title: 'Förrätter',
+        slug: 'forratter'
       },
       fr: {
-        title: 'Entrées à Partager',
-        slug: 'entrees-a-partager'
+        title: 'Entrées',
+        slug: 'entrees'
       },
       nl: {
-        title: 'Om te Delen of Happen',
-        slug: 'om-te-delen-of-happen'
+        title: 'Voorgerechten',
+        slug: 'voorgerechten'
       }
     },
     items: [
-      'item->product->meals->artisan-garlic-bread-from-ingenio-1',
-      'item->product->meals->artisan-bread-from-ingenio-with-canarian-sauces-2',
-      'item->product->meals->canarian-cheese-platter-3',
-      'item->product->meals->by-rocio-prawns-in-sizzling-garlic-oil-4',
-      'item->product->meals->iberian-ham-5',
-      'item->product->meals->canarian-wrinkled-potatoes-6',
-      'item->product->meals->eggplant-chips-with-palm-honey-and-sesame-7',
-      'item->product->meals->bao-buns-8',
-      'item->product->meals->kataifi-skewer-9',
-      'item->product->meals->herreno-cheese-10',
-      'item->product->meals->cubes-of-suckling-pig-roasted-at-low-temperature-and-confitted-11',
-      'item->product->meals->nachos-with-guacamole-cheddar-cheese-and-pico-de-gallo-sauce-12',
-      'item->product->meals->the-chef-s-appetizer-13'
+      'item->product->meals->starters->-1',
+      'item->product->meals->starters->-2',
+      'item->product->meals->starters->-3',
+      'item->product->meals->starters->-4',
+      'item->product->meals->starters->-5',
+      'item->product->meals->starters->-6',
+      'item->product->meals->starters->-7',
+      'item->product->meals->starters->-8',
+      'item->product->meals->starters->-9',
+      'item->product->meals->starters->-10',
+      'item->product->meals->starters->-11',
+      'item->product->meals->starters->-12',
+      'item->product->meals->starters->-13',
+      'item->product->meals->starters->-14'
     ]
   },
   'category->meals->salads': {
@@ -110,34 +112,35 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
-        title: 'Algo Fresco',
-        slug: 'algo-fresco'
+        title: 'Ensaladas',
+        slug: 'ensaladas'
       },
       en: {
-        title: 'Cool Dishes',
-        slug: 'cool-dishes'
+        title: 'Salads',
+        slug: 'salads'
       },
       de: {
-        title: 'Etwas Frisches',
-        slug: 'etwas-frisches'
+        title: 'Salate',
+        slug: 'salate'
       },
       nb: {
-        title: 'Noe Friskt',
-        slug: 'noe-friskt'
+        title: 'Salater',
+        slug: 'salater'
       },
       da: {
-        title: 'Lidt Frisk Til Ganen',
-        slug: 'lidt-frisk-til-ganen'
+        title: 'Salater',
+        slug: 'salater'
       },
       sv: {
-        title: 'Något Fräscht',
-        slug: 'nagot-frascht'
+        title: 'Sallader',
+        slug: 'sallader'
       },
       fr: {
-        title: 'Quelque Chose de Frais',
-        slug: 'quelque-chose-de-frais'
+        title: 'Salades',
+        slug: 'salades'
       },
       nl: {
         title: 'Verfrissend',
@@ -145,10 +148,12 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
       }
     },
     items: [
-      'item->product->meals->som-tam-salad-1',
-      'item->product->meals->smoked-salmon-salad-2',
-      'item->product->meals->canarian-beetroot-carpaccio-3',
-      'item->product->meals->by-rocio-poke-boll-caesar-4'
+      'item->product->meals->salads->-1',
+      'item->product->meals->salads->-2',
+      'item->product->meals->salads->-3',
+      'item->product->meals->salads->-4',
+      'item->product->meals->salads->-5',
+      'item->product->meals->salads->-6'
     ]
   },
   'category->meals->spoon-dishes': {
@@ -156,106 +161,56 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
-        title: 'Cuchara de la Tierra',
-        slug: 'cuchara-de-la-tierra'
+        title: 'Platos de Cuchara',
+        slug: 'platos-de-cuchara'
       },
       en: {
-        title: 'Soups and Stews',
-        slug: 'soups-and-stews'
+        title: 'Spoon dishes',
+        slug: 'spoon-dishes'
       },
       de: {
-        title: 'Löffelgerichte aus Örtlichen Gefilden',
-        slug: 'loffelgerichteaus-ortlichen-gefilden'
+        title: 'Löffelgerichte',
+        slug: 'loffelgerichte'
       },
       nb: {
-        title: 'Jordens Skje',
-        slug: 'jordens-skje'
+        title: 'Skje retter',
+        slug: 'skje-retter'
       },
       da: {
-        title: 'Lokale Supper',
-        slug: 'lokale-supper'
+        title: 'Ske retter',
+        slug: 'ske-retter'
       },
       sv: {
-        title: 'Jordens Sked',
-        slug: 'jordens-sked'
+        title: 'Sked rätter',
+        slug: 'sked-ratter'
       },
       fr: {
-        title: 'À la Cuillère',
-        slug: 'a-la-cuillere'
+        title: 'Plats à la Cuillère',
+        slug: 'plats-a-la-cuillere'
       },
       nl: {
-        title: 'Van het Land',
-        slug: 'van-het-land'
+        title: 'Lepel gerechten',
+        slug: 'lepel-gerechten'
       }
     },
     items: [
-      'item->product->meals->sauteed-chickpeas-1',
-      'item->product->meals->cream-of-courgette-soup-2',
-      'item->product->meals->mango-gazpacho-3',
-      'item->product->meals->soup-of-the-day-4'
+      'item->product->meals->spoon-dishes->-1',
+      'item->product->meals->spoon-dishes->-2',
+      'item->product->meals->spoon-dishes->-3',
+      'item->product->meals->spoon-dishes->-4',
+      'item->product->meals->spoon-dishes->-5',
+      'item->product->meals->spoon-dishes->-6'
     ]
   },
-  'category->meals->sea-and-mountains': {
-    id: 'category->meals->sea-and-mountains',
+  'category->meals->garnishes-or-side-dishes': {
+    id: 'category->meals->garnishes-or-side-dishes',
     active: true,
     type: 'product',
     hasVariants: false,
-    displayInfo: {
-      es: {
-        title: 'Mar y Montaña',
-        slug: 'mar-y-montana'
-      },
-      en: {
-        title: 'Surf & Turf',
-        slug: 'surf-turf'
-      },
-      de: {
-        title: 'Berge und Meer',
-        slug: 'berge-und-meer'
-      },
-      nb: {
-        title: 'Hav og Fjell',
-        slug: 'hav-og-fjell'
-      },
-      da: {
-        title: 'Hav og Bjerge',
-        slug: 'hav-og-bjerge'
-      },
-      sv: {
-        title: 'Hav och Berg',
-        slug: 'hav-och-berg'
-      },
-      fr: {
-        title: 'Mer et Montagne',
-        slug: 'mer-et-montagne'
-      },
-      nl: {
-        title: 'Uit de Zee en de Bergen',
-        slug: 'uit-de-zee-en-de-bergen'
-      }
-    },
-    items: [
-      'item->product->meals->tuna-in-tomato-with-fried-egg-yolk-1',
-      'item->product->meals->cod-fillet-2',
-      'item->product->meals->aquanaria-sea-bass-3',
-      'item->product->meals->nigiris-of-smoked-sardines-4',
-      'item->product->meals->rack-of-lamb-5',
-      'item->product->meals->norwegian-marinated-herring-6',
-      'item->product->meals->carved-angus-ribeye-7',
-      'item->product->meals->seafood-pasta-8',
-      'item->product->meals->fresh-fish-of-the-day-and-its-garnish-9',
-      'item->product->meals->our-fried-squid-with-garnish-10',
-      'item->product->meals->gratinated-iberian-secret-11',
-      'item->product->meals->by-rocio-style-red-curry-masala-12'
-    ]
-  },
-  'category->meals->fittings': {
-    id: 'category->meals->fittings',
-    active: true,
-    type: 'product',
-    hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         extraInfo: '(lleva un suplemento - 2,50 €)',
@@ -307,60 +262,12 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
       'item->product->meals->fittings->ratatouille-6'
     ]
   },
-  'category->meals->our-chef-s-suggestions': {
-    id: 'category->meals->our-chef-s-suggestions',
-    active: true,
-    type: 'product',
-    hasVariants: false,
-    displayInfo: {
-      es: {
-        title: 'Sugerencias de nuestro Chef',
-        slug: 'Sugerencias de nuestro Chef'
-      },
-      en: {
-        title: `Our Chef's Suggestions`,
-        slug: 'our-chef-s-suggestions'
-      },
-      de: {
-        title: 'Empfehlungen Unseres Küchenchefs',
-        slug: 'empfehlungen-unseres-kuchenchefs'
-      },
-      nb: {
-        title: 'Kokkens Anbefaling',
-        slug: 'kokkens-anbefaling'
-      },
-      da: {
-        title: 'Vores Chefkok Anbefaler',
-        slug: 'vores-chefkok-anbefaler'
-      },
-      sv: {
-        title: 'Rekommendation Från Vår Kock',
-        slug: 'rekommendation-fran-var-kock'
-      },
-      fr: {
-        title: 'Suggestion de Notre Chef',
-        slug: 'suggestion-de-notre-chef'
-      },
-      nl: {
-        title: 'Suggestie Van de Chef',
-        slug: 'suggestie-van-de-chef'
-      }
-    },
-    items: [
-      'item->product->meals->our-chef-s-suggestions->mixed-paella-1',
-      'item->product->meals->our-chef-s-suggestions->fish-and-shellfish-paella-2',
-      'item->product->meals->our-chef-s-suggestions->meat-paella-with-truffle-sauce-3',
-      'item->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tartar-4',
-      'item->product->meals->our-chef-s-suggestions->angus-steak-tartar-5',
-      'item->product->meals->our-chef-s-suggestions->betanzos-t-bone-cutlet-6',
-      'item->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tataki-7'
-    ]
-  },
   'category->meals->breakfasts': {
     id: 'category->meals->breakfasts',
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Desayunos',
@@ -396,12 +303,12 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
       }
     },
     items: [
-      'item->product->meals->breakfasts->toast-with-tomato-puree-and-serrano-cured-ham-1',
-      'item->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes-2',
-      'item->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon-3',
-      'item->product->meals->breakfasts->yoghurt-with-muesli-fresh-fruit-and-honey-4',
-      'item->product->meals->breakfasts->scrambled-eggs-with-ham-5',
-      'item->product->meals->breakfasts->english-breakfast-6'
+      'item->product->meals->breakfasts->-1',
+      'item->product->meals->breakfasts->-2',
+      'item->product->meals->breakfasts->-3',
+      'item->product->meals->breakfasts->-4',
+      'item->product->meals->breakfasts->-5',
+      'item->product->meals->breakfasts->-6'
     ]
   },
   'category->meals->sandwich': {
@@ -409,38 +316,39 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
-        title: 'Con las Manos',
-        slug: 'con-las-manos'
+        title: 'Bocadillos',
+        slug: 'bocadillos'
       },
       en: {
-        title: 'Hand-eaten Foods',
-        slug: 'hand-eaten-foods'
+        title: 'Sandwich',
+        slug: 'sandwich'
       },
       de: {
-        title: 'Mit Den Händen',
-        slug: 'Mit Den Handen'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       nb: {
-        title: 'Med Hendene',
-        slug: 'med-hendene'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       da: {
-        title: 'Til at Spise med Fingrene',
-        slug: 'til-at-spise-med-fingrene'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       sv: {
-        title: 'Med Händerna',
-        slug: 'med-handerna'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       fr: {
-        title: 'Avec Les Mains',
-        slug: 'avec-les-mains'
+        title: 'Collations',
+        slug: 'collations'
       },
       nl: {
-        title: 'Zonder Bestek',
-        slug: 'zonder-bestek'
+        title: 'Tussendoortjes',
+        slug: 'tussendoortjes'
       }
     },
     items: [
@@ -460,6 +368,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Menú Infantil',
@@ -496,7 +405,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     },
     items: [
       'item->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1',
-      'item->product->meals->childrens->grilled-fish-with-side-dishes-2',
+      'item->product->meals->childrens->-2',
       'item->product->meals->childrens->hamburger-with-tomato-and-cheese-3',
       'item->product->meals->childrens->pizza-4',
       'item->product->meals->childrens->nuggets-with-french-fries-5',
@@ -508,6 +417,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Aperitivos',
@@ -559,6 +469,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Refrescos',
@@ -619,6 +530,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Cervezas',
@@ -676,6 +588,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Cafetería',
@@ -727,6 +640,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Rones',
@@ -780,6 +694,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Whiskies',
@@ -818,8 +733,8 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
       'item->product->drinks->whiskies->tullamore-dew-1',
       'item->product->drinks->whiskies->red-label-2',
       'item->product->drinks->whiskies->black-label-3',
-      'item->product->drinks->whiskies->jhon-haig-4',
-      'item->product->drinks->whiskies->lagavulin-16-5',
+      'item->product->drinks->whiskies->lagavulin-16-4',
+      'item->product->drinks->whiskies->jhon-haig-5',
       'item->product->drinks->whiskies->house-whisky-6',
       'item->product->drinks->whiskies->100-pipers-7',
       'item->product->drinks->whiskies->ballantines-8',
@@ -834,6 +749,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Ginebras',
@@ -878,8 +794,8 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
       'item->product->drinks->gins->bulldog-7',
       'item->product->drinks->gins->gvine-8',
       'item->product->drinks->gins->house-gin-9',
-      'item->product->drinks->gins->macaronesian-10',
-      'item->product->drinks->gins->royal-kingston-11'
+      'item->product->drinks->macaronesian-10',
+      'item->product->drinks->royal-kingston-11'
     ]
   },
   'category->drinks->cognac-and-brandy': {
@@ -887,6 +803,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Coñac y Brandy',
@@ -941,6 +858,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Vodkas',
@@ -988,6 +906,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Sidras',
@@ -1032,6 +951,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Licores',
@@ -1104,6 +1024,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Cócteles',
@@ -1153,6 +1074,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Smoothies',
@@ -1440,6 +1362,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: true,
     type: 'info',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Medidas Sanitarias',
@@ -1494,6 +1417,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     type: 'info',
     active: true,
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Información',
@@ -1542,6 +1466,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
     active: false,
     type: 'product',
     hasVariants: false,
+    variants: '',
     displayInfo: {
       es: {
         title: 'Extra menu',

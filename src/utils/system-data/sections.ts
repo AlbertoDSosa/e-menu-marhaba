@@ -12,7 +12,7 @@ export const sections: { [key: string]: PageSection } = {
     showExtraInfo: false,
     showDescription: false,
     showTitle: false,
-    listItemsForCol: 8,
+    listItemsForCol: 6,
     lists: ['list->desserts'],
     number: '1',
     displayInfo: {
@@ -56,46 +56,46 @@ export const sections: { [key: string]: PageSection } = {
     active: true,
     template: 'template->pageSection->one-row-two-cols->slide',
     defaultImg: 'image->section->aside-650-750-default',
-    mainImg: 'image->section->aside-650-750-starters',
+    mainImg: 'image->section->aside-650-750-starters-1',
     show: true,
     showExtraInfo: false,
     showDescription: false,
     showTitle: false,
     listItemsForCol: 10,
-    lists: ['list->meals->to-share-or-to-snack-1'],
+    lists: ['list->meals->starters-1'],
     number: '1',
     displayInfo: {
       es: {
-        title: 'Para Compartir o Picar',
-        slug: 'para-compartir-o-picar'
+        title: 'Entrantes',
+        slug: 'entrantes'
       },
       en: {
-        title: 'To share or snack',
-        slug: 'to-share-or-snack'
+        title: 'Starters',
+        slug: 'starters'
       },
       de: {
-        title: 'Zum Teilen Oder Kleinigkeit Essen',
-        slug: 'zum-teilen-oder-kleinigkeit-essen'
+        title: 'Vorspeisen',
+        slug: 'vorspeisen'
       },
       nb: {
-        title: 'Å Dele Eller Som Snack',
-        slug: 'a-dele-eller-som-snack'
+        title: 'Forretter',
+        slug: 'forretter'
       },
       da: {
-        title: 'Til at Dele Eller Til at Nippe Til',
-        slug: 'til-at-dele-eller-til-at-nippe-til'
+        title: 'Forretter',
+        slug: 'forretter'
       },
       sv: {
-        title: 'Att Dela Eller Mellanmål',
-        slug: 'att-dela-eller-mellanmal'
+        title: 'Förrätter',
+        slug: 'forratter'
       },
       fr: {
-        title: 'Entrées à Partager',
-        slug: 'entrees-a-partager'
+        title: 'Entrées',
+        slug: 'entrees'
       },
       nl: {
-        title: 'Om te Delen of Happen',
-        slug: 'om-te-delen-of-happen'
+        title: 'Voorgerechten',
+        slug: 'voorgerechten'
       }
     }
   },
@@ -103,48 +103,244 @@ export const sections: { [key: string]: PageSection } = {
     id: 'pageSection->meals->starters-2',
     type: 'section',
     active: true,
-    template: 'template->pageSection->two-rows-multi-col->single-col-list',
-    defaultImg: 'image->section->aside-1500-350-default',
-    mainImg: 'image->section->aside-1500-350-starters',
+    template: 'template->pageSection->one-row-two-cols->slide',
+    defaultImg: 'image->section->aside-650-750-default',
+    mainImg: 'image->section->aside-650-750-starters-2',
     show: true,
     showExtraInfo: false,
     showDescription: false,
     showTitle: false,
     listItemsForCol: 6,
-    lists: ['list->meals->to-share-or-to-snack-2'],
+    lists: ['list->meals->starters-2'],
     number: '2',
     displayInfo: {
       es: {
-        title: 'Para Compartir o Picar',
-        slug: 'para-compartir-o-picar'
+        title: 'Entrantes',
+        slug: 'entrantes'
       },
       en: {
-        title: 'To share or snack',
-        slug: 'to-share-or-snack'
+        title: 'Starters',
+        slug: 'starters'
       },
       de: {
-        title: 'Zum Teilen Oder Kleinigkeit Essen',
-        slug: 'zum-teilen-oder-kleinigkeit-essen'
+        title: 'Vorspeisen',
+        slug: 'vorspeisen'
       },
       nb: {
-        title: 'Å Dele Eller Som Snack',
-        slug: 'a-dele-eller-som-snack'
+        title: 'Forretter',
+        slug: 'forretter'
       },
       da: {
-        title: 'Til at Dele Eller Til at Nippe Til',
-        slug: 'til-at-dele-eller-til-at-nippe-til'
+        title: 'Forretter',
+        slug: 'forretter'
       },
       sv: {
-        title: 'Att Dela Eller Mellanmål',
-        slug: 'att-dela-eller-mellanmal'
+        title: 'Förrätter',
+        slug: 'forratter'
       },
       fr: {
-        title: 'Entrées à Partager',
-        slug: 'entrees-a-partager'
+        title: 'Entrées',
+        slug: 'entrees'
       },
       nl: {
-        title: 'Om te Delen of Happen',
-        slug: 'om-te-delen-of-happen'
+        title: 'Voorgerechten',
+        slug: 'voorgerechten'
+      }
+    }
+  },
+  'pageSection->meals->starters-3': {
+    id: 'pageSection->meals->starters-3',
+    type: 'section',
+    active: true,
+    template: 'template->pageSection->one-row-two-cols->slide',
+    defaultImg: 'image->section->aside-650-750-default',
+    mainImg: 'image->section->aside-650-750-starters-3',
+    show: true,
+    showExtraInfo: false,
+    showDescription: false,
+    showTitle: false,
+    listItemsForCol: 10,
+    lists: ['list->meals->starters-3'],
+    number: '1',
+    displayInfo: {
+      es: {
+        title: 'Entrantes',
+        slug: 'entrantes'
+      },
+      en: {
+        title: 'Starters',
+        slug: 'starters'
+      },
+      de: {
+        title: 'Vorspeisen',
+        slug: 'vorspeisen'
+      },
+      nb: {
+        title: 'Forretter',
+        slug: 'forretter'
+      },
+      da: {
+        title: 'Forretter',
+        slug: 'forretter'
+      },
+      sv: {
+        title: 'Förrätter',
+        slug: 'forratter'
+      },
+      fr: {
+        title: 'Entrées',
+        slug: 'entrees'
+      },
+      nl: {
+        title: 'Voorgerechten',
+        slug: 'voorgerechten'
+      }
+    }
+  },
+  'pageSection->meals->skewers-1': {
+    id: 'pageSection->meals->skewers-1',
+    type: 'section',
+    active: true,
+    defaultImg: 'image->section->aside-1500-400-default',
+    mainImg: 'image->section->aside-1500-400-skewers',
+    template: 'template->pageSection->two-rows-multi-col->single-col-list',
+    show: true,
+    showExtraInfo: false,
+    showDescription: false,
+    showTitle: false,
+    listItemsForCol: 6,
+    lists: ['list->meals->skewers'],
+    number: '1',
+    displayInfo: {
+      es: {
+        title: 'Pinchitos',
+        slug: 'pinchitos'
+      },
+      en: {
+        title: 'Skewers',
+        slug: 'skewers'
+      },
+      de: {
+        title: 'Spieße',
+        slug: 'spiebe'
+      },
+      nb: {
+        title: '',
+        slug: ''
+      },
+      da: {
+        title: '',
+        slug: ''
+      },
+      sv: {
+        title: '',
+        slug: ''
+      },
+      fr: {
+        title: '',
+        slug: ''
+      },
+      nl: {
+        title: '',
+        slug: ''
+      }
+    }
+  },
+  'pageSection->meals->cous-cous-1': {
+    id: 'pageSection->meals->cous-cous-1',
+    type: 'section',
+    active: true,
+    defaultImg: 'image->section->aside-1500-400-default',
+    mainImg: 'image->section->aside-1500-400-cous-cous',
+    template: 'template->pageSection->two-rows-multi-col->single-col-list',
+    show: true,
+    showExtraInfo: false,
+    showDescription: false,
+    showTitle: false,
+    listItemsForCol: 6,
+    lists: ['list->meals->cous-cous'],
+    number: '1',
+    displayInfo: {
+      es: {
+        title: 'Cous Cous',
+        slug: 'cous-cous'
+      },
+      en: {
+        title: 'Cous Cous',
+        slug: 'cous-cous'
+      },
+      de: {
+        title: 'Cous Cous',
+        slug: 'cous-cous'
+      },
+      nb: {
+        title: '',
+        slug: ''
+      },
+      da: {
+        title: '',
+        slug: ''
+      },
+      sv: {
+        title: '',
+        slug: ''
+      },
+      fr: {
+        title: '',
+        slug: ''
+      },
+      nl: {
+        title: '',
+        slug: ''
+      }
+    }
+  },
+  'pageSection->meals->tajin-1': {
+    id: 'pageSection->meals->tajin-1',
+    type: 'section',
+    active: true,
+    defaultImg: 'image->section->aside-1500-400-default',
+    mainImg: 'image->section->aside-1500-400-tajin',
+    template: 'template->pageSection->two-rows-multi-col->single-col-list',
+    show: true,
+    showExtraInfo: false,
+    showDescription: false,
+    showTitle: false,
+    listItemsForCol: 6,
+    lists: ['list->meals->tajin'],
+    number: '1',
+    displayInfo: {
+      es: {
+        title: 'Tajin',
+        slug: 'tajin'
+      },
+      en: {
+        title: 'Tajin',
+        slug: 'tajin'
+      },
+      de: {
+        title: 'Tajin',
+        slug: 'tajin'
+      },
+      nb: {
+        title: '',
+        slug: ''
+      },
+      da: {
+        title: '',
+        slug: ''
+      },
+      sv: {
+        title: '',
+        slug: ''
+      },
+      fr: {
+        title: '',
+        slug: ''
+      },
+      nl: {
+        title: '',
+        slug: ''
       }
     }
   },
@@ -164,32 +360,32 @@ export const sections: { [key: string]: PageSection } = {
     number: '1',
     displayInfo: {
       es: {
-        title: 'Algo Fresco',
-        slug: 'algo-fresco'
+        title: 'Ensaladas',
+        slug: 'ensaladas'
       },
       en: {
-        title: 'Cool Dishes',
-        slug: 'cool-dishes'
+        title: 'Salads',
+        slug: 'salads'
       },
       de: {
-        title: 'Etwas Frisches',
-        slug: 'etwas-frisches'
+        title: 'Salate',
+        slug: 'salate'
       },
       nb: {
-        title: 'Noe Friskt',
-        slug: 'noe-friskt'
+        title: 'Salater',
+        slug: 'salater'
       },
       da: {
-        title: 'Lidt Frisk Til Ganen',
-        slug: 'lidt-frisk-til-ganen'
+        title: 'Salater',
+        slug: 'salater'
       },
       sv: {
-        title: 'Något Fräscht',
-        slug: 'nagot-frascht'
+        title: 'Sallader',
+        slug: 'sallader'
       },
       fr: {
-        title: 'Quelque Chose de Frais',
-        slug: 'quelque-chose-de-frais'
+        title: 'Salades',
+        slug: 'salades'
       },
       nl: {
         title: 'Verfrissend',
@@ -213,41 +409,41 @@ export const sections: { [key: string]: PageSection } = {
     number: '1',
     displayInfo: {
       es: {
-        title: 'Cuchara de la Tierra',
-        slug: 'cuchara-de-la-tierra'
+        title: 'Platos de Cuchara',
+        slug: 'platos-de-cuchara'
       },
       en: {
-        title: 'Soups and Stews',
-        slug: 'soups-and-stews'
+        title: 'Spoon dishes',
+        slug: 'spoon-dishes'
       },
       de: {
-        title: 'Löffelgerichte aus Örtlichen Gefilden',
-        slug: 'loffelgerichteaus-ortlichen-gefilden'
+        title: 'Löffelgerichte',
+        slug: 'loffelgerichte'
       },
       nb: {
-        title: 'Jordens Skje',
-        slug: 'jordens-skje'
+        title: 'Skje retter',
+        slug: 'skje-retter'
       },
       da: {
-        title: 'Lokale Supper',
-        slug: 'lokale-supper'
+        title: 'Ske retter',
+        slug: 'ske-retter'
       },
       sv: {
-        title: 'Jordens Sked',
-        slug: 'jordens-sked'
+        title: 'Sked rätter',
+        slug: 'sked-ratter'
       },
       fr: {
-        title: 'À la Cuillère',
-        slug: 'a-la-cuillere'
+        title: 'Plats à la Cuillère',
+        slug: 'plats-a-la-cuillere'
       },
       nl: {
-        title: 'Van het Land',
-        slug: 'van-het-land'
+        title: 'Lepel gerechten',
+        slug: 'lepel-gerechten'
       }
     }
   },
-  'pageSection->meals->fittings-1': {
-    id: 'pageSection->meals->fittings-1',
+  'pageSection->meals->garnishes-or-side-dishes-1': {
+    id: 'pageSection->meals->garnishes-or-side-dishes-1',
     type: 'section',
     active: true,
     template: 'template->pageSection->simple-list',
@@ -300,202 +496,6 @@ export const sections: { [key: string]: PageSection } = {
         extraInfo: '(Met toeslag - 2,50 €)',
         title: 'Bijgerechten',
         slug: 'bijgerechten'
-      }
-    }
-  },
-  'pageSection->meals->sea-and-mountains': {
-    id: 'pageSection->meals->sea-and-mountains',
-    type: 'section',
-    active: true,
-    template: 'template->pageSection->one-row-two-cols',
-    defaultImg: 'image->section->aside-750-2-default',
-    mainImg: 'image->section->aside-750-2-sea-and-montain',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    listItemsForCol: 10,
-    lists: ['list->meals->sea-and-mountains'],
-    number: '1',
-    displayInfo: {
-      es: {
-        title: 'Mar y Montaña',
-        slug: 'mar-y-montana'
-      },
-      en: {
-        title: 'Surf & Turf',
-        slug: 'surf-turf'
-      },
-      de: {
-        title: 'Berge und Meer',
-        slug: 'berge-und-meer'
-      },
-      nb: {
-        title: 'Hav og Fjell',
-        slug: 'hav-og-fjell'
-      },
-      da: {
-        title: 'Hav og Bjerge',
-        slug: 'hav-og-bjerge'
-      },
-      sv: {
-        title: 'Hav och Berg',
-        slug: 'hav-och-berg'
-      },
-      fr: {
-        title: 'Mer et Montagne',
-        slug: 'mer-et-montagne'
-      },
-      nl: {
-        title: 'Uit de Zee en de Bergen',
-        slug: 'uit-de-zee-en-de-bergen'
-      }
-    }
-  },
-  'pageSection->meals->sea-and-mountains-1': {
-    id: 'pageSection->meals->sea-and-mountains-1',
-    type: 'section',
-    active: true,
-    template: 'template->pageSection->two-rows-multi-col->single-col-list',
-    defaultImg: 'image->section->aside-1500-350-default',
-    mainImg: 'image->section->aside-1500-350-surf',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    listItemsForCol: 10,
-    lists: ['list->meals->sea-and-mountains-1'],
-    number: '1',
-    displayInfo: {
-      es: {
-        title: 'Mar',
-        slug: 'mar'
-      },
-      en: {
-        title: 'Surf',
-        slug: 'surf'
-      },
-      de: {
-        title: 'Meer',
-        slug: 'meer'
-      },
-      nb: {
-        title: 'Hav',
-        slug: 'hav'
-      },
-      da: {
-        title: 'Hav',
-        slug: 'hav'
-      },
-      sv: {
-        title: 'Hav',
-        slug: 'hav'
-      },
-      fr: {
-        title: 'Mer',
-        slug: 'mer'
-      },
-      nl: {
-        title: 'Uit de Zee',
-        slug: 'uit-de-zee'
-      }
-    }
-  },
-  'pageSection->meals->sea-and-mountains-2': {
-    id: 'pageSection->meals->sea-and-mountains-2',
-    type: 'section',
-    active: true,
-    template: 'template->pageSection->two-rows-multi-col->single-col-list',
-    defaultImg: 'image->section->aside-1500-350-default',
-    mainImg: 'image->section->aside-1500-350-turf',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    listItemsForCol: 10,
-    lists: ['list->meals->sea-and-mountains-2'],
-    number: '1',
-    displayInfo: {
-      es: {
-        title: 'Montaña',
-        slug: 'montana'
-      },
-      en: {
-        title: 'Turf',
-        slug: 'turf'
-      },
-      de: {
-        title: 'Berge',
-        slug: 'berge'
-      },
-      nb: {
-        title: 'Fjell',
-        slug: 'fjell'
-      },
-      da: {
-        title: 'Bjerge',
-        slug: 'bjerge'
-      },
-      sv: {
-        title: 'Berg',
-        slug: 'berg'
-      },
-      fr: {
-        title: 'Montagne',
-        slug: 'montagne'
-      },
-      nl: {
-        title: 'Uit de Bergen',
-        slug: 'uit-de-bergen'
-      }
-    }
-  },
-  'pageSection->meals->our-chef-s-suggestions-1': {
-    id: 'pageSection->meals->our-chef-s-suggestions-1',
-    type: 'section',
-    active: true,
-    defaultImg: 'image->section->aside-750-2-default',
-    mainImg: 'image->section->aside-750-2-our-chef-s-suggestions',
-    template: 'template->pageSection->one-row-two-cols',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    listItemsForCol: 6,
-    lists: ['list->meals->our-chef-s-suggestions'],
-    number: '1',
-    displayInfo: {
-      es: {
-        title: 'Sugerencias de nuestro Chef',
-        slug: 'Sugerencias de nuestro Chef'
-      },
-      en: {
-        title: `Our Chef's Suggestions`,
-        slug: 'our-chef-s-suggestions'
-      },
-      de: {
-        title: 'Empfehlungen Unseres Küchenchefs',
-        slug: 'empfehlungen-unseres-kuchenchefs'
-      },
-      nb: {
-        title: 'Kokkens Anbefaling',
-        slug: 'kokkens-anbefaling'
-      },
-      da: {
-        title: 'Vores Chefkok Anbefaler',
-        slug: 'vores-chefkok-anbefaler'
-      },
-      sv: {
-        title: 'Rekommendation Från Vår Kock',
-        slug: 'rekommendation-fran-var-kock'
-      },
-      fr: {
-        title: 'Suggestion de Notre Chef',
-        slug: 'suggestion-de-notre-chef'
-      },
-      nl: {
-        title: 'Suggestie Van de Chef',
-        slug: 'suggestie-van-de-chef'
       }
     }
   },
@@ -564,85 +564,36 @@ export const sections: { [key: string]: PageSection } = {
     number: '1',
     displayInfo: {
       es: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Bocadillos',
+        slug: 'bocadillos'
       },
       en: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Sandwich',
+        slug: 'sandwich'
       },
       de: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       nb: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       da: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       sv: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       fr: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Collations',
+        slug: 'collations'
       },
       nl: {
-        title: 'Brunch',
-        slug: 'brunch'
-      }
-    }
-  },
-  'pageSection->meals->childrens': {
-    id: 'pageSection->meals->childrens',
-    type: 'section',
-    active: true,
-    template: 'template->pageSection->two-rows-multi-col->single-col-list',
-    defaultImg: 'image->section->aside-1500-400-default',
-    mainImg: 'image->section->aside-1500-400-childrens',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    listItemsForCol: 6,
-    lists: ['list->meals->childrens'],
-    number: '1',
-    displayInfo: {
-      es: {
-        title: 'Menú Infantil',
-        slug: 'menu-infantil'
-      },
-      en: {
-        title: `Children's Menu`,
-        slug: 'children-s-menu'
-      },
-      de: {
-        title: 'Kindermenü',
-        slug: 'kindermenu'
-      },
-      nb: {
-        title: 'Meny for de Små',
-        slug: 'meny-for-de-sma'
-      },
-      da: {
-        title: 'Børnemenu',
-        slug: 'bornemenu'
-      },
-      sv: {
-        title: 'Meny för Barnen',
-        slug: 'meny-for-barnen'
-      },
-      fr: {
-        title: 'Menu Enfant',
-        slug: 'menu-enfant'
-      },
-      nl: {
-        title: 'Kindermenu',
-        slug: 'kindermenu'
+        title: 'Tussendoortjes',
+        slug: 'tussendoortjes'
       }
     }
   },
@@ -810,6 +761,108 @@ export const sections: { [key: string]: PageSection } = {
       'list->wines->sweet-wines',
       'list->wines->sangrias-and-champagnes'
     ],
+    number: '3',
+    displayInfo: {
+      es: {
+        title: 'Vinos',
+        slug: 'vinos'
+      },
+      en: {
+        title: 'Wines',
+        slug: 'wines'
+      },
+      de: {
+        title: 'Wein',
+        slug: 'wein'
+      },
+      nb: {
+        title: 'Viner',
+        slug: 'viner'
+      },
+      da: {
+        title: 'Vine',
+        slug: 'vine'
+      },
+      sv: {
+        title: 'Viner',
+        slug: 'viner'
+      },
+      fr: {
+        title: 'Vins ',
+        slug: 'vins'
+      },
+      nl: {
+        title: 'Wijn',
+        slug: 'wijn'
+      }
+    }
+  },
+  'pageSection->wines-4': {
+    id: 'pageSection->wines-4',
+    type: 'section',
+    active: true,
+    template: 'template->pageSection->one-row-two-cols->slide',
+    defaultImg: 'image->section->aside-650-750-default',
+    mainImg: 'image->section->aside-650-750-white-wine',
+    show: true,
+    showExtraInfo: false,
+    showDescription: false,
+    showTitle: false,
+    listItemsForCol: 4,
+    lists: [
+      'list->wines->white-wines-1',
+      'list->wines->white-wines-2',
+      'list->wines->rose-wines-1'
+    ],
+    number: '3',
+    displayInfo: {
+      es: {
+        title: 'Vinos',
+        slug: 'vinos'
+      },
+      en: {
+        title: 'Wines',
+        slug: 'wines'
+      },
+      de: {
+        title: 'Wein',
+        slug: 'wein'
+      },
+      nb: {
+        title: 'Viner',
+        slug: 'viner'
+      },
+      da: {
+        title: 'Vine',
+        slug: 'vine'
+      },
+      sv: {
+        title: 'Viner',
+        slug: 'viner'
+      },
+      fr: {
+        title: 'Vins ',
+        slug: 'vins'
+      },
+      nl: {
+        title: 'Wijn',
+        slug: 'wijn'
+      }
+    }
+  },
+  'pageSection->wines-5': {
+    id: 'pageSection->wines-5',
+    type: 'section',
+    active: true,
+    template: 'template->pageSection->one-row-two-cols->slide',
+    defaultImg: 'image->section->aside-650-750-default',
+    mainImg: 'image->section->aside-650-750-red-wine-1',
+    show: true,
+    showExtraInfo: false,
+    showDescription: false,
+    showTitle: false,
+    listItemsForCol: 4,
+    lists: ['list->wines->red-wines-1', 'list->wines->red-wines-2'],
     number: '3',
     displayInfo: {
       es: {
@@ -1249,7 +1302,7 @@ export const sections: { [key: string]: PageSection } = {
     showExtraInfo: false,
     showDescription: false,
     showTitle: true,
-    listItemsForCol: 7,
+    listItemsForCol: 10,
     lists: ['list->drinks->liqueurs'],
     number: '6',
     displayInfo: {
@@ -1340,14 +1393,14 @@ export const sections: { [key: string]: PageSection } = {
     id: 'pageSection->drinks->appetizers-1',
     type: 'section',
     active: true,
-    template: 'template->pageSection->one-row-two-cols',
-    defaultImg: 'image->section->aside-750-2-default',
-    mainImg: 'image->section->aside-750-2-appetizers',
+    template: 'template->pageSection->two-rows-multi-col->single-col-list',
+    defaultImg: 'image->section->aside-1500-350-default',
+    mainImg: 'image->section->aside-1500-350-appetizers',
     show: true,
     showExtraInfo: false,
     showDescription: false,
     showTitle: false,
-    listItemsForCol: 8,
+    listItemsForCol: 10,
     lists: ['list->drinks->appetizers'],
     number: '9',
     displayInfo: {
@@ -1732,55 +1785,6 @@ export const sections: { [key: string]: PageSection } = {
       nl: {
         title: 'Galerij',
         slug: 'galerij'
-      }
-    }
-  },
-  'pageSection->meals->extra-menu': {
-    id: 'pageSection->meals->extra-menu',
-    type: 'section',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->pageSection->simple-list',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: true,
-    listItemsForCol: 6,
-    lists: ['list->meals->extra-menu'],
-    number: '1',
-    displayInfo: {
-      es: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      en: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      de: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      nb: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      da: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      sv: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      fr: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      nl: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
       }
     }
   }

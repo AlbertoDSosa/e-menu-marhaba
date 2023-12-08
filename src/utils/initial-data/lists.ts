@@ -9,6 +9,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
@@ -58,139 +59,393 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       'listItem->product->desserts->trompe-l-oeil-ferrero-rocher-3',
       'listItem->product->desserts->banana-ice-cream-4',
       'listItem->product->desserts->homemade-ice-cream-5',
-      'listItem->product->desserts->cold-berry-soup-with-yogurt-7',
       'listItem->product->desserts->our-chef-s-suggested-sweet-6'
     ]
   } as ProductList,
-  'list->meals->to-share-or-to-snack-1': {
-    id: 'list->meals->to-share-or-to-snack-1',
+  'list->meals->starters-1': {
+    id: 'list->meals->starters-1',
     type: 'product',
     active: true,
     defaultImg: '',
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
     showTitle: false,
-    template: 'template->list->default',
+    template: 'template->list->meals->short-title',
     selectableItems: [],
     editable: false,
     maxItems: 12,
     categories: ['category->meals->starters'],
     displayInfo: {
       es: {
-        title: 'Para Compartir o Picar 1',
-        slug: 'para-compartir-o-picar'
+        title: 'Entrantes 1',
+        slug: 'entrantes-1'
       },
       en: {
-        title: 'To share or to snack 1',
-        slug: 'to-share-or-to-snack'
+        title: 'Starters 1',
+        slug: 'starters-1'
       },
       de: {
-        title: 'Zum Teilen Oder Knabbern 1',
-        slug: 'vorspeisen'
+        title: 'Vorspeisen 1',
+        slug: 'vorspeisen-1'
       },
       nb: {
-        title: 'Til og Dele Eller Små Plukke 1',
-        slug: 'forretter'
+        title: 'Forretter 1',
+        slug: 'forretter-1'
       },
       da: {
-        title: 'Til at Dele Eller Plukke Med 1',
-        slug: 'forretter'
+        title: 'Forretter 1',
+        slug: 'forretter-1'
       },
       sv: {
-        title: 'Förrätter att dela 1',
-        slug: 'forratter-att-dela'
+        title: 'Förrätter 1',
+        slug: 'forratter-1'
       },
       fr: {
-        title: 'À Partager ou à Picorer 1',
-        slug: 'a-partager-ou-a-picorer'
+        title: 'Entrées 1',
+        slug: 'entrees-1'
       },
       nl: {
-        title: 'Om te Delen of Happen 1',
-        slug: 'om-te-delen-of-happen'
+        title: 'Voorgerechten 1',
+        slug: 'voorgerechten-1'
       }
     },
     items: [
-      'listItem->product->meals->artisan-garlic-bread-from-ingenio-1',
-      'listItem->product->meals->artisan-bread-from-ingenio-with-canarian-sauces-2',
-      'listItem->product->meals->canarian-cheese-platter-3',
-      'listItem->product->meals->eggplant-chips-with-palm-honey-and-sesame-7',
-      'listItem->product->meals->bao-buns-8',
-      'listItem->product->meals->herreno-cheese-10',
-      'listItem->product->meals->nachos-with-guacamole-cheddar-cheese-and-pico-de-gallo-sauce-12'
+      'listItem->product->meals->starters->vegetable-and-meat-soup-1',
+      'listItem->product->meals->starters->arab-patty-with-cheese-and-honey-2',
+      'listItem->product->meals->starters->arab-patty-with-vegetables-3',
+      'listItem->product->meals->starters->arab-patty-with-spinach-4',
+      'listItem->product->meals->starters->arab-patty-with-chicken-and-spices-5',
+      'listItem->product->meals->starters->arab-patty-with-meat-and-pinions-6',
+      'listItem->product->meals->starters->chickpeas-croquettes-7',
+      'listItem->product->meals->starters->arab-patty-with-seadfood-8'
     ]
   } as ProductList,
-  'list->meals->to-share-or-to-snack-2': {
-    id: 'list->meals->to-share-or-to-snack-2',
+  'list->meals->starters-2': {
+    id: 'list->meals->starters-2',
     type: 'product',
     active: true,
     defaultImg: '',
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
     showTitle: false,
-    template: 'template->list->default',
+    template: 'template->list->meals->short-title',
     selectableItems: [],
     editable: false,
     maxItems: 12,
     categories: ['category->meals->starters'],
     displayInfo: {
       es: {
-        title: 'Para Compartir o Picar 2',
-        slug: 'para-compartir-o-picar'
+        title: 'Entrantes 2',
+        slug: 'entrantes-2'
       },
       en: {
-        title: 'To share or to snack 2',
-        slug: 'to-share-or-to-snack'
+        title: 'Starters 2',
+        slug: 'starters-2'
       },
       de: {
-        title: 'Zum Teilen Oder Knabbern 2',
-        slug: 'vorspeisen'
+        title: 'Vorspeisen 2',
+        slug: 'vorspeisen-2'
       },
       nb: {
-        title: 'Til og Dele Eller Små Plukke 2',
-        slug: 'forretter'
+        title: 'Forretter 2',
+        slug: 'forretter-2'
       },
       da: {
-        title: 'Til at Dele Eller Plukke Med 2',
-        slug: 'forretter'
+        title: 'Forretter 2',
+        slug: 'forretter-2'
       },
       sv: {
-        title: 'Förrätter att dela 2',
-        slug: 'forratter-att-dela'
+        title: 'Förrätter 2',
+        slug: 'forratter-2'
       },
       fr: {
-        title: 'À Partager ou à Picorer 2',
-        slug: 'a-partager-ou-a-picorer'
+        title: 'Entrées',
+        slug: 'entrees'
       },
       nl: {
-        title: 'Om te Delen of Happen 2',
-        slug: 'om-te-delen-of-happen'
+        title: 'Voorgerechten 2',
+        slug: 'voorgerechten-2'
       }
     },
     items: [
-      'listItem->product->meals->by-rocio-prawns-in-sizzling-garlic-oil-4',
-      'listItem->product->meals->iberian-ham-5',
-      'listItem->product->meals->canarian-wrinkled-potatoes-6',
-      'listItem->product->meals->kataifi-skewer-9',
-      'listItem->product->meals->cubes-of-suckling-pig-roasted-at-low-temperature-and-confitted-11',
-      'listItem->product->meals->the-chef-s-appetizer-13'
+      'listItem->product->meals->starters->spinachs-croquettes-9',
+      'listItem->product->meals->starters->lamb-croquettes-10',
+      'listItem->product->meals->starters->hummus-11',
+      'listItem->product->meals->starters->-12',
+      'listItem->product->meals->starters->-13',
+      'listItem->product->meals->starters->-14',
+      'listItem->product->meals->starters->-15'
     ]
   } as ProductList,
-  'list->meals->something-fresh': {
-    id: 'list->meals->something-fresh',
+  'list->meals->starters-3': {
+    id: 'list->meals->starters-3',
     type: 'product',
     active: true,
     defaultImg: '',
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
+    show: true,
+    showExtraInfo: false,
+    showDescription: false,
+    showTitle: false,
+    template: 'template->list->meals->short-title',
+    selectableItems: [],
+    editable: false,
+    maxItems: 12,
+    categories: ['category->meals->starters'],
+    displayInfo: {
+      es: {
+        title: 'Entrantes 3',
+        slug: 'entrantes-3'
+      },
+      en: {
+        title: 'Starters 3',
+        slug: 'starters-3'
+      },
+      de: {
+        title: 'Vorspeisen 3',
+        slug: 'vorspeisen-3'
+      },
+      nb: {
+        title: 'Forretter 3',
+        slug: 'forretter-3'
+      },
+      da: {
+        title: 'Forretter 3',
+        slug: 'forretter-3'
+      },
+      sv: {
+        title: 'Förrätter 3',
+        slug: 'forratter-3'
+      },
+      fr: {
+        title: 'Entrées 3',
+        slug: 'entrees-3'
+      },
+      nl: {
+        title: 'Voorgerechten 3',
+        slug: 'voorgerechten-3'
+      }
+    },
+    items: [
+      'listItem->product->meals->starters->-16',
+      'listItem->product->meals->starters->-17',
+      'listItem->product->meals->starters->-18',
+      'listItem->product->meals->starters->-19',
+      'listItem->product->meals->starters->-20',
+      'listItem->product->meals->starters->-21',
+      'listItem->product->meals->starters->-22'
+    ]
+  } as ProductList,
+  'list->meals->skewers': {
+    id: 'list->meals->skewers',
+    type: 'product',
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    sortable: true,
+    hasVariants: false,
+    variants: '',
+    show: true,
+    showExtraInfo: true,
+    showDescription: false,
+    showTitle: false,
+    template: 'template->list->meals->short-title',
+    selectableItems: [],
+    editable: false,
+    maxItems: 12,
+    categories: ['category->meals->skewers'],
+    displayInfo: {
+      es: {
+        title: 'Pinchitos',
+        extraInfo: '(Guarnición de papas y verduras)',
+        slug: 'pinchitos'
+      },
+      en: {
+        title: 'Skewers',
+        extraInfo: '(Chips and vegetables garnish)',
+        slug: 'skewers'
+      },
+      de: {
+        title: 'Spieße',
+        extraInfo: '(Kartoffel Gemüse Beilage)',
+        slug: 'spiebe'
+      },
+      nb: {
+        title: '',
+        extraInfo: '',
+        slug: ''
+      },
+      da: {
+        title: '',
+        extraInfo: '',
+        slug: ''
+      },
+      sv: {
+        title: '',
+        extraInfo: '',
+        slug: ''
+      },
+      fr: {
+        title: '',
+        extraInfo: '',
+        slug: ''
+      },
+      nl: {
+        title: '',
+        extraInfo: '',
+        slug: ''
+      }
+    },
+    items: [
+      'listItem->product->meals->skewers->-1',
+      'listItem->product->meals->skewers->-2',
+      'listItem->product->meals->skewers->-3',
+      'listItem->product->meals->skewers->-4'
+    ]
+  } as ProductList,
+  'list->meals->cous-cous': {
+    id: 'list->meals->cous-cous',
+    type: 'product',
+    active: false,
+    defaultImg: '',
+    mainImg: '',
+    sortable: true,
+    hasVariants: false,
+    variants: '',
+    show: false,
+    showDescription: false,
+    showExtraInfo: false,
+    showTitle: false,
+    template: 'template->list->meals->short-title',
+    selectableItems: [],
+    editable: false,
+    maxItems: 12,
+    categories: ['category->meals->default'],
+    displayInfo: {
+      es: {
+        title: 'Cous Cous',
+        slug: 'cous-cous'
+      },
+      en: {
+        title: 'Cous Cous',
+        slug: 'cous-cous'
+      },
+      de: {
+        title: 'Cous Cous',
+        slug: 'cous-cous'
+      },
+      nb: {
+        title: '',
+        slug: ''
+      },
+      da: {
+        title: '',
+        slug: ''
+      },
+      sv: {
+        title: '',
+        slug: ''
+      },
+      fr: {
+        title: '',
+        slug: ''
+      },
+      nl: {
+        title: '',
+        slug: ''
+      }
+    },
+    items: [
+      'listItem->product->meals->cous-cous->-1',
+      'listItem->product->meals->cous-cous->-2',
+      'listItem->product->meals->cous-cous->-3',
+      'listItem->product->meals->cous-cous->-4',
+      'listItem->product->meals->cous-cous->-5',
+      'listItem->product->meals->cous-cous->-6'
+    ]
+  } as ProductList,
+  'list->meals->tajin': {
+    id: 'list->meals->tajin',
+    type: 'product',
+    active: false,
+    defaultImg: '',
+    mainImg: '',
+    sortable: true,
+    hasVariants: false,
+    variants: '',
+    show: false,
+    showExtraInfo: false,
+    showDescription: false,
+    showTitle: false,
+    editable: true,
+    maxItems: 8,
+    template: 'template->list->default',
+    categories: [],
+    displayInfo: {
+      es: {
+        title: 'Tajin',
+        slug: 'tajin'
+      },
+      en: {
+        title: 'Tajin',
+        slug: 'tajin'
+      },
+      de: {
+        title: 'Tajin',
+        slug: 'tajin'
+      },
+      nb: {
+        title: '',
+        slug: ''
+      },
+      da: {
+        title: '',
+        slug: ''
+      },
+      sv: {
+        title: '',
+        slug: ''
+      },
+      fr: {
+        title: '',
+        slug: ''
+      },
+      nl: {
+        title: '',
+        slug: ''
+      }
+    },
+    selectableItems: [],
+    items: [
+      'listItem->product->meals->tajin->-1',
+      'listItem->product->meals->tajin->-2',
+      'listItem->product->meals->tajin->-3',
+      'listItem->product->meals->tajin->-4',
+      'listItem->product->meals->tajin->-5'
+    ]
+  } as ProductList,
+  'list->meals->salads': {
+    id: 'list->meals->salads',
+    type: 'product',
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    sortable: true,
+    hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
@@ -202,32 +457,32 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     categories: ['category->meals->salads'],
     displayInfo: {
       es: {
-        title: 'Algo Fresco',
-        slug: 'algo-fresco'
+        title: 'Ensaladas',
+        slug: 'ensaladas'
       },
       en: {
-        title: 'Cool Dishes',
-        slug: 'cool-dishes'
+        title: 'Salads',
+        slug: 'salads'
       },
       de: {
-        title: 'Etwas Frisches',
-        slug: 'etwas-frisches'
+        title: 'Salate',
+        slug: 'salate'
       },
       nb: {
-        title: 'Noe Friskt',
-        slug: 'noe-friskt'
+        title: 'Salater',
+        slug: 'salater'
       },
       da: {
-        title: 'Lidt Frisk Til Ganen',
-        slug: 'lidt-frisk-til-ganen'
+        title: 'Salater',
+        slug: 'salater'
       },
       sv: {
-        title: 'Något Fräscht',
-        slug: 'nagot-frascht'
+        title: 'Sallader',
+        slug: 'sallader'
       },
       fr: {
-        title: 'Quelque Chose de Frais',
-        slug: 'quelque-chose-de-frais'
+        title: 'Salades',
+        slug: 'salades'
       },
       nl: {
         title: 'Verfrissend',
@@ -235,10 +490,10 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       }
     },
     items: [
-      'listItem->product->meals->som-tam-salad-1',
-      'listItem->product->meals->smoked-salmon-salad-2',
-      'listItem->product->meals->canarian-beetroot-carpaccio-3',
-      'listItem->product->meals->by-rocio-poke-boll-caesar-4'
+      'listItem->product->meals->-1',
+      'listItem->product->meals->-2',
+      'listItem->product->meals->-3',
+      'listItem->product->meals->-4'
     ]
   } as ProductList,
   'list->meals->spoon-dishes': {
@@ -249,258 +504,68 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
     showTitle: false,
     template: 'template->list->meals->short-title',
-    selectableItems: ['listItem->product->meals->cream-of-courgette-soup-2'],
+    selectableItems: [],
     editable: false,
     maxItems: 12,
     categories: ['category->meals->spoon-dishes'],
     displayInfo: {
       es: {
-        title: 'Cuchara de la Tierra',
-        slug: 'cuchara-de-la-tierra'
+        title: 'Platos de Cuchara',
+        slug: 'platos-de-cuchara'
       },
       en: {
-        title: 'Soups and Stews',
-        slug: 'soups-and-stews'
+        title: 'Spoon dishes',
+        slug: 'spoon-dishes'
       },
       de: {
-        title: 'Löffelgerichte aus Örtlichen Gefilden',
-        slug: 'loffelgerichteaus-ortlichen-gefilden'
+        title: 'Löffelgerichte',
+        slug: 'loffelgerichte'
       },
       nb: {
-        title: 'Jordens Skje',
-        slug: 'jordens-skje'
+        title: 'Skje retter',
+        slug: 'skje-retter'
       },
       da: {
-        title: 'Lokale Supper',
-        slug: 'lokale-supper'
+        title: 'Ske retter',
+        slug: 'ske-retter'
       },
       sv: {
-        title: 'Jordens Sked',
-        slug: 'jordens-sked'
+        title: 'Sked rätter',
+        slug: 'sked-ratter'
       },
       fr: {
-        title: 'À la Cuillère',
-        slug: 'a-la-cuillere'
+        title: 'Plats à la Cuillère',
+        slug: 'plats-a-la-cuillere'
       },
       nl: {
-        title: 'Van het Land',
-        slug: 'van-het-land'
+        title: 'Lepel gerechten',
+        slug: 'lepel-gerechten'
       }
     },
     items: [
-      'listItem->product->meals->sauteed-chickpeas-1',
-      'listItem->product->meals->mango-gazpacho-3',
-      'listItem->product->meals->soup-of-the-day-4'
+      'listItem->product->meals->spoon-dishes->-1',
+      'listItem->product->meals->spoon-dishes->-2',
+      'listItem->product->meals->spoon-dishes->-3',
+      'listItem->product->meals->spoon-dishes->-4',
+      'listItem->product->meals->spoon-dishes->-5',
+      'listItem->product->meals->spoon-dishes->-6'
     ]
   } as ProductList,
-  'list->meals->sea-and-mountains': {
-    id: 'list->meals->sea-and-mountains',
+  'list->meals->garnishes-or-side-dishes': {
+    id: 'list->meals->garnishes-or-side-dishes',
     type: 'product',
     active: true,
     defaultImg: '',
     mainImg: '',
     sortable: true,
     hasVariants: false,
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [
-      'listItem->product->meals->tuna-in-tomato-with-fried-egg-yolk-1',
-      'listItem->product->meals->nigiris-of-smoked-sardines-4'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->sea-and-mountains'],
-    displayInfo: {
-      es: {
-        title: 'Mar y Montaña',
-        slug: 'mar-y-montana'
-      },
-      en: {
-        title: 'Surf & Turf',
-        slug: 'surf-turf'
-      },
-      de: {
-        title: 'Berge und Meer',
-        slug: 'berge-und-meer'
-      },
-      nb: {
-        title: 'Hav og Fjell',
-        slug: 'hav-og-fjell'
-      },
-      da: {
-        title: 'Hav og Bjerge',
-        slug: 'hav-og-bjerge'
-      },
-      sv: {
-        title: 'Hav och Berg',
-        slug: 'hav-och-berg'
-      },
-      fr: {
-        title: 'Mer et Montagne',
-        slug: 'mer-et-montagne'
-      },
-      nl: {
-        title: 'Uit de Zee en de Bergen',
-        slug: 'uit-de-zee-en-de-bergen'
-      }
-    },
-    items: [
-      'listItem->product->meals->norwegian-marinated-herring-6',
-      'listItem->product->meals->seafood-pasta-8',
-      'listItem->product->meals->cod-fillet-2',
-      'listItem->product->meals->aquanaria-sea-bass-3',
-      'listItem->product->meals->fresh-fish-of-the-day-and-its-garnish-9',
-      'listItem->product->meals->our-fried-squid-with-garnish-10',
-      'listItem->product->meals->gratinated-iberian-secret-11',
-      'listItem->product->meals->by-rocio-style-red-curry-masala-12',
-      'listItem->product->meals->rack-of-lamb-5',
-      'listItem->product->meals->carved-angus-ribeye-7',
-      'listItem->product->meals->mexican-iberian-pork-burger-13',
-      'listItem->product->meals->angus-beef-burger-14'
-    ]
-  } as ProductList,
-  'list->meals->sea-and-mountains-1': {
-    id: 'list->meals->sea-and-mountains-1',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [
-      'listItem->product->meals->tuna-in-tomato-with-fried-egg-yolk-1',
-      'listItem->product->meals->nigiris-of-smoked-sardines-4'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->sea-and-mountains'],
-    displayInfo: {
-      es: {
-        title: 'Mar y Montaña',
-        slug: 'mar-y-montana'
-      },
-      en: {
-        title: 'Surf & Turf',
-        slug: 'surf-turf'
-      },
-      de: {
-        title: 'Berge und Meer',
-        slug: 'berge-und-meer'
-      },
-      nb: {
-        title: 'Hav og Fjell',
-        slug: 'hav-og-fjell'
-      },
-      da: {
-        title: 'Hav og Bjerge',
-        slug: 'hav-og-bjerge'
-      },
-      sv: {
-        title: 'Hav och Berg',
-        slug: 'hav-och-berg'
-      },
-      fr: {
-        title: 'Mer et Montagne',
-        slug: 'mer-et-montagne'
-      },
-      nl: {
-        title: 'Uit de Zee en de Bergen',
-        slug: 'uit-de-zee-en-de-bergen'
-      }
-    },
-    items: [
-      'listItem->product->meals->norwegian-marinated-herring-6',
-      'listItem->product->meals->seafood-pasta-8',
-      'listItem->product->meals->cod-fillet-2',
-      'listItem->product->meals->aquanaria-sea-bass-3',
-      'listItem->product->meals->fresh-fish-of-the-day-and-its-garnish-9',
-      'listItem->product->meals->our-fried-squid-with-garnish-10'
-    ]
-  } as ProductList,
-  'list->meals->sea-and-mountains-2': {
-    id: 'list->meals->sea-and-mountains-2',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [
-      'listItem->product->meals->tuna-in-tomato-with-fried-egg-yolk-1',
-      'listItem->product->meals->nigiris-of-smoked-sardines-4'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->sea-and-mountains'],
-    displayInfo: {
-      es: {
-        title: 'Mar y Montaña',
-        slug: 'mar-y-montana'
-      },
-      en: {
-        title: 'Surf & Turf',
-        slug: 'surf-turf'
-      },
-      de: {
-        title: 'Berge und Meer',
-        slug: 'berge-und-meer'
-      },
-      nb: {
-        title: 'Hav og Fjell',
-        slug: 'hav-og-fjell'
-      },
-      da: {
-        title: 'Hav og Bjerge',
-        slug: 'hav-og-bjerge'
-      },
-      sv: {
-        title: 'Hav och Berg',
-        slug: 'hav-och-berg'
-      },
-      fr: {
-        title: 'Mer et Montagne',
-        slug: 'mer-et-montagne'
-      },
-      nl: {
-        title: 'Uit de Zee en de Bergen',
-        slug: 'uit-de-zee-en-de-bergen'
-      }
-    },
-    items: [
-      'listItem->product->meals->gratinated-iberian-secret-11',
-      'listItem->product->meals->by-rocio-style-red-curry-masala-12',
-      'listItem->product->meals->rack-of-lamb-5',
-      'listItem->product->meals->carved-angus-ribeye-7',
-      'listItem->product->meals->mexican-iberian-pork-burger-13',
-      'listItem->product->meals->angus-beef-burger-14'
-    ]
-  } as ProductList,
-  'list->meals->fittings': {
-    id: 'list->meals->fittings',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: true,
@@ -509,7 +574,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     selectableItems: [],
     editable: false,
     maxItems: 12,
-    categories: ['category->meals->fittings'],
+    categories: ['category->meals->garnishes-or-side-dishes'],
     displayInfo: {
       es: {
         extraInfo: '(lleva un suplemento - 2,50 €)',
@@ -553,73 +618,12 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       }
     },
     items: [
-      'listItem->product->meals->with-the-hands->fittings->chips-1',
-      'listItem->product->meals->with-the-hands->fittings->wrinkled-potatoes-2',
-      'listItem->product->meals->with-the-hands->fittings->sweet-potato-fries-3',
-      'listItem->product->meals->with-the-hands->fittings->salad-4',
-      'listItem->product->meals->with-the-hands->fittings->basmati-rice-5',
-      'listItem->product->meals->with-the-hands->fittings->ratatouille-6'
-    ]
-  } as ProductList,
-  'list->meals->our-chef-s-suggestions': {
-    id: 'list->meals->',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [],
-    editable: false,
-    maxItems: 10,
-    categories: [],
-    displayInfo: {
-      es: {
-        title: 'Sugerencias de nuestro Chef',
-        slug: 'Sugerencias de nuestro Chef'
-      },
-      en: {
-        title: `Our Chef's Suggestions`,
-        slug: 'our-chef-s-suggestions'
-      },
-      de: {
-        title: 'Empfehlungen Unseres Küchenchefs',
-        slug: 'empfehlungen-unseres-kuchenchefs'
-      },
-      nb: {
-        title: 'Kokkens Anbefaling',
-        slug: 'kokkens-anbefaling'
-      },
-      da: {
-        title: 'Vores Chefkok Anbefaler',
-        slug: 'vores-chefkok-anbefaler'
-      },
-      sv: {
-        title: 'Rekommendation Från Vår Kock',
-        slug: 'rekommendation-fran-var-kock'
-      },
-      fr: {
-        title: 'Suggestion de Notre Chef',
-        slug: 'suggestion-de-notre-chef'
-      },
-      nl: {
-        title: 'Suggestie Van de Chef',
-        slug: 'suggestie-van-de-chef'
-      }
-    },
-    items: [
-      'listItem->product->meals->our-chef-s-suggestions->mixed-paella-1',
-      'listItem->product->meals->our-chef-s-suggestions->fish-and-shellfish-paella-2',
-      'listItem->product->meals->our-chef-s-suggestions->meat-paella-with-truffle-sauce-3',
-      'listItem->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tartar-4',
-      'listItem->product->meals->our-chef-s-suggestions->angus-steak-tartar-5',
-      'listItem->product->meals->our-chef-s-suggestions->betanzos-t-bone-cutlet-6',
-      'listItem->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tataki-7'
+      'listItem->product->meals->garnishes-or-side-dishes->chips-1',
+      'listItem->product->meals->garnishes-or-side-dishes->wrinkled-potatoes-2',
+      'listItem->product->meals->garnishes-or-side-dishes->sweet-potato-fries-3',
+      'listItem->product->meals->garnishes-or-side-dishes->salad-4',
+      'listItem->product->meals->garnishes-or-side-dishes->basmati-rice-5',
+      'listItem->product->meals->garnishes-or-side-dishes->ratatouille-6'
     ]
   } as ProductList,
   'list->meals->breakfasts': {
@@ -630,6 +634,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -674,12 +679,12 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       }
     },
     items: [
-      'listItem->product->meals->breakfasts->toast-with-tomato-puree-and-serrano-cured-ham-1',
-      'listItem->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes-2',
-      'listItem->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon-3',
-      'listItem->product->meals->breakfasts->yoghurt-with-muesli-fresh-fruit-and-honey-4',
-      'listItem->product->meals->breakfasts->scrambled-eggs-with-ham-5',
-      'listItem->product->meals->breakfasts->english-breakfast-6'
+      'listItem->product->meals->breakfasts->-1',
+      'listItem->product->meals->breakfasts->-2',
+      'listItem->product->meals->breakfasts->-3',
+      'listItem->product->meals->breakfasts->-4',
+      'listItem->product->meals->breakfasts->-5',
+      'listItem->product->meals->breakfasts->-6'
     ]
   } as ProductList,
   'list->meals->sandwich': {
@@ -690,60 +695,57 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
     showTitle: false,
     template: 'template->list->default',
-    selectableItems: [
-      'listItem->product->meals->new-york-sandwich-5',
-      'listItem->product->meals->hamburger-with-chicken-6',
-      'listItem->product->meals->beef-burger-7',
-      'listItem->product->meals->mexican-iberian-pork-burger-8',
-      'listItem->product->meals->angus-beef-burger-9'
-    ],
+    selectableItems: [],
     editable: false,
     maxItems: 12,
     categories: ['category->meals->sandwich'],
     displayInfo: {
       es: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Bocadillos',
+        slug: 'bocadillos'
       },
       en: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Sandwich',
+        slug: 'sandwich'
       },
       de: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       nb: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       da: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       sv: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       fr: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Collations',
+        slug: 'collations'
       },
       nl: {
-        title: 'Brunch',
-        slug: 'brunch'
+        title: 'Tussendoortjes',
+        slug: 'tussendoortjes'
       }
     },
     items: [
-      'listItem->product->meals->artisan-loaf-sandwich-with-squid-1',
-      'listItem->product->meals->homemade-bread-with-black-pork-in-lard-2',
-      'listItem->product->meals->homemade-bread-with-chicken-3',
-      'listItem->product->meals->homemade-bread-with-chorizo-from-teror-4'
+      'listItem->product->meals->sandwich->-1',
+      'listItem->product->meals->sandwich->-2',
+      'listItem->product->meals->sandwich->-3',
+      'listItem->product->meals->sandwich->-4',
+      'listItem->product->meals->sandwich->-5',
+      'listItem->product->meals->sandwich->-6'
     ]
   } as ProductList,
   'list->meals->childrens': {
@@ -754,6 +756,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -815,6 +818,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
@@ -890,6 +894,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
@@ -960,6 +965,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1023,6 +1029,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1087,6 +1094,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1154,6 +1162,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1219,6 +1228,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1284,6 +1294,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     active: true,
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1344,6 +1355,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     active: true,
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1402,10 +1414,11 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
-    showTitle: false,
+    showTitle: true,
     template: 'template->list->drinks',
     selectableItems: ['listItem->product->drinks->appetizers->pernod-8'],
     editable: false,
@@ -1464,6 +1477,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1549,6 +1563,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1611,6 +1626,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1672,6 +1688,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -1800,9 +1817,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showExtraInfo: false,
     showTitle: true,
     template: 'template->list->default',
-    selectableItems: [
-      'listItem->product->wines->belondrade-quinta-apolonia-15'
-    ],
+    selectableItems: [],
     editable: false,
     maxItems: 12,
     categories: ['category->meals->white-wines'],
@@ -1850,7 +1865,8 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       'listItem->product->wines->tajinaste-13',
       'listItem->product->wines->godelia-godello-14',
       'listItem->product->wines->chivite-legardeta-25',
-      'listItem->product->wines->limite-norte-24'
+      'listItem->product->wines->limite-norte-24',
+      'listItem->product->wines->belondrade-quinta-apolonia-15'
     ]
   } as ProductList,
   'list->wines->rose-wines': {
@@ -2024,6 +2040,293 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       'listItem->product->wines->sangria-23'
     ]
   } as ProductList,
+
+  'list->wines->white-wines-1': {
+    id: 'list->wines->white-wines-1',
+    type: 'product',
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    sortable: true,
+    show: true,
+    showDescription: false,
+    showExtraInfo: false,
+    showTitle: true,
+    template: 'template->list->meals->short-title',
+    selectableItems: [],
+    editable: false,
+    maxItems: 6,
+    categories: ['category->meals->white-wines'],
+    displayInfo: {
+      es: {
+        title: 'Vinos Blancos Canarios',
+        slug: 'vinos-blancos-canarios'
+      },
+      en: {
+        title: 'Canary White Wines',
+        slug: 'canary-white-wines'
+      },
+      de: {
+        title: 'Kanarische Weißweine',
+        slug: 'kanarische-weibweine'
+      },
+      nb: {
+        title: 'Hvite vine',
+        slug: 'hvite-vine'
+      },
+      da: {
+        title: 'Hvide vine',
+        slug: 'hvide-vine'
+      },
+      sv: {
+        title: 'Vita viner',
+        slug: 'vita-viner'
+      },
+      fr: {
+        title: 'Vins blancs',
+        slug: 'vins-blancs'
+      },
+      nl: {
+        title: 'Witte wijnen',
+        slug: 'witte-wijnen'
+      }
+    },
+    hasVariants: false,
+    variants: '',
+    items: [
+      'listItem->product->wines->-1',
+      'listItem->product->wines->-2',
+      'listItem->product->wines->-3'
+    ]
+  } as ProductList,
+  'list->wines->white-wines-2': {
+    id: 'list->wines->white-wines-2',
+    type: 'product',
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    sortable: true,
+    show: true,
+    showDescription: false,
+    showExtraInfo: false,
+    showTitle: true,
+    template: 'template->list->meals->short-title',
+    selectableItems: [],
+    editable: false,
+    maxItems: 6,
+    categories: ['category->meals->white-wines'],
+    displayInfo: {
+      es: {
+        title: 'Vinos Blancos del Resto de España',
+        slug: 'vinos-blancos-del-resto-de-espana'
+      },
+      en: {
+        title: 'White Wines from the Rest of Spain',
+        slug: 'white-wines-from-the-rest-of-spain'
+      },
+      de: {
+        title: 'Weißweine aus dem rest von Spanien',
+        slug: 'weibweine-aus-dem-rest-von-spanien'
+      },
+      nb: {
+        title: 'Hvite vine',
+        slug: 'hvite-vine'
+      },
+      da: {
+        title: 'Hvide vine',
+        slug: 'hvide-vine'
+      },
+      sv: {
+        title: 'Vita viner',
+        slug: 'vita-viner'
+      },
+      fr: {
+        title: 'Vins blancs',
+        slug: 'vins-blancs'
+      },
+      nl: {
+        title: 'Witte wijnen',
+        slug: 'witte-wijnen'
+      }
+    },
+    hasVariants: false,
+    variants: '',
+    items: [
+      'listItem->product->wines->-4',
+      'listItem->product->wines->-5',
+      'listItem->product->wines->-6'
+    ]
+  } as ProductList,
+  'list->wines->red-wines-1': {
+    id: 'list->wines->red-wines-1',
+    type: 'product',
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    sortable: true,
+    show: true,
+    showDescription: false,
+    showExtraInfo: false,
+    showTitle: true,
+    template: 'template->list->meals->short-title',
+    selectableItems: [],
+    editable: false,
+    maxItems: 12,
+    categories: ['category->meals->red-wines'],
+    displayInfo: {
+      es: {
+        title: 'Vinos Tintos Canarios',
+        slug: 'tintos'
+      },
+      en: {
+        title: 'Canary Red Wines',
+        slug: 'canary-red-wines'
+      },
+      de: {
+        title: 'Kanarische Rotweine',
+        slug: 'kanarische-rotweine'
+      },
+      nb: {
+        title: 'Røde viner',
+        slug: 'rode-viner'
+      },
+      da: {
+        title: 'Røde viner',
+        slug: 'rode-viner'
+      },
+      sv: {
+        title: 'Röda viner',
+        slug: 'roda-viner'
+      },
+      fr: {
+        title: 'Vins rouges',
+        slug: 'vins-rouges'
+      },
+      nl: {
+        title: 'Rode wijnen',
+        slug: 'rode-wijnen'
+      }
+    },
+    hasVariants: false,
+    variants: '',
+    items: ['listItem->product->wines->-8', 'listItem->product->wines->-9']
+  } as ProductList,
+  'list->wines->red-wines-2': {
+    id: 'list->wines->red-wines-2',
+    type: 'product',
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    sortable: true,
+    show: true,
+    showDescription: false,
+    showExtraInfo: false,
+    showTitle: true,
+    template: 'template->list->meals->short-title',
+    selectableItems: [],
+    editable: false,
+    maxItems: 12,
+    categories: ['category->meals->red-wines'],
+    displayInfo: {
+      es: {
+        title: 'Vinos Tintos del resto de España',
+        slug: 'vinos-tintos-del-resto-de-espana'
+      },
+      en: {
+        title: 'Red Wines from the Rest of Spain',
+        slug: 'red-wines-from-the-rest-of-spain'
+      },
+      de: {
+        title: 'Rotweine aus dem rest von Spanien',
+        slug: 'rotweine-aus-dem-rest-von-spanien'
+      },
+      nb: {
+        title: 'Røde viner',
+        slug: 'rode-viner'
+      },
+      da: {
+        title: 'Røde viner',
+        slug: 'rode-viner'
+      },
+      sv: {
+        title: 'Röda viner',
+        slug: 'roda-viner'
+      },
+      fr: {
+        title: 'Vins rouges',
+        slug: 'vins-rouges'
+      },
+      nl: {
+        title: 'Rode wijnen',
+        slug: 'rode-wijnen'
+      }
+    },
+    hasVariants: false,
+    variants: '',
+    items: [
+      'listItem->product->wines->-10',
+      'listItem->product->wines->-11',
+      'listItem->product->wines->-12',
+      'listItem->product->wines->-13',
+      'listItem->product->wines->-14',
+      'listItem->product->wines->-15'
+    ]
+  } as ProductList,
+  'list->wines->rose-wines-1': {
+    id: 'list->wines->rose-wines-1',
+    type: 'product',
+    active: true,
+    sortable: true,
+    show: true,
+    showDescription: false,
+    showExtraInfo: false,
+    showTitle: true,
+    template: 'template->list->meals->short-title',
+    defaultImg: '',
+    mainImg: '',
+    selectableItems: [],
+    editable: false,
+    maxItems: 12,
+    categories: ['category->meals->rose-wines'],
+    displayInfo: {
+      es: {
+        title: 'Vinos Rosados',
+        slug: 'vinos-rosados'
+      },
+      en: {
+        title: 'Rosé Wines',
+        slug: 'rose-wines'
+      },
+      de: {
+        title: 'Roséweine',
+        slug: 'roseweine'
+      },
+      nb: {
+        title: 'Rosé Wines',
+        slug: 'rose-wines'
+      },
+      da: {
+        title: 'Rosé Wines',
+        slug: 'rose-wines'
+      },
+      sv: {
+        title: 'Rosé Wines',
+        slug: 'rose-wines'
+      },
+      fr: {
+        title: 'Vins rosés',
+        slug: 'vins-roses'
+      },
+      nl: {
+        title: 'Rosé wijnen',
+        slug: 'rose-wijnen'
+      }
+    },
+    hasVariants: false,
+    variants: '',
+    items: ['listItem->product->wines->-7']
+  } as ProductList,
+
   'list->info->allergens': {
     id: 'list->info->allergens',
     type: 'product',
@@ -2032,6 +2335,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showDescription: false,
     showExtraInfo: false,
@@ -2076,54 +2380,10 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       }
     },
     items: [
-      'listItem->product->meals->artisan-garlic-bread-from-ingenio-1',
-      'listItem->product->meals->artisan-bread-from-ingenio-with-canarian-sauces-2',
-      'listItem->product->meals->canarian-cheese-platter-3',
-      'listItem->product->meals->by-rocio-prawns-in-sizzling-garlic-oil-4',
-      'listItem->product->meals->iberian-ham-5',
-      'listItem->product->meals->eggplant-chips-with-palm-honey-and-sesame-7',
-      'listItem->product->meals->bao-buns-8',
-      'listItem->product->meals->kataifi-skewer-9',
-      'listItem->product->meals->herreno-cheese-10',
-      'listItem->product->meals->cubes-of-suckling-pig-roasted-at-low-temperature-and-confitted-11',
-      'listItem->product->meals->nachos-with-guacamole-cheddar-cheese-and-pico-de-gallo-sauce-12',
-      'listItem->product->meals->som-tam-salad-1',
-      'listItem->product->meals->smoked-salmon-salad-2',
-      'listItem->product->meals->canarian-beetroot-carpaccio-3',
-      'listItem->product->meals->by-rocio-poke-boll-caesar-4',
-      'listItem->product->meals->sauteed-chickpeas-1',
-      'listItem->product->meals->mango-gazpacho-3',
-      'listItem->product->meals->norwegian-marinated-herring-6',
-      'listItem->product->meals->seafood-pasta-8',
-      'listItem->product->meals->cod-fillet-2',
-      'listItem->product->meals->aquanaria-sea-bass-3',
-      'listItem->product->meals->fresh-fish-of-the-day-and-its-garnish-9',
-      'listItem->product->meals->our-fried-squid-with-garnish-10',
-      'listItem->product->meals->gratinated-iberian-secret-11',
-      'listItem->product->meals->by-rocio-style-red-curry-masala-12',
-      'listItem->product->meals->carved-angus-ribeye-7',
-      'listItem->product->meals->our-chef-s-suggestions->mixed-paella-1',
-      'listItem->product->meals->our-chef-s-suggestions->fish-and-shellfish-paella-2',
-      'listItem->product->meals->our-chef-s-suggestions->meat-paella-with-truffle-sauce-3',
-      'listItem->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tartar-4',
-      'listItem->product->meals->our-chef-s-suggestions->angus-steak-tartar-5',
-      'listItem->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tataki-7',
-      'listItem->product->meals->artisan-loaf-sandwich-with-squid-1',
-      'listItem->product->meals->homemade-bread-with-black-pork-in-lard-2',
-      'listItem->product->meals->homemade-bread-with-chicken-3',
-      'listItem->product->meals->homemade-bread-with-chorizo-from-teror-4',
-      'listItem->product->meals->mexican-iberian-pork-burger-8',
-      'listItem->product->meals->angus-beef-burger-9',
       'listItem->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1',
       'listItem->product->meals->childrens->ham-and-cheese-omelette-6',
       'listItem->product->meals->childrens->hamburger-with-tomato-and-cheese-3',
-      'listItem->product->meals->childrens->pizza-4',
-      'listItem->product->desserts->our-creamy-cheesecake-1',
-      'listItem->product->desserts->homemade-sweets-from-tejeda-2',
-      'listItem->product->desserts->trompe-l-oeil-ferrero-rocher-3',
-      'listItem->product->desserts->banana-ice-cream-4',
-      'listItem->product->desserts->homemade-ice-cream-5',
-      'listItem->product->desserts->cold-berry-soup-with-yogurt-7'
+      'listItem->product->meals->childrens->pizza-4'
     ]
   } as ProductList,
   'list->info->gallery': {
@@ -2134,55 +2394,13 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showTitle: false,
     showExtraInfo: false,
     showDescription: false,
     template: 'template->list->default',
-    selectableItems: [
-      'listItem->product->meals->artisan-garlic-bread-from-ingenio-1',
-      'listItem->product->meals->artisan-bread-from-ingenio-with-canarian-sauces-2',
-      'listItem->product->meals->canarian-cheese-platter-3',
-      'listItem->product->meals->by-rocio-prawns-in-sizzling-garlic-oil-4',
-      'listItem->product->meals->iberian-ham-5',
-      'listItem->product->meals->canarian-wrinkled-potatoes-6',
-      'listItem->product->meals->eggplant-chips-with-palm-honey-and-sesame-7',
-      'listItem->product->meals->bao-buns-8',
-      'listItem->product->meals->kataifi-skewer-9',
-      'listItem->product->meals->herreno-cheese-10',
-      'listItem->product->meals->cubes-of-suckling-pig-roasted-at-low-temperature-and-confitted-11',
-      'listItem->product->meals->nachos-with-guacamole-cheddar-cheese-and-pico-de-gallo-sauce-12',
-      'listItem->product->meals->canarian-beetroot-carpaccio-3',
-      'listItem->product->meals->by-rocio-poke-boll-caesar-4',
-      'listItem->product->meals->sauteed-chickpeas-1',
-      'listItem->product->meals->mango-gazpacho-3',
-      'listItem->product->meals->seafood-pasta-8',
-      'listItem->product->meals->fresh-fish-of-the-day-and-its-garnish-9',
-      'listItem->product->meals->our-fried-squid-with-garnish-10',
-      'listItem->product->meals->gratinated-iberian-secret-11',
-      'listItem->product->meals->by-rocio-style-red-curry-masala-12',
-      'listItem->product->meals->carved-angus-ribeye-7',
-      'listItem->product->meals->our-chef-s-suggestions->mixed-paella-1',
-      'listItem->product->meals->our-chef-s-suggestions->fish-and-shellfish-paella-2',
-      'listItem->product->meals->our-chef-s-suggestions->meat-paella-with-truffle-sauce-3',
-      'listItem->product->meals->our-chef-s-suggestions->angus-steak-tartar-5',
-      'listItem->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tataki-7',
-      'listItem->product->meals->artisan-loaf-sandwich-with-squid-1',
-      'listItem->product->meals->homemade-bread-with-black-pork-in-lard-2',
-      'listItem->product->meals->homemade-bread-with-chicken-3',
-      'listItem->product->meals->homemade-bread-with-chorizo-from-teror-4',
-      'listItem->product->meals->mexican-iberian-pork-burger-8',
-      'listItem->product->meals->angus-beef-burger-9',
-      'listItem->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1',
-      'listItem->product->meals->childrens->ham-and-cheese-omelette-6',
-      'listItem->product->meals->childrens->hamburger-with-tomato-and-cheese-3',
-      'listItem->product->meals->childrens->pizza-4',
-      'listItem->product->desserts->our-creamy-cheesecake-1',
-      'listItem->product->desserts->homemade-sweets-from-tejeda-2',
-      'listItem->product->desserts->trompe-l-oeil-ferrero-rocher-3',
-      'listItem->product->desserts->banana-ice-cream-4',
-      'listItem->product->desserts->homemade-ice-cream-5'
-    ],
+    selectableItems: [],
     editable: false,
     maxItems: 50,
     categories: [],
@@ -2220,16 +2438,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
         slug: 'galerij'
       }
     },
-    items: [
-      'listItem->product->meals->norwegian-marinated-herring-6',
-      'listItem->product->meals->aquanaria-sea-bass-3',
-      'listItem->product->meals->cod-fillet-2',
-      'listItem->product->meals->rack-of-lamb-5',
-      'listItem->product->meals->our-chef-s-suggestions->betanzos-t-bone-cutlet-6',
-      'listItem->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tartar-4',
-      'listItem->product->meals->som-tam-salad-1',
-      'listItem->product->meals->smoked-salmon-salad-2'
-    ]
+    items: []
   } as ProductList,
   'list->info->sanitary-measures-1': {
     id: 'list->info->sanitary-measures-1',
@@ -2239,6 +2448,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
@@ -2299,6 +2509,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
@@ -2359,6 +2570,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     mainImg: '',
     sortable: true,
     hasVariants: false,
+    variants: '',
     show: true,
     showExtraInfo: false,
     showDescription: false,
@@ -2410,154 +2622,156 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       'listItem->info->information-5',
       'listItem->info->information-6'
     ]
-  } as InfoList,
-  'list->meals->extra-menu': {
-    id: 'list->meals->extra-menu',
-    type: 'product',
-    active: false,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    show: false,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->extra-menu'],
-    displayInfo: {
-      es: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      en: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      de: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      nb: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      da: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      sv: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      fr: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      },
-      nl: {
-        title: 'Extra menu',
-        slug: 'extra-menu'
-      }
-    },
-    items: [
-      'listItem->product->meals->extra-menu->-1',
-      'listItem->product->meals->extra-menu->-2',
-      'listItem->product->meals->extra-menu->-3',
-      'listItem->product->meals->extra-menu->-4',
-      'listItem->product->meals->extra-menu->-5',
-      'listItem->product->meals->extra-menu->-6',
-      'listItem->product->meals->extra-menu->-7',
-      'listItem->product->meals->extra-menu->-8',
-      'listItem->product->meals->extra-menu->-9',
-      'listItem->product->meals->extra-menu->-10',
-      'listItem->product->meals->extra-menu->-11',
-      'listItem->product->meals->extra-menu->-12',
-      'listItem->product->meals->extra-menu->-13',
-      'listItem->product->meals->extra-menu->-14',
-      'listItem->product->meals->extra-menu->-15',
-      'listItem->product->meals->extra-menu->-16',
-      'listItem->product->meals->extra-menu->-17',
-      'listItem->product->meals->extra-menu->-19',
-      'listItem->product->meals->extra-menu->-19',
-      'listItem->product->meals->extra-menu->-20'
-    ]
-  } as ProductList,
-  'list->meals->default': {
-    id: 'list->meals->default',
-    type: 'product',
-    active: false,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    show: false,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    editable: true,
-    maxItems: 8,
-    template: 'template->list->default',
-    categories: ['category->default'],
-    displayInfo: {
-      es: {
-        title: '',
-        slug: ''
-      },
-      en: {
-        title: '',
-        slug: ''
-      },
-      de: {
-        title: '',
-        slug: ''
-      },
-      nb: {
-        title: '',
-        slug: ''
-      },
-      da: {
-        title: '',
-        slug: ''
-      },
-      sv: {
-        title: '',
-        slug: ''
-      },
-      fr: {
-        title: '',
-        slug: ''
-      },
-      nl: {
-        title: '',
-        slug: ''
-      }
-    },
-    selectableItems: [
-      'listItem->product->meals->default->-4',
-      'listItem->product->meals->default->-5',
-      'listItem->product->meals->default->-6',
-      'listItem->product->meals->default->-7',
-      'listItem->product->meals->default->-8',
-      'listItem->product->meals->default->-9',
-      'listItem->product->meals->default->-10',
-      'listItem->product->meals->default->-11',
-      'listItem->product->meals->default->-12',
-      'listItem->product->meals->default->-13',
-      'listItem->product->meals->default->-14',
-      'listItem->product->meals->default->-15',
-      'listItem->product->meals->default->-16',
-      'listItem->product->meals->default->-17',
-      'listItem->product->meals->default->-18',
-      'listItem->product->meals->default->-19',
-      'listItem->product->meals->default->-20'
-    ],
-    items: [
-      'listItem->product->meals->suggestions-of-the-day->norwegian-pickled-herring-1',
-      'listItem->product->meals->suggestions-of-the-day->steak-tartar-2',
-      'listItem->product->meals->suggestions-of-the-day->tuna-tartare-3'
-    ]
-  } as ProductList
+  } as InfoList
+  // 'list->meals->extra-menu': {
+  //   id: 'list->meals->extra-menu',
+  //   type: 'product',
+  //   active: false,
+  //   defaultImg: '',
+  //   mainImg: '',
+  //   sortable: true,
+  //   hasVariants: false,
+  //   variants: '',
+  //   show: false,
+  //   showDescription: false,
+  //   showExtraInfo: false,
+  //   showTitle: false,
+  //   template: 'template->list->default',
+  //   selectableItems: [],
+  //   editable: false,
+  //   maxItems: 12,
+  //   categories: ['category->meals->extra-menu'],
+  //   displayInfo: {
+  //     es: {
+  //       title: 'Extra menu',
+  //       slug: 'extra-menu'
+  //     },
+  //     en: {
+  //       title: 'Extra menu',
+  //       slug: 'extra-menu'
+  //     },
+  //     de: {
+  //       title: 'Extra menu',
+  //       slug: 'extra-menu'
+  //     },
+  //     nb: {
+  //       title: 'Extra menu',
+  //       slug: 'extra-menu'
+  //     },
+  //     da: {
+  //       title: 'Extra menu',
+  //       slug: 'extra-menu'
+  //     },
+  //     sv: {
+  //       title: 'Extra menu',
+  //       slug: 'extra-menu'
+  //     },
+  //     fr: {
+  //       title: 'Extra menu',
+  //       slug: 'extra-menu'
+  //     },
+  //     nl: {
+  //       title: 'Extra menu',
+  //       slug: 'extra-menu'
+  //     }
+  //   },
+  //   items: [
+  //     'listItem->product->meals->extra-menu->-1',
+  //     'listItem->product->meals->extra-menu->-2',
+  //     'listItem->product->meals->extra-menu->-3',
+  //     'listItem->product->meals->extra-menu->-4',
+  //     'listItem->product->meals->extra-menu->-5',
+  //     'listItem->product->meals->extra-menu->-6',
+  //     'listItem->product->meals->extra-menu->-7',
+  //     'listItem->product->meals->extra-menu->-8',
+  //     'listItem->product->meals->extra-menu->-9',
+  //     'listItem->product->meals->extra-menu->-10',
+  //     'listItem->product->meals->extra-menu->-11',
+  //     'listItem->product->meals->extra-menu->-12',
+  //     'listItem->product->meals->extra-menu->-13',
+  //     'listItem->product->meals->extra-menu->-14',
+  //     'listItem->product->meals->extra-menu->-15',
+  //     'listItem->product->meals->extra-menu->-16',
+  //     'listItem->product->meals->extra-menu->-17',
+  //     'listItem->product->meals->extra-menu->-19',
+  //     'listItem->product->meals->extra-menu->-19',
+  //     'listItem->product->meals->extra-menu->-20'
+  //   ]
+  // } as ProductList,
+  // 'list->meals->default': {
+  //   id: 'list->meals->default',
+  //   type: 'product',
+  //   active: false,
+  //   defaultImg: '',
+  //   mainImg: '',
+  //   sortable: true,
+  //   hasVariants: false,
+  //   variants: '',
+  //   show: false,
+  //   showExtraInfo: false,
+  //   showDescription: false,
+  //   showTitle: false,
+  //   editable: true,
+  //   maxItems: 8,
+  //   template: 'template->list->default',
+  //   categories: ['category->default'],
+  //   displayInfo: {
+  //     es: {
+  //       title: '',
+  //       slug: ''
+  //     },
+  //     en: {
+  //       title: '',
+  //       slug: ''
+  //     },
+  //     de: {
+  //       title: '',
+  //       slug: ''
+  //     },
+  //     nb: {
+  //       title: '',
+  //       slug: ''
+  //     },
+  //     da: {
+  //       title: '',
+  //       slug: ''
+  //     },
+  //     sv: {
+  //       title: '',
+  //       slug: ''
+  //     },
+  //     fr: {
+  //       title: '',
+  //       slug: ''
+  //     },
+  //     nl: {
+  //       title: '',
+  //       slug: ''
+  //     }
+  //   },
+  //   selectableItems: [
+  //     'listItem->product->meals->default->-4',
+  //     'listItem->product->meals->default->-5',
+  //     'listItem->product->meals->default->-6',
+  //     'listItem->product->meals->default->-7',
+  //     'listItem->product->meals->default->-8',
+  //     'listItem->product->meals->default->-9',
+  //     'listItem->product->meals->default->-10',
+  //     'listItem->product->meals->default->-11',
+  //     'listItem->product->meals->default->-12',
+  //     'listItem->product->meals->default->-13',
+  //     'listItem->product->meals->default->-14',
+  //     'listItem->product->meals->default->-15',
+  //     'listItem->product->meals->default->-16',
+  //     'listItem->product->meals->default->-17',
+  //     'listItem->product->meals->default->-18',
+  //     'listItem->product->meals->default->-19',
+  //     'listItem->product->meals->default->-20'
+  //   ],
+  //   items: [
+  //     'listItem->product->meals->suggestions-of-the-day->norwegian-pickled-herring-1',
+  //     'listItem->product->meals->suggestions-of-the-day->steak-tartar-2',
+  //     'listItem->product->meals->suggestions-of-the-day->tuna-tartare-3'
+  //   ]
+  // } as ProductList
 };

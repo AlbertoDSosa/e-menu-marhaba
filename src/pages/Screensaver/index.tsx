@@ -6,10 +6,13 @@ import {
   IonIcon,
   IonButton,
   IonText,
-  IonLoading
+  IonLoading,
+  IonGrid,
+  IonRow,
+  IonCol
 } from '@ionic/react';
 import { Autoplay } from 'swiper/modules';
-import { Swiper, SwiperSlide, SwiperSlideProps } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { play, restaurant, pause } from 'ionicons/icons';
 import { Image, Slide } from '../../definitions/models';
 
@@ -122,9 +125,9 @@ const ScreensaverPage: React.FC = () => {
           }}
         >
           <img
-            width={200}
+            width={150}
             height={150}
-            src="assets/img/flags/qr-flag-bw.png"
+            src="assets/img/qr/qr-web.png"
             alt="touchscreen"
           />
           <IonText>
@@ -133,29 +136,35 @@ const ScreensaverPage: React.FC = () => {
             </h2>
           </IonText>
         </div>
-        <Swiper
-          modules={[Autoplay]}
-          speed={1000}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false
-          }}
-          onSwiper={(swiper) => {
-            setSlider(swiper);
-          }}
-        >
-          {screensaver.slides?.map((slideId: string) => {
-            const slide: Slide = slides.dictionary[slideId];
-            const slideImg: Image =
-              images.dictionary[slide?.mainImg || slide?.defaultImg];
+        <IonGrid style={{ padding: 0 }}>
+          <IonRow style={{ height: '100vh' }} class="ion-align-items-center">
+            <IonCol>
+              <Swiper
+                modules={[Autoplay]}
+                speed={1000}
+                autoplay={{
+                  delay: 5000,
+                  disableOnInteraction: false
+                }}
+                onSwiper={(swiper) => {
+                  setSlider(swiper);
+                }}
+              >
+                {screensaver.slides?.map((slideId: string) => {
+                  const slide: Slide = slides.dictionary[slideId];
+                  const slideImg: Image =
+                    images.dictionary[slide?.mainImg || slide?.defaultImg];
 
-            return (
-              <SwiperSlide key={slideId}>
-                <img src={slideImg.full.src} alt={slideImg.full.title} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+                  return (
+                    <SwiperSlide key={slideId}>
+                      <img src={slideImg.full.src} alt={slideImg.full.title} />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </IonCol>
+          </IonRow>
+        </IonGrid>
       </IonContent>
     </IonPage>
   );

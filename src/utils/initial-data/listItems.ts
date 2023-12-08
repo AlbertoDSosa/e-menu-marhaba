@@ -1,9 +1,9 @@
 import { InfoListItem, ProductListItem } from 'definitions/models';
 
 export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
-  ///// meals->to-share-or-to-snack->
-  'listItem->product->meals->artisan-garlic-bread-from-ingenio-1': {
-    id: 'listItem->product->meals->artisan-garlic-bread-from-ingenio-1',
+  ///// meals->starters->
+  'listItem->product->meals->starters->vegetable-and-meat-soup-1': {
+    id: 'listItem->product->meals->starters->vegetable-and-meat-soup-1',
     show: true,
     showItemDetail: true,
     template: '',
@@ -13,11 +13,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showExtraInfo: false,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->meals->artisan-garlic-bread-from-ingenio-1'
+    itemId: 'item->product->meals->starters->vegetable-and-meat-soup-1'
   },
-  'listItem->product->meals->artisan-bread-from-ingenio-with-canarian-sauces-2': {
-    id:
-      'listItem->product->meals->artisan-bread-from-ingenio-with-canarian-sauces-2',
+  'listItem->product->meals->starters->arab-patty-with-cheese-and-honey-2': {
+    id: 'listItem->product->meals->starters->arab-patty-with-cheese-and-honey-2',
     show: true,
     showItemDetail: true,
     template: '',
@@ -25,26 +24,52 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->arab-patty-with-cheese-and-honey-2'
+  },
+  'listItem->product->meals->starters->arab-patty-with-vegetables-3': {
+    id: 'listItem->product->meals->starters->arab-patty-with-vegetables-3',
+    show: true,
+    showItemDetail: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->arab-patty-with-vegetables-3'
+  },
+  'listItem->product->meals->starters->arab-patty-with-spinach-4': {
+    id: 'listItem->product->meals->starters->arab-patty-with-spinach-4',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->arab-patty-with-spinach-4'
+  },
+  'listItem->product->meals->starters->arab-patty-with-chicken-and-spices-5': {
+    id: 'listItem->product->meals->starters->arab-patty-with-chicken-and-spices-5',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
     showPrice: true,
     showDescription: false,
     itemId:
-      'item->product->meals->artisan-bread-from-ingenio-with-canarian-sauces-2'
+      'item->product->meals->starters->arab-patty-with-chicken-and-spices-5'
   },
-  'listItem->product->meals->canarian-cheese-platter-3': {
-    id: 'listItem->product->meals->canarian-cheese-platter-3',
-    show: true,
-    showItemDetail: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->canarian-cheese-platter-3'
-  },
-  'listItem->product->meals->by-rocio-prawns-in-sizzling-garlic-oil-4': {
-    id: 'listItem->product->meals->by-rocio-prawns-in-sizzling-garlic-oil-4',
+  'listItem->product->meals->starters->arab-patty-with-meat-and-pinions-6': {
+    id: 'listItem->product->meals->starters->arab-patty-with-meat-and-pinions-6',
     show: true,
     template: '',
     active: true,
@@ -54,10 +79,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->meals->by-rocio-prawns-in-sizzling-garlic-oil-4'
+    itemId: 'item->product->meals->starters->arab-patty-with-meat-and-pinions-6'
   },
-  'listItem->product->meals->iberian-ham-5': {
-    id: 'listItem->product->meals->iberian-ham-5',
+  'listItem->product->meals->starters->chickpeas-croquettes-7': {
+    id: 'listItem->product->meals->starters->chickpeas-croquettes-7',
     show: true,
     template: '',
     active: true,
@@ -67,36 +92,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->meals->iberian-ham-5'
+    itemId: 'item->product->meals->starters->chickpeas-croquettes-7'
   },
-  'listItem->product->meals->canarian-wrinkled-potatoes-6': {
-    id: 'listItem->product->meals->canarian-wrinkled-potatoes-6',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->canarian-wrinkled-potatoes-6'
-  },
-  'listItem->product->meals->eggplant-chips-with-palm-honey-and-sesame-7': {
-    id: 'listItem->product->meals->eggplant-chips-with-palm-honey-and-sesame-7',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->eggplant-chips-with-palm-honey-and-sesame-7'
-  },
-  'listItem->product->meals->bao-buns-8': {
-    id: 'listItem->product->meals->bao-buns-8',
+  'listItem->product->meals->starters->arab-patty-with-seadfood-8': {
+    id: 'listItem->product->meals->starters->arab-patty-with-seadfood-8',
     show: true,
     template: '',
     active: true,
@@ -106,10 +105,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: true,
-    itemId: 'item->product->meals->bao-buns-8'
+    itemId: 'item->product->meals->starters->arab-patty-with-seadfood-8'
   },
-  'listItem->product->meals->kataifi-skewer-9': {
-    id: 'listItem->product->meals->kataifi-skewer-9',
+  'listItem->product->meals->starters->spinachs-croquettes-9': {
+    id: 'listItem->product->meals->starters->spinachs-croquettes-9',
     show: true,
     template: '',
     active: true,
@@ -119,10 +118,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->meals->kataifi-skewer-9'
+    itemId: 'item->product->meals->starters->spinachs-croquettes-9'
   },
-  'listItem->product->meals->herreno-cheese-10': {
-    id: 'listItem->product->meals->herreno-cheese-10',
+  'listItem->product->meals->starters->lamb-croquettes-10': {
+    id: 'listItem->product->meals->starters->lamb-croquettes-10',
     show: true,
     template: '',
     active: true,
@@ -132,11 +131,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->meals->herreno-cheese-10'
+    itemId: 'item->product->meals->starters->lamb-croquettes-10'
   },
-  'listItem->product->meals->cubes-of-suckling-pig-roasted-at-low-temperature-and-confitted-11': {
-    id:
-      'listItem->product->meals->cubes-of-suckling-pig-roasted-at-low-temperature-and-confitted-11',
+  'listItem->product->meals->starters->hummus-11': {
+    id: 'listItem->product->meals->starters->hummus-11',
     show: true,
     template: '',
     active: true,
@@ -146,12 +144,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId:
-      'item->product->meals->cubes-of-suckling-pig-roasted-at-low-temperature-and-confitted-11'
+    itemId: 'item->product->meals->starters->hummus-11'
   },
-  'listItem->product->meals->nachos-with-guacamole-cheddar-cheese-and-pico-de-gallo-sauce-12': {
-    id:
-      'listItem->product->meals->nachos-with-guacamole-cheddar-cheese-and-pico-de-gallo-sauce-12',
+  'listItem->product->meals->starters->-12': {
+    id: 'listItem->product->meals->starters->-12',
     show: true,
     template: '',
     active: true,
@@ -161,52 +157,142 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId:
-      'item->product->meals->nachos-with-guacamole-cheddar-cheese-and-pico-de-gallo-sauce-12'
+    itemId: 'item->product->meals->starters->-12'
   },
-  'listItem->product->meals->the-chef-s-appetizer-13': {
-    id: 'listItem->product->meals->the-chef-s-appetizer-13',
+  'listItem->product->meals->starters->-13': {
+    id: 'listItem->product->meals->starters->-13',
+    show: true,
+    showItemDetail: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->-13'
+  },
+  'listItem->product->meals->starters->-14': {
+    id: 'listItem->product->meals->starters->-14',
     show: true,
     template: '',
     active: true,
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
-    showItemDetail: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->-14'
+  },
+  'listItem->product->meals->starters->-15': {
+    id: 'listItem->product->meals->starters->-15',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->-15'
+  },
+  'listItem->product->meals->starters->-16': {
+    id: 'listItem->product->meals->starters->-16',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->-16'
+  },
+  'listItem->product->meals->starters->-17': {
+    id: 'listItem->product->meals->starters->-17',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->-17'
+  },
+  'listItem->product->meals->starters->-18': {
+    id: 'listItem->product->meals->starters->-18',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
     showPrice: true,
     showDescription: true,
-    itemId: 'item->product->meals->the-chef-s-appetizer-13'
+    itemId: 'item->product->meals->starters->-18'
+  },
+  'listItem->product->meals->starters->-19': {
+    id: 'listItem->product->meals->starters->-19',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->-19'
+  },
+  'listItem->product->meals->starters->-20': {
+    id: 'listItem->product->meals->starters->-20',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->-20'
+  },
+  'listItem->product->meals->starters->-21': {
+    id: 'listItem->product->meals->starters->-21',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->-21'
+  },
+  'listItem->product->meals->starters->-22': {
+    id: 'listItem->product->meals->starters->-22',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->starters->-22'
   },
 
-  ///// meals->something-fresh->
-  'listItem->product->meals->som-tam-salad-1': {
-    id: 'listItem->product->meals->som-tam-salad-1',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->meals->som-tam-salad-1'
-  },
-  'listItem->product->meals->smoked-salmon-salad-2': {
-    id: 'listItem->product->meals->smoked-salmon-salad-2',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->meals->smoked-salmon-salad-2'
-  },
-  'listItem->product->meals->canarian-beetroot-carpaccio-3': {
-    id: 'listItem->product->meals->canarian-beetroot-carpaccio-3',
+  ///// meals->skewers->
+  'listItem->product->meals->skewers->-1': {
+    id: 'listItem->product->meals->skewers->-1',
     show: true,
     template: '',
     active: true,
@@ -216,10 +302,64 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->meals->canarian-beetroot-carpaccio-3'
+    itemId: 'item->product->meals->skewers->-1'
   },
-  'listItem->product->meals->by-rocio-poke-boll-caesar-4': {
-    id: 'listItem->product->meals->by-rocio-poke-boll-caesar-4',
+  'listItem->product->meals->skewers->-2': {
+    id: 'listItem->product->meals->skewers->-2',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->skewers->-2'
+  },
+  'listItem->product->meals->skewers->-3': {
+    id: 'listItem->product->meals->skewers->-3',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->skewers->-3'
+  },
+  'listItem->product->meals->skewers->-4': {
+    id: 'listItem->product->meals->skewers->-4',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->skewers->-4'
+  },
+
+  ///// meals->cous-cous->
+  'listItem->product->meals->cous-cous->-1': {
+    id: 'listItem->product->meals->cous-cous->-1',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->cous-cous->-1'
+  },
+  'listItem->product->meals->cous-cous->-2': {
+    id: 'listItem->product->meals->cous-cous->-2',
     show: true,
     template: '',
     active: true,
@@ -229,12 +369,211 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: true,
-    itemId: 'item->product->meals->by-rocio-poke-boll-caesar-4'
+    itemId: 'item->product->meals->cous-cous->-2'
+  },
+  'listItem->product->meals->cous-cous->-3': {
+    id: 'listItem->product->meals->cous-cous->-3',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->cous-cous->-3'
+  },
+  'listItem->product->meals->cous-cous->-4': {
+    id: 'listItem->product->meals->cous-cous->-4',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->cous-cous->-4'
+  },
+  'listItem->product->meals->cous-cous->-5': {
+    id: 'listItem->product->meals->cous-cous->-5',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->cous-cous->-5'
+  },
+  'listItem->product->meals->cous-cous->-6': {
+    id: 'listItem->product->meals->cous-cous->-6',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->cous-cous->-6'
+  },
+
+  ///// meals->tajin->
+  'listItem->product->meals->tajin->-1': {
+    id: 'listItem->product->meals->tajin->-1',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->meals->tajin->-1'
+  },
+  'listItem->product->meals->tajin->-2': {
+    id: 'listItem->product->meals->tajin->-2',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->meals->tajin->-2'
+  },
+  'listItem->product->meals->tajin->-3': {
+    id: 'listItem->product->meals->tajin->-3',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->meals->tajin->-3'
+  },
+  'listItem->product->meals->tajin->-4': {
+    id: 'listItem->product->meals->tajin->-4',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showDescription: false,
+    showItemDetail: true,
+    showPrice: true,
+    itemId: 'item->product->meals->tajin->-4'
+  },
+  'listItem->product->meals->tajin->-5': {
+    id: 'listItem->product->meals->tajin->-5',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showDescription: false,
+    showItemDetail: true,
+    showPrice: true,
+    itemId: 'item->product->meals->tajin->-5'
+  },
+
+  ///// meals->salads->
+  'listItem->product->meals->salads->-1': {
+    id: 'listItem->product->meals->salads->-1',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->meals->salads->-1'
+  },
+  'listItem->product->meals->salads->-2': {
+    id: 'listItem->product->meals->salads->-2',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->meals->salads->-2'
+  },
+  'listItem->product->meals->salads->-3': {
+    id: 'listItem->product->meals->salads->-3',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: false,
+    itemId: 'item->product->meals->salads->-3'
+  },
+  'listItem->product->meals->salads->-4': {
+    id: 'listItem->product->meals->salads->-4',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->meals->salads->-4'
+  },
+  'listItem->product->meals->salads->-5': {
+    id: 'listItem->product->meals->salads->-5',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->meals->salads->-5'
+  },
+  'listItem->product->meals->salads->-6': {
+    id: 'listItem->product->meals->salads->-6',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: true,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->meals->salads->-6'
   },
 
   ///// meals->spoon-dishes->
-  'listItem->product->meals->sauteed-chickpeas-1': {
-    id: 'listItem->product->meals->sauteed-chickpeas-1',
+  'listItem->product->meals->spoon-dishes->-1': {
+    id: 'listItem->product->meals->spoon-dishes->-1',
     show: true,
     template: '',
     active: true,
@@ -244,10 +583,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->meals->sauteed-chickpeas-1'
+    itemId: 'item->product->meals->spoon-dishes->-1'
   },
-  'listItem->product->meals->cream-of-courgette-soup-2': {
-    id: 'listItem->product->meals->cream-of-courgette-soup-2',
+  'listItem->product->meals->spoon-dishes->-2': {
+    id: 'listItem->product->meals->spoon-dishes->-2',
     show: true,
     template: '',
     active: true,
@@ -257,10 +596,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->meals->cream-of-courgette-soup-2'
+    itemId: 'item->product->meals->spoon-dishes->-2'
   },
-  'listItem->product->meals->mango-gazpacho-3': {
-    id: 'listItem->product->meals->mango-gazpacho-3',
+  'listItem->product->meals->spoon-dishes->-3': {
+    id: 'listItem->product->meals->spoon-dishes->-3',
     show: true,
     template: '',
     active: true,
@@ -270,10 +609,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->meals->mango-gazpacho-3'
+    itemId: 'item->product->meals->spoon-dishes->-3'
   },
-  'listItem->product->meals->soup-of-the-day-4': {
-    id: 'listItem->product->meals->soup-of-the-day-4',
+  'listItem->product->meals->spoon-dishes->-4': {
+    id: 'listItem->product->meals->spoon-dishes->-4',
     show: true,
     template: '',
     active: true,
@@ -283,12 +622,38 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: false,
     showPrice: true,
     showDescription: true,
-    itemId: 'item->product->meals->soup-of-the-day-4'
+    itemId: 'item->product->meals->spoon-dishes->-4'
+  },
+  'listItem->product->meals->spoon-dishes->-5': {
+    id: 'listItem->product->meals->spoon-dishes->-5',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->meals->spoon-dishes->-5'
+  },
+  'listItem->product->meals->spoon-dishes->-6': {
+    id: 'listItem->product->meals->spoon-dishes->-6',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->meals->spoon-dishes->-6'
   },
 
-  ///// meals->with-the-hands->fittings->
-  'listItem->product->meals->with-the-hands->fittings->chips-1': {
-    id: 'listItem->product->meals->with-the-hands->fittings->chips-1',
+  ///// meals->garnishes-or-side-dishes->
+  'listItem->product->meals->garnishes-or-side-dishes->chips-1': {
+    id: 'listItem->product->meals->garnishes-or-side-dishes->chips-1',
     show: true,
     template: '',
     active: true,
@@ -298,11 +663,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: false,
     showDescription: false,
     showPrice: false,
-    itemId: 'item->product->meals->fittings->chips-1'
+    itemId: 'item->product->meals->garnishes-or-side-dishes->chips-1'
   },
-  'listItem->product->meals->with-the-hands->fittings->wrinkled-potatoes-2': {
-    id:
-      'listItem->product->meals->with-the-hands->fittings->wrinkled-potatoes-2',
+  'listItem->product->meals->garnishes-or-side-dishes->wrinkled-potatoes-2': {
+    id: 'listItem->product->meals->garnishes-or-side-dishes->wrinkled-potatoes-2',
     show: true,
     template: '',
     active: true,
@@ -312,353 +676,66 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: false,
     showDescription: false,
     showPrice: false,
-    itemId: 'item->product->meals->fittings->wrinkled-potatoes-2'
-  },
-  'listItem->product->meals->with-the-hands->fittings->sweet-potato-fries-3': {
-    id:
-      'listItem->product->meals->with-the-hands->fittings->sweet-potato-fries-3',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showDescription: false,
-    showPrice: false,
-    itemId: 'item->product->meals->fittings->sweet-potato-fries-3'
-  },
-  'listItem->product->meals->with-the-hands->fittings->salad-4': {
-    id: 'listItem->product->meals->with-the-hands->fittings->salad-4',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showDescription: false,
-    showPrice: false,
-    itemId: 'item->product->meals->fittings->salad-4'
-  },
-  'listItem->product->meals->with-the-hands->fittings->basmati-rice-5': {
-    id: 'listItem->product->meals->with-the-hands->fittings->basmati-rice-5',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showDescription: false,
-    showPrice: false,
-    itemId: 'item->product->meals->fittings->basmati-rice-5'
-  },
-  'listItem->product->meals->with-the-hands->fittings->ratatouille-6': {
-    id: 'listItem->product->meals->with-the-hands->fittings->ratatouille-6',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showDescription: false,
-    showPrice: false,
-    itemId: 'item->product->meals->fittings->ratatouille-6'
-  },
-
-  ///// meals->sea-and-mountains->
-  'listItem->product->meals->tuna-in-tomato-with-fried-egg-yolk-1': {
-    id: 'listItem->product->meals->tuna-in-tomato-with-fried-egg-yolk-1',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->tuna-in-tomato-with-fried-egg-yolk-1'
-  },
-  'listItem->product->meals->cod-fillet-2': {
-    id: 'listItem->product->meals->cod-fillet-2',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->cod-fillet-2'
-  },
-  'listItem->product->meals->aquanaria-sea-bass-3': {
-    id: 'listItem->product->meals->aquanaria-sea-bass-3',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->aquanaria-sea-bass-3'
-  },
-  'listItem->product->meals->nigiris-of-smoked-sardines-4': {
-    id: 'listItem->product->meals->nigiris-of-smoked-sardines-4',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->nigiris-of-smoked-sardines-4'
-  },
-  'listItem->product->meals->rack-of-lamb-5': {
-    id: 'listItem->product->meals->rack-of-lamb-5',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->rack-of-lamb-5'
-  },
-  'listItem->product->meals->norwegian-marinated-herring-6': {
-    id: 'listItem->product->meals->norwegian-marinated-herring-6',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->meals->norwegian-marinated-herring-6'
-  },
-  'listItem->product->meals->carved-angus-ribeye-7': {
-    id: 'listItem->product->meals->carved-angus-ribeye-7',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->carved-angus-ribeye-7'
-  },
-  'listItem->product->meals->seafood-pasta-8': {
-    id: 'listItem->product->meals->seafood-pasta-8',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->meals->seafood-pasta-8'
-  },
-  'listItem->product->meals->fresh-fish-of-the-day-and-its-garnish-9': {
-    id: 'listItem->product->meals->fresh-fish-of-the-day-and-its-garnish-9',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->fresh-fish-of-the-day-and-its-garnish-9'
-  },
-  'listItem->product->meals->our-fried-squid-with-garnish-10': {
-    id: 'listItem->product->meals->our-fried-squid-with-garnish-10',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->our-fried-squid-with-garnish-10'
-  },
-  'listItem->product->meals->gratinated-iberian-secret-11': {
-    id: 'listItem->product->meals->gratinated-iberian-secret-11',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->gratinated-iberian-secret-11'
-  },
-  'listItem->product->meals->by-rocio-style-red-curry-masala-12': {
-    id: 'listItem->product->meals->by-rocio-style-red-curry-masala-12',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->by-rocio-style-red-curry-masala-12'
-  },
-  'listItem->product->meals->mexican-iberian-pork-burger-13': {
-    id: 'listItem->product->meals->mexican-iberian-pork-burger-13',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->mexican-iberian-pork-burger-8'
-  },
-  'listItem->product->meals->angus-beef-burger-14': {
-    id: 'listItem->product->meals->angus-beef-burger-14',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->angus-beef-burger-9'
-  },
-
-  ///// meals->our-chef-s-suggestions->
-  'listItem->product->meals->our-chef-s-suggestions->mixed-paella-1': {
-    id: 'listItem->product->meals->our-chef-s-suggestions->mixed-paella-1',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->meals->our-chef-s-suggestions->mixed-paella-1'
-  },
-  'listItem->product->meals->our-chef-s-suggestions->fish-and-shellfish-paella-2': {
-    id:
-      'listItem->product->meals->our-chef-s-suggestions->fish-and-shellfish-paella-2',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: true,
     itemId:
-      'item->product->meals->our-chef-s-suggestions->fish-and-shellfish-paella-2'
+      'item->product->meals->garnishes-or-side-dishes->wrinkled-potatoes-2'
   },
-  'listItem->product->meals->our-chef-s-suggestions->meat-paella-with-truffle-sauce-3': {
-    id:
-      'listItem->product->meals->our-chef-s-suggestions->meat-paella-with-truffle-sauce-3',
+  'listItem->product->meals->garnishes-or-side-dishes->sweet-potato-fries-3': {
+    id: 'listItem->product->meals->garnishes-or-side-dishes->sweet-potato-fries-3',
     show: true,
     template: '',
     active: true,
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: true,
-    itemId:
-      'item->product->meals->our-chef-s-suggestions->meat-paella-with-truffle-sauce-3'
-  },
-  'listItem->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tartar-4': {
-    id:
-      'listItem->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tartar-4',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
+    showItemDetail: false,
     showDescription: false,
-    showItemDetail: true,
-    showPrice: true,
+    showPrice: false,
     itemId:
-      'item->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tartar-4'
+      'item->product->meals->garnishes-or-side-dishes->sweet-potato-fries-3'
   },
-  'listItem->product->meals->our-chef-s-suggestions->angus-steak-tartar-5': {
-    id:
-      'listItem->product->meals->our-chef-s-suggestions->angus-steak-tartar-5',
+  'listItem->product->meals->garnishes-or-side-dishes->salad-4': {
+    id: 'listItem->product->meals->garnishes-or-side-dishes->salad-4',
     show: true,
     template: '',
     active: true,
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
+    showItemDetail: false,
     showDescription: false,
-    showItemDetail: true,
-    showPrice: true,
-    itemId: 'item->product->meals->our-chef-s-suggestions->angus-steak-tartar-5'
+    showPrice: false,
+    itemId: 'item->product->meals->garnishes-or-side-dishes->salad-4'
   },
-  'listItem->product->meals->our-chef-s-suggestions->betanzos-t-bone-cutlet-6': {
-    id:
-      'listItem->product->meals->our-chef-s-suggestions->betanzos-t-bone-cutlet-6',
+  'listItem->product->meals->garnishes-or-side-dishes->basmati-rice-5': {
+    id: 'listItem->product->meals->garnishes-or-side-dishes->basmati-rice-5',
     show: true,
     template: '',
     active: true,
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
+    showItemDetail: false,
     showDescription: false,
-    showItemDetail: true,
-    showPrice: true,
-    itemId:
-      'item->product->meals->our-chef-s-suggestions->betanzos-t-bone-cutlet-6'
+    showPrice: false,
+    itemId: 'item->product->meals->garnishes-or-side-dishes->basmati-rice-5'
   },
-  'listItem->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tataki-7': {
-    id:
-      'listItem->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tataki-7',
+  'listItem->product->meals->garnishes-or-side-dishes->ratatouille-6': {
+    id: 'listItem->product->meals->garnishes-or-side-dishes->ratatouille-6',
     show: true,
     template: '',
     active: true,
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
+    showItemDetail: false,
     showDescription: false,
-    showItemDetail: true,
-    showPrice: true,
-    itemId:
-      'item->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tataki-7'
+    showPrice: false,
+    itemId: 'item->product->meals->garnishes-or-side-dishes->ratatouille-6'
   },
 
   ///// desserts->
-  'listItem->product->desserts->our-creamy-cheesecake-1': {
-    id: 'listItem->product->desserts->our-creamy-cheesecake-1',
+  'listItem->product->desserts->-1': {
+    id: 'listItem->product->desserts->-1',
     show: true,
     template: '',
     active: true,
@@ -668,10 +745,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->desserts->our-creamy-cheesecake-1'
+    itemId: 'item->product->desserts->-1'
   },
-  'listItem->product->desserts->homemade-sweets-from-tejeda-2': {
-    id: 'listItem->product->desserts->homemade-sweets-from-tejeda-2',
+  'listItem->product->desserts->-2': {
+    id: 'listItem->product->desserts->-2',
     show: true,
     template: '',
     active: true,
@@ -681,10 +758,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->desserts->homemade-sweets-from-tejeda-2'
+    itemId: 'item->product->desserts->-2'
   },
-  'listItem->product->desserts->trompe-l-oeil-ferrero-rocher-3': {
-    id: 'listItem->product->desserts->trompe-l-oeil-ferrero-rocher-3',
+  'listItem->product->desserts->-3': {
+    id: 'listItem->product->desserts->-3',
     show: true,
     template: '',
     active: true,
@@ -694,10 +771,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->desserts->trompe-l-oeil-ferrero-rocher-3'
+    itemId: 'item->product->desserts->-3'
   },
-  'listItem->product->desserts->banana-ice-cream-4': {
-    id: 'listItem->product->desserts->banana-ice-cream-4',
+  'listItem->product->desserts->-4': {
+    id: 'listItem->product->desserts->-4',
     show: true,
     template: '',
     active: true,
@@ -707,10 +784,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->desserts->banana-ice-cream-4'
+    itemId: 'item->product->desserts->-4'
   },
-  'listItem->product->desserts->homemade-ice-cream-5': {
-    id: 'listItem->product->desserts->homemade-ice-cream-5',
+  'listItem->product->desserts->-5': {
+    id: 'listItem->product->desserts->-5',
     show: true,
     template: '',
     active: true,
@@ -720,10 +797,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->desserts->homemade-ice-cream-5'
+    itemId: 'item->product->desserts->-5'
   },
-  'listItem->product->desserts->our-chef-s-suggested-sweet-6': {
-    id: 'listItem->product->desserts->our-chef-s-suggested-sweet-6',
+  'listItem->product->desserts->-6': {
+    id: 'listItem->product->desserts->-6',
     show: true,
     template: '',
     active: true,
@@ -733,83 +810,70 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: false,
     showPrice: true,
     showDescription: false,
-    itemId: 'item->product->desserts->our-chef-s-suggested-sweet-6'
-  },
-  'listItem->product->desserts->cold-berry-soup-with-yogurt-7': {
-    id: 'listItem->product->desserts->cold-berry-soup-with-yogurt-7',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->desserts->cold-berry-soup-with-yogurt-7'
+    itemId: 'item->product->desserts->-6'
   },
 
   //// meals->breakfasts->
-  'listItem->product->meals->breakfasts->toast-with-tomato-puree-and-serrano-cured-ham-1': {
-    id:
-      'listItem->product->meals->breakfasts->toast-with-tomato-puree-and-serrano-cured-ham-1',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: false,
-    itemId:
-      'item->product->meals->breakfasts->toast-with-tomato-puree-and-serrano-cured-ham-1'
-  },
-  'listItem->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes-2': {
-    id:
-      'listItem->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes-2',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: false,
-    itemId:
-      'item->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes-2'
-  },
-  'listItem->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon-3': {
-    id:
-      'listItem->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon-3',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: false,
-    itemId:
-      'item->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon-3'
-  },
-  'listItem->product->meals->breakfasts->yoghurt-with-muesli-fresh-fruit-and-honey-4': {
-    id:
-      'listItem->product->meals->breakfasts->yoghurt-with-muesli-fresh-fruit-and-honey-4',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: false,
-    itemId:
-      'item->product->meals->breakfasts->yoghurt-with-muesli-fresh-fruit-and-honey-4'
-  },
+  'listItem->product->meals->breakfasts->toast-with-tomato-puree-and-serrano-cured-ham-1':
+    {
+      id: 'listItem->product->meals->breakfasts->toast-with-tomato-puree-and-serrano-cured-ham-1',
+      show: true,
+      template: '',
+      active: true,
+      type: 'product',
+      showTitle: true,
+      showExtraInfo: false,
+      showItemDetail: false,
+      showPrice: true,
+      showDescription: false,
+      itemId:
+        'item->product->meals->breakfasts->toast-with-tomato-puree-and-serrano-cured-ham-1'
+    },
+  'listItem->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes-2':
+    {
+      id: 'listItem->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes-2',
+      show: true,
+      template: '',
+      active: true,
+      type: 'product',
+      showTitle: true,
+      showExtraInfo: false,
+      showItemDetail: false,
+      showPrice: true,
+      showDescription: false,
+      itemId:
+        'item->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes-2'
+    },
+  'listItem->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon-3':
+    {
+      id: 'listItem->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon-3',
+      show: true,
+      template: '',
+      active: true,
+      type: 'product',
+      showTitle: true,
+      showExtraInfo: false,
+      showItemDetail: false,
+      showPrice: true,
+      showDescription: false,
+      itemId:
+        'item->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon-3'
+    },
+  'listItem->product->meals->breakfasts->yoghurt-with-muesli-fresh-fruit-and-honey-4':
+    {
+      id: 'listItem->product->meals->breakfasts->yoghurt-with-muesli-fresh-fruit-and-honey-4',
+      show: true,
+      template: '',
+      active: true,
+      type: 'product',
+      showTitle: true,
+      showExtraInfo: false,
+      showItemDetail: false,
+      showPrice: true,
+      showDescription: false,
+      itemId:
+        'item->product->meals->breakfasts->yoghurt-with-muesli-fresh-fruit-and-honey-4'
+    },
   'listItem->product->meals->breakfasts->scrambled-eggs-with-ham-5': {
     id: 'listItem->product->meals->breakfasts->scrambled-eggs-with-ham-5',
     show: true,
@@ -837,7 +901,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     itemId: 'item->product->meals->breakfasts->english-breakfast-6'
   },
 
-  ///// meals->with-the-hands->
+  ///// meals->sandwich->
   'listItem->product->meals->artisan-loaf-sandwich-with-squid-1': {
     id: 'listItem->product->meals->artisan-loaf-sandwich-with-squid-1',
     show: true,
@@ -916,50 +980,25 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showDescription: false,
     itemId: 'item->product->meals->hamburger-with-chicken-6'
   },
-  'listItem->product->meals->beef-burger-7': {
-    id: 'listItem->product->meals->beef-burger-7',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->beef-burger-7'
-  },
-  'listItem->product->meals->mexican-iberian-pork-burger-8': {
-    id: 'listItem->product->meals->mexican-iberian-pork-burger-8',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->mexican-iberian-pork-burger-8'
-  },
-  'listItem->product->meals->angus-beef-burger-9': {
-    id: 'listItem->product->meals->angus-beef-burger-9',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->angus-beef-burger-9'
-  },
 
   ///// meals->childrens->
-  'listItem->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1': {
-    id:
-      'listItem->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1',
+  'listItem->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1':
+    {
+      id: 'listItem->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1',
+      show: true,
+      template: '',
+      active: true,
+      type: 'product',
+      showTitle: true,
+      showExtraInfo: false,
+      showItemDetail: true,
+      showPrice: true,
+      showDescription: false,
+      itemId:
+        'item->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1'
+    },
+  'listItem->product->meals->childrens->-2': {
+    id: 'listItem->product->meals->childrens->-2',
     show: true,
     template: '',
     active: true,
@@ -969,25 +1008,10 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showItemDetail: true,
     showPrice: true,
     showDescription: false,
-    itemId:
-      'item->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1'
-  },
-  'listItem->product->meals->childrens->grilled-fish-with-side-dishes-2': {
-    id: 'listItem->product->meals->childrens->grilled-fish-with-side-dishes-2',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->meals->childrens->grilled-fish-with-side-dishes-2'
+    itemId: 'item->product->meals->childrens->-2'
   },
   'listItem->product->meals->childrens->hamburger-with-tomato-and-cheese-3': {
-    id:
-      'listItem->product->meals->childrens->hamburger-with-tomato-and-cheese-3',
+    id: 'listItem->product->meals->childrens->hamburger-with-tomato-and-cheese-3',
     show: true,
     template: '',
     active: true,
@@ -3095,19 +3119,6 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showDescription: true,
     itemId: 'item->product->wines->artillero-8'
   },
-  'listItem->product->wines->carmelo-rodero-9-meses-24': {
-    id: 'listItem->product->wines->carmelo-rodero-9-meses-24',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->wines->carmelo-rodero-9-meses-24'
-  },
   'listItem->product->wines->wine-from-the-house-9': {
     id: 'listItem->product->wines->wine-from-the-house-9',
     show: true,
@@ -3328,6 +3339,215 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showPrice: true,
     showDescription: true,
     itemId: 'item->product->wines->chivite-legardeta-25'
+  },
+  'listItem->product->wines->carmelo-rodero-9-meses-26': {
+    id: 'listItem->product->wines->carmelo-rodero-9-meses-26',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->carmelo-rodero-9-meses-26'
+  },
+
+  'listItem->product->wines->-1': {
+    id: 'listItem->product->wines->-1',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-1'
+  },
+  'listItem->product->wines->-2': {
+    id: 'listItem->product->wines->-2',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-2'
+  },
+  'listItem->product->wines->-3': {
+    id: 'listItem->product->wines->-3',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-3'
+  },
+  'listItem->product->wines->-4': {
+    id: 'listItem->product->wines->-4',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-4'
+  },
+  'listItem->product->wines->-5': {
+    id: 'listItem->product->wines->-5',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-5'
+  },
+  'listItem->product->wines->-6': {
+    id: 'listItem->product->wines->-6',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-6'
+  },
+  'listItem->product->wines->-7': {
+    id: 'listItem->product->wines->-7',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-7'
+  },
+  'listItem->product->wines->-8': {
+    id: 'listItem->product->wines->-8',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-8'
+  },
+  'listItem->product->wines->-9': {
+    id: 'listItem->product->wines->-9',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-9'
+  },
+  'listItem->product->wines->-10': {
+    id: 'listItem->product->wines->-10',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-10'
+  },
+  'listItem->product->wines->-11': {
+    id: 'listItem->product->wines->-11',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-11'
+  },
+  'listItem->product->wines->-12': {
+    id: 'listItem->product->wines->-12',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-12'
+  },
+  'listItem->product->wines->-13': {
+    id: 'listItem->product->wines->-13',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-13'
+  },
+  'listItem->product->wines->-14': {
+    id: 'listItem->product->wines->-14',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-14'
+  },
+  'listItem->product->wines->-15': {
+    id: 'listItem->product->wines->-15',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-15'
   },
 
   ///// info->sanitary-measures->

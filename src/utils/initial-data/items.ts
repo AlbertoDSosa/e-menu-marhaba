@@ -2,1643 +2,68 @@ import { Info, Menu, Product } from 'definitions/models';
 
 export const items: { [key: string]: Info | Product | Menu } = {
   ///// meals->starters->
-  'item->product->meals->artisan-garlic-bread-from-ingenio-1': {
-    id: 'item->product->meals->artisan-garlic-bread-from-ingenio-1',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Pan artesano de Ingenio con ajo',
-        slug: 'pan-artesano-de-ingenio-con-ajo'
-      },
-      en: {
-        description: '',
-        title: 'Artisan Garlic Bread from Ingenio',
-        slug: 'artisan-garlic-bread-from-ingenio'
-      },
-      de: {
-        description: '',
-        title: 'Handgemachtes Brot aus Ingenio mit Knoblauch',
-        slug: 'handgemachtes-brot-aus-ingenio-mit-knoblauch'
-      },
-      nb: {
-        description: '',
-        title: 'Håndverksbrød fra Ingenio med hvitløk',
-        slug: 'handverksbrod-fra-ingenio-med-hvitlok'
-      },
-      da: {
-        description: '',
-        title: 'Hjemmelavet hvidløgsbrød fra Ingenio',
-        slug: 'hjemmelavet-hvidlogsbrod-fra-ingenio'
-      },
-      sv: {
-        description: '',
-        title: 'Hantverksbröd från Ingenio med vitlök',
-        slug: 'hantverksbrod-fran-ingenio-med-vitlok'
-      },
-      fr: {
-        description: '',
-        title: 'Pain artisanal à l’ail d’Ingenio (commune de l’île)',
-        slug: 'pain-artisanal-a-l-ail-d-ingenio'
-      },
-      nl: {
-        description: '',
-        title: 'Ambachtelijk brood uit Ingenio (Gran Canaria) met knoflook',
-        slug: 'ambachtelijk-brood-uit-ingenio-met-knoflook'
-      }
-    },
-    price: { amount: '3.90' },
-    number: '1'
-  } as Product,
-  'item->product->meals->artisan-bread-from-ingenio-with-canarian-sauces-2': {
-    id: 'item->product->meals->artisan-bread-from-ingenio-with-canarian-sauces-2',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10',
-      'allergenic->nuts-7'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Pan Artesano de Ingenio con Salsas Canarias',
-        slug: 'pan-artesano-de-ingenio-con-salsas-canarias'
-      },
-      en: {
-        description: '',
-        title: 'Artisan Bread from Ingenio with Canarian Sauces',
-        slug: 'artisan-bread-from-ingenio-with-canarian-sauces'
-      },
-      de: {
-        description: '',
-        title: 'Handgemachtes Brot aus Ingenio mit kanarischen Saucen',
-        slug: 'Handgemachtes Brot aus Ingenio mit kanarischen Saucen'
-      },
-      nb: {
-        description: '',
-        title: 'Håndverksbrød fra Ingenio med kanariske sauser',
-        slug: 'handverksbrød-fra-ingenio-med-kanariske-sauser'
-      },
-      da: {
-        description: '',
-        title: 'Hjemmelavet brød fra Ingenio med kanariske dressinger',
-        slug: 'hjemmelavet-brod-fra-ingenio-med-kanariske-dressinger'
-      },
-      sv: {
-        description: '',
-        title: 'Hantverksbröd från Ingenio med kanariska såser',
-        slug: 'hantverksbrod-fran-ingenio-med-kanariska-saser'
-      },
-      fr: {
-        description: '',
-        title:
-          'Pain artisanal d’Ingenio (commune de l’île) accompagné de sauces des Canaries',
-        slug: 'pain-artisanal-d-ingenio-commune-de-l-ile-accompagne-de-sauces-des-canaries'
-      },
-      nl: {
-        description: '',
-        title:
-          'Ambachtelijk brood uit Ingenio (Gran Canaria) met Canarische sauzen',
-        slug: 'ambachtelijk-brood-uit-ingenio-gran-canaria-met-canarische-sauzen'
-      }
-    },
-    price: { amount: '3.90' },
-    number: '2'
-  } as Product,
-  'item->product->meals->canarian-cheese-platter-3': {
-    id: 'item->product->meals->canarian-cheese-platter-3',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9',
-      'allergenic->nuts-7'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Tabla de quesos Canarios',
-        slug: 'tabla-de-quesos-canarios'
-      },
-      en: {
-        description: '',
-        title: 'Canarian Cheese Platter',
-        slug: 'canarian-cheese-platter'
-      },
-      de: {
-        description: '',
-        title: 'Kanarische Käseplatte',
-        slug: 'kanarische-käseplatte'
-      },
-      nb: {
-        description: '',
-        title: 'Kanarisk ostebrett',
-        slug: 'kanarisk-ostebrett'
-      },
-      da: {
-        description: '',
-        title: 'Fad med oste fra Kanarieøerne',
-        slug: 'fad-med-oste-fra-kanarieoerne'
-      },
-      sv: {
-        description: '',
-        title: 'Kanariska ostbrädan',
-        slug: 'kanariska-ostbradan'
-      },
-      fr: {
-        description: '',
-        title: 'Assiette de fromages des Canaries',
-        slug: 'assiette-de-fromages-des-canaries'
-      },
-      nl: {
-        description: '',
-        title: 'Plank met Canarische kazen',
-        slug: 'plank-met-canarische-kazen'
-      }
-    },
-    price: { amount: '16.50' },
-    number: '3'
-  } as Product,
-  'item->product->meals->by-rocio-prawns-in-sizzling-garlic-oil-4': {
-    id: 'item->product->meals->by-rocio-prawns-in-sizzling-garlic-oil-4',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    allergens: ['allergenic->crustaceans-2'],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Gambas al ajillo By Rocio',
-        slug: 'gambas-al-ajillo-by-rocio'
-      },
-      en: {
-        description: '',
-        title: 'By Rocio Prawns in sizzling Garlic Oil',
-        slug: 'by-rocio-prawns-in-sizzling-garlic-oil'
-      },
-      de: {
-        description: '',
-        title: 'Garnelen in Knoblauchöl by Rocio',
-        slug: 'Garnelen in Knoblauchöl by Rocio'
-      },
-      nb: {
-        description: '',
-        title: 'Hvitløksreker by Rocio',
-        slug: 'hvitloksreker'
-      },
-      da: {
-        description: '',
-        title: 'Hvidløgsrejer by Rocio',
-        slug: 'hvidlogsrejer'
-      },
-      sv: {
-        description: '',
-        title: 'Vitlöksräkor By Rocio',
-        slug: 'vitloksrakor-by-rocio'
-      },
-      fr: {
-        description: '',
-        title: 'Crevettes à l’ail by Rocio',
-        slug: 'crevettes-a-l-ail-by-rocio'
-      },
-      nl: {
-        description: '',
-        title: 'Gambas al ajillo by Rocio (Gamba’s in de look)',
-        slug: 'gambas-al-ajillo-by-rocio-gamba-s-in-de-look'
-      }
-    },
-    price: { amount: '10.95' },
-    number: '4'
-  } as Product,
-  'item->product->meals->iberian-ham-5': {
-    id: 'item->product->meals->iberian-ham-5',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    allergens: ['allergenic->gluten-3'],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Jamón Ibérico 5J con picos artesanos y tomate rallado',
-        slug: 'jamon-iberico'
-      },
-      en: {
-        description: '',
-        title: 'Iberian Ham 5J with homemade bread sticks and grated tomato',
-        slug: 'iberian-ham'
-      },
-      de: {
-        description: '',
-        title:
-          'Iberischer Schinken 5J mit handgemachten Knabberstangen und geriebenen Tomaten',
-        slug: 'iberischer-schinken'
-      },
-      nb: {
-        description: '',
-        title: 'Iberisk skinke 5J med minikavring og revet tomat',
-        slug: 'serrano-skinke'
-      },
-      da: {
-        description: '',
-        title:
-          'Iberisk sortfodsskinke 5J med luksus picos-brødhapser og revet tomat',
-        slug: 'serrano-skinke'
-      },
-      sv: {
-        description: '',
-        title: 'Iberisk skinka 5J med hantverkskavring och riven tomat',
-        slug: 'iberisk-skinka'
-      },
-      fr: {
-        description: '',
-        title:
-          'Jambon ibérique 5J accompagné de petits pains artisanaux et de tomate râpée',
-        slug: 'jambon-iberique'
-      },
-      nl: {
-        description: '',
-        title: 'Ibericoham 5J met ambachtelijke dipstokjes en geraspte tomaat',
-        slug: 'Ibericoham'
-      }
-    },
-    price: { amount: '22.90' },
-    number: '5'
-  } as Product,
-  'item->product->meals->canarian-wrinkled-potatoes-6': {
-    id: 'item->product->meals->canarian-wrinkled-potatoes-6',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title:
-          'Papas arrugadas de la tierra con Mojo de pimiento asado y Mojo verde cítrico',
-        slug: 'papas-arrugadas-de-la-tierra'
-      },
-      en: {
-        description: '',
-        title:
-          'Canarian Wrinkled Potatoes with Roast Pepper Mojo and Green Citrus Mojo',
-        slug: 'canarian-wrinkled-potatoes'
-      },
-      de: {
-        description: '',
-        title:
-          'Heimische Papas Arrugadas (Runzelkartoffeln) mit einer Mojosauce aus gebratenen Paprika und grünem Zitronenmojo',
-        slug: 'heimische-papas-arrugadas'
-      },
-      nb: {
-        description: '',
-        title:
-          'Kanariske rynkepoteter med mojo av grillet paprika og grønn sitrusmojo',
-        slug: 'kanariske-rynkepoteter'
-      },
-      da: {
-        description: '',
-        title:
-          'Papas arrugadas (saltkogte lokale kartofler med skræl) med mojo-dressing med stegt peberfrugt og grøn mojo-citrusdressing',
-        slug: 'papas-arrugadas'
-      },
-      sv: {
-        description: '',
-        title:
-          'Skrynklig potatis från Kanarien med rostad paprikamojo och citrusgrön mojo (Kanariska såsar)',
-        slug: 'skrynklig-potatis'
-      },
-      fr: {
-        description: '',
-        title:
-          'Papas arrugadas (pommes de terre cuites au sel) accompagné d’un mojo aux poivrons rôtis et d’un mojo vert aux agrumes (sauces typiques des îles Canaries)',
-        slug: 'papas-arrugadas'
-      },
-      nl: {
-        description: '',
-        title:
-          'Papas arrugadas van het land met Mojo verde (Canarisch aardappelgerecht met pittige, Canarische saus met citroensmaak)',
-        slug: 'papas-arrugadas'
-      }
-    },
-    price: { amount: '5.90' },
-    number: '6'
-  } as Product,
-  'item->product->meals->eggplant-chips-with-palm-honey-and-sesame-7': {
-    id: 'item->product->meals->eggplant-chips-with-palm-honey-and-sesame-7',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->gluten-3', 'allergenic->sesame-8'],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Chips de Berenjena con Miel de Palma y Sésamo',
-        slug: 'chips-de-berenjena'
-      },
-      en: {
-        description: '',
-        title: 'Eggplant Chips with Palm Honey and Sesame',
-        slug: 'eggplant-chips-with-palm-honey-and-sesame'
-      },
-      de: {
-        description: '',
-        title: 'Chips von der Aubergine mit Palmenhonig und Sesam',
-        slug: 'chips-von-der-aubergine-mit-palmenhonig-und-sesam'
-      },
-      nb: {
-        description: '',
-        title: 'Aubergine chips med palmehonning og sesam',
-        slug: 'aubergine-chips'
-      },
-      da: {
-        description: '',
-        title: 'Aubergine-chips med palmehonning og sesamfrø',
-        slug: 'aubergine-chips'
-      },
-      sv: {
-        description: '',
-        title: 'Auberginechips med palmhonung och sesam',
-        slug: 'auberginechips'
-      },
-      fr: {
-        description: '',
-        title: 'Chips d’aubergines au miel de palme et sésame',
-        slug: 'chips-d-aubergine'
-      },
-      nl: {
-        description: '',
-        title: 'Auberginechips met honing uit Palma en sesam',
-        slug: 'auberginechips'
-      }
-    },
-    price: { amount: '10.50' },
-    number: '7'
-  } as Product,
-  'item->product->meals->bao-buns-8': {
-    id: 'item->product->meals->bao-buns-8',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9',
-      'allergenic->moluscs-13',
-      'allergenic->fish-1'
-    ],
-    selectableAllergens: [
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description:
-          'A elegir (Pollo con salsa thai, crujiente de puerros y sus brotes), (cordero con su propio jugo en hierba huerto y crujiente de bacón con brotes)',
-        title: 'Pan Bao (3 unidades)',
-        slug: 'pan-bao'
-      },
-      en: {
-        description:
-          'Choose between Chicken with Thai Sauce, Leek Crisps and Sprouts or Lamb in its own gravy with Mint and Crispy Bacon with Sprouts',
-        title: 'Pan Bao (3 pieces)',
-        slug: 'bao-buns'
-      },
-      de: {
-        description:
-          'Wahlweise (Hähnchen mit Thai-Sauce, Knusprigem vom Lauch und Sprossen), (Lamm im eigenen Saft mit Minze und knusprigem Speck mit Sprossen) ',
-        title: 'Bao Buns (3 Stück)',
-        slug: 'bao-buns'
-      },
-      nb: {
-        description:
-          'Valg (Kylling med thailandsk saus, knasende purre og spirer), (lam med sjysaus i sitronmelisse og sprø bacon samt spirer)',
-        title: 'Baobrød (3 enheter)',
-        slug: 'bao-brod'
-      },
-      da: {
-        description:
-          'Valgmuligheder (kylling med thai-sovs  sprødstegte porrer og nye grøntsagsskud), (lam i egen sovs med krydderurter og sprød bacon med nye grøntsagsskud) ',
-        title: 'Bao-brød (3 stk.)',
-        slug: 'pan-bao-brød'
-      },
-      sv: {
-        description:
-          'Välj (Kyckling med thailändsk sås, krispig purjolök och  groddar), (lamm med skysås i grönmynta och krispigt bacon såväl som groddar)',
-        title: 'Baobröd (3 enhet)',
-        slug: 'baobrod'
-      },
-      fr: {
-        description:
-          'Au choix (Poulet sauce thaï, croustillant de poireaux et jeunes pousses), agneau dans son jus de cuisson aux herbes du potager, bacon croustillant et jeunes pousses)',
-        title: 'Pain Bao (3 unités)',
-        slug: 'pain-bao'
-      },
-      nl: {
-        description:
-          'keuze: kip in Thaise saus met krokante prei en kiemgroenten; lam in kruidenjus met knapperige bacon en kiemgroenten ',
-        title: 'Broodje bapao (3 stuks)',
-        slug: 'Broodje-bapao'
-      }
-    },
-    price: { amount: '10.95' },
-    number: '8'
-  } as Product,
-  'item->product->meals->kataifi-skewer-9': {
-    id: 'item->product->meals->kataifi-skewer-9',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->egg-9',
-      'allergenic->crustaceans-2',
-      'allergenic->fish-1'
-    ],
-    selectableAllergens: [
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Brocheta de Kataifi de Langostino y melón, mayonesa kimchi',
-        slug: 'brocheta-de-kataifi'
-      },
-      en: {
-        description: '',
-        title: 'King Prawn Kaitifi Skewer and Melon with Kimchi Mayonnaise',
-        slug: 'kaitifi-skewer'
-      },
-      de: {
-        description: '',
-        title: 'Garnelenspieß in Kataifi-Teig, Melone und Kimchi-Mayonnaise',
-        slug: 'garnelenspiesbs-in-kataifi-teig'
-      },
-      nb: {
-        description: '',
-        title: 'Kataifi spyd av reke og melon, kimchi majones',
-        slug: 'kataifi-spyd'
-      },
-      da: {
-        description: '',
-        title: 'Kataifi-spyd med stor reje og melon, kimchi-mayonnaise',
-        slug: 'kataifi-spyd'
-      },
-      sv: {
-        description: '',
-        title: 'Kataifi spett av räkor och melon, kimchi majonnäs',
-        slug: 'kataifi-spett'
-      },
-      fr: {
-        description: '',
-        title:
-          'Brochette de crevettes et melon au kataifi croustillant, mayonnaise au kimchi',
-        slug: 'brochette-kataifi'
-      },
-      nl: {
-        description: '',
-        title: 'Gamba in kataifideeg, meloen en kimchimayonaise op spie',
-        slug: 'gamba-in-kataifideeg'
-      }
-    },
-    price: { amount: '11.50' },
-    number: '9'
-  } as Product,
-  'item->product->meals->herreno-cheese-10': {
-    id: 'item->product->meals->herreno-cheese-10',
+  'item->product->meals->starters->vegetable-and-meat-soup-1': {
+    id: 'item->product->meals->starters->vegetable-and-meat-soup-1',
     type: 'product',
     images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->dairy-products-10'],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Queso Herreño plancha con mermelada de pimientos',
-        slug: 'queso-herreno'
-      },
-      en: {
-        description: '',
-        title: 'Grilled Cheese from El Hierro with Bell Pepper Marmelade',
-        slug: 'herreno-cheese'
-      },
-      de: {
-        description: '',
-        title: 'Käse aus El Hierro gegrillt mit Paprikamarmelade',
-        slug: 'herreno-kase'
-      },
-      nb: {
-        description: '',
-        title: 'Grillet Herreño-ost med paprikasyltetøy',
-        slug: 'herreno-ost'
-      },
-      da: {
-        description: '',
-        title: 'Grillstegt Herreño-ost med peberfrugtmarmelade',
-        slug: 'herreno-ost'
-      },
-      sv: {
-        description: '',
-        title: 'Grillad Herreñoost (från ön El Hierro) med paprikasylt',
-        slug: 'herreno-ost'
-      },
-      fr: {
-        description: '',
-        title:
-          'Fromage Herreño (de l’île El Hierro) grillé accompagné d’une confiture de poivrons',
-        slug: 'fromage-de-el-hierro'
-      },
-      nl: {
-        description: '',
-        title: 'Gegrilde Herreño (Canarische kaas) met paprikajam',
-        slug: 'gegrilde-herreno'
-      }
-    },
-    price: { amount: '9.50' },
-    number: '10'
-  } as Product,
-  'item->product->meals->cubes-of-suckling-pig-roasted-at-low-temperature-and-confitted-11':
-    {
-      id: 'item->product->meals->cubes-of-suckling-pig-roasted-at-low-temperature-and-confitted-11',
-      type: 'product',
-      images: ['image->item->product->default-1'],
-      active: true,
-      defaultImg: 'image->item->product->default-1',
-      mainImg: '',
-      hasAllergens: true,
-      hasVariants: false,
-      allergens: [
-        'allergenic->gluten-3',
-        'allergenic->egg-9',
-        'allergenic->fish-1'
-      ],
-      selectableAllergens: [
-        'allergenic->crustaceans-2',
-        'allergenic->mustard-4',
-        'allergenic->sulphites-5',
-        'allergenic->peanuts-6',
-        'allergenic->nuts-7',
-        'allergenic->sesame-8',
-        'allergenic->dairy-products-10',
-        'allergenic->lupins-11',
-        'allergenic->soya-12',
-        'allergenic->moluscs-13',
-        'allergenic->celery-14'
-      ],
-      displayInfo: {
-        es: {
-          description: '',
-          title:
-            'Tacos de Cochinillo a baja temperatura confitado (3 unidades)',
-          slug: 'tacos-de-cochinillo-a-baja-temperatura-confitado'
-        },
-        en: {
-          description: '',
-          title:
-            'Cubes of Suckling Pig, roasted at low temperature and confitted (3 pieces)',
-          slug: 'cubes-of-suckling-pig-roasted-at-low-temperature-and-confitted'
-        },
-        de: {
-          description: '',
-          title:
-            'Häppchen vom Spanferkel bei niedriger Temperatur confiert (3 Stück)',
-          slug: 'happchen-vom-spanferkel-bei-niedriger-temperatur-confiert'
-        },
-        nb: {
-          description: '',
-          title: 'Stykker av konfitert pattegris (3 enheter)',
-          slug: 'stykker-av-konfitert-pattegris'
-        },
-        da: {
-          description: '',
-          title: 'Tacos med pattegris konfiteret ved lav temperatur (3 stk.)',
-          slug: 'tacos-med-pattegris-konfiteret-ved-lav-temperatur'
-        },
-        sv: {
-          description: '',
-          title: 'Bitar av konfiterad kulting (3 enheter)',
-          slug: 'bitar-av-konfiterad-kulting'
-        },
-        fr: {
-          description: '',
-          title:
-            'Pavés de cochon de lait confit à basse température (3 unités)',
-          slug: 'paves-de-cochon-de-lait-confit-a-basse-temperature'
-        },
-        nl: {
-          description: '',
-          title:
-            'Tacos met gekonfijt speenvarken bereid op lage temperatuur (3 stuks)',
-          slug: 'tacos-met-gekonfijt-speenvarken-bereid-op-lage-temperatuur'
-        }
-      },
-      price: { amount: '10.95' },
-      number: '11'
-    } as Product,
-  'item->product->meals->nachos-with-guacamole-cheddar-cheese-and-pico-de-gallo-sauce-12':
-    {
-      id: 'item->product->meals->nachos-with-guacamole-cheddar-cheese-and-pico-de-gallo-sauce-12',
-      type: 'product',
-      images: [],
-      active: true,
-      defaultImg: 'image->item->product->default-1',
-      mainImg: '',
-      hasAllergens: true,
-      hasVariants: false,
-      allergens: ['allergenic->gluten-3', 'allergenic->dairy-products-10'],
-      selectableAllergens: [
-        'allergenic->fish-1',
-        'allergenic->crustaceans-2',
-        'allergenic->mustard-4',
-        'allergenic->sulphites-5',
-        'allergenic->peanuts-6',
-        'allergenic->nuts-7',
-        'allergenic->sesame-8',
-        'allergenic->egg-9',
-        'allergenic->lupins-11',
-        'allergenic->soya-12',
-        'allergenic->moluscs-13',
-        'allergenic->celery-14'
-      ],
-      displayInfo: {
-        es: {
-          description: '',
-          title: 'Nachos con guacamole, queso Cheddar y pico de gallo',
-          slug: 'nachos-con-guacamole-queso-cheddar-y-pico-de-gallo'
-        },
-        en: {
-          description: '',
-          title:
-            'Nachos with Guacamole, Cheddar Cheese and Pico de Gallo Sauce',
-          slug: 'nachos-with-guacamole-cheddar-cheese-and-pico-de-gallo-sauce'
-        },
-        de: {
-          description: '',
-          title: 'Nachos mit Guacamole, Cheddar und Pico de Gallo',
-          slug: 'nachos-mit-guacamole-cheddar-und-pico-de-gallo'
-        },
-        nb: {
-          description: '',
-          title: 'Nachos med guacamole, Cheddar ost og "pico de gallo"',
-          slug: 'nachos-med-guacamole-cheddar-ost-og-pico-de-gallo'
-        },
-        da: {
-          description: '',
-          title:
-            'Nachos med guacamole, cheddar-ost og pico-de-gallo-tomatsalat',
-          slug: 'nachos-med-guacamole-cheddar-ost-og-pico-de-gallo-tomatsalat'
-        },
-        sv: {
-          description: '',
-          title: 'Nachos med Guacamole, Cheddarost och "Pico de gallo"',
-          slug: 'nachos-med-guacamole-cheddarost-och-pico-de-gallo'
-        },
-        fr: {
-          description: '',
-          title:
-            'Nachos accompagnés de guacamole, de fromage cheddar et d’une sauce pico de gallo (sauce mexicaine)',
-          slug: 'nachos-accompagnes-de-guacamole-de-fromage-cheddar-et-d-une-sauce-pico-de-gallo'
-        },
-        nl: {
-          description: '',
-          title:
-            'Nachos met guacamole, Cheddar en pico de gallo (Mexicaanse saus)',
-          slug: 'nachos-met-guacamole-cheddar-en-pico-de-gallo'
-        }
-      },
-      price: { amount: '9.95' },
-      number: '12'
-    } as Product,
-  'item->product->meals->the-chef-s-appetizer-13': {
-    id: 'item->product->meals->the-chef-s-appetizer-13',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->sopa-harera-1',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
     allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '* Los alérgenos dependen del plato',
-        title: 'Aperitivo chef',
-        slug: 'aperitivo-chef'
-      },
-      en: {
-        description: '* Allergens depend on the dish',
-        title: `The Chef's Appetizer`,
-        slug: 'the-chef-s-appetizer'
-      },
-      de: {
-        description: '* Allergene hängen vom Gericht ab',
-        title: 'Aperitif des Küchenchefs',
-        slug: 'aperitif-des-kuchenchefs'
-      },
-      nb: {
-        description: '* Allergener avhenger av retten',
-        title: 'Kokkens aperitiff',
-        slug: 'kokkens-aperitiff'
-      },
-      da: {
-        description: '* Allergener afhænger af retten',
-        title: 'Chefkokkens aperitif',
-        slug: 'chefkokkens-aperitif'
-      },
-      sv: {
-        description: '* Allergener beror på maträtten',
-        title: 'Kockens aperitif',
-        slug: 'kockens-aperitif'
-      },
-      fr: {
-        description: '* Les allergènes dépendent du plat',
-        title: 'Apéritifs du chef',
-        slug: 'aperitifs-du-chef'
-      },
-      nl: {
-        description: '* Allergenen zijn afhankelijk van het gerecht',
-        title: 'Borrelhap van de chef',
-        slug: 'borrelhap-van-de-chef'
-      }
-    },
-    price: { amount: '12.00' },
-    number: '13'
-  } as Product,
-
-  ///// meals->salads->
-  'item->product->meals->som-tam-salad-1': {
-    id: 'item->product->meals->som-tam-salad-1',
-    type: 'product',
-    images: [
-      'image->item->product->default-1',
-      'image->item->product->som-tam-salad-1'
-    ],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: 'image->item->product->som-tam-salad-1',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->fish-1',
-      'allergenic->peanuts-6'
-    ],
-    selectableAllergens: [
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description:
-          '(Papaya verde, judías verdes, tomate cherry, gambas cocidas, manises) y salsa destilada de pescado',
-        title: 'Ensalada Som Tam',
-        slug: 'ensalada-som-tam'
-      },
-      en: {
-        description:
-          '(Green Papaya, Cherry Tomato, Boiled Prawns, Peanuts) and Distilled Fish Sauce',
-        title: 'Som Tam Salad',
-        slug: 'som-tam-salad'
-      },
-      de: {
-        description:
-          '(Grüne Papaya, Kirschtomaten, gekochte Garnelen, Erdnüsse) destillierte Fischsauce',
-        title: 'Salat Som Tam',
-        slug: 'salat-som-tam'
-      },
-      nb: {
-        description:
-          '(grønn papaya, cherry tomat, kokte reker, peanøtter)  med destillert fiskesaus',
-        title: 'Som Tam Salat ',
-        slug: 'som-tam-salat'
-      },
-      da: {
-        description:
-          '(grøn papaya, cherrytomat, kogte rejer, jordnødder) med destilleret fiskesauce',
-        title: 'Som Tam-salat',
-        slug: 'som-tam-salat'
-      },
-      sv: {
-        description:
-          '(Grön Papaya, Körsbärstomat, Kokta räkor, Jordnötter) Destillerad fisksås',
-        title: 'Som Tam Salad',
-        slug: 'som-tam-salad'
-      },
-      fr: {
-        description:
-          '(papaye verte, tomate cerise, crevettes cuites, manises) et sauce de poisson distillée',
-        title: 'Salade Som Tam',
-        slug: 'salade-som-tam'
-      },
-      nl: {
-        description:
-          '(Groene papaya, cherrytomaat, gebakken gamba’s, pinda’s) met vissaus',
-        title: 'Som Tam Salade',
-        slug: 'som-tam-salade'
-      }
-    },
-    price: { amount: '9.50' },
-    number: '1'
-  } as Product,
-  'item->product->meals->smoked-salmon-salad-2': {
-    id: 'item->product->meals->smoked-salmon-salad-2',
-    type: 'product',
-    images: [
-      'image->item->product->default-1',
-      'image->item->product->smoked-salmon-salad-1'
-    ],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: 'image->item->product->smoked-salmon-salad-1',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->fish-1',
-      'allergenic->sulphites-5',
-      'allergenic->nuts-7',
-      'allergenic->soya-12',
-      'allergenic->celery-14'
-    ],
-    selectableAllergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->peanuts-6',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->moluscs-13'
-    ],
-    displayInfo: {
-      es: {
-        description:
-          '(manzana roja, rábano, nueces y tallos de apio tierno) vinagreta y reducción de balsámico',
-        title: 'Ensalada de Salmón Ahumado',
-        slug: 'ensalada-de-salmon-ahumado'
-      },
-      en: {
-        description:
-          '(Red Apple, Radish, Walnuts and Tender Celery Stalks) Vinaigrette and Balsamic Reduction',
-        title: 'Smoked salmon salad',
-        slug: 'smoked-salmon-salad'
-      },
-      de: {
-        description:
-          '(Rote Äpfel, Radieschen, Nüsse und Stangensellerie) an Vinaigrette und Balsamico-Reduktion ',
-        title: 'Salat mit Räucherlachs',
-        slug: 'salat-mi-raucherlachs'
-      },
-      nb: {
-        description:
-          '(rødt eple, reddik, nøtter og selleristengler) vinaigrette og balsamico reduksjon',
-        title: 'Røkt laksesalat',
-        slug: 'rokt-laksesalat'
-      },
-      da: {
-        description:
-          '(røde æbler, radisser, valnødder og sprøde selleristænger) med vinaigrette og balsamikumreduktion',
-        title: 'Salat med røget laks',
-        slug: 'salat-med-roget-laks'
-      },
-      sv: {
-        description:
-          '(rött äpple, rädisa, nötter och selleristammar) vinägrett och reducerad balsamvinäger',
-        title: 'Rökt laxsallad',
-        slug: 'rokt-laxsallad'
-      },
-      fr: {
-        description:
-          '(pomme rouge, radis, noix et branches de céleri tendre), vinaigrette et réduction de vinaigre balsamique',
-        title: 'Salade de saumon fumé',
-        slug: 'salade-de-saumon-fume'
-      },
-      nl: {
-        description:
-          '(rode appel, radijs, noten en bleekselderij) vinaigrette en een vleugje balsamico',
-        title: 'Salade gerookte zalm',
-        slug: 'salade-gerookte-zalm'
-      }
-    },
-    price: { amount: '11.50' },
-    number: '2'
-  } as Product,
-  'item->product->meals->canarian-beetroot-carpaccio-3': {
-    id: 'item->product->meals->canarian-beetroot-carpaccio-3',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->fish-1',
-      'allergenic->mustard-4',
-      'allergenic->nuts-7',
-      'allergenic->dairy-products-10'
-    ],
-    selectableAllergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->celery-14',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13'
-    ],
     displayInfo: {
       es: {
         description: '',
-        title:
-          'Carpaccio de remolacha Canaria con salsa de yogur al curry, almendras picadas, sus brotes y vinagreta de fruta de la pasión',
-        slug: 'carpaccio-de-remolacha-canaria'
+        title: 'Sopa Harera',
+        slug: 'sopa-harera'
       },
       en: {
         description: '',
-        title:
-          'Canarian Beet Carpaccio with Curry Yogurt Sauce, chopped Almonds, Sprouts and Passion Fruit Vinaigrette',
-        slug: 'canarian-beetroot-carpaccio'
+        title: 'Vegetable and meat soup',
+        slug: 'vegetable-and-meat-soup'
       },
       de: {
         description: '',
-        title:
-          'Carpaccio von der kanarischen roten Beete an einer Joghurt-Curry-Sauce, gehackten Mandeln, Sprossen und einer Vinaigrette aus Passionsfrucht',
-        slug: 'carpaccio-von-der-kanarischen-roten-beete'
+        title: 'Gremüsesuppe it Fleisch',
+        slug: 'gremusesuppe-it-fleisch'
       },
       nb: {
         description: '',
-        title:
-          'Kanarisk rødbetecarpaccio med karriyoghurt saus, hakkede mandler, spirer og pasjonsfrukt vinaigrette',
-        slug: 'kanarisk-rodbetecarpaccio'
+        title: '',
+        slug: ''
       },
       da: {
         description: '',
-        title:
-          'Carpaccio med kanarisk roe og karryyoghurtsovs, hakkede mandler, nye grøntsagsskud og vinaigrette med passionsfrugt',
-        slug: 'carpaccio-med-kanarisk-roe'
+        title: '',
+        slug: ''
       },
       sv: {
         description: '',
-        title:
-          'Kanarisk rödbetskarpaccio med curryyoghurtsås, hackade mandlar, deras groddar och passionsfruktvinägrett pasión',
-        slug: 'kanarisk-rodbetskarpaccio'
+        title: '',
+        slug: ''
       },
       fr: {
         description: '',
-        title:
-          'Carpaccio de betterave des Canaries accompagné de sauce au yaourt au curry, amandes effilées, jeunes pousses et vinaigrette aux fruits de la passion',
-        slug: 'carpaccio-de-betterave-des-canaries'
-      },
-      nl: {
-        description: '',
-        title:
-          'Canarische bietencarpaccio met kerrie-yoghurtsaus, gehakte amandelen, kiemgroenten en passievruchtvinaigrette',
-        slug: 'canarische-bietencarpaccio'
-      }
-    },
-    price: { amount: '8.50' },
-    number: '3'
-  } as Product,
-  'item->product->meals->by-rocio-poke-boll-caesar-4': {
-    id: 'item->product->meals->by-rocio-poke-boll-caesar-4',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->mustard-4',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10'
-    ],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Poke Bowl-Cesar By Rocio',
-        slug: 'poke-bowl-cesar-by-rocio'
-      },
-      en: {
-        description: '',
-        title: 'By Rocio Poke Boll Caesar',
-        slug: 'by-rocio-poke-boll-caesar'
-      },
-      de: {
-        description: '',
-        title: 'Poke Bowl Caesar By Rocio',
-        slug: 'poke-bowl-caesar-by-rocio'
-      },
-      nb: {
-        description: '',
-        title: 'Poke Bowl-Cesar By Rocio',
-        slug: 'poke-bowl-cesar-by-rocio'
-      },
-      da: {
-        description: '',
-        title: 'Poke Bowl-cæsarsalat By Rocio',
-        slug: 'poke-bowl-caesarsalat-by-rocio'
-      },
-      sv: {
-        description: '',
-        title: 'Poke Bowl-Cesar By Rocio',
-        slug: 'poke-bowl-cesar-by-rocio'
-      },
-      fr: {
-        description: '',
-        title: 'Poke Bowl-César By Rocio',
-        slug: 'poke-bowl-cesar-by-rocio'
-      },
-      nl: {
-        description: '',
-        title: 'Caeser-Poke Bowl By Rocio',
-        slug: 'caeser-poke-bowl-by-rocio'
-      }
-    },
-    price: { amount: '10.50' },
-    number: '4'
-  } as Product,
-
-  //// meals->spoon-dishes->
-  'item->product->meals->sauteed-chickpeas-1': {
-    id: 'item->product->meals->sauteed-chickpeas-1',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->gluten-3', 'allergenic->nuts-7'],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title:
-          'Garbanzos Salteados con Morcilla, Pimiento del Piquillo y Piñones salteados',
-        slug: 'garbanzos-salteados'
-      },
-      en: {
-        description: '',
-        title:
-          'Sautéed Chickpeas with Black Pudding, Piquillo Peppers and Sautéed Pine-nuts',
-        slug: 'sauteed-chickpeas'
-      },
-      de: {
-        description: '',
-        title:
-          'Sautierte Kichererbsen mit Blutwurst, Piquillo-Paprika und gerösteten Pinienkernen',
-        slug: 'sautierte-kichererbsen'
-      },
-      nb: {
-        description: '',
-        title:
-          'Sauterte kikerter med blodpudding, piquillo paprika og sauterte pinjekjerner',
-        slug: 'sauterte-kikerter'
-      },
-      da: {
-        description: '',
-        title:
-          'Sauterede kikærter med blodpølse, små røde peberfrugter og ristede pinjekerner',
-        slug: 'sauterede-kikaerter'
-      },
-      sv: {
-        description: '',
-        title:
-          'Sauterade kikärter med blodpudding, piquillopeppar och sauterade pinjenötter',
-        slug: 'sauterade-kikarter'
-      },
-      fr: {
-        description: '',
-        title:
-          'Pois chiches sautés au boudin, poivrons piquillo et pignons sautés',
-        slug: 'pois-chiches-sautes'
-      },
-      nl: {
-        description: '',
-        title:
-          'Gebakken kikkererwten met bloedworst, Piquillo-peper en gebakken pijnboompitten',
-        slug: 'gebakken-kikkererwten'
-      }
-    },
-    price: { amount: '9.75' },
-    number: '1'
-  } as Product,
-  'item->product->meals->cream-of-courgette-soup-2': {
-    id: 'item->product->meals->cream-of-courgette-soup-2',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title:
-          'Crema de Calabacín con Picatostes, Crema Blanca y Nevada de Curry',
-        slug: 'crema-de-calabacin'
-      },
-      en: {
-        description: '',
-        title: 'Cream of courgette soup with croutons, cream, and curry foam',
-        slug: 'cream-of-courgette-soup'
-      },
-      de: {
-        description: '',
-        title: 'Zucchini-Cremesuppe mit Croutons, Sahne und Curryschaum',
-        slug: 'zucchini-cremesuppe'
-      },
-      nb: {
-        description: '',
-        title:
-          'Kremet Gresskarsuppe med Hardbrødstykker, Hvit Krem og Ett Snøflak av Karry',
-        slug: 'kremet-gresskarsuppe'
-      },
-      da: {
-        description: '',
-        title:
-          'Kremet Gresskarsuppe med Hårdebrødstykker, Hvid Krem og ett Snæv af Carry',
-        slug: 'kremet-gresskarsuppe'
-      },
-      sv: {
-        description: '',
-        title: 'Grädde av zucchini med krutonger, Vit grädde och curry ',
-        slug: 'gradde-av-zucchini'
-      },
-      fr: {
-        description: '',
-        title:
-          'Crème de courgettes aux croutons avec de la crème blanche et des copeaux de curry.',
-        slug: 'creme-de-courgettes'
-      },
-      nl: {
-        description: '',
-        title: 'Courgetteroom met croutons, witte room en kerrie Sneeuwval',
-        slug: 'courgetteroom'
-      }
-    },
-    price: { amount: '6.75' },
-    number: '2'
-  } as Product,
-  'item->product->meals->mango-gazpacho-3': {
-    id: 'item->product->meals->mango-gazpacho-3',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->egg-9'
-    ],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Gazpacho de mangos de Mogán y su guarnición',
-        slug: 'gazpacho-de-mangos'
-      },
-      en: {
-        description: '',
-        title: 'Mogan Mango Gazpacho with its Garnish',
-        slug: 'mogan-mango-gazpacho'
-      },
-      de: {
-        description: '',
-        title: 'Gazpacho von der Mango aus Mogán und ihre Beilagen',
-        slug: 'gazpacho-von-der-mango'
-      },
-      nb: {
-        description: '',
-        title: 'Gazpacho av mango fra Mogán og dens garnityr (kald suppe)',
-        slug: 'garzacho-av-mango'
-      },
-      da: {
-        description: '',
-        title: 'Gazpacho med mangofrugter fra Mogan og garniture',
-        slug: 'gazpacho-med-mangofrugter'
-      },
-      sv: {
-        description: '',
-        title: 'Gazpacho av mango från Mogán och dess garnering',
-        slug: 'gazpacho-av-mango'
-      },
-      fr: {
-        description: '',
-        title: `Gaspacho de mangues Mogán (commune de l'île) et son accompagnement`,
-        slug: 'gazpacho-de-mangues'
-      },
-      nl: {
-        description: '',
-        title: 'Mangogazpacho uit Mogan (Gran Canaria) met garnering',
-        slug: 'mangogazpacho-uit-mogan'
-      }
-    },
-    price: { amount: '6.90' },
-    number: '3'
-  } as Product,
-  'item->product->meals->soup-of-the-day-4': {
-    id: 'item->product->meals->soup-of-the-day-4',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '* Los alérgenos dependen del plato',
-        title: 'Cuchara del día',
-        slug: 'cuchara-del-dia'
-      },
-      en: {
-        description: '* Allergens depending on the dish',
-        title: 'Soup of the Day',
-        slug: 'soup-of-the-day'
-      },
-      de: {
-        description: '* Allergene je nach gericht',
-        title: 'Eintopf des Tages',
-        slug: 'eintopf-des-tages'
-      },
-      nb: {
-        description: '* Alergener avhenger av ingrediensene',
-        title: 'Dagens skje',
-        slug: 'dagens-skje'
-      },
-      da: {
-        description: '* Allergener alt efter typen af suppe',
-        title: 'Dagens suppe',
-        slug: 'dagens-suppe'
-      },
-      sv: {
-        description: '* Allergen beror på olika ingredienser',
-        title: 'Dagens sked',
-        slug: 'dagens-sked'
-      },
-      fr: {
-        description: '* Allergènes à consulter',
-        title: 'Le plat du jour',
-        slug: 'le-plat-du-jour'
-      },
-      nl: {
-        description: '* Allergenen afhankelijk van gerecht',
-        title: 'Gerecht van de dag',
-        slug: 'gerecht-van-de-dag'
-      }
-    },
-    price: { amount: '6.75' },
-    number: '4'
-  } as Product,
-
-  //// meals->sea-and-mountains->
-  'item->product->meals->tuna-in-tomato-with-fried-egg-yolk-1': {
-    id: 'item->product->meals->tuna-in-tomato-with-fried-egg-yolk-1',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->fish-1',
-      'allergenic->egg-9'
-    ],
-    selectableAllergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Atún en tomate con yema frita',
-        slug: 'atun-en-tomate-con-yema-frita'
-      },
-      en: {
-        description: '',
-        title: 'Tuna in tomato with fried egg yolk',
-        slug: 'tuna-in-tomato-with-fried-egg-yolk'
-      },
-      de: {
-        description: '',
-        title: 'Thunfisch in Tomate mit gebratenem Eigelb',
-        slug: 'thunfisch-in-tomate-mit-gebratenem-eigelb'
-      },
-      nb: {
-        description: '',
-        title: 'Tunfisk i tomat med stekt eggeplomme',
-        slug: 'tunfisk-i-tomat-med-stekt-eggeplomme'
-      },
-      da: {
-        description: '',
-        title: 'Tunfisk i tomat med stægt æggeplomme',
-        slug: 'tunfisk-i-tomat-med-stægt-æggeplomme'
-      },
-      sv: {
-        description: '',
-        title: 'Tonfisk med tomat och stekt äggula',
-        slug: 'tonfisk-med-tomat-och-stekt-aggula'
-      },
-      fr: {
-        description: '',
-        title: 'Thon à la tomate avec jaune d’œuf frite',
-        slug: 'thon-a-la-tomate-avec-jaune-d-œuf-frite'
+        title: '',
+        slug: ''
       },
       nl: {
         description: '',
@@ -1646,23 +71,21 @@ export const items: { [key: string]: Info | Product | Menu } = {
         slug: ''
       }
     },
-    price: { amount: '11.50' },
+    price: { amount: '3.95' },
     number: '1'
   } as Product,
-  'item->product->meals->cod-fillet-2': {
-    id: 'item->product->meals->cod-fillet-2',
+  'item->product->meals->starters->arab-patty-with-cheese-and-honey-2': {
+    id: 'item->product->meals->starters->arab-patty-with-cheese-and-honey-2',
     type: 'product',
-    images: [
-      'image->item->product->default-1',
-      'image->item->product->bacalao-1'
-    ],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: 'image->item->product->bacalao-1',
-    hasAllergens: true,
+    mainImg: 'image->item->product->briwat-queso-miel-1',
+    hasAllergens: false,
     hasVariants: false,
-    allergens: ['allergenic->fish-1', 'allergenic->dairy-products-10'],
+    variants: '',
     selectableAllergens: [
+      'allergenic->fish-1',
       'allergenic->crustaceans-2',
       'allergenic->gluten-3',
       'allergenic->mustard-4',
@@ -1670,156 +93,143 @@ export const items: { [key: string]: Info | Product | Menu } = {
       'allergenic->peanuts-6',
       'allergenic->nuts-7',
       'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
       'allergenic->egg-9',
       'allergenic->lupins-11',
       'allergenic->soya-12',
       'allergenic->moluscs-13',
       'allergenic->celery-14'
     ],
+    allergens: [],
     displayInfo: {
       es: {
         description: '',
-        title:
-          'Lomo de Bacalao sobre base de puré de papa violeta y salsa pil-pil',
-        slug: 'lomo-de-bacalao'
+        title: 'Briwat de Queso y Miel',
+        slug: 'briwat-de-queso-y-miel'
       },
       en: {
         description: '',
-        title: 'Cod Loin on a bed of Purple Potato Purée and Pil-pil Sauce',
-        slug: 'cod-fillet'
+        title: 'Arab Patty with Cheese and Honey',
+        slug: 'arab-patty-with-cheese-and-honey'
       },
       de: {
         description: '',
-        title:
-          'Rückensteak vom Kabeljau an einem Bett von der violetten Kartoffel und Pil-Pil-Sauce',
-        slug: 'ruckensteak-vom-kabeljau'
+        title: 'Arabische Teigtasche mit Kase und Honig',
+        slug: 'arabische-teigtasche-mit-kase-und-honig'
       },
       nb: {
         description: '',
-        title: 'Torskeloin servert med lilla potetmos og med pil-pil saus',
-        slug: 'torskeloin-servert'
+        title: '',
+        slug: ''
       },
       da: {
         description: '',
-        title:
-          'Torskefilet på grøntsagspure med blå kartofler og pil-pil-sauce',
-        slug: 'tosrkefilet'
+        title: '',
+        slug: ''
       },
       sv: {
         description: '',
-        title: 'Torskfilé baserad på violett potatismos och pil-pilsås',
-        slug: 'tosrkefile'
+        title: '',
+        slug: ''
       },
       fr: {
         description: '',
-        title:
-          'Filet de cabillaud sur fond de purée de papa violeta (vitelottes des îles Canaries) et sauce pil-pil',
-        slug: 'filet-de-cabillaud'
+        title: '',
+        slug: ''
       },
       nl: {
         description: '',
-        title:
-          'Kabeljauwlende op een bedje van truffelaardappelpuree en pil-pil saus',
-        slug: 'kabeljauwlende'
+        title: '',
+        slug: ''
       }
     },
-    price: { amount: '15.75' },
+    price: { amount: '5.50' },
     number: '2'
   } as Product,
-  'item->product->meals->aquanaria-sea-bass-3': {
-    id: 'item->product->meals->aquanaria-sea-bass-3',
+  'item->product->meals->starters->arab-patty-with-vegetables-3': {
+    id: 'item->product->meals->starters->arab-patty-with-vegetables-3',
     type: 'product',
-    images: [
-      'image->item->product->default-1',
-      'image->item->product->lubina-1'
-    ],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: 'image->item->product->lubina-1',
-    hasAllergens: true,
+    mainImg: 'image->item->product->briwat-verduras-1',
+    hasAllergens: false,
     hasVariants: false,
-    allergens: [
-      'allergenic->fish-1',
-      'allergenic->nuts-7',
-      'allergenic->sulphites-5'
-    ],
+    variants: '',
     selectableAllergens: [
+      'allergenic->fish-1',
       'allergenic->crustaceans-2',
       'allergenic->gluten-3',
       'allergenic->mustard-4',
+      'allergenic->sulphites-5',
       'allergenic->peanuts-6',
+      'allergenic->nuts-7',
       'allergenic->sesame-8',
-      'allergenic->egg-9',
       'allergenic->dairy-products-10',
+      'allergenic->egg-9',
       'allergenic->lupins-11',
       'allergenic->soya-12',
       'allergenic->moluscs-13',
       'allergenic->celery-14'
     ],
+    allergens: [],
     displayInfo: {
       es: {
         description: '',
-        title:
-          'Lubina Aquanaria sobre base de mangos, aguacate y anacardos, tomate cherry amarillo laminado y salsa Bilbaína',
-        slug: 'lubina-aquanaria'
+        title: 'Briwat de Verduras',
+        slug: 'briwat-de-verduras'
       },
       en: {
         description: '',
-        title:
-          'AAquanaria Seabass on a bed of Mango, Avocado, Cashews, sliced Yellow Cherry Tomato and Bilbaina Sauce',
-        slug: 'aquanaria-sea-bass'
+        title: 'Arab Patty with Vegetables',
+        slug: 'arab-patty-with-vegetables'
       },
       de: {
         description: '',
-        title:
-          'Aquanaria-Seebarsch an einem Bett aus Mango, Avocado und Cashewkernen, in Scheiben geschnittenen gelben Kirschtomaten in bilbainischer Sauce',
-        slug: 'aquanaria-seebarsch'
+        title: 'Arabische Teigtasche mit Gemüse',
+        slug: 'arabische-teigtasche-mit-gemuse'
       },
       nb: {
         description: '',
-        title:
-          'Havsabbor fra Aquanaria servert med mango, avokado og cashewnøtter, skiver av gul cherrytomat og Bilbao-saus',
-        slug: 'havsabbor-fra-aquanaria'
+        title: '',
+        slug: ''
       },
       da: {
         description: '',
-        title:
-          'Aquanaria-havbars på en bund af mangofrugt, avocado og  cashew-nødder, gule cherry-tomater i skiver og bilbainsk sauce',
-        slug: 'aquanaria-havbars'
+        title: '',
+        slug: ''
       },
       sv: {
         description: '',
-        title:
-          'Havsabborre från Aquanaria baserad på mango, avokado och cashewnötter, skivan gul körsbärstomat och Bilbaosås',
-        slug: 'havsabborre-fran-aquanaria'
+        title: '',
+        slug: ''
       },
       fr: {
         description: '',
-        title:
-          'Lubina Aquanaria (petit bar) sur un fond de mangues, avocat et noix de cajou, tomates cerises jaunes en lamelle et sauce bilbaína (sauce typique de la région de Bilbao)',
-        slug: 'lubina-aquanaria'
+        title: '',
+        slug: ''
       },
       nl: {
         description: '',
-        title:
-          'Zeebaars op een bedje van mango, avocado en cashewnoten, laagjes gele cherrytomaatjes en saus uit Bilbao',
-        slug: 'zeebaars'
+        title: '',
+        slug: ''
       }
     },
-    price: { amount: '18.95' },
+    price: { amount: '5.50' },
     number: '3'
   } as Product,
-  'item->product->meals->nigiris-of-smoked-sardines-4': {
-    id: 'item->product->meals->nigiris-of-smoked-sardines-4',
+  'item->product->meals->starters->arab-patty-with-spinach-4': {
+    id: 'item->product->meals->starters->arab-patty-with-spinach-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
+    mainImg: 'image->item->product->briwat-espinacas-1',
+    hasAllergens: false,
     hasVariants: false,
-    allergens: ['allergenic->fish-1'],
+    variants: '',
     selectableAllergens: [
+      'allergenic->fish-1',
       'allergenic->crustaceans-2',
       'allergenic->gluten-3',
       'allergenic->mustard-4',
@@ -1827,2950 +237,194 @@ export const items: { [key: string]: Info | Product | Menu } = {
       'allergenic->peanuts-6',
       'allergenic->nuts-7',
       'allergenic->sesame-8',
-      'allergenic->egg-9',
       'allergenic->dairy-products-10',
+      'allergenic->egg-9',
       'allergenic->lupins-11',
       'allergenic->soya-12',
       'allergenic->moluscs-13',
       'allergenic->celery-14'
     ],
+    allergens: [],
     displayInfo: {
       es: {
         description: '',
-        title:
-          'Nigiris de sardina ahumada, salmón ahumado o atún rojo. (4 unidades)',
-        slug: 'nigiris-de-sardina-ahumada'
+        title: 'Briwat de Espinacas con Langostinos y Champiñones',
+        slug: 'briwat-de-espinacas'
       },
       en: {
         description: '',
-        title:
-          'Nigiris of smoked sardines, smoked salmon, or red tuna (4 pieces)',
-        slug: 'nigiris-of-smoked-sardines'
+        title: 'Arab Patty with Spinach, Prawns and Mushrooms',
+        slug: 'arab-patty-with-spinach'
       },
       de: {
         description: '',
         title:
-          'Nigiris aus geräucherten Sardinen, geräuchertem Lachs oder rotem Thunfisch (4 St.)',
-        slug: 'nigiris-aus-geräucherten-sardinen'
+          'Arabische Teigpastete gefüllt mit Spinat, Garnelen uns Champignons',
+        slug: 'arabische-teigpastete-gefullt-mit-spinat'
       },
       nb: {
         description: '',
-        title: 'Sardin nigiris røket, røket laks eller rød tunfisk',
-        slug: 'sardin-nigiris-roket'
+        title: '',
+        slug: ''
       },
       da: {
         description: '',
-        title: 'Sardin nigiris røget, røget laks eller rød tunfisk',
-        slug: 'sardin-nigiris-roget'
+        title: '',
+        slug: ''
       },
       sv: {
         description: '',
-        title:
-          'Nigiris ( rökt sardin eller rökt lax eller röd tonfisk ) (fyra enheter)',
-        slug: 'nigiris'
+        title: '',
+        slug: ''
       },
       fr: {
         description: '',
-        title:
-          'Nigiri à la sardine fumée, au saumon fumé ou au thon rouge (4 unités)',
-        slug: 'nigiri-a-la-sardine-fumee'
+        title: '',
+        slug: ''
       },
       nl: {
         description: '',
-        title:
-          'Gerookte sardine nigiri, gerookte zalm of rode tonijn. (4 stuks)',
-        slug: 'gerookte-sardine-nigiri'
+        title: '',
+        slug: ''
       }
     },
-    price: { amount: '11.50' },
+    price: { amount: '5.95' },
     number: '4'
   } as Product,
-  'item->product->meals->rack-of-lamb-5': {
-    id: 'item->product->meals->rack-of-lamb-5',
+  'item->product->meals->starters->arab-patty-with-chicken-and-spices-5': {
+    id: 'item->product->meals->starters->arab-patty-with-chicken-and-spices-5',
     type: 'product',
-    images: [
-      'image->item->product->default-1',
-      'image->item->product->cordero-1'
-    ],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: 'image->item->product->cordero-1',
+    mainImg: 'image->item->product->briwat-pollo-1',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
     allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
     displayInfo: {
       es: {
         description: '',
-        title:
-          'Carre de Cordero a baja temperatura base menestra de verduras (Ratatouille), salsa de su jugo al tomillo y crujiente de patata',
-        slug: 'carre-de-cordero'
+        title: 'Briwat de Pollo',
+        slug: 'briwat-de-pollo'
       },
       en: {
         description: '',
-        title:
-          'Low temperature roasted Rack of Lamb on a bed of Ratatouille, Thyme Gravy and Crispy Potatoes',
-        slug: 'rack-of-lamb'
+        title: 'Arab Patty with Chicken and Spices',
+        slug: 'arab-patty-with-chicken-and-spices'
       },
       de: {
         description: '',
-        title:
-          'Lammkarree auf niedriger Tempreratur gegart, auf einem Bett aus Mischgemüse (Ratatouille), Sauce aus dem eigenen Bratensaft mit Thymian und Knusprigem von der Kartoffel',
-        slug: 'lammkarree-auf-niedriger-tempreratur-gegart'
+        title: 'Arabische Teigpastete mit Hähnchenfleisch',
+        slug: 'arabische-teigpastete-mit-hahnchenfleisch'
       },
       nb: {
         description: '',
-        title:
-          'Konfitert lammecarre, grønnsaksgryte (ratatouille), sjysaus med timian, og sprø potet',
-        slug: 'konfitert-lammecarre'
+        title: '',
+        slug: ''
       },
       da: {
         description: '',
-        title:
-          'Lammekrone tilberedt ved lav temperatur, grøntssagsblanding (ratatouille), i egen sovs med timian og rösti',
-        slug: 'lammekrone-tilberedt-ved-lav-temperatur'
+        title: '',
+        slug: ''
       },
       sv: {
         description: '',
-        title:
-          'Konfiterad Lammcarre, grönsaksgryta (ratatouille), skysås med timjan och krispig potatis',
-        slug: 'konfiterad-lammcarre'
+        title: '',
+        slug: ''
       },
       fr: {
         description: '',
-        title:
-          'Carré d’agneau cuisiné à basse température, ratatouille, jus de cuisson au thym et croustillant de pommes de terre',
-        slug: 'carre-d-agneau'
+        title: '',
+        slug: ''
       },
       nl: {
         description: '',
-        title:
-          'Lamsvlees en schapenvlees bereid op lage temperatuur, groenteschotel (ratatouille), tijmjus en aardappelkoekjes',
-        slug: 'lamsvlees-en-schapenvlees-bereid-op-lage-temperatuur'
-      }
-    },
-    price: { amount: '19.50' },
-    number: '5'
-  } as Product,
-  'item->product->meals->norwegian-marinated-herring-6': {
-    id: 'item->product->meals->norwegian-marinated-herring-6',
-    type: 'product',
-    images: [
-      'image->item->product->default-1',
-      'image->item->product->arenque-1'
-    ],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: 'image->item->product->arenque-1',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->fish-1',
-      'allergenic->egg-9',
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10'
-    ],
-    selectableAllergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '(disponible entre los meses de octubre a marzo)',
-        title: 'Arenque Marinado Noruego',
-        slug: 'arenque-marinado-noruego'
-      },
-      en: {
-        description: '(available from October through March)',
-        title: 'Norwegian Marinated Herring',
-        slug: 'norwegian-marinated-herring'
-      },
-      de: {
-        description: '(erhältlich in den Monaten Oktober bis März)',
-        title: 'Marinierter norwegischer Hering',
-        slug: 'marinierter-norwegischer-hering'
-      },
-      nb: {
-        description: '(tilgjengelig mellom oktober og mars)',
-        title: 'Norsk Marinert sild',
-        slug: 'norsk-marinert-sild'
-      },
-      da: {
-        description: '(fås i månederne fra oktober til marts)',
-        title: 'Norsk marineret sild',
-        slug: 'norsk-marineret-sild'
-      },
-      sv: {
-        description: '(tillgänglig mellan oktober och mars)',
-        title: 'Norsk marinerad sill',
-        slug: 'norsk-marinerad-sill'
-      },
-      fr: {
-        description: '(disponible d’octobre à mars)',
-        title: 'Hareng mariné norvégien',
-        slug: 'hareng-marine-norvegien'
-      },
-      nl: {
-        description: '(beschikbaar tussen oktober en maart)',
-        title: 'Noorse gemarineerde haring',
-        slug: 'noorse-gemarineerde-haring'
-      }
-    },
-    price: { amount: '11.95' },
-    number: '6'
-  } as Product,
-  'item->product->meals->carved-angus-ribeye-7': {
-    id: 'item->product->meals->carved-angus-ribeye-7',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->egg-9', 'allergenic->dairy-products-10'],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title:
-          'Trinchado Lomo alto de Angus con torre de papa, escalibada y salsa Bearnesa',
-        slug: 'trinchado-lomo-alto'
-      },
-      en: {
-        description: '',
-        title:
-          'Carved Angus Ribeye with a Tower of Potatoes, Escalivada smoked Vegetables and Béarnaise Sauce',
-        slug: 'carved-angus-ribeye'
-      },
-      de: {
-        description: '',
-        title:
-          'Tranchierter Hochrücken vom Angusrind mit Kartoffelturm, Escalivada und Sauce Bearnaise ',
-        slug: 'tranchierter-hochrucken-vom-angusrind'
-      },
-      nb: {
-        description: '',
-        title:
-          'Transjert høyrygg av Angusfe med potettårn, Grillede og syltede paprika og bearnaise saus',
-        slug: 'transjert-hoyrygg-av-angusfe'
-      },
-      da: {
-        description: '',
-        title:
-          'Udskåret Angus-højreb, kartoffeltårn, ovnbagte grøntsager og bearnaisesovs',
-        slug: 'udskaret-angus-hojreb'
-      },
-      sv: {
-        description: '',
-        title: 'Hugga länden Angus med béarnaisesås och chips',
-        slug: 'hugga-landen-angus'
-      },
-      fr: {
-        description: '',
-        title: 'Entrecôte d’Angus à la béarnaise et pommes paille.',
-        slug: 'entrecote-d-angus'
-      },
-      nl: {
-        description: '',
-        title:
-          'Trancherad Angus nötkött högrygg med potatistorn, grillade och syltade paprika och bearnaisesås',
-        slug: 'trancherad-angus-notkott-hogrygg'
-      }
-    },
-    price: { amount: '19.50' },
-    number: '7'
-  } as Product,
-  'item->product->meals->seafood-pasta-8': {
-    id: 'item->product->meals->seafood-pasta-8',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->moluscs-13'
-    ],
-    selectableAllergens: [
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description:
-          'A elegir también (Linguini boloñesa -> 8,25€, Linguini carbonara -> 9,90€)',
-        title: 'Pasta fresca de frutos del Mar (Linguini)',
-        slug: 'pasta-fresca-de-frutos-del-mar'
-      },
-      en: {
-        description:
-          'To choose also (Linguini bolognese -> 8,25€, Linguini carbonara -> 9,90€)',
-        title: 'Seafood Pasta (Linguini)',
-        slug: 'seafood-pasta'
-      },
-      de: {
-        description:
-          'Auch zur Auswahl (Linguini bolognese -> 8,25€, Linguini carbonara -> 9,90€)',
-        title: 'Pasta mit Meeresfrüchten (Linguini)',
-        slug: 'pasta-mit-meeresfruchten'
-      },
-      nb: {
-        description:
-          'Å velge også (Linguini bolognese -> 8,25€, Linguini carbonara -> 9,90€)',
-        title: 'Sjømatpasta (Linguini)',
-        slug: 'sjomatpasta'
-      },
-      da: {
-        description:
-          'At vælge også (Linguini bolognese -> 8,25€, Linguini carbonara -> 9,90€)',
-        title: 'Pasta med havets frugter (Linguini)',
-        slug: 'pasta-med-havets-frugter'
-      },
-      sv: {
-        description:
-          'Att välja också (Linguini bolognese -> 8,25€, Linguini carbonara -> 9,90€)',
-        title: 'Skaldjurspasta (Linguini)',
-        slug: 'skaldjurspasta'
-      },
-      fr: {
-        description:
-          'A choisir aussi (Linguini bolognaise -> 8,25€, Linguini carbonara -> 9,90€)',
-        title: 'Pâtes aux fruits de mer (Linguini)',
-        slug: 'pates-aux-fruits-de-mer'
-      },
-      nl: {
-        description:
-          'Om ook te kiezen (Linguini bolognese -> 8,25€, Linguini carbonara -> 9,90€)',
-        title: 'Pasta met zeevruchten (Linguini)',
-        slug: 'pasta-met-zeevruchten'
-      }
-    },
-    price: { amount: '13.95' },
-    number: '8'
-  } as Product,
-  'item->product->meals->fresh-fish-of-the-day-and-its-garnish-9': {
-    id: 'item->product->meals->fresh-fish-of-the-day-and-its-garnish-9',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->fish-1', 'allergenic->sulphites-5'],
-    selectableAllergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Pescado fresco del día con su guarnición',
-        slug: 'pescado-fresco-del-dia-con-su-guarnicion'
-      },
-      en: {
-        description: '',
-        title: 'Fresh Fish of the Day and its Garnish',
-        slug: 'fresh-fish-of-the-day-and-its-garnish'
-      },
-      de: {
-        description: '',
-        title: 'Frischer Fisch des Tages mit seinen Beilagen',
-        slug: 'frischer-fisch-des-tages-mit-seinen-beilagen'
-      },
-      nb: {
-        description: '',
-        title: 'Dagens ferske fisk med garnityr',
-        slug: 'dagens-ferske-fisk-med-garnityr'
-      },
-      da: {
-        description: '',
-        title: 'Dagens friske fisk med garniture',
-        slug: 'dagens-friske-fisk-med-garniture'
-      },
-      sv: {
-        description: '',
-        title: 'Dagens färska fisk med sin garnering',
-        slug: 'dagens-farska-fisk-med-sin-garnering'
-      },
-      fr: {
-        description: '',
-        title: 'Poisson pêché du jour et son accompagnement',
-        slug: 'poisson-peche-du-jour-et-son-accompagnement'
-      },
-      nl: {
-        description: '',
-        title: 'Verse vis van de dag met garnering',
-        slug: 'verse-vis-van-de-dag-met-garnering'
-      }
-    },
-    price: { amount: '18.95' },
-    number: '9'
-  } as Product,
-  'item->product->meals->our-fried-squid-with-garnish-10': {
-    id: 'item->product->meals->our-fried-squid-with-garnish-10',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10',
-      'allergenic->moluscs-13'
-    ],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Nuestros calamares fritos con su guarnición',
-        slug: 'nuestros-calamares-fritos-con-su-guarnicion'
-      },
-      en: {
-        description: '',
-        title: 'Our Fried Squid with Garnish',
-        slug: 'our-fried-squid-with-garnish'
-      },
-      de: {
-        description: '',
-        title: 'Unsere frittierten Tintenfische mit ihrer Beilage',
-        slug: 'unsere-frittierten-tintenfische-mit-ihrer-beilage'
-      },
-      nb: {
-        description: '',
-        title: 'Vår stekte akkar med sin garnityr',
-        slug: 'var-stekte-akkar-med-sin-garnityr'
-      },
-      da: {
-        description: '',
-        title: 'Vores friturestegte blæksprutter med garniture',
-        slug: 'vores-friturestegte-blaeksprutter-med-garniture'
-      },
-      sv: {
-        description: '',
-        title: 'Vår stekta bläckfisk med sin garnering',
-        slug: 'var-stekta-bläckfisk-med-sin-garnering'
-      },
-      fr: {
-        description: '',
-        title: 'Calamar frit et son accompagnement',
-        slug: 'calamar-frit-et-son-accompagnement'
-      },
-      nl: {
-        description: '',
-        title: 'Onze gefrituurde calamares met garnering',
-        slug: 'onze-gefrituurde-calamares-met-garnering'
-      }
-    },
-    price: { amount: '14.75' },
-    number: '10'
-  } as Product,
-  'item->product->meals->gratinated-iberian-secret-11': {
-    id: 'item->product->meals->gratinated-iberian-secret-11',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->dairy-products-10'],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title:
-          'Secreto ibérico con graten al horno y salsa de pera al pimentón de la vera',
-        slug: 'secreto-iberico'
-      },
-      en: {
-        description: '',
-        title:
-          'Gratinated Iberian Secret Pork Fillet and Pear Sauce with de la Vera Paprika',
-        slug: 'gratinated-iberian-secret'
-      },
-      de: {
-        description: '',
-        title:
-          'Verstecktes Filet vom iberischen Schwein mit Gratin und Birnensauce mit de la Vera Paprika',
-        slug: 'verstecktes-filet-vom-iberischen-schwein'
-      },
-      nb: {
-        description: '',
-        title:
-          'Iberisk ribbetverrstykke (uten ben) med bakt grateng og pæresaus med paprika «de la vera»',
-        slug: 'iberisk-ribbetverrstykke'
-      },
-      da: {
-        description: '',
-        title:
-          'Ovnstegt iberisk secreto (svinebrystkød) med gratin og pæresovs med spansk paprika ',
-        slug: 'ovnstegt-iberisk-secreto'
-      },
-      sv: {
-        description: '',
-        title:
-          'Iberisk revben tvärstycke  med gratäng och päronsås med paprika ”de la vera”',
-        slug: 'iberisk-revben-tvarstycke'
-      },
-      fr: {
-        description: '',
-        title:
-          'Secreto de porc ibérique accompagné d’un gratin de poire au piment doux A.O.C. de la Vera',
-        slug: 'secreto-de-porc-iberique'
-      },
-      nl: {
-        description: '',
-        title:
-          'Iberico Secreto met gratin uit de oven en perensaus met paprikapoeder',
-        slug: 'iberico-secreto-met-gratin'
-      }
-    },
-    price: { amount: '19.50' },
-    number: '11'
-  } as Product,
-  'item->product->meals->by-rocio-style-red-curry-masala-12': {
-    id: 'item->product->meals->by-rocio-style-red-curry-masala-12',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->soya-12'
-    ],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->gluten-3',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title:
-          'Mix curry masala rojo estilo By Rocio (pollo y gamba servido con Arroz Basmati)',
-        slug: 'mix-curry-masala-rojo-estilo-by-rocio'
-      },
-      en: {
-        description: '',
-        title:
-          'By Rocio style Red Curry Masala (Chicken and Prawns served with Basmati Rice)',
-        slug: 'by-rocio-style-red-curry-masala'
-      },
-      de: {
-        description: '',
-        title:
-          'Mix vom roten Curry Masala nach Art By Rocio (Hähnchen und Garnelen serviert mit Basmatireis)',
-        slug: 'mix-vom-roten-curry-masala-nach-art-by-rocio'
-      },
-      nb: {
-        description: '',
-        title:
-          'By Rocios Rød masala curry mix (kylling og reker servert med Basmati ris)',
-        slug: 'by-rocios-rod-masala-curry-mix'
-      },
-      da: {
-        description: '',
-        title:
-          'Blandet rød masala karryret á la By Rocio (kylling og rejer serveret med Basmati-ris)',
-        slug: 'blandet-rod-masala-karryret-a-la-by-rocio'
-      },
-      sv: {
-        description: '',
-        title:
-          'By Rocios stil röd masala curry mix (kyckling och räkor serveras med Basmati ris)',
-        slug: 'by-rocios-stil-röd-masala-curry-mix'
-      },
-      fr: {
-        description: '',
-        title:
-          'Mix curry masala rouge By Rocio (poulet et crevettes servis avec du riz basmati)',
-        slug: 'mix-curry-masala-rouge-by-rocio'
-      },
-      nl: {
-        description: '',
-        title:
-          'Rode curry Masala mix By Rocio (kip en gamba’s geserveerd met Basmatirijst)',
-        slug: 'rode-curry-masala-mix-by-rocio'
-      }
-    },
-    price: { amount: '15.90' },
-    number: '12'
-  } as Product,
-
-  //// meals->fittings->
-  'item->product->meals->fittings->chips-1': {
-    id: 'item->product->meals->fittings->chips-1',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Papas fritas',
-        slug: 'papa-frita'
-      },
-      en: {
-        description: '',
-        title: 'Chips',
-        slug: 'chips'
-      },
-      de: {
-        description: '',
-        title: 'Pommes frites',
-        slug: 'pommes-frites'
-      },
-      nb: {
-        description: '',
-        title: 'Pommes frites',
-        slug: 'pommes-frites'
-      },
-      da: {
-        description: '',
-        title: 'Pommes frites',
-        slug: 'pommes-frites'
-      },
-      sv: {
-        description: '',
-        title: 'Pommes frites',
-        slug: 'pommes-frites'
-      },
-      fr: {
-        description: '',
-        title: 'Papas Fritas (frites)',
-        slug: 'frites'
-      },
-      nl: {
-        description: '',
-        title: 'Frieten',
-        slug: 'frieten'
-      }
-    },
-    price: { amount: '2.50' },
-    number: '1'
-  } as Product,
-  'item->product->meals->fittings->wrinkled-potatoes-2': {
-    id: 'item->product->meals->fittings->wrinkled-potatoes-2',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: 'Papas arrugadas',
-        title: 'Papas arrugadas',
-        slug: 'papa-arrugadas'
-      },
-      en: {
-        description: '',
-        title: 'Canarian Wrinkled Potatoes',
-        slug: 'wrinkled-potatoes'
-      },
-      de: {
-        description: '',
-        title: 'Papas Arrugadas (Kanarische Runzelkartoffeln mit Salz)',
-        slug: 'kanarische-runzelkartoffeln'
-      },
-      nb: {
-        description: '',
-        title: 'Rynkepoteter',
-        slug: 'rynkepoteter'
-      },
-      da: {
-        description: '',
-        title: 'Kanariske kartofler med skræl',
-        slug: 'kanariske-kartofler-med-skrael'
-      },
-      sv: {
-        description: '',
-        title: 'Skrynklig potatis',
-        slug: 'skrynklig-potatis'
-      },
-      fr: {
-        description: '',
-        title: 'Papas arrugadas (pommes de terre cuites au sel)',
-        slug: 'pommes-de-terre-cuites-au-sel'
-      },
-      nl: {
-        description: '',
-        title: 'Papas arrugadas (Canarisch aardappelgerecht)',
-        slug: 'canarisch-aardappelgerecht'
-      }
-    },
-    price: { amount: '2.50' },
-    number: '2'
-  } as Product,
-  'item->product->meals->fittings->sweet-potato-fries-3': {
-    id: 'item->product->meals->fittings->sweet-potato-fries-3',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Batata frita',
-        slug: 'batata-frita'
-      },
-      en: {
-        description: '',
-        title: 'Fried Sweet Potato',
-        slug: 'sweet-potato-fries'
-      },
-      de: {
-        description: '',
-        title: 'Frittierte Süßkartoffeln',
-        slug: 'Subkartoffel-pommes'
-      },
-      nb: {
-        description: '',
-        title: 'Pommes frites av søtpotet',
-        slug: 'sotpotet-frites'
-      },
-      da: {
-        description: '',
-        title: 'Friturestegt sød kartoffel',
-        slug: 'sod-kartoffle-frites'
-      },
-      sv: {
-        description: '',
-        title: 'Sötpotatis pommes frites',
-        slug: 'stekt-sotpotatis'
-      },
-      fr: {
-        description: '',
-        title: 'Patate douce frite',
-        slug: 'patate-douce-frite'
-      },
-      nl: {
-        description: '',
-        title: 'Zoete-aardappelfrieten',
-        slug: 'zoete-aardappelfrieten'
-      }
-    },
-    price: { amount: '2.50' },
-    number: '3'
-  } as Product,
-  'item->product->meals->fittings->salad-4': {
-    id: 'item->product->meals->fittings->salad-4',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Buque de ensalada',
-        slug: 'buque-de-ensalada'
-      },
-      en: {
-        description: '',
-        title: 'Salad Bouquet',
-        slug: 'salad'
-      },
-      de: {
-        description: '',
-        title: 'Salatbouquet',
-        slug: 'salatbouquet'
-      },
-      nb: {
-        description: '',
-        title: 'Salatbukett',
-        slug: 'salatbukett'
-      },
-      da: {
-        description: '',
-        title: 'Salatbåd',
-        slug: 'salatbad'
-      },
-      sv: {
-        description: '',
-        title: 'Sallads bukett',
-        slug: 'sallads-bukett'
-      },
-      fr: {
-        description: '',
-        title: 'Bouquet de salade',
-        slug: 'bouquet-de-salade'
-      },
-      nl: {
-        description: '',
-        title: 'Saladeboeket',
-        slug: 'saladeboeket'
-      }
-    },
-    price: { amount: '2.50' },
-    number: '4'
-  } as Product,
-  'item->product->meals->fittings->basmati-rice-5': {
-    id: 'item->product->meals->fittings->basmati-rice-5',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Arroz basmati',
-        slug: 'arroz-basmati'
-      },
-      en: {
-        description: '',
-        title: 'Basmati Rice',
-        slug: 'basmati-rice'
-      },
-      de: {
-        description: '',
-        title: 'Basmatireis',
-        slug: 'basmatireis'
-      },
-      nb: {
-        description: '',
-        title: 'Basmati ris',
-        slug: 'basmati-ris'
-      },
-      da: {
-        description: '',
-        title: 'Basmati-ris',
-        slug: 'basmati-ris'
-      },
-      sv: {
-        description: '',
-        title: 'Basmati ris',
-        slug: 'basmati-ris'
-      },
-      fr: {
-        description: '',
-        title: 'Riz basmati',
-        slug: 'riz-basmati'
-      },
-      nl: {
-        description: '',
-        title: 'Basmatirijst',
-        slug: 'basmatirijst'
-      }
-    },
-    price: { amount: '2.50' },
-    number: '5'
-  } as Product,
-  'item->product->meals->fittings->ratatouille-6': {
-    id: 'item->product->meals->fittings->ratatouille-6',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Ratatouille',
-        slug: 'ratatouille'
-      },
-      en: {
-        description: '',
-        title: 'Ratatouille',
-        slug: 'ratatouille'
-      },
-      de: {
-        description: '',
-        title: 'Ratatouille',
-        slug: 'ratatouille'
-      },
-      nb: {
-        description: '',
-        title: 'Ratatouille',
-        slug: 'ratatouille'
-      },
-      da: {
-        description: '',
-        title: 'Ratatouille',
-        slug: 'ratatouille'
-      },
-      sv: {
-        description: '',
-        title: 'Ratatouille',
-        slug: 'ratatouille'
-      },
-      fr: {
-        description: '',
-        title: 'Ratatouille',
-        slug: 'ratatouille'
-      },
-      nl: {
-        description: '',
-        title: 'Ratatouille',
-        slug: 'ratatouille'
-      }
-    },
-    price: { amount: '2.50' },
-    number: '6'
-  } as Product,
-
-  //// desserts->
-  'item->product->desserts->our-creamy-cheesecake-1': {
-    id: 'item->product->desserts->our-creamy-cheesecake-1',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9'
-    ],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Nuestra tarta de queso cremosa al horno',
-        slug: 'tarta-de-queso'
-      },
-      en: {
-        description: '',
-        title: 'Our Creamy Baked Cheesecake',
-        slug: 'our-creamy-cheesecake'
-      },
-      de: {
-        description: '',
-        title: 'Unsere cremige Käsetorte aus dem Backofen',
-        slug: 'unser-cremiger-kasekuchen'
-      },
-      nb: {
-        description: '',
-        title: 'Vår kremete bakte ostekake',
-        slug: 'var-egen-ostekake'
-      },
-      da: {
-        description: '',
-        title: 'Vår krämiga bakade cheesecake',
-        slug: 'vores egen ostekage'
-      },
-      sv: {
-        description: '',
-        title: 'Bakad Artescheesecake',
-        slug: 'bakad-artescheesecake'
-      },
-      fr: {
-        description: '',
-        title: 'Notre tarta de queso (cheese cake), crémeux et cuit au four',
-        slug: 'tarte-cremeuse-au-fromage'
-      },
-      nl: {
-        description: '',
-        title: 'Onze romige cheesecake uit de oven',
-        slug: 'onze-romige-cheesecake-uit-de-oven'
-      }
-    },
-    price: { amount: '6.50' },
-    number: '1'
-  } as Product,
-  'item->product->desserts->homemade-sweets-from-tejeda-2': {
-    id: 'item->product->desserts->homemade-sweets-from-tejeda-2',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9'
-    ],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Selección de dulces Artesanos Tejeda',
-        slug: 'dulces-artesanos-tejeda'
-      },
-      en: {
-        description: '',
-        title: 'Selection of homemade sweets from Tejeda',
-        slug: 'homemade-sweets-from-tejeda'
-      },
-      de: {
-        description: '',
-        title: 'Auswahl an hausgemachten Süßspeisen aus Tejeda',
-        slug: 'hausgemachten-susspeisen-aus-tejeda'
-      },
-      nb: {
-        description: '',
-        title: 'Velg fra forskjellige hjemmelagde søtsaker fra tejeda',
-        slug: 'forskjellige-hjemmelagde-sotsaker-fra-tejeda'
-      },
-      da: {
-        description: '',
-        title: 'Vælg fra forskjellige hjemmelavede sødesager fra tejeda',
-        slug: 'forskjellige-hjemmelavede-sodesager-fra-tejeda'
-      },
-      sv: {
-        description: '',
-        title: 'Varierande handgjorda kakor från Tejeda',
-        slug: 'handgjorda-kakor-fran-tejeda'
-      },
-      fr: {
-        description: '',
-        title: 'Assortiment de pâtisseries artisanales de Tejeda',
-        slug: 'patisseries-artisanales-de-tejeda'
-      },
-      nl: {
-        description: '',
-        title: 'Selectie van zoetigheden uit Tejeda (Gran Canaria)',
-        slug: 'selectie-van-zoetigheden-uit-tejeda'
-      }
-    },
-    price: { amount: '6.50' },
-    number: '2'
-  } as Product,
-  'item->product->desserts->trompe-l-oeil-ferrero-rocher-3': {
-    id: 'item->product->desserts->trompe-l-oeil-ferrero-rocher-3',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10',
-      'allergenic->fish-1',
-      'allergenic->nuts-7'
-    ],
-    selectableAllergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Trampantojo de Ferrero Rocher',
-        slug: 'trampantojo-de-ferrero-rocher'
-      },
-      en: {
-        description: ``,
-        title: `Ferrero Rocher Trompe l'oeil `,
-        slug: 'trompe-l-oeil-ferrero-rocher'
-      },
-      de: {
-        description: ``,
-        title: `Trompe-l’œil vom Ferrero Rocher`,
-        slug: 'trompe-l-oeil-ferrero-rocher'
-      },
-      nb: {
-        description: '',
-        title: 'Optisk ilusjon av Ferrero Rocher',
-        slug: 'fristelser-fra-ferrero-rocher'
-      },
-      da: {
-        description: '',
-        title: 'Trompe-l´æil Ferrero Rocher',
-        slug: 'fristelser-fra-ferrero-rocher'
-      },
-      sv: {
-        description: ``,
-        title: `Optisk illusion av Ferrero Rocher`,
-        slug: 'trompe-l-oeil-ferrero-rocher'
-      },
-      fr: {
-        description: ``,
-        title: `Trompe l’œil de Ferrero Rocher`,
-        slug: 'trompe-l-oeil-ferrero-rocher'
-      },
-      nl: {
-        description: '',
-        title:
-          'Trompe l’oeil van Ferrero Rocher (Dessert dat op het eerste zicht lijkt op een groentestoofpot)',
-        slug: 'trompe-l-oeil-van-ferrero-rocher'
-      }
-    },
-    price: { amount: '6.50' },
-    number: '3'
-  } as Product,
-  'item->product->desserts->banana-ice-cream-4': {
-    id: 'item->product->desserts->banana-ice-cream-4',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9',
-      'allergenic->nuts-7'
-    ],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Helado de Plátano, mini suspiros y bienmesabe',
-        slug: 'helado-de-platano'
-      },
-      en: {
-        description: '',
-        title:
-          'Banana Ice-cream, mini Sighs (Baked Meringue) and Bienmesabe Almond Paste',
-        slug: 'banana-ice-cream'
-      },
-      de: {
-        description: '',
-        title: 'Bananeneis, Miniwindbäckerei und Bienmesabe-Mandelcreme',
-        slug: 'bananeneis'
-      },
-      nb: {
-        description: '',
-        title: 'Bananis, mini marengs og bienmesabe (kanarisk mandelsaus)',
-        slug: 'bananis'
-      },
-      da: {
-        description: '',
-        title: 'Bananis, små marengskys og bienmesabe-mandelkage',
-        slug: 'bananis'
-      },
-      sv: {
-        description: '',
-        title: 'Bananglass, mini maräng och bienmesabe (kanarisk mandelsås)',
-        slug: 'bananglass'
-      },
-      fr: {
-        description: '',
-        title:
-          'Glace à la banane, petites meringues et bienmesabe (dessert typique des îles Canaries)',
-        slug: 'glace-a-la-banane'
-      },
-      nl: {
-        description: '',
-        title:
-          'Bananenijs, minischuimpjes en bienmesabe (Canarische amandelsaus)',
-        slug: 'bananenijs'
-      }
-    },
-    price: { amount: '6.50' },
-    number: '4'
-  } as Product,
-  'item->product->desserts->homemade-ice-cream-5': {
-    id: 'item->product->desserts->homemade-ice-cream-5',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->dairy-products-10'],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Helado Artesano Italiano',
-        slug: 'helados-artesanos'
-      },
-      en: {
-        description: '',
-        title: 'Italian Artisan Ice-cream',
-        slug: 'homemade-ice-cream'
-      },
-      de: {
-        description: '',
-        title: 'Hausgemachtes italienisches Eis ',
-        slug: 'hausgemachtes-eis'
-      },
-      nb: {
-        description: '',
-        title: 'Italiensk hjemmelaget is',
-        slug: 'artisan-ice-cream'
-      },
-      da: {
-        description: '',
-        title: 'Hjemmelavet is',
-        slug: 'artisan-ice-cream'
-      },
-      sv: {
-        description: '',
-        title: 'Italiensk hantverksglass ',
-        slug: 'handgjord-glass'
-      },
-      fr: {
-        description: '',
-        title: 'Crème glacée artisanale italienne',
-        slug: 'glace-artisanale'
-      },
-      nl: {
-        description: '',
-        title: 'Ambachtelijk Italiaans ijs',
-        slug: 'ambachtelijk-italiaans-ijs'
+        title: '',
+        slug: ''
       }
     },
     price: { amount: '5.50' },
     number: '5'
   } as Product,
-  'item->product->desserts->our-chef-s-suggested-sweet-6': {
-    id: 'item->product->desserts->our-chef-s-suggested-sweet-6',
+  'item->product->meals->starters->arab-patty-with-meat-and-pinions-6': {
+    id: 'item->product->meals->starters->arab-patty-with-meat-and-pinions-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->briwat-carne-1',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
     allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
     displayInfo: {
       es: {
         description: '',
-        title: 'Sugerencia dulce del chef',
-        slug: 'sugerencia-dulce-del-chef'
+        title: 'Briwat de Carne con Piñones',
+        slug: 'briwat-de-carne-con-pinones'
       },
       en: {
         description: '',
-        title: `Our Chef's suggested Sweet`,
-        slug: 'our-chef-s-suggested-sweet'
+        title: 'Arab Patty with Meat and Pinions',
+        slug: 'arab-patty-with-meat-and-pinions'
       },
       de: {
         description: '',
-        title: 'Süße Empfehlung des Küchenchefs',
-        slug: 'sube-empfehlung-des-küchenchefs'
+        title: 'Arabische Partei mit Fleisch und Pinions',
+        slug: 'arabische-partei-mit-fleisch-und-pinions'
       },
       nb: {
         description: '',
-        title: 'Søtt forslag fra kokken',
-        slug: 'sott-forslag-fra-kokken'
+        title: '',
+        slug: ''
       },
       da: {
         description: '',
-        title: 'Chefkokkens dessertforslag',
-        slug: 'chefkokkens-dessertforslag'
+        title: '',
+        slug: ''
       },
       sv: {
         description: '',
-        title: 'Sött förslag från kocken',
-        slug: 'sott-förslag-från-kocken'
+        title: '',
+        slug: ''
       },
       fr: {
         description: '',
-        title: 'Suggestion sucrée du chef',
-        slug: 'suggestion-sucrée-du-chef'
-      },
-      nl: {
-        description: '',
-        title: 'Zoete suggestie van de chef',
-        slug: 'zoete-suggestie-van-de-chef'
-      }
-    },
-    price: { amount: '7.00' },
-    number: '6'
-  } as Product,
-  'item->product->desserts->cold-berry-soup-with-yogurt-7': {
-    id: 'item->product->desserts->cold-berry-soup-with-yogurt-7',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->dairy-products-10'],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title:
-          'Sopa fría de frutos del bosque con yogurt, servido con frutos rojos y chocolate blanco.',
-        slug: 'sopa-fria-de-frutos-del-bosque-con-yogurt'
-      },
-      en: {
-        description: '',
-        title:
-          'Cold Berry Soup with Yogurt, served with Red Fruit and White Chocolate',
-        slug: 'cold-berry-soup-with-yogurt'
-      },
-      de: {
-        description: '',
-        title:
-          'Kalte Waldfrüchtesuppe mit Joghurt, serviert mit roten Früchten und weißer Schokolade',
-        slug: 'kalte-waldfrüchtesuppe-mit-joghurt'
-      },
-      nb: {
-        description: '',
-        title:
-          'Kald bærsuppe med yoghurt, servert med røde bær og hvit sjokolade.',
-        slug: 'kald-baersuppe-med-yoghurt'
-      },
-      da: {
-        description: '',
-        title:
-          'Kald bærsuppe med yoghurt, servert med røde bær og hvit sjokolade.',
-        slug: 'kald-baersuppe-med-yoghurt'
-      },
-      sv: {
-        description: '',
-        title:
-          'Kall bärsoppa med yoghurt, serverad med röda bär och vit choklad.',
-        slug: 'kall-barsoppa-med-yoghurt'
-      },
-      fr: {
-        description: '',
-        title:
-          'Soupe froide aux fruits des bois et yaourt, accompagnée de fruits rouges et chocolat blanc',
-        slug: 'soupe-froide-aux-fruits-des-bois-et-yaourt'
-      },
-      nl: {
-        description: '',
-        title:
-          'Koude bessensoep met yoghurt, geserveerd met rode vruchten en witte chocolade.',
-        slug: 'koude-bessensoep-met-yoghurt'
-      }
-    },
-    price: { amount: '7.00' },
-    number: '7'
-  } as Product,
-
-  //// meals->our-chef-s-suggestions->
-  'item->product->meals->our-chef-s-suggestions->mixed-paella-1': {
-    id: 'item->product->meals->our-chef-s-suggestions->mixed-paella-1',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->fish-1',
-      'allergenic->moluscs-13',
-      'allergenic->crustaceans-2'
-    ],
-    selectableAllergens: [
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '* Precio por persona',
-        title: 'Paella Mixta (mínimo para dos personas)',
-        slug: 'paella-mixta'
-      },
-      en: {
-        description: '* Price per person',
-        title: 'Mixed Paella (for minimum two persons)',
-        slug: 'mixed-paella'
-      },
-      de: {
-        description: '* Preis pro person',
-        title: 'Gemischte Paella (mind.für zwei personen)',
-        slug: 'gemischte-paella'
-      },
-      nb: {
-        description: '* Pris per person',
-        title: 'Blandet Paella (min. for to personer)',
-        slug: 'blandet-paella'
-      },
-      da: {
-        description: '* Pris pr person',
-        title: 'Blandet Paella (mindst til to personer)',
-        slug: 'blandet-paella'
-      },
-      sv: {
-        description: '* Pris per person',
-        title: 'Blandad Paella (minst för två personer)',
-        slug: 'blandad-paella'
-      },
-      fr: {
-        description: '* Prix par personne',
-        title: 'Paella Mixte (min. pour deux personnes) ',
-        slug: 'paella-mixte'
-      },
-      nl: {
-        description: '* Prijs per persoon',
-        title: 'Paella Mixta (min.voor twee personen)',
-        slug: 'paella-mixta'
-      }
-    },
-    price: { amount: '12.50' },
-    number: '1'
-  } as Product,
-  'item->product->meals->our-chef-s-suggestions->fish-and-shellfish-paella-2': {
-    id: 'item->product->meals->our-chef-s-suggestions->fish-and-shellfish-paella-2',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->fish-1',
-      'allergenic->moluscs-13',
-      'allergenic->crustaceans-2'
-    ],
-    selectableAllergens: [
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '* Precio por persona',
-        title: 'Paella de Pescado y Marisco (Mínimo para dos personas)',
-        slug: 'paella-de-pescado-y-marisco'
-      },
-      en: {
-        description: '* Price per person',
-        title: 'Fish and Shellfish Paella (for minimum two persons)',
-        slug: 'fish-and-shellfish-paella'
-      },
-      de: {
-        description: '* Preis pro person',
-        title: 'Fisch-und Meeresfrüchtepaella (mind für zwei personen)',
-        slug: 'fisch-und-meeresfrüchtepaella'
-      },
-      nb: {
-        description: '* Pris per person',
-        title: 'Fisk og Sjømat Paella (min. for to personer)',
-        slug: 'fisk-og-sjomat-paella'
-      },
-      da: {
-        description: '* Pris pr person',
-        title: 'Paella med Fisk og Skaldyr (mindst til to personer)',
-        slug: 'paella-med-fisk-og-skaldyr'
-      },
-      sv: {
-        description: '* Pris per person',
-        title: 'Fisk och Skaldjur Paella (minst för två personer)',
-        slug: 'fisk-och-skaldjur-paella'
-      },
-      fr: {
-        description: '* Prix par personne',
-        title: 'Paella au Poisson et Fruits de Mer (min. pour deux personnes) ',
-        slug: 'paella-au-poisson-et-fruits-de-mer'
-      },
-      nl: {
-        description: '* Prijs per persoon',
-        title: 'Paella met Vis en Zeevruchten (min. voor twee personen)',
-        slug: 'paella-met-vis-en-zeevruchten'
-      }
-    },
-    price: { amount: '15.90' },
-    number: '2'
-  } as Product,
-  'item->product->meals->our-chef-s-suggestions->meat-paella-with-truffle-sauce-3':
-    {
-      id: 'item->product->meals->-our-chef-s-suggestions>meat-paella-with-truffle-sauce-3',
-      type: 'product',
-      images: ['image->item->product->default-1'],
-      active: true,
-      defaultImg: 'image->item->product->default-1',
-      mainImg: '',
-      hasAllergens: true,
-      hasVariants: false,
-      displayInfo: {
-        es: {
-          description: '* Precio por persona',
-          title: 'Paella Carne con Salsa de Trufa (Mínimo para dos personas)',
-          slug: 'paella-carne-con-salsa-de-trufa'
-        },
-        en: {
-          description: '* Price per person',
-          title: 'Meat Paella with Truffle Sauce (for minimum two persons)',
-          slug: 'meat-paella-with-truffle-sauce'
-        },
-        de: {
-          description: '* Preis pro person',
-          title: 'Fleischpaella mit Trüffelsauce (mind für zwei personen)',
-          slug: 'fleischpaella-mit-truffelsauce'
-        },
-        nb: {
-          description: '* Pris per person',
-          title: 'Kjøttpaella med Trøffelsaus (min. for to personer)',
-          slug: 'kjottpaella-med-troffelsaus'
-        },
-        da: {
-          description: '* Pris pr person',
-          title: 'Paella med Kød og Trøffelsovs (mindst til to personer)',
-          slug: 'paella-med-kod-og-trøffelsovs'
-        },
-        sv: {
-          description: '* Pris per person',
-          title: 'Kött Paella med Tryffelsås (Minst för två personer)',
-          slug: 'kott-paella-med-tryffelsas'
-        },
-        fr: {
-          description: '* Prix par personne',
-          title:
-            'Paella à la Viande et Sauce à la Truffe (min. pour deux personnes)',
-          slug: 'paella-a-la-viande-et-sauce-a-la-truffe'
-        },
-        nl: {
-          description: '* Prijs per persoon',
-          title: 'Paella met Vlees en Truffelsaus (min. voor twee personen)',
-          slug: 'paella-met-vlees-en-truffelsaus'
-        }
-      },
-      allergens: [
-        'allergenic->fish-1',
-        'allergenic->crustaceans-2',
-        'allergenic->gluten-3',
-        'allergenic->soya-12',
-        'allergenic->moluscs-13',
-        'allergenic->celery-14'
-      ],
-      selectableAllergens: [
-        'allergenic->mustard-4',
-        'allergenic->sulphites-5',
-        'allergenic->peanuts-6',
-        'allergenic->nuts-7',
-        'allergenic->sesame-8',
-        'allergenic->egg-9',
-        'allergenic->dairy-products-10',
-        'allergenic->lupins-11'
-      ],
-      price: { amount: '15.90' },
-      number: '3'
-    } as Product,
-  'item->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tartar-4': {
-    id: 'item->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tartar-4',
-    type: 'product',
-    images: [
-      'image->item->product->default-1',
-      'image->item->product->tuna-tartar-1'
-    ],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: 'image->item->product->tuna-tartar-1',
-    hasAllergens: true,
-    hasVariants: false,
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Tartar de atún Rojo (Según temporada)',
-        slug: 'tartar-de-atun-rojo'
-      },
-      en: {
-        description: '',
-        title: 'Red Tuna Tartar (when in season)',
-        slug: 'red-tuna-tartar'
-      },
-      de: {
-        description: '',
-        title: 'Tartar vom Roten thunfisch (je nach saison)',
-        slug: 'tartar-vom-roten-thunfisch'
-      },
-      nb: {
-        description: '',
-        title: 'Rød Tunfisktartar (avhengig av sesong)',
-        slug: 'rod-tunfisktartar'
-      },
-      da: {
-        description: '',
-        title: 'Tartar med Rød Tun (alt efter sæson)',
-        slug: 'tartar-med-rod-tun'
-      },
-      sv: {
-        description: '',
-        title: 'Röd Tonfisktartar (Enligt säsong)',
-        slug: 'rod-tonfisktartar'
-      },
-      fr: {
-        description: '',
-        title: 'Tartare de Thon Rouge (en saison)',
-        slug: 'tartare-de-thon-rouge'
-      },
-      nl: {
-        description: '',
-        title: 'Rodetonijntartaar (seizoensgebonden)',
-        slug: 'rodetonijntartaar'
-      }
-    },
-    allergens: [
-      'allergenic->fish-1',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->soya-12'
-    ],
-    selectableAllergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    price: { amount: '18.00' },
-    number: '4'
-  } as Product,
-  'item->product->meals->our-chef-s-suggestions->angus-steak-tartar-5': {
-    id: 'item->product->meals->our-chef-s-suggestions->angus-steak-tartar-5',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Steak Tartar de Angus',
-        slug: 'steak-tartar-de-angus'
-      },
-      en: {
-        description: '',
-        title: 'Angus Steak Tartar',
-        slug: 'angus-steak-tartar'
-      },
-      de: {
-        description: '',
-        title: 'Steak Tartar vom Angus',
-        slug: 'steak-tartar-vom-angus'
-      },
-      nb: {
-        description: '',
-        title: 'Biff Tartar av Angusfe',
-        slug: 'biff-tartar-av-angusfe'
-      },
-      da: {
-        description: '',
-        title: 'Tartar med Angusoksekød',
-        slug: 'tartar-med-angusoksekod'
-      },
-      sv: {
-        description: '',
-        title: 'Angus Nötkött Råbiff',
-        slug: 'angus-notkott-rabiff'
-      },
-      fr: {
-        description: '',
-        title: 'Steak Tartare de Bœuf Angus',
-        slug: 'steak-tartare-de-boeuf-angus'
-      },
-      nl: {
-        description: '',
-        title: 'Angus Steaktartaar',
-        slug: 'angus-steaktartaar'
-      }
-    },
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sesame-8',
-      'allergenic->soya-12'
-    ],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    price: { amount: '18.00' },
-    number: '5'
-  } as Product,
-  'item->product->meals->our-chef-s-suggestions->betanzos-t-bone-cutlet-6': {
-    id: 'item->product->meals->our-chef-s-suggestions->betanzos-t-bone-cutlet-6',
-    type: 'product',
-    images: [
-      'image->item->product->default-1',
-      'image->item->product->chuleton-1'
-    ],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: 'image->item->product->chuleton-1',
-    hasAllergens: true,
-    hasVariants: false,
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Chuletón de Betanzos (300 gr)',
-        slug: 'chuleton-de-betanzos'
-      },
-      en: {
-        description: '',
-        title: 'Betanzos T-Bone Cutlet (300 gr)',
-        slug: 'betanzos-t-bone-cutlet'
-      },
-      de: {
-        description: '',
-        title: 'T-Bone-Steak von Betanzos (300 g)',
-        slug: 't-bone-steak-von-betanzos'
-      },
-      nb: {
-        description: '',
-        title: 'Betanzosfe Ribeye (300 gr)',
-        slug: 'betanzosfe-ribeye'
-      },
-      da: {
-        description: '',
-        title: 'Entrecote fra Betanzo (Galicien, 300 gr)',
-        slug: 'entrecote fra betanzo'
-      },
-      sv: {
-        description: '',
-        title: 'Betanzos Nötkött Ribeye (300 gr) ',
-        slug: 'betanzos-notkott-ribeye'
-      },
-      fr: {
-        description: '',
-        title: 'Côte de Bœuf de Betanzos (300 gr) ',
-        slug: 'cote-de-boeuf-de-betanzos'
-      },
-      nl: {
-        description: '',
-        title: 'Ribeye uit Betanzos (Spanje, 300 gr)',
-        slug: 'ribeye-uit-betanzos'
-      }
-    },
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    price: { amount: '25.00' },
-    number: '6'
-  } as Product,
-  'item->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tataki-7': {
-    id: 'item->product->meals->our-chef-s-suggestions->fuentes-red-tuna-tataki-7',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Tataki de Atún Rojo (Según temporada)',
-        slug: 'tataki-de-atun-rojo'
-      },
-      en: {
-        description: '',
-        title: 'Red Tuna Tataki (when in season)',
-        slug: 'red-tuna-tataki'
-      },
-      de: {
-        description: '',
-        title: 'Tataki vom Roten Thunfisch (je nach saison)',
-        slug: 'tataki-vom-roten-thunfisch'
-      },
-      nb: {
-        description: '',
-        title: 'Tataki av Rød Tunfisk (avhengig av sesong)',
-        slug: 'tataki-av-rod-tunfisk'
-      },
-      da: {
-        description: '',
-        title: 'Tataki med Rød Tun (Alt efter sæsonen)',
-        slug: 'tataki-med-rod-tun'
-      },
-      sv: {
-        description: '',
-        title: 'Tataki av Röd Tonfisk (Enligt säsong)',
-        slug: 'tataki-av-rod-tonfisk'
-      },
-      fr: {
-        description: '',
-        title: 'Tataki de Thon Rouge (en saison)',
-        slug: 'tataki-de-thon-rouge'
-      },
-      nl: {
-        description: '',
-        title: 'Rodetonijntataki (seizoensgebonden)',
-        slug: 'rodetonijntataki'
-      }
-    },
-    allergens: [
-      'allergenic->fish-1',
-      'allergenic->sesame-8',
-      'allergenic->soya-12'
-    ],
-    selectableAllergens: [
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    price: { amount: '22.50' },
-    number: '7'
-  } as Product,
-
-  //// meals->breakfasts->
-  'item->product->meals->breakfasts->toast-with-tomato-puree-and-serrano-cured-ham-1':
-    {
-      id: 'item->product->meals->breakfasts->toast-with-tomato-puree-and-serrano-cured-ham-1',
-      type: 'product',
-      images: ['image->item->product->default-1'],
-      active: true,
-      defaultImg: 'image->item->product->default-1',
-      mainImg: '',
-      hasAllergens: true,
-      hasVariants: false,
-      displayInfo: {
-        es: {
-          description: '',
-          title: 'Tostada con Tumaca y Jamón',
-          slug: 'tostada-con-tumaca-y-jamon'
-        },
-        en: {
-          description: '',
-          title: 'Toast with Tomato puree and Serrano Cured Ham',
-          slug: 'toast-with-tomato-puree-and-serrano-cured-ham'
-        },
-        de: {
-          description: '',
-          title: 'Röstbrot mit Tomate und Rohschinken',
-          slug: 'rostbrot-mit-tomate-und-rohschinken'
-        },
-        nb: {
-          description: '',
-          title: 'Toast med tomatpurè og serranoskinke',
-          slug: 'toast-med-tomatpurè-og-serranoskinke'
-        },
-        da: {
-          description: '',
-          title: 'Toast med tomatpure og skinke',
-          slug: 'toast-med-tomatpure-og-skinke'
-        },
-        sv: {
-          description: '',
-          title: 'Toast med tomatpuré och serranoskinke',
-          slug: 'toast-med-tomatpure-och-serranoskinke'
-        },
-        fr: {
-          description: '',
-          title: 'Pain Grillé avec tomate purée et jambon cru',
-          slug: 'pain-grille-avec-tomate-puree-et-jambon-cru'
-        },
-        nl: {
-          description: '',
-          title: 'Toast met tomatenpuree en serranoham',
-          slug: 'toast-met-tomatenpuree-en-serranoham'
-        }
-      },
-      allergens: [],
-      selectableAllergens: [
-        'allergenic->fish-1',
-        'allergenic->crustaceans-2',
-        'allergenic->gluten-3',
-        'allergenic->mustard-4',
-        'allergenic->sulphites-5',
-        'allergenic->peanuts-6',
-        'allergenic->nuts-7',
-        'allergenic->sesame-8',
-        'allergenic->egg-9',
-        'allergenic->dairy-products-10',
-        'allergenic->lupins-11',
-        'allergenic->soya-12',
-        'allergenic->moluscs-13',
-        'allergenic->celery-14'
-      ],
-      price: { amount: '6.00' },
-      number: '1'
-    } as Product,
-  'item->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes-2':
-    {
-      id: 'item->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes-2',
-      type: 'product',
-      images: ['image->item->product->default-1'],
-      active: true,
-      defaultImg: 'image->item->product->default-1',
-      mainImg: '',
-      hasAllergens: true,
-      hasVariants: false,
-      displayInfo: {
-        es: {
-          description: '',
-          title: 'Tostada con queso Philadelfia, guacamole y cherrys',
-          slug: 'tostada-con-queso-philadelfia-guacamole-y-cherrys'
-        },
-        en: {
-          description: '',
-          title:
-            'Toast with Philadelphia Cream Cheese, Guacamole and Cherry Tomatoes',
-          slug: 'toast-with-philadelphia-cream-cheese-guacamole-and-cherry-tomatoes'
-        },
-        de: {
-          description: '',
-          title: 'Toast mit Philadelphia Cremekäse, Guacamole, Cherrytomate',
-          slug: 'toast-mit-philadelphia-cremekase-guacamole-cherrytomate'
-        },
-        nb: {
-          description: '',
-          title: 'Toast med Philadelphiaost, Guacamole og cherrytomate',
-          slug: 'toast-med-philadelphiaost-guacamole-og-cherrytomate'
-        },
-        da: {
-          description: '',
-          title: 'Toast med Philadelphiaost, Guacamole og kirsebaertomat',
-          slug: 'toast-med-philadelphiaost-guacamole-og-kirsebaertomat'
-        },
-        sv: {
-          description: '',
-          title: 'Toast med Philadelphiaost, Guacamole och cherrytomate',
-          slug: 'toast-med-philadelphiaost-guacamole-och-cherrytomate'
-        },
-        fr: {
-          description: '',
-          title:
-            'Pain Grillé au fromage Philadelphia, Guacamole et tomates cerises',
-          slug: 'pain-grille-au-fromage-philadelphia-guacamole-et-tomates-cerises'
-        },
-        nl: {
-          description: '',
-          title: 'Toast met Philadelphia kaas, Guacamole en cherry-tomaten',
-          slug: 'toast-met-philadelphia-kaas-guacamole-en-cherry-tomaten'
-        }
-      },
-      allergens: [],
-      selectableAllergens: [
-        'allergenic->fish-1',
-        'allergenic->crustaceans-2',
-        'allergenic->gluten-3',
-        'allergenic->mustard-4',
-        'allergenic->sulphites-5',
-        'allergenic->peanuts-6',
-        'allergenic->nuts-7',
-        'allergenic->sesame-8',
-        'allergenic->egg-9',
-        'allergenic->dairy-products-10',
-        'allergenic->lupins-11',
-        'allergenic->soya-12',
-        'allergenic->moluscs-13',
-        'allergenic->celery-14'
-      ],
-      price: { amount: '6.50' },
-      number: '2'
-    } as Product,
-  'item->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon-3':
-    {
-      id: 'item->product->meals->breakfasts->toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon-3',
-      type: 'product',
-      images: ['image->item->product->default-1'],
-      active: true,
-      defaultImg: 'image->dummy->default-gallery-',
-      mainImg: '',
-      hasAllergens: true,
-      hasVariants: false,
-      displayInfo: {
-        es: {
-          description: '',
-          title: 'Tostada con queso philadelfia , rúcula y salmón',
-          slug: 'tostada-con-queso-philadelfia-rucula-y-salmon'
-        },
-        en: {
-          description: '',
-          title:
-            'Toast with Philadelphia Cream Cheese, Rocket Lettuce and Smoked Salmon',
-          slug: 'toast-with-philadelphia-cream-cheese-rocket-lettuce-and-smoked-salmon'
-        },
-        de: {
-          description: '',
-          title: 'Toast mit Philadelphia Cremekäse, Arugula und Lachs',
-          slug: 'toast-mit-philadelphia-cremekase-arugula-und-lachs'
-        },
-        nb: {
-          description: '',
-          title: 'Toast med Philadelphiaost, arugula og laks',
-          slug: 'toast-med-philadelphiaost-arugula-og-laks'
-        },
-        da: {
-          description: '',
-          title: 'Toast med Philadelphiaost, salatsennep og laks',
-          slug: 'toast-med-philadelphiaost-salatsennep-og-laks'
-        },
-        sv: {
-          description: '',
-          title: 'Toast med Philadelphiaost, arugula och lax',
-          slug: 'toast-med-philadelphiaost-arugula-och-lax'
-        },
-        fr: {
-          description: '',
-          title: 'Pain Grillé au fromage Philadelphia, roquette et saumon fumé',
-          slug: 'pain-grille-au-fromage-philadelphia-roquette-et-saumon-fume'
-        },
-        nl: {
-          description: '',
-          title: 'Toast met Philadelphia kaas, rucola en zalm',
-          slug: 'toast-met-philadelphia-kaas-rucola-en-zalm'
-        }
-      },
-      allergens: [],
-      selectableAllergens: [
-        'allergenic->fish-1',
-        'allergenic->crustaceans-2',
-        'allergenic->gluten-3',
-        'allergenic->mustard-4',
-        'allergenic->sulphites-5',
-        'allergenic->peanuts-6',
-        'allergenic->nuts-7',
-        'allergenic->sesame-8',
-        'allergenic->egg-9',
-        'allergenic->dairy-products-10',
-        'allergenic->lupins-11',
-        'allergenic->soya-12',
-        'allergenic->moluscs-13',
-        'allergenic->celery-14'
-      ],
-      price: { amount: '7.50' },
-      number: '3'
-    } as Product,
-  'item->product->meals->breakfasts->yoghurt-with-muesli-fresh-fruit-and-honey-4':
-    {
-      id: 'item->product->meals->breakfasts->yoghurt-with-muesli-fresh-fruit-and-honey-4',
-      type: 'product',
-      images: ['image->item->product->default-1'],
-      active: true,
-      defaultImg: 'image->item->product->default-1',
-      mainImg: '',
-      hasAllergens: true,
-      hasVariants: false,
-      displayInfo: {
-        es: {
-          description: '',
-          title: 'Yoghurt con muesli, fruta fresca y miel',
-          slug: 'yoghurt-con-muesli-fruta-fresca-y-miel'
-        },
-        en: {
-          description: '',
-          title: 'Yoghurt with Muesli, fresh Fruit and Honey',
-          slug: 'yoghurt-with-muesli-fresh-fruit-and-honey'
-        },
-        de: {
-          description: '',
-          title: 'Joghurt mit Müsli, frischen Früchten und Honig',
-          slug: 'joghurt-mit-musli-frischen-fruchten-und-honig'
-        },
-        nb: {
-          description: '',
-          title: 'Yoghurt med müsli, fersk frukt og honning',
-          slug: 'yoghurt-med-musli-fersk-frukt-og-honning'
-        },
-        da: {
-          description: '',
-          title: 'Yoghurt med müsli, frisk frugt og honning',
-          slug: 'yoghurt-med-musli-frisk-frugt-og-honning'
-        },
-        sv: {
-          description: '',
-          title: 'Yoghurt med müsli, färsk frukt och honung',
-          slug: 'yoghurt-med-musli-farsk-frukt-och-honung'
-        },
-        fr: {
-          description: '',
-          title: 'Yaourt au muesli, fruits frais et miel',
-          slug: 'yaourt-au-muesli-fruits-frais-et-miel'
-        },
-        nl: {
-          description: '',
-          title: 'Yogurt met muesli, vers fruit en honing',
-          slug: 'yogurt-met-muesli-vers-fruit-en-honing'
-        }
-      },
-      allergens: [],
-      selectableAllergens: [
-        'allergenic->fish-1',
-        'allergenic->crustaceans-2',
-        'allergenic->gluten-3',
-        'allergenic->mustard-4',
-        'allergenic->sulphites-5',
-        'allergenic->peanuts-6',
-        'allergenic->nuts-7',
-        'allergenic->sesame-8',
-        'allergenic->egg-9',
-        'allergenic->dairy-products-10',
-        'allergenic->lupins-11',
-        'allergenic->soya-12',
-        'allergenic->moluscs-13',
-        'allergenic->celery-14'
-      ],
-      price: { amount: '4,95' },
-      number: '4'
-    } as Product,
-  'item->product->meals->breakfasts->scrambled-eggs-with-ham-5': {
-    id: 'item->product->meals->breakfasts->scrambled-eggs-with-ham-5',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Huevos revueltos con jamón',
-        slug: 'huevos-revueltos-con-jamon'
-      },
-      en: {
-        description: '',
-        title: 'Scrambled eggs with Ham',
-        slug: 'scrambled-eggs-with-ham'
-      },
-      de: {
-        description: '',
-        title: 'Rühreier mit Schinken',
-        slug: 'ruhreier-mit-schinken'
-      },
-      nb: {
-        description: '',
-        title: 'Eggrøre med skinke',
-        slug: 'eggrore-med-skinke'
-      },
-      da: {
-        description: '',
-        title: 'Røræg med skinke',
-        slug: 'roraeg-med-skinke'
-      },
-      sv: {
-        description: '',
-        title: 'Äggröra med skinka',
-        slug: 'aggrora-med-skinka'
-      },
-      fr: {
-        description: '',
-        title: 'Oeufs brouillés au jambon',
-        slug: 'oeufs-brouilles-au-jambon'
-      },
-      nl: {
-        description: '',
-        title: 'Roerei met ham',
-        slug: 'roerei-met-ham'
-      }
-    },
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    price: { amount: '8.50' },
-    number: '5'
-  } as Product,
-  'item->product->meals->breakfasts->english-breakfast-6': {
-    id: 'item->product->meals->breakfasts->english-breakfast-6',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    displayInfo: {
-      es: {
-        description: '(huevo frito, judias, bacon y salchicha y tomate)',
-        title: 'Desayuno Inglés',
-        slug: 'desayuno-ingles'
-      },
-      en: {
-        description: '(Fried Egg, Beans, Bacon, Sausage and Tomato)',
-        title: 'English Breakfast',
-        slug: 'english-breakfast'
-      },
-      de: {
-        description: '(Spiegeleier, Bohnen, Speck, Würst und Tomate)',
-        title: 'Englisches Frühstück',
-        slug: 'englisches-fruhstuck'
-      },
-      nb: {
-        description:
-          '(stekte egg, bønner i tomatsaus med bacon, pølse og tomat)',
-        title: 'Engelsk frokost',
-        slug: 'engelsk-frokost'
-      },
-      da: {
-        description: '(spejlæg, bønnerne, bacon, pølse og tomat)',
-        title: 'Engelsk morgenmad',
-        slug: 'engelsk-morgenmad'
-      },
-      sv: {
-        description:
-          '(stekt ägg, vita bönor i tomatsås, bacon, korv och tomat)',
-        title: 'Engelsk Frukost',
-        slug: 'engelsk-frukost'
-      },
-      fr: {
-        description:
-          '(oeuf au plats, Haricots à la tomate, bacon et saucisse et tomate)',
-        title: 'Petit déjeuner Anglais',
-        slug: 'petit-dejeuner-anglais'
-      },
-      nl: {
-        description:
-          '(gebakken ei, witte bonen in tomatensaus, spek, worstjes en tomaat)',
-        title: 'Engels ontbijt',
-        slug: 'engels-ontbijt'
-      }
-    },
-    allergens: [],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    price: { amount: '8.50' },
-    number: '6'
-  } as Product,
-
-  ///// meals->sandwich->
-  'item->product->meals->artisan-loaf-sandwich-with-squid-1': {
-    id: 'item->product->meals->artisan-loaf-sandwich-with-squid-1',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->egg-9',
-      'allergenic->moluscs-13'
-    ],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Bocata artesano de calamares con mayonesa del chef y brotes.',
-        slug: 'bocata-artesano-de-calamares'
-      },
-      en: {
-        description: '',
-        title: `Artisan Loaf Sandwich with Squid and the Chef's Mayonnaise and Sprouts`,
-        slug: 'artisan-loaf-sandwich-with-squid'
-      },
-      de: {
-        description: '',
-        title:
-          'Handgemachtes Brötchen mit Tintenfisch, Mayonnaise des Küchenchefs und Sprossen',
-        slug: 'hausgemachtes-brotchen-mit-tintenfisch'
-      },
-      nb: {
-        description: '',
-        title: 'Blekksprutsandwich med kokkens majones og spirer',
-        slug: 'blekksprutsandwich-med-kokkens'
-      },
-      da: {
-        description: '',
-        title:
-          'Hjemmelavet sandwich med blæksprutter og chefkokkens mayonnaise og nye grøntsagsskud',
-        slug: 'hjemmelavet-sandwich-med-blaeksprutter'
-      },
-      sv: {
-        description: '',
-        title: 'Hantverkarens smörgås med kockens majonnäs och groddar',
-        slug: 'hantverkarens-smorgas-med-kockens'
-      },
-      fr: {
-        description: '',
-        title:
-          'Sandwich artisanal aux calamars avec mayonnaise du chef et jeunes pousses',
-        slug: 'sandwich-artisanal-aux-calamars'
-      },
-      nl: {
-        description: '',
-        title:
-          'Ambachtelijk broodje met calamares, mayonaise van de chef en kiemgroenten',
-        slug: 'ambachtelijk-broodje-met-calamares'
-      }
-    },
-    price: { amount: '9.50' },
-    number: '1'
-  } as Product,
-  'item->product->meals->homemade-bread-with-black-pork-in-lard-2': {
-    id: 'item->product->meals->homemade-bread-with-black-pork-in-lard-2',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    selectableAllergens: [
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title:
-          'Bocata artesano de cochino negro en manteca, tartufado, y queso canario rallado',
-        slug: 'bocata-artesano-de-cochino-negro-en-manteca'
-      },
-      en: {
-        description: '',
-        title:
-          'Artisan Loaf Sandwich of larded, truffelled Black Pork and grated Canarian (Goat) Cheese',
-        slug: 'artisan-loaf-sandwich-of-larded-truffelled-black-pork-and-grated-canarian-goat-cheese'
-      },
-      de: {
-        description: '',
-        title:
-          'Handgemachtes Brötchen vom getrüffelten schwarzen Schwein in Schmalz und kanarischem geriebenen Käse',
-        slug: 'handgemachtes-brotchen-vom-getruffelten-schwarzen-schwein-in-schmalz-und-kanarischem-geriebenen-kase'
-      },
-      nb: {
-        description: '',
-        title:
-          'Sandwich av iberisk svartgris i smør, trøfler og revet kanarisk ost',
-        slug: 'sandwich-av-iberisk-svartgris-i-smor'
-      },
-      da: {
-        description: '',
-        title:
-          'Hjemmelavet sandwich med sortfodspattegris i svinefedt, trøffel og revet kanarisk ost',
-        slug: 'hjemmelavet-sandwich-med-sortfodspattegris-i-svinefedt'
-      },
-      sv: {
-        description: '',
-        title:
-          'Hantverkarens smörgås av iberisk svartgris i smör, tryffel och riven kanarisk ost',
-        slug: 'hantverkarens-smorgas-av-iberisk-svartgris-i-smor'
-      },
-      fr: {
-        description: '',
-        title:
-          'Sandwich artisanal de porc noir au beurre, tartufata (sauce aux truffes)  et fromage râpé des Canaries',
-        slug: 'sandwich-artisanal-de-porc-noir-au-beurre'
-      },
-      nl: {
-        description: '',
-        title:
-          'Ambachtelijk broodje met zwart varkensvlees in boter, met truffel en Canarische geraspte kaas',
-        slug: 'ambachtelijk-broodje-met-zwart-varkensvlees-in-boter'
-      }
-    },
-    price: { amount: '6.75' },
-    number: '2'
-  } as Product,
-  'item->product->meals->homemade-bread-with-chicken-3': {
-    id: 'item->product->meals->homemade-bread-with-chicken-3',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->gluten-3', 'allergenic->mustard-4'],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: 'Tomate, Rúcula, Cebolla Frita, Salsa de Miel y Mostaza',
-        title: 'Bocata Artesano de Pollo de Corral (Rast Hanout)',
-        slug: 'bocata-artesano-de-pollo-de-corral'
-      },
-      en: {
-        description:
-          'Tomato, Rocket Lettuce, fried Onion, Honey and Mustard Sauce',
-        title: 'Artisan Loaf Sandwich of free-range Chicken Ras el Hanout',
-        slug: 'artisan-loaf-sandwich-of-free-range-chicken-ras-el-hanout'
-      },
-      de: {
-        description:
-          'Tomate, Rucola, frittierten Zwiebeln und Honig-Senf-Sauce',
-        title: 'Handgemachtes Brötchen vom Freilandhuhn ( Ras el Hanout )',
-        slug: 'handgemachtes-brotchen-vom-freilandhuhn'
-      },
-      nb: {
-        description: 'tomat, rucula, stekt løk, honningsaus og sennep',
-        title: 'Sandwich av frittgående kylling (Ras el Hanout)',
-        slug: 'handverker-frittgaende-kyllingsandwich'
-      },
-      da: {
-        description: 'tomat, rucula, stegte løg, honning- og sennupsdressing',
-        title: 'Hjemmelavet sandwich med friluftskylling (Rast Hanout)',
-        slug: 'handvaerker-fritgaende-kyllingesandwich'
-      },
-      sv: {
-        description: 'tomat, rucula, stekt lök, honungssås och senap',
-        title: 'Hantverkarens smörgås av frittlöpande kyckling (Ras el Hanout)',
-        slug: 'hantverksbrodsmorgas-med-frittgaende-kyckling'
-      },
-      fr: {
-        description: 'tomate, roquette, oignon frit, sauce miel et moutarde',
-        title: 'Sandwich au poulet fermier (Ras el Hanout)',
-        slug: 'sandwich-au-poulet-fermier'
-      },
-      nl: {
-        description: 'tomaat, rucola, gebakken ui en honing-mosterdsaus',
-        title:
-          'Ambachtelijk broodje met scharrelkip in Ras el Hanout (Marokkaans kruidenmengsel)',
-        slug: 'ambachtelijk-broodje-met-scharrelkip'
-      }
-    },
-    price: { amount: '9.50' },
-    number: '3'
-  } as Product,
-  'item->product->meals->homemade-bread-with-chorizo-from-teror-4': {
-    id: 'item->product->meals->homemade-bread-with-chorizo-from-teror-4',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->gluten-3', 'allergenic->dairy-products-10'],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Pan Artesano con chorizo de Teror, queso semi y mojo cilantro',
-        slug: 'pan-artesano-con-chorizo-de-teror'
-      },
-      en: {
-        description: '',
-        title:
-          'Artisan Loaf Sandwich with Teror Chorizo Spread, semi-cured Goat Cheese and Cilantro Mojo Sauce',
-        slug: 'artisan-loaf-sandwich-with-teror-chorizo-spread'
-      },
-      de: {
-        description: '',
-        title:
-          'Handgemachtes Brötchen mit Chorizowurst aus Teror, halbharter Köse und Koriandermojo',
-        slug: 'hausgemachtes-brot-mit-chorizo-aus-teror'
-      },
-      nb: {
-        description: '',
-        title:
-          'Håndverksbrød med chorizo fra Teror, halvlagret ost og koriander mojo',
-        slug: 'hjemmelagd-brod-med-chorizo-polse-fra-teror'
-      },
-      da: {
-        description: '',
-        title:
-          'Hjemmelavet brød med chorizo-pølse fra Teror, mellemlagret ost og mojo-sovs med koriander',
-        slug: 'hjemmelaved-brod-med-chorizo-polse-fra-teror'
-      },
-      sv: {
-        description: '',
-        title:
-          'Hantverksbröd med  chorizo från Teror, halvlagrad ost och koriandermojo',
-        slug: 'hantverksbrodsmorgas-med-chorizo-fran-teror'
-      },
-      fr: {
-        description: '',
-        title:
-          'Pain artisanal au chorizo de Teror (commune de l’île), fromage semi-affiné et mojo à la coriandre (sauce typique des îles Canaries)',
-        slug: 'pain-artisanal-au-chorizo-de-teror'
-      },
-      nl: {
-        description: '',
-        title:
-          'Ambachtelijk broodje met chorizo uit Teror (Gran Canaria), jongbelegen kaas en Mojo met koriander (Canarische saus)',
-        slug: 'ambachtelijk-broodje-met-chorizo-uit-teror'
-      }
-    },
-    price: { amount: '6.00' },
-    number: '4'
-  } as Product,
-  'item->product->meals->new-york-sandwich-5': {
-    id: 'item->product->meals->new-york-sandwich-5',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9'
-    ],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description:
-          'Bocata de New York (Pastrami plancha, queso, mostaza, chukrut ) salsa rusa.',
-        title:
-          'Bocata de New York (Pastrami plancha, queso, mostaza, chukrut ) salsa rusa',
-        slug: 'bocata-de-new-york'
-      },
-      en: {
-        description:
-          'New York sandwich (grilled pastrami, cheese, mustard, sauerkraut, Russian sauce)',
-        title:
-          'New York sandwich (grilled pastrami, cheese, mustard, sauerkraut, Russian sauce)',
-        slug: 'new-york-sandwich'
-      },
-      de: {
-        description:
-          'New York Sandwich (gegrillte Pastrami, Käse, Senf, Sauerkraut, russische Sauce)',
-        title:
-          'New York Sandwich (gegrillte Pastrami, Käse, Senf, Sauerkraut, russische Sauce)',
-        slug: 'new-york-sandwich'
-      },
-      nb: {
-        description:
-          'Hjemmelagd brød New York (Pastramiskinke, ost, sennep,surkål, rusisk saus)',
-        title:
-          'Hjemmelagd brød New York (Pastramiskinke, ost, sennep,surkål, rusisk saus)',
-        slug: 'hjemmelagd-brod-new-york'
-      },
-      da: {
-        description:
-          'Hjemmelaved Brød New York (Pastramiskinke, Ost, Sennep, Surkål Rusisk Saus)',
-        title:
-          'Hjemmelaved Brød New York (Pastramiskinke, Ost, Sennep, Surkål Rusisk Saus)',
-        slug: 'hjemmelaved-brod-new-york'
-      },
-      sv: {
-        description:
-          'Hantverksbrödsmörgås New York (Grillad pastrami, ost, senap, chukrut) rysk sås',
-        title:
-          'Hantverksbrödsmörgås New York (Grillad pastrami, ost, senap, chukrut) rysk sås',
-        slug: 'hantverksbrodsmorgas-new-york'
-      },
-      fr: {
-        description:
-          'Sandwich New York (au pastrami, fromage, choucroute, moutarde et sauce russe)',
-        title:
-          'Sandwich New York (au pastrami, fromage, choucroute, moutarde et sauce russe)',
-        slug: 'sandwich-new-york-au-pastrami'
+        title: '',
+        slug: ''
       },
       nl: {
         description: '',
@@ -4778,308 +432,3994 @@ export const items: { [key: string]: Info | Product | Menu } = {
         slug: ''
       }
     },
-    price: { amount: '7.50' },
-    number: '5'
+    price: { amount: '5.95' },
+    number: '6'
   } as Product,
-  'item->product->meals->hamburger-with-chicken-6': {
-    id: 'item->product->meals->hamburger-with-chicken-6',
+  'item->product->meals->starters->chickpeas-croquettes-7': {
+    id: 'item->product->meals->starters->chickpeas-croquettes-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
+    mainImg: 'image->item->product->falafel-1',
+    hasAllergens: false,
     hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9'
-    ],
+    variants: '',
     selectableAllergens: [
       'allergenic->fish-1',
       'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
       'allergenic->sulphites-5',
       'allergenic->peanuts-6',
       'allergenic->nuts-7',
       'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
       'allergenic->lupins-11',
       'allergenic->soya-12',
       'allergenic->moluscs-13',
       'allergenic->celery-14'
     ],
+    allergens: [],
     displayInfo: {
       es: {
         description: '',
-        title:
-          'Hamburguesa pollo corral, queso semiduro, su ensalada, salsa remolada',
-        slug: 'hamburguesa-pollo-corral'
+        title: 'Falafel (Croquetas de Garbanzos)',
+        slug: 'falafel'
       },
       en: {
         description: '',
-        title:
-          'Hamburger with chicken, medium-aged cheese, salad, and Tartar sauce',
-        slug: 'hamburger-with-chicken'
+        title: 'Falafel (Chickpeas Croquettes)',
+        slug: 'chickpeas-croquettes'
       },
       de: {
         description: '',
-        title:
-          'Hamburger mit Hähnchenfleisch, mittelaltem Käse, Salat und Remouladensoße',
-        slug: 'hamburger-mit-hahnchenfleisch'
+        title: 'Falafel (Kichererbsen Krokette mit Gewürzen)',
+        slug: 'kichererbsen-krokette-mit-gewurzen'
       },
       nb: {
         description: '',
-        title: 'Kyllingehambuger mellomlagret ost, salat, remulade',
-        slug: 'kyllingehambuger-mellomlagret-ost'
+        title: '',
+        slug: ''
       },
       da: {
         description: '',
-        title: 'Kyllingehambuger Mellomlagred Ost, Salat, Remulade',
-        slug: 'kyllingehambuger-mellomlagred-ost'
+        title: '',
+        slug: ''
       },
       sv: {
         description: '',
-        title:
-          'Frittgående kycklingburger, halvhård ost, sallad, remoulade sås',
-        slug: 'frittgaende-kycklingburger'
+        title: '',
+        slug: ''
       },
       fr: {
         description: '',
-        title:
-          'Hamburger de poulet fermier, fromage demi-affiné, salade et sauce rémoulade',
-        slug: 'hamburger-de-poulet-fermier'
+        title: '',
+        slug: ''
       },
       nl: {
         description: '',
-        title: 'Scharrelkipburger, halfharde kaas, jouw salade, remoladasaus',
-        slug: 'scharrelkipburger-halfharde-kaas-jouw-salade-remoladasaus'
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '6.90' },
+    number: '7'
+  } as Product,
+  'item->product->meals->starters->arab-patty-with-seadfood-8': {
+    id: 'item->product->meals->starters->arab-patty-with-seadfood-8',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->pastelas-marisco-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Pastela de Marisco',
+        slug: 'pastela-de-marisco'
+      },
+      en: {
+        description: '',
+        title: 'Arab Patty with Seadfood',
+        slug: 'arab-patty-with-seadfood'
+      },
+      de: {
+        description: '',
+        title: 'Arabische Teigpastete mit Meeresfrüchten',
+        slug: 'arabische-teigpastete-mit-meeresfruchten'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '6.95' },
+    number: '8'
+  } as Product,
+  'item->product->meals->starters->spinachs-croquettes-9': {
+    id: 'item->product->meals->starters->spinachs-croquettes-9',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->croqueta-espinacas-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Croquetas de Espinacas',
+        slug: 'croquetas-de-espinacas'
+      },
+      en: {
+        description: '',
+        title: 'Spinachs Croquettes',
+        slug: 'spinachs-croquettes'
+      },
+      de: {
+        description: '',
+        title: 'Spinatkroketten',
+        slug: 'spinatkroketten'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '6.90' },
+    number: '9'
+  } as Product,
+  'item->product->meals->starters->lamb-croquettes-10': {
+    id: 'item->product->meals->starters->lamb-croquettes-10',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->croqueta-cordero-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Croquetas de Cordero',
+        slug: 'croquetas-de-cordero'
+      },
+      en: {
+        description: '',
+        title: 'Lamb Croquettes',
+        slug: 'lamb-croquettes'
+      },
+      de: {
+        description: '',
+        title: 'Lammkroketten',
+        slug: 'lammkroketten'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '7.90' },
+    number: '10'
+  } as Product,
+  'item->product->meals->starters->hummus-11': {
+    id: 'item->product->meals->starters->hummus-11',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->hummus-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Hummus (Crema de Garbanzos)',
+        slug: 'hummus'
+      },
+      en: {
+        description: '',
+        title: 'Hummus (Chickpeas Cream)',
+        slug: 'hummus'
+      },
+      de: {
+        description: '',
+        title: 'Hummus (Kichererbsen Brei mit Gewürzen)',
+        slug: 'hummus'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '5.50' },
+    number: '11'
+  } as Product,
+  'item->product->meals->starters->-12': {
+    id: 'item->product->meals->starters->-12',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->hummus-lentejas-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Hummus de lentejas con trufa',
+        slug: 'hummus-de-lentejas-con-trufa'
+      },
+      en: {
+        description: '',
+        title: 'Lentil and Truffle Hummus',
+        slug: 'lentil-and-truffle-hummus'
+      },
+      de: {
+        description: '',
+        title: 'Linsen-Hummus mit Trüffle',
+        slug: 'linsen-hummus-mit-truffle'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '6.90' },
+    number: '12'
+  } as Product,
+  'item->product->meals->starters->-13': {
+    id: 'item->product->meals->starters->-13',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->zaaluk-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Zaaluk (Crema de Berenjena)',
+        slug: 'zaaluk'
+      },
+      en: {
+        description: '',
+        title: 'Zaaluk (Aubergine Creams)',
+        slug: 'zaaluk'
+      },
+      de: {
+        description: '',
+        title: 'Zaaluk (Auberginen Bre)',
+        slug: 'zaaluk'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '5.90' },
+    number: '13'
+  } as Product,
+  'item->product->meals->starters->-14': {
+    id: 'item->product->meals->starters->-14',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->ensalada-cous-cous-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Tabule (Ensalada con Cous Cous)',
+        slug: 'tabule'
+      },
+      en: {
+        description: '',
+        title: 'Tabule (Cous Cous Salad)',
+        slug: 'tabule'
+      },
+      de: {
+        description: '',
+        title: 'Tabule (Kuskus Salat mit Tomate und Gewürzen)',
+        slug: 'tabule'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '6.90' },
+    number: '14'
+  } as Product,
+  'item->product->meals->starters->-15': {
+    id: 'item->product->meals->starters->-15',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->ensalada-pollo-crujiente-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Ensalada de Pollo Crujiente',
+        slug: 'ensalada-de-pollo-crujiente'
+      },
+      en: {
+        description: '',
+        title: 'Crunchy Chicken Salad',
+        slug: 'crunchy-chicken-salad'
+      },
+      de: {
+        description: '',
+        title: 'Knuspriger Hühnersalat',
+        slug: 'knuspriger-huhnersalat'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
       }
     },
     price: { amount: '9.50' },
-    number: '6'
+    number: '15'
   } as Product,
-  'item->product->meals->beef-burger-7': {
-    id: 'item->product->meals->beef-burger-7',
+  'item->product->meals->starters->-16': {
+    id: 'item->product->meals->starters->-16',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
+    mainImg: 'image->item->product->ensalada-gourmet-1',
+    hasAllergens: false,
     hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9'
-    ],
+    variants: '',
     selectableAllergens: [
       'allergenic->fish-1',
       'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
       'allergenic->mustard-4',
       'allergenic->sulphites-5',
       'allergenic->peanuts-6',
       'allergenic->nuts-7',
       'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
       'allergenic->lupins-11',
       'allergenic->soya-12',
       'allergenic->moluscs-13',
       'allergenic->celery-14'
     ],
+    allergens: [],
     displayInfo: {
       es: {
         description: '',
-        title: 'Hamburguesa carne, bacon, queso, su ensalada y salsa rusa',
-        slug: 'hamburguesa-carne'
+        title: 'Ensalada Gourmet (Queso de Cabra)',
+        slug: 'ensalada-gourmet'
       },
       en: {
         description: '',
-        title: 'Beef burger, bacon, cheese, salad, and Russian sauce',
-        slug: 'beef-burger'
+        title: 'Gourmet Salad (Goat Cheese)',
+        slug: 'gourmet-salad'
       },
       de: {
         description: '',
-        title: 'Rindfleisch-Burger, Bacon, Käse, Salat und russische Soße',
-        slug: 'rindfleisch-burger'
+        title: 'Ziegenkäse Salat und Obst',
+        slug: 'ziegenkase-salat-und-obst'
       },
       nb: {
         description: '',
-        title: 'Hambuger, bacon, ost, salat og rusisk saus.',
-        slug: 'hambuger'
+        title: '',
+        slug: ''
       },
       da: {
         description: '',
-        title: 'Hambuger, bacon, ost, salad og rusisk sovs',
-        slug: 'hambuger'
+        title: '',
+        slug: ''
       },
       sv: {
         description: '',
-        title: 'Biffburgare, bacon, ost, sallad och rysk sås ',
-        slug: 'biffburgare'
+        title: '',
+        slug: ''
       },
       fr: {
         description: '',
-        title: 'Hamburger de viande, bacon et fromage, salade et sauce russe',
-        slug: 'hamburger-de-viande'
+        title: '',
+        slug: ''
       },
       nl: {
         description: '',
-        title: 'Vleesburger, bacon, kaas, jouw salade en Russische saus',
-        slug: 'vleesburger-bacon-kaas-jouw-salade-en-russische-saus'
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '9.50' },
+    number: '16'
+  } as Product,
+  'item->product->meals->starters->-17': {
+    id: 'item->product->meals->starters->-17',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->berengenas-miel-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Berenjenas Fritas con Miel',
+        slug: 'berenjenas-fritas-con-miel'
+      },
+      en: {
+        description: '',
+        title: 'Fried Aubergine with Honey',
+        slug: 'fried-aubergine-with-honey'
+      },
+      de: {
+        description: '',
+        title: 'Frittierte Aubergine mit Honig',
+        slug: 'frittierte-aubergine-mit-honig'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '6.50' },
+    number: '17'
+  } as Product,
+  'item->product->meals->starters->-18': {
+    id: 'item->product->meals->starters->-18',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->berengena-rellena-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Berenjenas rellenas de Ternera',
+        slug: 'berenjenas-rellenas-de-ternera'
+      },
+      en: {
+        description: '',
+        title: 'Veal stuffed Aubergine',
+        slug: 'veal-stuffed-aubergine'
+      },
+      de: {
+        description: '',
+        title: 'Aubergine Gefüllt mit Kalbfleisch',
+        slug: 'aubergine-gefüllt-mit-kalbfleisch'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '6.95' },
+    number: '18'
+  } as Product,
+  'item->product->meals->starters->-19': {
+    id: 'item->product->meals->starters->-19',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->queso-ahumado-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Queso Ahumado con Crema de Higo',
+        slug: 'queso-ahumado-con-crema-de-higo'
+      },
+      en: {
+        description: '',
+        title: 'Skomed Cheese with Fig Cream',
+        slug: 'skomed-cheese-with-fig-cream'
+      },
+      de: {
+        description: '',
+        title: 'Geräucherter Käse mit Feigencreme',
+        slug: 'geraucherter-käse-mit-feigencreme'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '7.90' },
+    number: '19'
+  } as Product,
+  'item->product->meals->starters->-20': {
+    id: 'item->product->meals->starters->-20',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->chistorras-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Chistorras Morunas',
+        slug: 'chistorras-morunas'
+      },
+      en: {
+        description: '',
+        title: 'Moroccan Spicy Sausage',
+        slug: 'moroccan-spicy-sausage'
+      },
+      de: {
+        description: '',
+        title: 'Chistorra auf Marokkanische Art',
+        slug: 'chistorra-auf-marokkanische-art'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '8.95' },
+    number: '20'
+  } as Product,
+  'item->product->meals->starters->-21': {
+    id: 'item->product->meals->starters->-21',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->marchica-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Marchica (Calabacín y Langostinos con Salsa de Marisco)',
+        slug: 'marchica'
+      },
+      en: {
+        description: '',
+        title: 'Marchica (Zucchini, Prawns with Seafood Sauce)',
+        slug: 'marchica'
+      },
+      de: {
+        description: '',
+        title: 'Marchica (Zucchini und Langusten mit Meeresfrüchtesoße)',
+        slug: 'marchica'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '9.95' },
+    number: '21'
+  } as Product,
+  'item->product->meals->starters->-22': {
+    id: 'item->product->meals->starters->-22',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->gambas-pil-pil-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Gambas al Pil Pil',
+        slug: 'gambas-al-pil-pil'
+      },
+      en: {
+        description: '',
+        title: 'Fried Shrimps with Spices',
+        slug: 'fried-shrimps-with-spices'
+      },
+      de: {
+        description: '',
+        title: 'Garnelen Pil Pil',
+        slug: 'garnelen-pil-pil'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '8.90' },
+    number: '22'
+  } as Product,
+
+  //// meals->skewers->
+  'item->product->meals->skewers->-1': {
+    id: 'item->product->meals->skewers->-1',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->pinchos-pollo-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Pinchitos de Pollo',
+        slug: 'pinchitos-de-pollo'
+      },
+      en: {
+        description: '',
+        title: 'Chicken Skewers',
+        slug: 'chicken-skewers'
+      },
+      de: {
+        description: '',
+        title: 'Kalbs Spieb',
+        slug: 'kalbs-spieb'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
       }
     },
     price: { amount: '10.95' },
-    number: '7'
+    number: '1'
   } as Product,
-  'item->product->meals->mexican-iberian-pork-burger-8': {
-    id: 'item->product->meals->mexican-iberian-pork-burger-8',
+  'item->product->meals->skewers->-2': {
+    id: 'item->product->meals->skewers->-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
+    mainImg: 'image->item->product->pinchos-ternera-1',
+    hasAllergens: false,
     hasVariants: false,
-    allergens: ['allergenic->gluten-3', 'allergenic->dairy-products-10'],
+    variants: '',
     selectableAllergens: [
       'allergenic->fish-1',
       'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
       'allergenic->mustard-4',
       'allergenic->sulphites-5',
       'allergenic->peanuts-6',
       'allergenic->nuts-7',
       'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
       'allergenic->egg-9',
       'allergenic->lupins-11',
       'allergenic->soya-12',
       'allergenic->moluscs-13',
       'allergenic->celery-14'
     ],
+    allergens: [],
     displayInfo: {
       es: {
         description: '',
-        title:
-          'Hamburguesa Mexicana carne cochino ibérico, mayonesa chipotle, guacamole y cebolla morada frita',
-        slug: 'hamburguesa-mexicana-carne-cochino-iberico'
+        title: 'Pinchitos de Ternera',
+        slug: 'pinchitos-de-ternera'
       },
       en: {
         description: '',
-        title:
-          'Mexican Iberian Pork Burger, Chipotle Mayonnaise, Guacamole and fried Red Onion',
-        slug: 'mexican-iberian-pork-burger'
+        title: 'Veal Skewers',
+        slug: 'veal-skewers'
       },
       de: {
         description: '',
-        title:
-          'Mexikanischer Hamburger vom iberischen Schwein, Chipotle-Mayonnaise, Guacamole und frittierten roten Zwiebeln',
-        slug: 'mexikanischer-hamburger-vom-iberischen-schwein'
+        title: 'Hähnchen Spieb',
+        slug: 'hahnchen-spieb'
       },
       nb: {
         description: '',
-        title:
-          'Meksikansk burger av iberisk svinekjøtt, chipotlemajones, guacamole og stekt rødløk',
-        slug: 'meksikansk-burger-av-iberisk-svinekjott'
+        title: '',
+        slug: ''
       },
       da: {
         description: '',
-        title:
-          'Mexikansk hamburger med iberisk pattegrisekød, chipotle-mayonnaise, guacamole og stegte rødløg',
-        slug: 'mexikansk-hamburger-med-iberisk-pattegrisekod'
+        title: '',
+        slug: ''
       },
       sv: {
         description: '',
-        title:
-          'Mexikansk Burger av Iberisk griskött, chipotlemajonnäs, guacamole och stekt rödlök',
-        slug: 'mexikansk-burger-av-iberisk-griskott-chipotlemajonnas'
+        title: '',
+        slug: ''
       },
       fr: {
         description: '',
-        title:
-          'Burger mexicain à la viande de porc ibérique, mayonnaise chipotle, guacamole et oignon rouge frit',
-        slug: 'burger-mexicain-a-la-viande-de-porc-iberique'
+        title: '',
+        slug: ''
       },
       nl: {
         description: '',
-        title:
-          'Mexicaanse hamburger met iberico-varkensvlees, chipotlemayonaise (jalapeñopeper), guacamole en gebakken paarse ui',
-        slug: 'Mexicaanse hamburger met iberico-varkensvlees'
-      }
-    },
-    price: { amount: '12.95' },
-    number: '8'
-  } as Product,
-  'item->product->meals->angus-beef-burger-9': {
-    id: 'item->product->meals->angus-beef-burger-9',
-    type: 'product',
-    images: ['image->item->product->default-1'],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: true,
-    hasVariants: false,
-    allergens: ['allergenic->gluten-3', 'allergenic->dairy-products-10'],
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    displayInfo: {
-      es: {
-        description: '',
-        title:
-          'Hamburguesa carne Angus, beicon, queso, su ensalada y salsa rusa',
-        slug: 'hamburguesa-carne-angus'
-      },
-      en: {
-        description: '',
-        title: 'Angus Beef Burger, Bacon, Cheese, Salad and Russian Dressing',
-        slug: 'angus-beef-burger'
-      },
-      de: {
-        description: '',
-        title:
-          'Hamburger vom Angusrind, Speck, Käse, Salat und russische Sauce',
-        slug: 'hamburger-vom-angusrind'
-      },
-      nb: {
-        description: '',
-        title: 'Angus biffburger, bacon, ost, salat og russisk saus',
-        slug: 'angus-biffburger'
-      },
-      da: {
-        description: '',
-        title:
-          'Hamburger med Angus-oksekød, bacon, ost, salat og Thousand Island-dressing',
-        slug: 'hamburger-med-angus-oksekod'
-      },
-      sv: {
-        description: '',
-        title: 'Angus nötkött hamburgare, bacon, ost,  sallad och rysk sås',
-        slug: 'angus-notkott-hamburgare'
-      },
-      fr: {
-        description: '',
-        title:
-          'Burger de bœuf Angus, bacon, fromage, salade et sauce à la russe',
-        slug: 'burger-de-boeuf-angus'
-      },
-      nl: {
-        description: '',
-        title:
-          'Hamburger met Angusvlees, bacon, kaas, sla en Russische dressing',
-        slug: 'hamburger-met-angusvlees'
+        title: '',
+        slug: ''
       }
     },
     price: { amount: '11.95' },
-    number: '9'
+    number: '2'
+  } as Product,
+  'item->product->meals->skewers->-3': {
+    id: 'item->product->meals->skewers->-3',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->pinchos-cordero-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Pinchitos de Cordero',
+        slug: 'pinchitos-de-cordero'
+      },
+      en: {
+        description: '',
+        title: 'Lamb Skewers',
+        slug: 'lamb-skewers'
+      },
+      de: {
+        description: '',
+        title: 'Lamm Spieb',
+        slug: 'lamm-spieb'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '12.50' },
+    number: '3'
+  } as Product,
+  'item->product->meals->skewers->-4': {
+    id: 'item->product->meals->skewers->-4',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Pinchitos vegetarianos',
+        slug: 'pinchitos-vegetarianos'
+      },
+      en: {
+        description: '',
+        title: 'Vegetarian meat substitute skewers',
+        slug: 'vegetarian-meat-substitute-skewers'
+      },
+      de: {
+        description: '',
+        title: 'Vegetarischer fleischpieß',
+        slug: 'vegetarischer-fleischpieß'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '12.50' },
+    number: '4'
+  } as Product,
+
+  //// meals->cous-cous->
+  'item->product->meals->cous-cous->-1': {
+    id: 'item->product->meals->cous-cous->-1',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->cous-cous-verduras-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Cous Cous de Verduras',
+        slug: 'cous-cous-de-verduras'
+      },
+      en: {
+        description: '',
+        title: 'Original Cous Cous with vegetables',
+        slug: 'original-cous-cous-with-vegetables'
+      },
+      de: {
+        description: '',
+        title: 'Original Cous Cous mit Gemuse',
+        slug: 'original-cous-cous-mit-gemuse'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '9.50' },
+    number: '1'
+  } as Product,
+  'item->product->meals->cous-cous->-2': {
+    id: 'item->product->meals->cous-cous->-2',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->cous-cous-pollo-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    allergens: [],
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->dairy-products-10',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Cous Cous de Pollo con verduras y cebolla caramelizada',
+        slug: 'cous-cous-de-pollo'
+      },
+      en: {
+        description: '',
+        title: 'Chicken Cous Cous with vegetables and caramelized onion',
+        slug: 'chicken-cous-cous'
+      },
+      de: {
+        description: '',
+        title: 'Cous Cous mit Fleisch, Gemüse und karamellisiertem zwiebel',
+        slug: 'cous-cous-mit-fleisch'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '10.95' },
+    number: '2'
+  } as Product,
+  'item->product->meals->cous-cous->-3': {
+    id: 'item->product->meals->cous-cous->-3',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Cous Cous de Ternera con verduras y cebolla caramelizada',
+        slug: 'cous-cous-de-ternera'
+      },
+      en: {
+        description: '',
+        title: 'Beef Cous Cous with vegetables and caramelized onion',
+        slug: 'beef-cous-cous'
+      },
+      de: {
+        description: '',
+        title:
+          'Original Cous Cous mit Kalbsfleisch, Gemüse und karamellisiertem zwiebel',
+        slug: 'original-cous-cous-mit-kalbsfleisch'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '11.95' },
+    number: '3'
+  } as Product,
+  'item->product->meals->cous-cous->-4': {
+    id: 'item->product->meals->cous-cous->-4',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->cous-cous-cordero-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Cous Cous de Cordero con verduras y cebolla caramelizada',
+        slug: 'cous-cous-de-cordero'
+      },
+      en: {
+        description: '',
+        title: 'Original Cous Cous with Lamb, vegetables and caramelized onion',
+        slug: 'original-cous-cous-with-lamb'
+      },
+      de: {
+        description: '',
+        title: 'Cous Cous mit Lamm, Gemüse und karamellisiertem zwiebel',
+        slug: 'cous-cous-mit-lamm'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '12.50' },
+    number: '4'
+  } as Product,
+  'item->product->meals->cous-cous->-5': {
+    id: 'item->product->meals->cous-cous->-5',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title:
+          'Cous Cous de Marisco con merluza fresca, langostinos, almejas y cebolla caramelizada',
+        slug: 'cous-cous-de-marisco'
+      },
+      en: {
+        description: '',
+        title:
+          'Seafood Cous Cous with fresh hake, langoustines, clams and caramelized onion',
+        slug: 'seafood-cous-cous'
+      },
+      de: {
+        description: '',
+        title:
+          'Meeresfrüchte-Cous Cous mit Garnelen, Muscheln, Frischem Seehecht und karamellisierten Zwiebeln',
+        slug: 'meeresfruchte-cous-cous'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '15.00' },
+    number: '5'
+  } as Product,
+  'item->product->meals->cous-cous->-6': {
+    id: 'item->product->meals->cous-cous->-6',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->cous-cous-verduras-tofu-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title:
+          'Cous Cous de carne vegetal con verdura, tofu y cebolla caramelizada',
+        slug: 'cous-cous-de-carne-vegetal'
+      },
+      en: {
+        description: '',
+        title:
+          'Vegetarian meat substitute Cous Cous with vegetables, tofu and caramelized onion',
+        slug: 'vegetarian-meat-substitute-cous-cous'
+      },
+      de: {
+        description: '',
+        title:
+          'Cous Cous aus Gemüsefleisch mit Gemüse, Tofu und karamellisierten Zwiebeln',
+        slug: 'cous-cous-aus-gemusefleisch'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '12.95' },
+    number: '6'
+  } as Product,
+
+  //// meals->tajin->
+  'item->product->meals->tajin->-1': {
+    id: 'item->product->meals->tajin->-1',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->tajin-ternera-huevo-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title:
+          'Tajin de Ternera con verdura o con ciruela, almendra y huevo duro',
+        slug: 'tajin-de-ternera'
+      },
+      en: {
+        description: '',
+        title:
+          'Beef tagine with vegetables or with plums, almonds and hard-boiled egg',
+        slug: 'beef-tagine'
+      },
+      de: {
+        description: '',
+        title:
+          'Rindfleisch-Tajine mit Gemüse oder Pflaume, Mandel und gekochtes Ei',
+        slug: 'rindfleisch-tajine'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '11.95' },
+    number: '1'
+  } as Product,
+  'item->product->meals->tajin->-2': {
+    id: 'item->product->meals->tajin->-2',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->tajin-pollo-verduras-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Tajin de Pollo con Verdura o al Limón',
+        slug: 'tajin-de-pollo'
+      },
+      en: {
+        description: '',
+        title: 'Chicken tagine with vegetables or lemon chicken',
+        slug: 'chicken-tagine'
+      },
+      de: {
+        description: '',
+        title: 'Zitronen-Hähnchen-Tajine oder Hähnchen-Tajine mit Gemüse',
+        slug: 'zitronen-hahnchen-tajine'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '10.95' },
+    number: '2'
+  } as Product,
+  'item->product->meals->tajin->-3': {
+    id: 'item->product->meals->tajin->-3',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->tajin-cordero-verduras-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title:
+          'Tajin de Cordero con verdura o con ciruela, almendra y huevo duro',
+        slug: 'tajin-de-cordero'
+      },
+      en: {
+        description: '',
+        title:
+          'Lamb tagine with vegetables or with plums, almonds and hard-boiled egg',
+        slug: 'lamb-tagine'
+      },
+      de: {
+        description: '',
+        title: 'Lamm-Tajine mit Gemüse oder Pflaume, Mandel und gekochtes Ei',
+        slug: 'lamm-tajine'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '12.95' },
+    number: '3'
+  } as Product,
+  'item->product->meals->tajin->-4': {
+    id: 'item->product->meals->tajin->-4',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->tajin-albondigas-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Tajin de kafta (albóndigas de ternera) con huevo roto',
+        slug: 'tajin-de-kafta'
+      },
+      en: {
+        description: '',
+        title: 'Kafka (beef meatballs) tagine with scrambled eggs',
+        slug: 'kafka-tagine'
+      },
+      de: {
+        description: '',
+        title: 'Tajine dyal kefta (mit Hackfleisch) und Ei',
+        slug: 'tajine-dyal-kefta'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '12.50' },
+    number: '4'
+  } as Product,
+  'item->product->meals->tajin->-5': {
+    id: 'item->product->meals->tajin->-5',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->tajin-verduras-tofu-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Tajin con carne vegetal con verdura y tofu',
+        slug: 'tajin-con-carne-vegetal'
+      },
+      en: {
+        description: '',
+        title: 'Vegetarian meat substitute tagine with vegetables and tofu',
+        slug: 'vegetarian-meat-substitute-tagine'
+      },
+      de: {
+        description: '',
+        title: 'Tajine mit fleisch und Tofu-Gemüse',
+        slug: 'tajine-mit-fleisch'
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '12.95' },
+    number: '5'
+  } as Product,
+
+  ///// meals->salads->
+  'item->product->meals->salads->-1': {
+    id: 'item->product->meals->salads->-1',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->som-tam-salad-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '1'
+  } as Product,
+  'item->product->meals->salads->-2': {
+    id: 'item->product->meals->salads->-2',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: 'image->item->product->smoked-salmon-salad-1',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '2'
+  } as Product,
+  'item->product->meals->salads->-3': {
+    id: 'item->product->meals->salads->-3',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '3'
+  } as Product,
+  'item->product->meals->salads->-4': {
+    id: 'item->product->meals->salads->-4',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '4'
+  } as Product,
+  'item->product->meals->salads->-5': {
+    id: 'item->product->meals->salads->-5',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '5'
+  } as Product,
+  'item->product->meals->salads->-6': {
+    id: 'item->product->meals->salads->-6',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '6'
+  } as Product,
+
+  //// meals->spoon-dishes->
+  'item->product->meals->spoon-dishes->-1': {
+    id: 'item->product->meals->spoon-dishes->-1',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '1'
+  } as Product,
+  'item->product->meals->spoon-dishes->-2': {
+    id: 'item->product->meals->spoon-dishes->-2',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '2'
+  } as Product,
+  'item->product->meals->spoon-dishes->-3': {
+    id: 'item->product->meals->spoon-dishes->-3',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '3'
+  } as Product,
+  'item->product->meals->spoon-dishes->-4': {
+    id: 'item->product->meals->spoon-dishes->-4',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '4'
+  } as Product,
+  'item->product->meals->spoon-dishes->-5': {
+    id: 'item->product->meals->spoon-dishes->-5',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '5'
+  } as Product,
+  'item->product->meals->spoon-dishes->-6': {
+    id: 'item->product->meals->spoon-dishes->-6',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '6'
+  } as Product,
+
+  //// meals->breakfasts->
+  'item->product->meals->breakfasts->-1': {
+    id: 'item->product->meals->breakfasts->-1',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '1'
+  } as Product,
+  'item->product->meals->breakfasts->-2': {
+    id: 'item->product->meals->breakfasts->-2',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '2'
+  } as Product,
+  'item->product->meals->breakfasts->-3': {
+    id: 'item->product->meals->breakfasts->-3',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->dummy->default-gallery-',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '3'
+  } as Product,
+  'item->product->meals->breakfasts->-4': {
+    id: 'item->product->meals->breakfasts->-4',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '4'
+  } as Product,
+  'item->product->meals->breakfasts->-5': {
+    id: 'item->product->meals->breakfasts->-5',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '5'
+  } as Product,
+  'item->product->meals->breakfasts->-6': {
+    id: 'item->product->meals->breakfasts->-6',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '6'
+  } as Product,
+
+  ///// meals->sandwich->
+  'item->product->meals->sandwich->-1': {
+    id: 'item->product->meals->sandwich->-1',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '1'
+  } as Product,
+  'item->product->meals->sandwich->-2': {
+    id: 'item->product->meals->sandwich->-2',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '2'
+  } as Product,
+  'item->product->meals->sandwich->-3': {
+    id: 'item->product->meals->sandwich->-3',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '3'
+  } as Product,
+  'item->product->meals->sandwich->-4': {
+    id: 'item->product->meals->sandwich->-4',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '4'
+  } as Product,
+  'item->product->meals->sandwich->-5': {
+    id: 'item->product->meals->sandwich->-5',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '5'
+  } as Product,
+  'item->product->meals->sandwich->-6': {
+    id: 'item->product->meals->sandwich->-6',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '6'
   } as Product,
 
   //// meals->childrens->
@@ -5087,12 +4427,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
     {
       id: 'item->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1',
       type: 'product',
-      images: ['image->item->product->default-1'],
+      images: [],
       active: true,
       defaultImg: 'image->item->product->default-1',
       mainImg: '',
-      hasAllergens: true,
+      hasAllergens: false,
       hasVariants: false,
+      variants: '',
       allergens: [
         'allergenic->gluten-3',
         'allergenic->dairy-products-10',
@@ -5156,17 +4497,19 @@ export const items: { [key: string]: Info | Product | Menu } = {
       price: { amount: '7.50' },
       number: '1'
     } as Product,
-  'item->product->meals->childrens->grilled-fish-with-side-dishes-2': {
-    id: 'item->product->meals->childrens->grilled-fish-with-side-dishes-2',
+  'item->product->meals->childrens->-2': {
+    id: 'item->product->meals->childrens->-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: '',
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
-    allergens: ['allergenic->fish-1'],
-    selectableAllergens: [
+    variants: '',
+    selectableAllergens: [],
+    allergens: [
+      'allergenic->fish-1',
       'allergenic->crustaceans-2',
       'allergenic->gluten-3',
       'allergenic->mustard-4',
@@ -5174,8 +4517,8 @@ export const items: { [key: string]: Info | Product | Menu } = {
       'allergenic->peanuts-6',
       'allergenic->nuts-7',
       'allergenic->sesame-8',
-      'allergenic->egg-9',
       'allergenic->dairy-products-10',
+      'allergenic->egg-9',
       'allergenic->lupins-11',
       'allergenic->soya-12',
       'allergenic->moluscs-13',
@@ -5184,57 +4527,58 @@ export const items: { [key: string]: Info | Product | Menu } = {
     displayInfo: {
       es: {
         description: '',
-        title: 'Pescado a la Plancha con Guarnición del Chef',
-        slug: 'pescado-a-la-plancha-con-guarnicion-del-chef'
+        title: '',
+        slug: ''
       },
       en: {
         description: '',
-        title: 'Grilled fish with side dishes',
-        slug: 'grilled-fish-with-side-dishes'
+        title: '',
+        slug: ''
       },
       de: {
         description: '',
-        title: 'Gegrillter fisch mit beilagen',
-        slug: 'gegrillter-fisch-mit-beilagen'
+        title: '',
+        slug: ''
       },
       nb: {
         description: '',
-        title: 'Grillet Fisk med sjefkokkens tilbehør',
-        slug: 'grillet-fisk-med-sjefkokkens-tilbehor'
+        title: '',
+        slug: ''
       },
       da: {
         description: '',
-        title: 'Grilled fisk med chefkokkens tilbehør',
-        slug: 'grilled-fisk-med-chefkokkens-tilbehor'
+        title: '',
+        slug: ''
       },
       sv: {
         description: '',
-        title: 'Grillad fisk med kockgarnering',
-        slug: 'grillad-fisk-med-kockgarnering'
+        title: '',
+        slug: ''
       },
       fr: {
         description: '',
-        title: 'Poisson grillé avec la garniture du chef',
-        slug: 'poisson-grille-avec-la-garniture-du-chef'
+        title: '',
+        slug: ''
       },
       nl: {
         description: '',
-        title: 'Gegrilde vis met garnituur van de chef',
-        slug: 'gegrilde-vis-met-garnituur-van-de-chef'
+        title: '',
+        slug: ''
       }
     },
-    price: { amount: '5.50' },
-    number: '38'
+    price: { amount: '0.00' },
+    number: '2'
   } as Product,
   'item->product->meals->childrens->hamburger-with-tomato-and-cheese-3': {
     id: 'item->product->meals->childrens->hamburger-with-tomato-and-cheese-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: '',
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [
       'allergenic->gluten-3',
       'allergenic->dairy-products-10',
@@ -5301,12 +4645,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->childrens->pizza-4': {
     id: 'item->product->meals->childrens->pizza-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: '',
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [
       'allergenic->gluten-3',
       'allergenic->dairy-products-10',
@@ -5373,12 +4718,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->childrens->nuggets-with-french-fries-5': {
     id: 'item->product->meals->childrens->nuggets-with-french-fries-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: '',
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: ['allergenic->gluten-3', 'allergenic->egg-9'],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -5442,17 +4788,14 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->childrens->ham-and-cheese-omelette-6': {
     id: 'item->product->meals->childrens->ham-and-cheese-omelette-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: '',
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
-    allergens: [
-      'allergenic->gluten-3',
-      'allergenic->egg-9',
-      'allergenic->dairy-products-10'
-    ],
+    variants: '',
+    allergens: ['allergenic->gluten-3', 'allergenic->egg-9'],
     selectableAllergens: [
       'allergenic->fish-1',
       'allergenic->crustaceans-2',
@@ -5461,6 +4804,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
       'allergenic->peanuts-6',
       'allergenic->nuts-7',
       'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
       'allergenic->lupins-11',
       'allergenic->soya-12',
       'allergenic->moluscs-13',
@@ -5512,16 +4856,885 @@ export const items: { [key: string]: Info | Product | Menu } = {
     number: '4'
   } as Product,
 
-  ///// drinks->refreshments->
-  'item->product->drinks->refreshments->pepsi-1': {
-    id: 'item->product->drinks->refreshments->pepsi-1',
+  //// meals->garnishes-or-side-dishes->
+  'item->product->meals->garnishes-or-side-dishes->chips-1': {
+    id: 'item->product->meals->garnishes-or-side-dishes->chips-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
+    allergens: [],
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->egg-9',
+      'allergenic->dairy-products-10',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Papas fritas',
+        slug: 'papa-frita'
+      },
+      en: {
+        description: '',
+        title: 'Chips',
+        slug: 'chips'
+      },
+      de: {
+        description: '',
+        title: 'Pommes frites',
+        slug: 'pommes-frites'
+      },
+      nb: {
+        description: '',
+        title: 'Pommes frites',
+        slug: 'pommes-frites'
+      },
+      da: {
+        description: '',
+        title: 'Pommes frites',
+        slug: 'pommes-frites'
+      },
+      sv: {
+        description: '',
+        title: 'Pommes frites',
+        slug: 'pommes-frites'
+      },
+      fr: {
+        description: '',
+        title: 'Papas Fritas (frites)',
+        slug: 'frites'
+      },
+      nl: {
+        description: '',
+        title: 'Frieten',
+        slug: 'frieten'
+      }
+    },
+    price: { amount: '2.50' },
+    number: '1'
+  } as Product,
+  'item->product->meals->garnishes-or-side-dishes->wrinkled-potatoes-2': {
+    id: 'item->product->meals->garnishes-or-side-dishes->wrinkled-potatoes-2',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    allergens: [],
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->egg-9',
+      'allergenic->dairy-products-10',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    displayInfo: {
+      es: {
+        description: 'Papas arrugadas',
+        title: 'Papas arrugadas',
+        slug: 'papa-arrugadas'
+      },
+      en: {
+        description: '',
+        title: 'Canarian Wrinkled Potatoes',
+        slug: 'wrinkled-potatoes'
+      },
+      de: {
+        description: '',
+        title: 'Papas Arrugadas (Kanarische Runzelkartoffeln mit Salz)',
+        slug: 'kanarische-runzelkartoffeln'
+      },
+      nb: {
+        description: '',
+        title: 'Rynkepoteter',
+        slug: 'rynkepoteter'
+      },
+      da: {
+        description: '',
+        title: 'Kanariske kartofler med skræl',
+        slug: 'kanariske-kartofler-med-skrael'
+      },
+      sv: {
+        description: '',
+        title: 'Skrynklig potatis',
+        slug: 'skrynklig-potatis'
+      },
+      fr: {
+        description: '',
+        title: 'Papas arrugadas (pommes de terre cuites au sel)',
+        slug: 'pommes-de-terre-cuites-au-sel'
+      },
+      nl: {
+        description: '',
+        title: 'Papas arrugadas (Canarisch aardappelgerecht)',
+        slug: 'canarisch-aardappelgerecht'
+      }
+    },
+    price: { amount: '2.50' },
+    number: '2'
+  } as Product,
+  'item->product->meals->garnishes-or-side-dishes->sweet-potato-fries-3': {
+    id: 'item->product->meals->garnishes-or-side-dishes->sweet-potato-fries-3',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    allergens: [],
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->egg-9',
+      'allergenic->dairy-products-10',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Batata frita',
+        slug: 'batata-frita'
+      },
+      en: {
+        description: '',
+        title: 'Fried Sweet Potato',
+        slug: 'sweet-potato-fries'
+      },
+      de: {
+        description: '',
+        title: 'Frittierte Süßkartoffeln',
+        slug: 'Subkartoffel-pommes'
+      },
+      nb: {
+        description: '',
+        title: 'Pommes frites av søtpotet',
+        slug: 'sotpotet-frites'
+      },
+      da: {
+        description: '',
+        title: 'Friturestegt sød kartoffel',
+        slug: 'sod-kartoffle-frites'
+      },
+      sv: {
+        description: '',
+        title: 'Sötpotatis pommes frites',
+        slug: 'stekt-sotpotatis'
+      },
+      fr: {
+        description: '',
+        title: 'Patate douce frite',
+        slug: 'patate-douce-frite'
+      },
+      nl: {
+        description: '',
+        title: 'Zoete-aardappelfrieten',
+        slug: 'zoete-aardappelfrieten'
+      }
+    },
+    price: { amount: '2.50' },
+    number: '3'
+  } as Product,
+  'item->product->meals->garnishes-or-side-dishes->salad-4': {
+    id: 'item->product->meals->garnishes-or-side-dishes->salad-4',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    allergens: [],
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->egg-9',
+      'allergenic->dairy-products-10',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Buque de ensalada',
+        slug: 'buque-de-ensalada'
+      },
+      en: {
+        description: '',
+        title: 'Salad Bouquet',
+        slug: 'salad'
+      },
+      de: {
+        description: '',
+        title: 'Salatbouquet',
+        slug: 'salatbouquet'
+      },
+      nb: {
+        description: '',
+        title: 'Salatbukett',
+        slug: 'salatbukett'
+      },
+      da: {
+        description: '',
+        title: 'Salatbåd',
+        slug: 'salatbad'
+      },
+      sv: {
+        description: '',
+        title: 'Sallads bukett',
+        slug: 'sallads-bukett'
+      },
+      fr: {
+        description: '',
+        title: 'Bouquet de salade',
+        slug: 'bouquet-de-salade'
+      },
+      nl: {
+        description: '',
+        title: 'Saladeboeket',
+        slug: 'saladeboeket'
+      }
+    },
+    price: { amount: '2.50' },
+    number: '4'
+  } as Product,
+  'item->product->meals->garnishes-or-side-dishes->basmati-rice-5': {
+    id: 'item->product->meals->garnishes-or-side-dishes->basmati-rice-5',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    allergens: [],
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->egg-9',
+      'allergenic->dairy-products-10',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Arroz basmati',
+        slug: 'arroz-basmati'
+      },
+      en: {
+        description: '',
+        title: 'Basmati Rice',
+        slug: 'basmati-rice'
+      },
+      de: {
+        description: '',
+        title: 'Basmatireis',
+        slug: 'basmatireis'
+      },
+      nb: {
+        description: '',
+        title: 'Basmati ris',
+        slug: 'basmati-ris'
+      },
+      da: {
+        description: '',
+        title: 'Basmati-ris',
+        slug: 'basmati-ris'
+      },
+      sv: {
+        description: '',
+        title: 'Basmati ris',
+        slug: 'basmati-ris'
+      },
+      fr: {
+        description: '',
+        title: 'Riz basmati',
+        slug: 'riz-basmati'
+      },
+      nl: {
+        description: '',
+        title: 'Basmatirijst',
+        slug: 'basmatirijst'
+      }
+    },
+    price: { amount: '2.50' },
+    number: '5'
+  } as Product,
+  'item->product->meals->garnishes-or-side-dishes->ratatouille-6': {
+    id: 'item->product->meals->garnishes-or-side-dishes->ratatouille-6',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    allergens: [],
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->egg-9',
+      'allergenic->dairy-products-10',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    displayInfo: {
+      es: {
+        description: '',
+        title: 'Ratatouille',
+        slug: 'ratatouille'
+      },
+      en: {
+        description: '',
+        title: 'Ratatouille',
+        slug: 'ratatouille'
+      },
+      de: {
+        description: '',
+        title: 'Ratatouille',
+        slug: 'ratatouille'
+      },
+      nb: {
+        description: '',
+        title: 'Ratatouille',
+        slug: 'ratatouille'
+      },
+      da: {
+        description: '',
+        title: 'Ratatouille',
+        slug: 'ratatouille'
+      },
+      sv: {
+        description: '',
+        title: 'Ratatouille',
+        slug: 'ratatouille'
+      },
+      fr: {
+        description: '',
+        title: 'Ratatouille',
+        slug: 'ratatouille'
+      },
+      nl: {
+        description: '',
+        title: 'Ratatouille',
+        slug: 'ratatouille'
+      }
+    },
+    price: { amount: '2.50' },
+    number: '6'
+  } as Product,
+
+  //// meals->desserts->
+  'item->product->desserts->-1': {
+    id: 'item->product->desserts->-1',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '1'
+  } as Product,
+  'item->product->desserts->-2': {
+    id: 'item->product->desserts->-2',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '2'
+  } as Product,
+  'item->product->desserts->-3': {
+    id: 'item->product->desserts->-3',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '3'
+  } as Product,
+  'item->product->desserts->-4': {
+    id: 'item->product->desserts->-4',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '4'
+  } as Product,
+  'item->product->desserts->-5': {
+    id: 'item->product->desserts->-5',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '5'
+  } as Product,
+  'item->product->desserts->-6': {
+    id: 'item->product->desserts->-6',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
+    selectableAllergens: [
+      'allergenic->fish-1',
+      'allergenic->crustaceans-2',
+      'allergenic->gluten-3',
+      'allergenic->mustard-4',
+      'allergenic->sulphites-5',
+      'allergenic->peanuts-6',
+      'allergenic->nuts-7',
+      'allergenic->sesame-8',
+      'allergenic->dairy-products-10',
+      'allergenic->egg-9',
+      'allergenic->lupins-11',
+      'allergenic->soya-12',
+      'allergenic->moluscs-13',
+      'allergenic->celery-14'
+    ],
+    allergens: [],
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    price: { amount: '0.00' },
+    number: '6'
+  } as Product,
+
+  ///// drinks->refreshments->
+  'item->product->drinks->refreshments->pepsi-1': {
+    id: 'item->product->drinks->refreshments->pepsi-1',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -5571,12 +5784,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->pepsi-light-2': {
     id: 'item->product->drinks->refreshments->pepsi-light-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -5626,12 +5840,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->pepsi-max-3': {
     id: 'item->product->drinks->refreshments->pepsi-max-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -5681,12 +5896,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->schweppes-orange-4': {
     id: 'item->product->drinks->refreshments->schweppes-orange-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -5736,12 +5952,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->schweppes-lemon-5': {
     id: 'item->product->drinks->refreshments->schweppes-lemon-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -5791,12 +6008,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->seven-up-6': {
     id: 'item->product->drinks->refreshments->seven-up-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -5846,12 +6064,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->appletiser-7': {
     id: 'item->product->drinks->refreshments->appletiser-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -5901,12 +6120,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->tonic-8': {
     id: 'item->product->drinks->refreshments->tonic-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -5956,12 +6176,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->lipton-tea-9': {
     id: 'item->product->drinks->refreshments->lipton-tea-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6011,12 +6232,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->peach-juice-10': {
     id: 'item->product->drinks->refreshments->peach-juice-10',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6066,12 +6288,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->orange-juice-11': {
     id: 'item->product->drinks->refreshments->orange-juice-11',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6121,12 +6344,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->multifruit-juice-12': {
     id: 'item->product->drinks->refreshments->multifruit-juice-12',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6176,12 +6400,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->apple-juice-13': {
     id: 'item->product->drinks->refreshments->apple-juice-13',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6231,12 +6456,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->pear-pineapple-juice-14': {
     id: 'item->product->drinks->refreshments->pear-pineapple-juice-14',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6286,12 +6512,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->tomato-juice-15': {
     id: 'item->product->drinks->refreshments->tomato-juice-15',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6341,12 +6568,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->mineral-water-16': {
     id: 'item->product->drinks->refreshments->mineral-water-16',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6396,12 +6624,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->soda-water-17': {
     id: 'item->product->drinks->refreshments->soda-water-17',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6451,12 +6680,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->soda-jug-18': {
     id: 'item->product->drinks->refreshments->soda-jug-18',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6506,12 +6736,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->refreshments->natural-orange-juice-19': {
     id: 'item->product->drinks->refreshments->natural-orange-juice-19',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6563,12 +6794,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->coffee-shop->black-coffe-or-expresso-1': {
     id: 'item->product->drinks->coffee-shop->black-coffe-or-expresso-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6618,12 +6850,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->coffee-shop->cut-coffee-2': {
     id: 'item->product->drinks->coffee-shop->cut-coffee-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6673,12 +6906,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->coffee-shop->coffee-with-milk-3': {
     id: 'item->product->drinks->coffee-shop->coffee-with-milk-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6728,12 +6962,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->coffee-shop->coffee-with-condensed-milk-4': {
     id: 'item->product->drinks->coffee-shop->coffee-with-condensed-milk-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6783,12 +7018,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->coffee-shop->cola-cao-5': {
     id: 'item->product->drinks->coffee-shop->cola-cao-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6838,12 +7074,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->coffee-shop->cappuccino-6': {
     id: 'item->product->drinks->coffee-shop->cappuccino-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6893,12 +7130,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->coffee-shop->irish-coffee-7': {
     id: 'item->product->drinks->coffee-shop->irish-coffee-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -6948,12 +7186,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->coffee-shop->french-coffee-8': {
     id: 'item->product->drinks->coffee-shop->french-coffee-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7003,12 +7242,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->coffee-shop->infusion-9': {
     id: 'item->product->drinks->coffee-shop->infusion-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7060,12 +7300,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->beer-cane-1': {
     id: 'item->product->drinks->beers->beer-cane-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7115,12 +7356,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->beer-jar-2': {
     id: 'item->product->drinks->beers->beer-jar-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7170,12 +7412,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->cruzcampo-especial-3': {
     id: 'item->product->drinks->beers->cruzcampo-especial-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7225,12 +7468,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->el-aguila-sin-filtrar-4': {
     id: 'item->product->drinks->beers->el-aguila-sin-filtrar-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7280,12 +7524,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->1906-reserva-especial-5': {
     id: 'item->product->drinks->beers->1906-reserva-especial-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7335,12 +7580,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->coronita-6': {
     id: 'item->product->drinks->beers->coronita-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7390,12 +7636,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->desperados-7': {
     id: 'item->product->drinks->beers->desperados-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7445,12 +7692,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->heineken-8': {
     id: 'item->product->drinks->beers->heineken-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7500,12 +7748,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->judas-9': {
     id: 'item->product->drinks->beers->judas-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7555,12 +7804,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->mort-subite-10': {
     id: 'item->product->drinks->beers->mort-subite-10',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7610,12 +7860,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->paulaner-11': {
     id: 'item->product->drinks->beers->paulaner-11',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7665,12 +7916,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->peroni-12': {
     id: 'item->product->drinks->beers->peroni-12',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7720,12 +7972,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->raddler-13': {
     id: 'item->product->drinks->beers->raddler-13',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7775,12 +8028,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->18-70-14': {
     id: 'item->product->drinks->beers->18-70-14',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7830,12 +8084,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->beers->sin-gluten-15': {
     id: 'item->product->drinks->beers->sin-gluten-15',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7887,12 +8142,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->arehucas-1': {
     id: 'item->product->drinks->rums->arehucas-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7942,12 +8198,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->bacardy-2': {
     id: 'item->product->drinks->rums->bacardy-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -7997,12 +8254,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->matusalem-3': {
     id: 'item->product->drinks->rums->matusalem-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8052,12 +8310,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->zacapa-4': {
     id: 'item->product->drinks->rums->zacapa-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8107,12 +8366,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->house-honey-rum-5': {
     id: 'item->product->drinks->rums->house-honey-rum-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8162,12 +8422,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->artemi-6': {
     id: 'item->product->drinks->rums->artemi-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8217,12 +8478,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->shot-7': {
     id: 'item->product->drinks->rums->shot-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8272,12 +8534,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->havana-club-3-8': {
     id: 'item->product->drinks->rums->havana-club-3-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8327,12 +8590,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->havana-club-7-9': {
     id: 'item->product->drinks->rums->havana-club-7-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8382,12 +8646,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->flor-de-cana-7-10': {
     id: 'item->product->drinks->rums->flor-de-cana-7-10',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8437,12 +8702,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->rums->diplomatico-11': {
     id: 'item->product->drinks->rums->diplomatico-11',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8494,12 +8760,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->tullamore-dew-1': {
     id: 'item->product->drinks->whiskies->tullamore-dew-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8549,12 +8816,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->red-label-2': {
     id: 'item->product->drinks->whiskies->red-label-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8604,12 +8872,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->black-label-3': {
     id: 'item->product->drinks->whiskies->black-label-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8659,12 +8928,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->jhon-haig-4': {
     id: 'item->product->drinks->whiskies->jhon-haig-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8714,12 +8984,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->lagavulin-16-5': {
     id: 'item->product->drinks->whiskies->lagavulin-16-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8769,12 +9040,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->house-whisky-6': {
     id: 'item->product->drinks->whiskies->house-whisky-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8824,12 +9096,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->100-pipers-7': {
     id: 'item->product->drinks->whiskies->100-pipers-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8879,12 +9152,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->ballantines-8': {
     id: 'item->product->drinks->whiskies->ballantines-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8934,12 +9208,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->chanceler-9': {
     id: 'item->product->drinks->whiskies->chanceler-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -8989,12 +9264,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->chivas-regal-12-10': {
     id: 'item->product->drinks->whiskies->chivas-regal-12-10',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9044,12 +9320,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->j-and-b-11': {
     id: 'item->product->drinks->whiskies->j-and-b-11',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9099,12 +9376,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->whiskies->jack-daniels-12': {
     id: 'item->product->drinks->whiskies->jack-daniels-12',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9156,12 +9434,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->gordons-1': {
     id: 'item->product->drinks->gins->gordons-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9211,12 +9490,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->beefeater-2': {
     id: 'item->product->drinks->gins->beefeater-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9266,12 +9546,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->bombay-sapphire-3': {
     id: 'item->product->drinks->gins->bombay-sapphire-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9321,12 +9602,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->hendricks-4': {
     id: 'item->product->drinks->gins->hendricks-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9376,12 +9658,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->tanqueray-5': {
     id: 'item->product->drinks->gins->tanqueray-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9431,12 +9714,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->martin-millers-6': {
     id: 'item->product->drinks->gins->martin-millers-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9486,12 +9770,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->bulldog-7': {
     id: 'item->product->drinks->gins->bulldog-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9541,12 +9826,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->gvine-8': {
     id: 'item->product->drinks->gins->gvine-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9596,12 +9882,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->house-gin-9': {
     id: 'item->product->drinks->gins->house-gin-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9651,12 +9938,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->macaronesian-10': {
     id: 'item->product->drinks->gins->macaronesian-10',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9706,12 +9994,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->gins->royal-kingston-11': {
     id: 'item->product->drinks->gins->royal-kingston-11',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9763,12 +10052,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->veterano-1': {
     id: 'item->product->drinks->cognac-and-brandy->veterano-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9818,12 +10108,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->carlos-1-2': {
     id: 'item->product->drinks->cognac-and-brandy->carlos-1-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9873,12 +10164,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->gran-duque-de-alba-3': {
     id: 'item->product->drinks->cognac-and-brandy->gran-duque-de-alba-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9928,12 +10220,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->pedro-3-4': {
     id: 'item->product->drinks->cognac-and-brandy->pedro-3-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -9983,12 +10276,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->magno-5': {
     id: 'item->product->drinks->cognac-and-brandy->magno-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10038,12 +10332,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->103-etiqueta-blanca-6': {
     id: 'item->product->drinks->cognac-and-brandy->103-etiqueta-blanca-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10093,12 +10388,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->alma-de-magno-7': {
     id: 'item->product->drinks->cognac-and-brandy->alma-de-magno-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10149,12 +10445,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->brandy-local-8': {
     id: 'item->product->drinks->cognac-and-brandy->brandy-local-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10204,12 +10501,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->cardenal-de-mendoza-9': {
     id: 'item->product->drinks->cognac-and-brandy->cardenal-de-mendoza-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10259,12 +10557,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->carlos-3-10': {
     id: 'item->product->drinks->cognac-and-brandy->carlos-3-10',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10314,12 +10613,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->remy-martin-vsop-11': {
     id: 'item->product->drinks->cognac-and-brandy->remy-martin-vsop-11',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10369,12 +10669,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cognac-and-brandy->torres-5-12': {
     id: 'item->product->drinks->cognac-and-brandy->torres-5-12',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10426,12 +10727,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->vodkas->smirnoff-red-1': {
     id: 'item->product->drinks->vodkas->smirnoff-red-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
     defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10481,12 +10783,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->vodkas->absolut-2': {
     id: 'item->product->drinks->vodkas->absolut-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10536,12 +10839,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->vodkas->aniuska-3': {
     id: 'item->product->drinks->vodkas->aniuska-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10591,12 +10895,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->vodkas->moskovskaya-4': {
     id: 'item->product->drinks->vodkas->moskovskaya-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10646,12 +10951,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->vodkas->house-vodka-5': {
     id: 'item->product->drinks->vodkas->house-vodka-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10703,12 +11009,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->ciders->ladron-de-manzanas-1': {
     id: 'item->product->drinks->ciders->ladron-de-manzanas-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10758,12 +11065,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->ciders->strongbow-2': {
     id: 'item->product->drinks->ciders->strongbow-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10817,10 +11125,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10870,12 +11179,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->appetizers->tio-pepe-2': {
     id: 'item->product->drinks->appetizers->tio-pepe-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10925,12 +11235,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->appetizers->aperol-spritz-3': {
     id: 'item->product->drinks->appetizers->aperol-spritz-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -10980,12 +11291,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->appetizers->martini-bianco-4': {
     id: 'item->product->drinks->appetizers->martini-bianco-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11035,12 +11347,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->appetizers->martini-dry-5': {
     id: 'item->product->appetizers->drinks->martini-dry-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11090,12 +11403,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->appetizers->martini-rosso-6': {
     id: 'item->product->drinks->appetizers->martini-rosso-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11145,12 +11459,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->appetizers->oporto-7': {
     id: 'item->product->drinks->appetizers->oporto-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11200,12 +11515,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->appetizers->pernod-8': {
     id: 'item->product->drinks->appetizers->pernod-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11255,12 +11571,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->appetizers->hugo-spritz-9': {
     id: 'item->product->drinks->appetizers->hugo-spritz-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11312,12 +11629,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->aquavit-gammel-opland-1': {
     id: 'item->product->drinks->liqueurs->aquavit-gammel-opland-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11367,12 +11685,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->gammel-dansk-2': {
     id: 'item->product->drinks->liqueurs->gammel-dansk-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11422,12 +11741,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->jagermeister-3': {
     id: 'item->product->drinks->liqueurs->jagermeister-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11477,12 +11797,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->fernet-branca-4': {
     id: 'item->product->drinks->liqueurs->fernet-branca-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11532,12 +11853,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->baileys-5': {
     id: 'item->product->drinks->liqueurs->baileys-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11587,12 +11909,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->cointreau-6': {
     id: 'item->product->drinks->liqueurs->cointreau-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11642,12 +11965,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->frangelico-7': {
     id: 'item->product->drinks->liqueurs->frangelico-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11697,12 +12021,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->limoncello-8': {
     id: 'item->product->drinks->liqueurs->limoncello-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11752,12 +12077,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->drambuie-9': {
     id: 'item->product->drinks->liqueurs->drambuie-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11813,6 +12139,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11862,12 +12189,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->malibu-11': {
     id: 'item->product->drinks->liqueurs->malibu-11',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11917,12 +12245,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->linie-aquavit-12': {
     id: 'item->product->drinks->liqueurs->linie-aquavit-12',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -11972,12 +12301,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->archers-peach-schnapps-13': {
     id: 'item->product->drinks->liqueurs->archers-peach-schnapps-13',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12027,12 +12357,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->banana-liqueur-14': {
     id: 'item->product->drinks->liqueurs->banana-liqueur-14',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12082,12 +12413,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->benedictine-15': {
     id: 'item->product->drinks->liqueurs->benedictine-15',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12137,12 +12469,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->cynar-16': {
     id: 'item->product->drinks->liqueurs->cynar-16',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12192,12 +12525,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->tequila-17': {
     id: 'item->product->drinks->liqueurs->tequila-17',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12247,12 +12581,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->grand-marnier-cordon-jaune-18': {
     id: 'item->product->drinks->liqueurs->grand-marnier-cordon-jaune-18',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12302,12 +12637,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->grand-marnier-cordon-rouge-19': {
     id: 'item->product->drinks->liqueurs->grand-marnier-cordon-rouge-19',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12357,12 +12693,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->galliano-20': {
     id: 'item->product->drinks->liqueurs->galliano-20',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12412,12 +12749,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->grappa-21': {
     id: 'item->product->drinks->liqueurs->grappa-21',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12467,12 +12805,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->licor-43-22': {
     id: 'item->product->drinks->liqueurs->licor-43-22',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12522,12 +12861,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->herbal-liquor-23': {
     id: 'item->product->drinks->liqueurs->herbal-liquor-23',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12577,12 +12917,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->marie-brizard-24': {
     id: 'item->product->drinks->liqueurs->marie-brizard-24',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12632,12 +12973,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->ramazzotti-25': {
     id: 'item->product->drinks->liqueurs->ramazzotti-25',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12687,12 +13029,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->ricard-26': {
     id: 'item->product->drinks->liqueurs->ricard-26',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12742,12 +13085,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->peppermint-27': {
     id: 'item->product->drinks->liqueurs->peppermint-27',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12797,12 +13141,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->sambuca-28': {
     id: 'item->product->drinks->liqueurs->sambuca-28',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12852,12 +13197,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->tia-maria-29': {
     id: 'item->product->drinks->liqueurs->tia-maria-29',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12907,12 +13253,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->liqueurs->amaretto-30': {
     id: 'item->product->drinks->liqueurs->amaretto-30',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -12964,12 +13311,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cocktails->margarita-1': {
     id: 'item->product->drinks->cocktails->margarita-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13019,12 +13367,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cocktails->moscow-mule-2': {
     id: 'item->product->drinks->cocktails->moscow-mule-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13074,12 +13423,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cocktails->cosmopolitan-3': {
     id: 'item->product->drinks->cocktails->cosmopolitan-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13129,12 +13479,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cocktails->mojito-4': {
     id: 'item->product->drinks->cocktails->mojito-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13184,12 +13535,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cocktails->pina-colada-5': {
     id: 'item->product->drinks->cocktails->pina-colada-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13239,12 +13591,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cocktails->caipirihnha-6': {
     id: 'item->product->drinks->cocktails->caipirihnha-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13294,12 +13647,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->cocktails->long-island-ice-tea-7': {
     id: 'item->product->drinks->cocktails->long-island-ice-tea-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13351,15 +13705,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->smoothies->berry-burst-1': {
     id: 'item->product->drinks->smoothies->berry-burst-1',
     type: 'product',
-    images: [
-      'image->item->info->info-card-250-2-default',
-      'image->item->product->250-2-smoothi-1'
-    ],
+    images: [],
     active: true,
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->product->250-2-smoothi-1',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13409,12 +13761,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->smoothies->canarian-kiss-2': {
     id: 'item->product->drinks->smoothies->canarian-kiss-2',
     type: 'product',
-    images: ['image->item->info->info-card-250-2-default'],
+    images: [],
     active: true,
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13464,12 +13817,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->smoothies->mango-heaven-3': {
     id: 'item->product->drinks->smoothies->mango-heaven-3',
     type: 'product',
-    images: ['image->item->info->info-card-250-2-default'],
+    images: [],
     active: true,
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13519,15 +13873,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->smoothies->strawberry-split-4': {
     id: 'item->product->drinks->smoothies->strawberry-split-4',
     type: 'product',
-    images: [
-      'image->item->info->info-card-250-2-default',
-      'image->item->product->250-2-smoothi-4'
-    ],
+    images: [],
     active: true,
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->product->250-2-smoothi-4',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13577,12 +13929,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->smoothies->green-machine-5': {
     id: 'item->product->drinks->smoothies->green-machine-5',
     type: 'product',
-    images: ['image->item->info->info-card-250-2-default'],
+    images: [],
     active: true,
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: '',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13632,15 +13985,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->drinks->smoothies->tropical-colada-6': {
     id: 'item->product->drinks->smoothies->tropical-colada-6',
     type: 'product',
-    images: [
-      'image->item->info->info-card-250-2-default',
-      'image->item->product->250-2-smoothi-6'
-    ],
+    images: [],
     active: true,
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->product->250-2-smoothi-6',
     hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     displayInfo: {
       es: {
@@ -13692,9 +14043,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->wine-from-the-house-1': {
     id: 'item->product->wines->wine-from-the-house-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -13758,9 +14109,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->erial-2': {
     id: 'item->product->wines->erial-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -13824,9 +14175,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->agala-1175-3': {
     id: 'item->product->wines->agala-1175-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -13898,9 +14249,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->tierra-fundida-4': {
     id: 'item->product->wines->tierra-fundida-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -13972,9 +14323,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->rodriguez-de-vera-5': {
     id: 'item->product->wines->rodriguez-de-vera-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14046,9 +14397,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->vizcarra-15-meses-6': {
     id: 'item->product->wines->vizcarra-15-meses-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: false,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14112,9 +14463,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->ostatu-7': {
     id: 'item->product->wines->ostatu-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14178,9 +14529,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->artillero-8': {
     id: 'item->product->wines->artillero-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14244,9 +14595,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->carmelo-rodero-9-meses-24': {
     id: 'item->product->wines->carmelo-rodero-9-meses-24',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14310,9 +14661,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->wine-from-the-house-9': {
     id: 'item->product->wines->wine-from-the-house-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14376,9 +14727,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->rubicon-10': {
     id: 'item->product->wines->rubicon-10',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14442,9 +14793,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->paco-and-lola-11': {
     id: 'item->product->wines->paco-and-lola-11',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14508,9 +14859,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->paisaje-de-las-islas-12': {
     id: 'item->product->wines->paisaje-de-las-islas-12',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14574,9 +14925,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->tajinaste-13': {
     id: 'item->product->wines->tajinaste-13',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14648,9 +14999,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->godelia-godello-14': {
     id: 'item->product->wines->godelia-godello-14',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14714,9 +15065,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->belondrade-quinta-apolonia-15': {
     id: 'item->product->wines->belondrade-quinta-apolonia-15',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14780,9 +15131,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->wine-from-the-house-16': {
     id: 'item->product->wines->wine-from-the-house-16',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14846,9 +15197,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->ochoa-lagrima-rosa-17': {
     id: 'item->product->wines->ochoa-lagrima-rosa-17',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14912,9 +15263,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->chivite-las-fincas-18': {
     id: 'item->product->wines->chivite-las-fincas-18',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -14978,9 +15329,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->don-px-2018-19': {
     id: 'item->product->wines->don-px-2018-19',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -15044,9 +15395,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->raventos-i-blanc-de-nit-20': {
     id: 'item->product->wines->raventos-i-blanc-de-nit-20',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -15110,9 +15461,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->raventos-de-nit-rose-21': {
     id: 'item->product->wines->raventos-de-nit-rose-21',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
 
     displayInfo: {
@@ -15177,10 +15528,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->taittinger-brut-reserve-22': {
     id: 'item->product->wines->taittinger-brut-reserve-22',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
+
     displayInfo: {
       es: {
         description: 'Taittinger Brut Réserve',
@@ -15243,9 +15595,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->sangria-23': {
     id: 'item->product->wines->sangria-23',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -15309,9 +15661,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->limite-norte-24': {
     id: 'item->product->wines->limite-norte-24',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -15375,9 +15727,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->wines->chivite-legardeta-25': {
     id: 'item->product->wines->chivite-legardeta-25',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     active: true,
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     mainImg: '',
     displayInfo: {
       es: {
@@ -15439,16 +15791,853 @@ export const items: { [key: string]: Info | Product | Menu } = {
     number: '25'
   } as Product,
 
+  // Marhaba wines
+  'item->product->wines->-1': {
+    id: 'item->product->wines->-1',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Malvasía aromática. D.O Islas Canarias (Piñero)',
+        title: 'Vinátigo afrutado',
+        slug: 'vinatigo-afrutado'
+      },
+      en: {
+        description: 'Malvasía aromática. D.O Islas Canarias (Piñero)',
+        title: 'Vinátigo afrutado',
+        slug: 'vinatigo-afrutado'
+      },
+      de: {
+        description: 'Malvasía aromática. D.O Islas Canarias (Piñero)',
+        title: 'Vinátigo afrutado',
+        slug: 'vinatigo-afrutado'
+      },
+      nb: {
+        description: 'Malvasía aromática. D.O Islas Canarias (Piñero)',
+        title: 'Vinátigo afrutado',
+        slug: 'vinatigo-afrutado'
+      },
+      da: {
+        description: 'Malvasía aromática. D.O Islas Canarias (Piñero)',
+        title: 'Vinátigo afrutado',
+        slug: 'vinatigo-afrutado'
+      },
+      sv: {
+        description: 'Malvasía aromática. D.O Islas Canarias (Piñero)',
+        title: 'Vinátigo afrutado',
+        slug: 'vinatigo-afrutado'
+      },
+      fr: {
+        description: 'Malvasía aromática. D.O Islas Canarias (Piñero)',
+        title: 'Vinátigo afrutado',
+        slug: 'vinatigo-afrutado'
+      },
+      nl: {
+        description: 'Malvasía aromática. D.O Islas Canarias (Piñero)',
+        title: 'Vinátigo afrutado',
+        slug: 'vinatigo-afrutado'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+
+    price: { amount: '21.95' },
+    number: '1'
+  } as Product,
+  'item->product->wines->-2': {
+    id: 'item->product->wines->-2',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'D.O Lanzarote Malvasía volcánico (Piñero)',
+        title: 'El Grifo Colección',
+        slug: 'el-grifo-coleccion'
+      },
+      en: {
+        description: 'D.O Lanzarote Malvasía volcánico (Piñero)',
+        title: 'El Grifo Colección',
+        slug: 'el-grifo-coleccion'
+      },
+      de: {
+        description: 'D.O Lanzarote Malvasía volcánico (Piñero)',
+        title: 'El Grifo Colección',
+        slug: 'el-grifo-coleccion'
+      },
+      nb: {
+        description: 'D.O Lanzarote Malvasía volcánico (Piñero)',
+        title: 'El Grifo Colección',
+        slug: 'el-grifo-coleccion'
+      },
+      da: {
+        description: 'D.O Lanzarote Malvasía volcánico (Piñero)',
+        title: 'El Grifo Colección',
+        slug: 'el-grifo-coleccion'
+      },
+      sv: {
+        description: 'D.O Lanzarote Malvasía volcánico (Piñero)',
+        title: 'El Grifo Colección',
+        slug: 'el-grifo-coleccion'
+      },
+      fr: {
+        description: 'D.O Lanzarote Malvasía volcánico (Piñero)',
+        title: 'El Grifo Colección',
+        slug: 'el-grifo-coleccion'
+      },
+      nl: {
+        description: 'D.O Lanzarote Malvasía volcánico (Piñero)',
+        title: 'El Grifo Colección',
+        slug: 'el-grifo-coleccion'
+      }
+    },
+    hasVariants: true,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '21.00' },
+    number: '2'
+  } as Product,
+  'item->product->wines->-3': {
+    id: 'item->product->wines->-3',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Listán Blanco. D.O Islas Canarias',
+        title: 'Plaza Perdida',
+        slug: 'plaza-perdida'
+      },
+      en: {
+        description: 'Listán Blanco. D.O Islas Canarias',
+        title: 'Plaza Perdida',
+        slug: 'plaza-perdida'
+      },
+      de: {
+        description: 'Listán Blanco. D.O Islas Canarias',
+        title: 'Plaza Perdida',
+        slug: 'plaza-perdida'
+      },
+      nb: {
+        description: 'Listán Blanco. D.O Islas Canarias',
+        title: 'Plaza Perdida',
+        slug: 'plaza-perdida'
+      },
+      da: {
+        description: 'Listán Blanco. D.O Islas Canarias',
+        title: 'Plaza Perdida',
+        slug: 'plaza-perdida'
+      },
+      sv: {
+        description: 'Listán Blanco. D.O Islas Canarias',
+        title: 'Plaza Perdida',
+        slug: 'plaza-perdida'
+      },
+      fr: {
+        description: 'Listán Blanco. D.O Islas Canarias',
+        title: 'Plaza Perdida',
+        slug: 'plaza-perdida'
+      },
+      nl: {
+        description: 'Listán Blanco. D.O Islas Canarias',
+        title: 'Plaza Perdida',
+        slug: 'plaza-perdida'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '21.00' },
+    number: '3'
+  } as Product,
+  'item->product->wines->-4': {
+    id: 'item->product->wines->-4',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Verdejo. D.O Rueda',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      en: {
+        description: 'Verdejo. D.O Rueda',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      de: {
+        description: 'Verdejo. D.O Rueda',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      nb: {
+        description: 'Verdejo. D.O Rueda',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      da: {
+        description: 'Verdejo. D.O Rueda',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      sv: {
+        description: 'Verdejo. D.O Rueda',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      fr: {
+        description: 'Verdejo. D.O Rueda',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      nl: {
+        description: 'Verdejo. D.O Rueda',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '18.00' },
+    number: '4'
+  } as Product,
+  'item->product->wines->-5': {
+    id: 'item->product->wines->-5',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Albariño. D.O Rías Baixas',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      en: {
+        description: 'Albariño. D.O Rías Baixas',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      de: {
+        description: 'Albariño. D.O Rías Baixas',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      nb: {
+        description: 'Albariño. D.O Rías Baixas',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      da: {
+        description: 'Albariño. D.O Rías Baixas',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      sv: {
+        description: 'Albariño. D.O Rías Baixas',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      fr: {
+        description: 'Albariño. D.O Rías Baixas',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      },
+      nl: {
+        description: 'Albariño. D.O Rías Baixas',
+        title: 'Montecillo Singladuras',
+        slug: 'montecillo-singladuras'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '19.95' },
+    number: '5'
+  } as Product,
+  'item->product->wines->-6': {
+    id: 'item->product->wines->-6',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Tierra de Castilla',
+        title: 'Solaz Chardonnay',
+        slug: 'solaz-chardonnay'
+      },
+      en: {
+        description: 'Tierra de Castilla',
+        title: 'Solaz Chardonnay',
+        slug: 'solaz-chardonnay'
+      },
+      de: {
+        description: 'Tierra de Castilla',
+        title: 'Solaz Chardonnay',
+        slug: 'solaz-chardonnay'
+      },
+      nb: {
+        description: 'Tierra de Castilla',
+        title: 'Solaz Chardonnay',
+        slug: 'solaz-chardonnay'
+      },
+      da: {
+        description: 'Tierra de Castilla',
+        title: 'Solaz Chardonnay',
+        slug: 'solaz-chardonnay'
+      },
+      sv: {
+        description: 'Tierra de Castilla',
+        title: 'Solaz Chardonnay',
+        slug: 'solaz-chardonnay'
+      },
+      fr: {
+        description: 'Tierra de Castilla',
+        title: 'Solaz Chardonnay',
+        slug: 'solaz-chardonnay'
+      },
+      nl: {
+        description: 'Tierra de Castilla',
+        title: 'Solaz Chardonnay',
+        slug: 'solaz-chardonnay'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '16.00' },
+    number: '6'
+  } as Product,
+  'item->product->wines->-7': {
+    id: 'item->product->wines->-7',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Tempranillo y Garnacha. D.O.La Rioja',
+        title: 'Montecillo Rosado',
+        slug: 'montecillo-rosado'
+      },
+      en: {
+        description: 'Tempranillo y Garnacha. D.O.La Rioja',
+        title: 'Montecillo Rosado',
+        slug: 'montecillo-rosado'
+      },
+      de: {
+        description: 'Tempranillo y Garnacha. D.O.La Rioja',
+        title: 'Montecillo Rosado',
+        slug: 'montecillo-rosado'
+      },
+      nb: {
+        description: 'Tempranillo y Garnacha. D.O.La Rioja',
+        title: 'Montecillo Rosado',
+        slug: 'montecillo-rosado'
+      },
+      da: {
+        description: 'Tempranillo y Garnacha. D.O.La Rioja',
+        title: 'Montecillo Rosado',
+        slug: 'montecillo-rosado'
+      },
+      sv: {
+        description: 'Tempranillo y Garnacha. D.O.La Rioja',
+        title: 'Montecillo Rosado',
+        slug: 'montecillo-rosado'
+      },
+      fr: {
+        description: 'Tempranillo y Garnacha. D.O.La Rioja',
+        title: 'Montecillo Rosado',
+        slug: 'montecillo-rosado'
+      },
+      nl: {
+        description: 'Tempranillo y Garnacha. D.O.La Rioja',
+        title: 'Montecillo Rosado',
+        slug: 'montecillo-rosado'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '18.00' },
+    number: '7'
+  } as Product,
+  'item->product->wines->-8': {
+    id: 'item->product->wines->-8',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description:
+          'Listán Negro y Baboso Negro, D.O Gran Canaria (Vinófilos)',
+        title: 'Agala Joven',
+        slug: 'agala-joven'
+      },
+      en: {
+        description:
+          'Listán Negro y Baboso Negro, D.O Gran Canaria (Vinófilos)',
+        title: 'Agala Joven',
+        slug: 'agala-joven'
+      },
+      de: {
+        description:
+          'Listán Negro y Baboso Negro, D.O Gran Canaria (Vinófilos)',
+        title: 'Agala Joven',
+        slug: 'agala-joven'
+      },
+      nb: {
+        description:
+          'Listán Negro y Baboso Negro, D.O Gran Canaria (Vinófilos)',
+        title: 'Agala Joven',
+        slug: 'agala-joven'
+      },
+      da: {
+        description:
+          'Listán Negro y Baboso Negro, D.O Gran Canaria (Vinófilos)',
+        title: 'Agala Joven',
+        slug: 'agala-joven'
+      },
+      sv: {
+        description:
+          'Listán Negro y Baboso Negro, D.O Gran Canaria (Vinófilos)',
+        title: 'Agala Joven',
+        slug: 'agala-joven'
+      },
+      fr: {
+        description:
+          'Listán Negro y Baboso Negro, D.O Gran Canaria (Vinófilos)',
+        title: 'Agala Joven',
+        slug: 'agala-joven'
+      },
+      nl: {
+        description:
+          'Listán Negro y Baboso Negro, D.O Gran Canaria (Vinófilos)',
+        title: 'Agala Joven',
+        slug: 'agala-joven'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '17.00' },
+    number: '8'
+  } as Product,
+  'item->product->wines->-9': {
+    id: 'item->product->wines->-9',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Listán Negro y tintilla D.O. Gran Canaria',
+        title: 'Mondalón Tinto',
+        slug: 'mondalon-tinto'
+      },
+      en: {
+        description: 'Listán Negro y tintilla D.O. Gran Canaria',
+        title: 'Mondalón Tinto',
+        slug: 'mondalon-tinto'
+      },
+      de: {
+        description: 'Listán Negro y tintilla D.O. Gran Canaria',
+        title: 'Mondalón Tinto',
+        slug: 'mondalon-tinto'
+      },
+      nb: {
+        description: 'Listán Negro y tintilla D.O. Gran Canaria',
+        title: 'Mondalón Tinto',
+        slug: 'mondalon-tinto'
+      },
+      da: {
+        description: 'Listán Negro y tintilla D.O. Gran Canaria',
+        title: 'Mondalón Tinto',
+        slug: 'mondalon-tinto'
+      },
+      sv: {
+        description: 'Listán Negro y tintilla D.O. Gran Canaria',
+        title: 'Mondalón Tinto',
+        slug: 'mondalon-tinto'
+      },
+      fr: {
+        description: 'Listán Negro y tintilla D.O. Gran Canaria',
+        title: 'Mondalón Tinto',
+        slug: 'mondalon-tinto'
+      },
+      nl: {
+        description: 'Listán Negro y tintilla D.O. Gran Canaria',
+        title: 'Mondalón Tinto',
+        slug: 'mondalon-tinto'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '21.00' },
+    number: '9'
+  } as Product,
+  'item->product->wines->-10': {
+    id: 'item->product->wines->-10',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Tempranillo y Garnacha D.O.La Rioja',
+        title: 'Montecillo Crianza',
+        slug: 'montecillo-crianza'
+      },
+      en: {
+        description: 'Tempranillo y Garnacha D.O.La Rioja',
+        title: 'Montecillo Crianza',
+        slug: 'montecillo-crianza'
+      },
+      de: {
+        description: 'Tempranillo y Garnacha D.O.La Rioja',
+        title: 'Montecillo Crianza',
+        slug: 'montecillo-crianza'
+      },
+      nb: {
+        description: 'Tempranillo y Garnacha D.O.La Rioja',
+        title: 'Montecillo Crianza',
+        slug: 'montecillo-crianza'
+      },
+      da: {
+        description: 'Tempranillo y Garnacha D.O.La Rioja',
+        title: 'Montecillo Crianza',
+        slug: 'montecillo-crianza'
+      },
+      sv: {
+        description: 'Tempranillo y Garnacha D.O.La Rioja',
+        title: 'Montecillo Crianza',
+        slug: 'montecillo-crianza'
+      },
+      fr: {
+        description: 'Tempranillo y Garnacha D.O.La Rioja',
+        title: 'Montecillo Crianza',
+        slug: 'montecillo-crianza'
+      },
+      nl: {
+        description: 'Tempranillo y Garnacha D.O.La Rioja',
+        title: 'Montecillo Crianza',
+        slug: 'montecillo-crianza'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '17.00' },
+    number: '10'
+  } as Product,
+  'item->product->wines->-11': {
+    id: 'item->product->wines->-11',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Tempranillo y Graciano D.O.La Rioja',
+        title: 'Montecillo Edición Limitada',
+        slug: 'montecillo-edicion-limitada'
+      },
+      en: {
+        description: 'Tempranillo y Graciano D.O.La Rioja',
+        title: 'Montecillo Edición Limitada',
+        slug: 'montecillo-edicion-limitada'
+      },
+      de: {
+        description: 'Tempranillo y Graciano D.O.La Rioja',
+        title: 'Montecillo Edición Limitada',
+        slug: 'montecillo-edicion-limitada'
+      },
+      nb: {
+        description: 'Tempranillo y Graciano D.O.La Rioja',
+        title: 'Montecillo Edición Limitada',
+        slug: 'montecillo-edicion-limitada'
+      },
+      da: {
+        description: 'Tempranillo y Graciano D.O.La Rioja',
+        title: 'Montecillo Edición Limitada',
+        slug: 'montecillo-edicion-limitada'
+      },
+      sv: {
+        description: 'Tempranillo y Graciano D.O.La Rioja',
+        title: 'Montecillo Edición Limitada',
+        slug: 'montecillo-edicion-limitada'
+      },
+      fr: {
+        description: 'Tempranillo y Graciano D.O.La Rioja',
+        title: 'Montecillo Edición Limitada',
+        slug: 'montecillo-edicion-limitada'
+      },
+      nl: {
+        description: 'Tempranillo y Graciano D.O.La Rioja',
+        title: 'Montecillo Edición Limitada',
+        slug: 'montecillo-edicion-limitada'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '17.00' },
+    number: '11'
+  } as Product,
+  'item->product->wines->-12': {
+    id: 'item->product->wines->-12',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: '100% Graciano D.O.Ca Rioja',
+        title: 'Viña Monty Reserva',
+        slug: 'vina-monty-reserva'
+      },
+      en: {
+        description: '100% Graciano D.O.Ca Rioja',
+        title: 'Viña Monty Reserva',
+        slug: 'vina-monty-reserva'
+      },
+      de: {
+        description: '100% Graciano D.O.Ca Rioja',
+        title: 'Viña Monty Reserva',
+        slug: 'vina-monty-reserva'
+      },
+      nb: {
+        description: '100% Graciano D.O.Ca Rioja',
+        title: 'Viña Monty Reserva',
+        slug: 'vina-monty-reserva'
+      },
+      da: {
+        description: '100% Graciano D.O.Ca Rioja',
+        title: 'Viña Monty Reserva',
+        slug: 'vina-monty-reserva'
+      },
+      sv: {
+        description: '100% Graciano D.O.Ca Rioja',
+        title: 'Viña Monty Reserva',
+        slug: 'vina-monty-reserva'
+      },
+      fr: {
+        description: '100% Graciano D.O.Ca Rioja',
+        title: 'Viña Monty Reserva',
+        slug: 'vina-monty-reserva'
+      },
+      nl: {
+        description: '100% Graciano D.O.Ca Rioja',
+        title: 'Viña Monty Reserva',
+        slug: 'vina-monty-reserva'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '43.00' },
+    number: '12'
+  } as Product,
+  'item->product->wines->-13': {
+    id: 'item->product->wines->-13',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Tempranillo, Graciano, Garnacha y Mazuelo D.O.Ca Rioja',
+        title: 'Montecillo 22 barricas Gran Reserva',
+        slug: 'montecillo-22-barricas-gran-reserva'
+      },
+      en: {
+        description: 'Tempranillo, Graciano, Garnacha y Mazuelo D.O.Ca Rioja',
+        title: 'Montecillo 22 barricas Gran Reserva',
+        slug: 'montecillo-22-barricas-gran-reserva'
+      },
+      de: {
+        description: 'Tempranillo, Graciano, Garnacha y Mazuelo D.O.Ca Rioja',
+        title: 'Montecillo 22 barricas Gran Reserva',
+        slug: 'montecillo-22-barricas-gran-reserva'
+      },
+      nb: {
+        description: 'Tempranillo, Graciano, Garnacha y Mazuelo D.O.Ca Rioja',
+        title: 'Montecillo 22 barricas Gran Reserva',
+        slug: 'montecillo-22-barricas-gran-reserva'
+      },
+      da: {
+        description: 'Tempranillo, Graciano, Garnacha y Mazuelo D.O.Ca Rioja',
+        title: 'Montecillo 22 barricas Gran Reserva',
+        slug: 'montecillo-22-barricas-gran-reserva'
+      },
+      sv: {
+        description: 'Tempranillo, Graciano, Garnacha y Mazuelo D.O.Ca Rioja',
+        title: 'Montecillo 22 barricas Gran Reserva',
+        slug: 'montecillo-22-barricas-gran-reserva'
+      },
+      fr: {
+        description: 'Tempranillo, Graciano, Garnacha y Mazuelo D.O.Ca Rioja',
+        title: 'Montecillo 22 barricas Gran Reserva',
+        slug: 'montecillo-22-barricas-gran-reserva'
+      },
+      nl: {
+        description: 'Tempranillo, Graciano, Garnacha y Mazuelo D.O.Ca Rioja',
+        title: 'Montecillo 22 barricas Gran Reserva',
+        slug: 'montecillo-22-barricas-gran-reserva'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '43.00' },
+    number: '13'
+  } as Product,
+  'item->product->wines->-14': {
+    id: 'item->product->wines->-14',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: '100% Tinta del País D.O Ribera del Duero',
+        title: 'Montecillo Tinto Roble',
+        slug: 'montecillo-tinto-roble'
+      },
+      en: {
+        description: '100% Tinta del País D.O Ribera del Duero',
+        title: 'Montecillo Tinto Roble',
+        slug: 'montecillo-tinto-roble'
+      },
+      de: {
+        description: '100% Tinta del País D.O Ribera del Duero',
+        title: 'Montecillo Tinto Roble',
+        slug: 'montecillo-tinto-roble'
+      },
+      nb: {
+        description: '100% Tinta del País D.O Ribera del Duero',
+        title: 'Montecillo Tinto Roble',
+        slug: 'montecillo-tinto-roble'
+      },
+      da: {
+        description: '100% Tinta del País D.O Ribera del Duero',
+        title: 'Montecillo Tinto Roble',
+        slug: 'montecillo-tinto-roble'
+      },
+      sv: {
+        description: '100% Tinta del País D.O Ribera del Duero',
+        title: 'Montecillo Tinto Roble',
+        slug: 'montecillo-tinto-roble'
+      },
+      fr: {
+        description: '100% Tinta del País D.O Ribera del Duero',
+        title: 'Montecillo Tinto Roble',
+        slug: 'montecillo-tinto-roble'
+      },
+      nl: {
+        description: '100% Tinta del País D.O Ribera del Duero',
+        title: 'Montecillo Tinto Roble',
+        slug: 'montecillo-tinto-roble'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '20.00' },
+    number: '14'
+  } as Product,
+  'item->product->wines->-15': {
+    id: 'item->product->wines->-15',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: '',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: 'Mencía y Sousón. D.O Ribera Sacra',
+        title: 'Massimo',
+        slug: 'massimo'
+      },
+      en: {
+        description: 'Mencía y Sousón. D.O Ribera Sacra',
+        title: 'Massimo',
+        slug: 'massimo'
+      },
+      de: {
+        description: 'Mencía y Sousón. D.O Ribera Sacra',
+        title: 'Massimo',
+        slug: 'massimo'
+      },
+      nb: {
+        description: 'Mencía y Sousón. D.O Ribera Sacra',
+        title: 'Massimo',
+        slug: 'massimo'
+      },
+      da: {
+        description: 'Mencía y Sousón. D.O Ribera Sacra',
+        title: 'Massimo',
+        slug: 'massimo'
+      },
+      sv: {
+        description: 'Mencía y Sousón. D.O Ribera Sacra',
+        title: 'Massimo',
+        slug: 'massimo'
+      },
+      fr: {
+        description: 'Mencía y Sousón. D.O Ribera Sacra',
+        title: 'Massimo',
+        slug: 'massimo'
+      },
+      nl: {
+        description: 'Mencía y Sousón. D.O Ribera Sacra',
+        title: 'Massimo',
+        slug: 'massimo'
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '21.00' },
+    number: '15'
+  } as Product,
+
   ///// product->extra-menu
   'item->product->meals->extra-menu->-1': {
     id: 'item->product->meals->extra-menu->-1',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
     hasVariants: false,
-    hasAllergens: true,
+    variants: '',
+    hasAllergens: false,
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -15514,12 +16703,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-2': {
     id: 'item->product->meals->extra-menu->-2',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -15585,12 +16775,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-3': {
     id: 'item->product->meals->extra-menu->-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -15656,12 +16847,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-4': {
     id: 'item->product->meals->extra-menu->-4',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -15727,12 +16919,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-5': {
     id: 'item->product->meals->extra-menu->-5',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -15798,12 +16991,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-6': {
     id: 'item->product->meals->extra-menu->-6',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -15869,12 +17063,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-7': {
     id: 'item->product->meals->extra-menu->-7',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -15940,12 +17135,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-8': {
     id: 'item->product->meals->extra-menu->-8',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16011,12 +17207,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-9': {
     id: 'item->product->meals->extra-menu->-9',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16082,12 +17279,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-10': {
     id: 'item->product->meals->extra-menu->-10',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16153,12 +17351,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-11': {
     id: 'item->product->meals->extra-menu->-11',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
-    hasVariants: true,
+    hasAllergens: false,
+    hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16224,12 +17423,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-12': {
     id: 'item->product->meals->extra-menu->-12',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16297,10 +17497,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16366,12 +17567,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-14': {
     id: 'item->product->meals->extra-menu->-14',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16437,12 +17639,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-15': {
     id: 'item->product->meals->extra-menu->-15',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16508,12 +17711,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-16': {
     id: 'item->product->meals->extra-menu->-16',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16579,12 +17783,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-17': {
     id: 'item->product->meals->extra-menu->-17',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16650,12 +17855,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-18': {
     id: 'item->product->meals->extra-menu->-18',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16721,12 +17927,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-19': {
     id: 'item->product->meals->extra-menu->-19',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16792,12 +17999,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->extra-menu->-20': {
     id: 'item->product->meals->extra-menu->-20',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: [],
     mainImg: '',
-    defaultImg: 'image->item->product->default-1',
+    defaultImg: '',
     active: true,
-    hasAllergens: true,
+    hasAllergens: false,
     hasVariants: false,
+    variants: '',
     allergens: [],
     selectableAllergens: [
       'allergenic->fish-1',
@@ -16865,12 +18073,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->info->sanitary-measures->1': {
     id: 'item->info->sanitary-measures->1',
     type: 'info',
-    images: [
-      'image->item->info->info-card-250-2-default',
-      'image->item->info->info-card-250-2-sanitary-measures-1'
-    ],
+    images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-1',
     displayInfo: {
@@ -16923,6 +18129,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-2',
     displayInfo: {
@@ -16976,6 +18183,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-3',
     displayInfo: {
@@ -17034,6 +18242,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-4',
     displayInfo: {
@@ -17086,6 +18295,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-5',
     displayInfo: {
@@ -17138,6 +18348,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-6',
     displayInfo: {
@@ -17190,6 +18401,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-7',
     displayInfo: {
@@ -17249,6 +18461,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-8',
     displayInfo: {
@@ -17304,6 +18517,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-9',
     displayInfo: {
@@ -17356,6 +18570,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-10',
     displayInfo: {
@@ -17414,6 +18629,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-11',
     displayInfo: {
@@ -17466,6 +18682,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-sanitary-measures-12',
     displayInfo: {
@@ -17521,6 +18738,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-information-1',
     displayInfo: {
@@ -17573,6 +18791,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-information-2',
     displayInfo: {
@@ -17625,6 +18844,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-information-3',
     displayInfo: {
@@ -17684,6 +18904,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-information-4',
     displayInfo: {
@@ -17743,6 +18964,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-information-5',
     displayInfo: {
@@ -17801,6 +19023,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: [],
     active: true,
     hasVariants: false,
+    variants: '',
     defaultImg: 'image->item->info->info-card-250-2-default',
     mainImg: 'image->item->info->info-card-250-2-information-6',
     displayInfo: {
@@ -17852,9 +19075,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals': {
     id: 'item->menu->meals',
     type: 'menu',
-    images: ['image->menus->default-menu-item'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->meals-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -17894,9 +19119,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->desserts': {
     id: 'item->menu->desserts',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->desserts-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->desserts-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -17936,9 +19163,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->drinks': {
     id: 'item->menu->drinks',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->drinks-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->drinks-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -17978,9 +19207,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->wines': {
     id: 'item->menu->wines',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->wines-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->wines-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -18020,9 +19251,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->info->allergens': {
     id: 'item->menu->info->allergens',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->allergens-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->allergens-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -18062,9 +19295,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->info->sanitary-measures': {
     id: 'item->menu->info->sanitary-measures',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->covid-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->covid-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -18104,9 +19339,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->info->information': {
     id: 'item->menu->info->information',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->info-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->info-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -18146,9 +19383,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->info->gallery': {
     id: 'item->menu->info->gallery',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->gallery-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->gallery-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -18188,80 +19427,84 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals->starters': {
     id: 'item->menu->meals->starters',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->share-snack-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
-    mainImg: 'image->menus->share-snack-1',
+    mainImg: 'image->menus->starters-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
-        title: 'Para Compartir o Picar',
-        slug: 'para-compartir-o-picar'
+        title: 'Entrantes',
+        slug: 'entrantes'
       },
       en: {
-        title: 'To share or snack',
-        slug: 'to-share-or-snack'
+        title: 'Starters',
+        slug: 'starters'
       },
       de: {
-        title: 'Zum Teilen Oder Kleinigkeit Essen',
-        slug: 'zum-teilen-oder-kleinigkeit-essen'
+        title: 'Vorspeisen',
+        slug: 'vorspeisen'
       },
       nb: {
-        title: 'Å Dele Eller Som Snack',
-        slug: 'a-dele-eller-som-snack'
+        title: 'Forretter',
+        slug: 'forretter'
       },
       da: {
-        title: 'Til at Dele Eller Til at Nippe Til',
-        slug: 'til-at-dele-eller-til-at-nippe-til'
+        title: 'Forretter',
+        slug: 'forretter'
       },
       sv: {
-        title: 'Att Dela Eller Mellanmål',
-        slug: 'att-dela-eller-mellanmal'
+        title: 'Förrätter',
+        slug: 'forratter'
       },
       fr: {
-        title: 'Entrées à Partager',
-        slug: 'entrees-a-partager'
+        title: 'Entrées',
+        slug: 'entrees'
       },
       nl: {
-        title: 'Om te Delen of Happen',
-        slug: 'om-te-delen-of-happen'
+        title: 'Voorgerechten',
+        slug: 'voorgerechten'
       }
     }
   } as Menu,
   'item->menu->meals->salads': {
     id: 'item->menu->meals->salads',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->meals-fresh-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->meals-fresh-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
-        title: 'Algo Fresco',
-        slug: 'algo-fresco'
+        title: 'Ensaladas',
+        slug: 'ensaladas'
       },
       en: {
-        title: 'Cool Dishes',
-        slug: 'cool-dishes'
+        title: 'Salads',
+        slug: 'salads'
       },
       de: {
-        title: 'Etwas Frisches',
-        slug: 'etwas-frisches'
+        title: 'Salate',
+        slug: 'salate'
       },
       nb: {
-        title: 'Noe Friskt',
-        slug: 'noe-friskt'
+        title: 'Salater',
+        slug: 'salater'
       },
       da: {
-        title: 'Lidt Frisk Til Ganen',
-        slug: 'lidt-frisk-til-ganen'
+        title: 'Salater',
+        slug: 'salater'
       },
       sv: {
-        title: 'Något Fräscht',
-        slug: 'nagot-frascht'
+        title: 'Sallader',
+        slug: 'sallader'
       },
       fr: {
-        title: 'Quelque Chose de Frais',
-        slug: 'quelque-chose-de-frais'
+        title: 'Salades',
+        slug: 'salades'
       },
       nl: {
         title: 'Verfrissend',
@@ -18272,183 +19515,187 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals->spoon-dishes': {
     id: 'item->menu->meals->spoon-dishes',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->spoon-dishes-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->spoon-dishes-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
-        title: 'Cuchara de la Tierra',
-        slug: 'cuchara-de-la-tierra'
+        title: 'Platos de Cuchara',
+        slug: 'platos-de-cuchara'
       },
       en: {
-        title: 'Soups and Stews',
-        slug: 'soups-and-stews'
+        title: 'Spoon dishes',
+        slug: 'spoon-dishes'
       },
       de: {
-        title: 'Löffelgerichte aus Örtlichen Gefilden',
-        slug: 'loffelgerichteaus-ortlichen-gefilden'
+        title: 'Löffelgerichte',
+        slug: 'loffelgerichte'
       },
       nb: {
-        title: 'Jordens Skje',
-        slug: 'jordens-skje'
+        title: 'Skje retter',
+        slug: 'skje-retter'
       },
       da: {
-        title: 'Lokale Supper',
-        slug: 'lokale-supper'
+        title: 'Ske retter',
+        slug: 'ske-retter'
       },
       sv: {
-        title: 'Jordens Sked',
-        slug: 'jordens-sked'
+        title: 'Sked rätter',
+        slug: 'sked-ratter'
       },
       fr: {
-        title: 'À la Cuillère',
-        slug: 'a-la-cuillere'
+        title: 'Plats à la Cuillère',
+        slug: 'plats-a-la-cuillere'
       },
       nl: {
-        title: 'Van het Land',
-        slug: 'van-het-land'
+        title: 'Lepel gerechten',
+        slug: 'lepel-gerechten'
       }
     }
   } as Menu,
-  'item->menu->meals->sea-and-mountains': {
-    id: 'item->menu->meals->sea-and-mountains',
+  'item->menu->meals->skewers': {
+    id: 'item->menu->meals->skewers',
     type: 'menu',
-    images: [
-      'image->menus->default-menu-item',
-      'image->menus->sea-and-montain-1'
-    ],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
-    mainImg: 'image->menus->sea-and-montain-1',
+    mainImg: 'image->menus->skewers-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
-        title: 'Mar y Montaña',
-        slug: 'mar-y-montana'
+        title: 'Pinchitos',
+        slug: 'pinchitos'
       },
       en: {
-        title: 'Surf & Turf',
-        slug: 'surf-turf'
+        title: 'Skewers',
+        slug: 'skewers'
       },
       de: {
-        title: 'Berge und Meer',
-        slug: 'berge-und-meer'
+        title: 'Spieße',
+        slug: 'spiebe'
       },
       nb: {
-        title: 'Hav og Fjell',
-        slug: 'hav-og-fjell'
+        title: '',
+        slug: ''
       },
       da: {
-        title: 'Hav og Bjerge',
-        slug: 'hav-og-bjerge'
+        title: '',
+        slug: ''
       },
       sv: {
-        title: 'Hav och Berg',
-        slug: 'hav-och-berg'
+        title: '',
+        slug: ''
       },
       fr: {
-        title: 'Mer et Montagne',
-        slug: 'mer-et-montagne'
+        title: '',
+        slug: ''
       },
       nl: {
-        title: 'Uit de Zee en de Bergen',
-        slug: 'uit-de-zee-en-de-bergen'
+        title: '',
+        slug: ''
       }
     }
   } as Menu,
-  'item->menu->meals->our-chef-s-suggestions': {
-    id: 'item->menu->meals->our-chef-s-suggestions',
+  'item->menu->meals->cous-cous': {
+    id: 'item->menu->meals->cous-cous',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->suggestions-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
-    mainImg: 'image->menus->suggestions-1',
+    mainImg: 'image->menus->cous-cous-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
-        title: 'Sugerencias de nuestro Chef',
-        slug: 'Sugerencias de nuestro Chef'
+        title: 'Cous Cous',
+        slug: 'cous-cous'
       },
       en: {
-        title: `Our Chef's Suggestions`,
-        slug: 'our-chef-s-suggestions'
+        title: 'Cous Cous',
+        slug: 'cous-cous'
       },
       de: {
-        title: 'Empfehlungen Unseres Küchenchefs',
-        slug: 'empfehlungen-unseres-kuchenchefs'
+        title: 'Cous Cous',
+        slug: 'cous-cous'
       },
       nb: {
-        title: 'Kokkens Anbefaling',
-        slug: 'kokkens-anbefaling'
+        title: '',
+        slug: ''
       },
       da: {
-        title: 'Vores Chefkok Anbefaler',
-        slug: 'vores-chefkok-anbefaler'
+        title: '',
+        slug: ''
       },
       sv: {
-        title: 'Rekommendation Från Vår Kock',
-        slug: 'rekommendation-fran-var-kock'
+        title: '',
+        slug: ''
       },
       fr: {
-        title: 'Suggestion de Notre Chef',
-        slug: 'suggestion-de-notre-chef'
+        title: '',
+        slug: ''
       },
       nl: {
-        title: 'Suggestie Van de Chef',
-        slug: 'suggestie-van-de-chef'
+        title: '',
+        slug: ''
       }
     }
   } as Menu,
-  'item->menu->meals->snacks-and-brunch': {
-    id: 'item->menu->meals->snacks-and-brunch',
+  'item->menu->meals->tajin': {
+    id: 'item->menu->meals->tajin',
     type: 'menu',
-    images: [
-      'image->menus->default-menu-item',
-      'image->menus->snack-and-brunch-1'
-    ],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
-    mainImg: 'image->menus->snack-and-brunch-1',
+    mainImg: 'image->menus->tajin-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
-        title: 'Snacks and Brunch',
-        slug: 'snacks-and-brunch'
+        title: 'Tajin',
+        slug: 'tajin'
       },
       en: {
-        title: 'Snacks and Brunch',
-        slug: 'snacks-and-brunch'
+        title: 'Tajin',
+        slug: 'tajin'
       },
       de: {
-        title: 'Snacks und Brunch',
-        slug: 'snacks-und-brunch'
+        title: 'Tajin',
+        slug: 'tajin'
       },
       nb: {
-        title: 'Snacks og Brunsj',
-        slug: 'snacks-og-brunsj'
+        title: '',
+        slug: ''
       },
       da: {
-        title: 'Snacks og Brunch',
-        slug: 'snacks-og-brunch'
+        title: '',
+        slug: ''
       },
       sv: {
-        title: 'Snacks och Brunch',
-        slug: 'Snacks och Brunch'
+        title: '',
+        slug: ''
       },
       fr: {
-        title: 'Collations et brunch',
-        slug: 'collations-et-brunch'
+        title: '',
+        slug: ''
       },
       nl: {
-        title: 'Snacks and Brunch',
-        slug: 'snacks-and-brunch'
+        title: '',
+        slug: ''
       }
     }
   } as Menu,
   'item->menu->meals->breakfasts': {
     id: 'item->menu->meals->breakfasts',
     type: 'menu',
-    images: ['image->menus->default-menu-item'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: '',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -18488,51 +19735,55 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals->sandwich': {
     id: 'item->menu->meals->sandwich',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->hands-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->hands-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
-        title: 'Con las Manos',
-        slug: 'con-las-manos'
+        title: 'Bocadillos',
+        slug: 'bocadillos'
       },
       en: {
-        title: 'Hand-eaten Foods',
-        slug: 'hand-eaten-foods'
+        title: 'Sandwich',
+        slug: 'sandwich'
       },
       de: {
-        title: 'Mit Den Händen',
-        slug: 'Mit Den Handen'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       nb: {
-        title: 'Med Hendene',
-        slug: 'med-hendene'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       da: {
-        title: 'Til at Spise med Fingrene',
-        slug: 'til-at-spise-med-fingrene'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       sv: {
-        title: 'Med Händerna',
-        slug: 'med-handerna'
+        title: 'Snacks',
+        slug: 'snacks'
       },
       fr: {
-        title: 'Avec Les Mains',
-        slug: 'avec-les-mains'
+        title: 'Collations',
+        slug: 'collations'
       },
       nl: {
-        title: 'Zonder Bestek',
-        slug: 'zonder-bestek'
+        title: 'Tussendoortjes',
+        slug: 'tussendoortjes'
       }
     }
   } as Menu,
   'item->menu->meals->childrens': {
     id: 'item->menu->meals->childrens',
     type: 'menu',
-    images: ['image->menus->default-menu-item'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->children-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -18569,12 +19820,14 @@ export const items: { [key: string]: Info | Product | Menu } = {
       }
     }
   } as Menu,
-  'item->menu->meals->fittings': {
-    id: 'item->menu->meals->fittings',
+  'item->menu->meals->garnishes-or-side-dishes': {
+    id: 'item->menu->meals->garnishes-or-side-dishes',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->fittings-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
-    mainImg: 'image->menus->fittings-1',
+    mainImg: 'image->menus->garnishes-or-side-dishes-1',
+    hasVariants: false,
+    variants: '',
     active: true,
     displayInfo: {
       es: {
@@ -18622,9 +19875,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->drinks->bar': {
     id: 'item->menu->drinks->bar',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->bar-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->bar-1',
+    hasVariants: false,
+    variants: '',
     active: false,
     displayInfo: {
       es: {
@@ -18664,9 +19919,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->drinks->beers': {
     id: 'item->menu->drinks->beers',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->beers-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->beers-1',
+    hasVariants: false,
+    variants: '',
     active: false,
     displayInfo: {
       es: {
@@ -18706,9 +19963,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->drinks->coffee-shop': {
     id: 'item->menu->drinks->coffee-shop',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->coffee-shop-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->coffee-shop-1',
+    hasVariants: false,
+    variants: '',
     active: false,
     displayInfo: {
       es: {
@@ -18748,9 +20007,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->drinks->refreshments': {
     id: 'item->menu->drinks->refreshments',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->refreshments-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->refreshments-1',
+    hasVariants: false,
+    variants: '',
     active: false,
     displayInfo: {
       es: {
@@ -18790,9 +20051,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->drinks->smoothies': {
     id: 'item->menu->drinks->smoothies',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->smoothies-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->smoothies-1',
+    hasVariants: false,
+    variants: '',
     active: false,
     displayInfo: {
       es: {
@@ -18832,9 +20095,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->drinks->appetizers': {
     id: 'item->menu->drinks->appetizers',
     type: 'menu',
-    images: ['image->menus->default-menu-item', 'image->menus->appetizers-1'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->appetizers-1',
+    hasVariants: false,
+    variants: '',
     active: false,
     displayInfo: {
       es: {
@@ -18874,9 +20139,11 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals->extra-menu': {
     id: 'item->menu->meals->extra-menu',
     type: 'menu',
-    images: ['image->menus->default-menu-item'],
+    images: [],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: '',
+    hasVariants: false,
+    variants: '',
     active: false,
     displayInfo: {
       es: {

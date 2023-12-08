@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import styles from './styles.module.css';
 
+import { TripadvisorIcon } from '../../../../components/ui/icons/TripadvisorIcon';
+
 import {
   IonHeader,
   IonToolbar,
@@ -21,6 +23,7 @@ import {
 } from 'ionicons/icons';
 
 import { useData } from '../../../../contexts/DataContext';
+import { Image } from 'definitions/models';
 
 interface MenuHeaderProps
   extends RouteComponentProps<{
@@ -32,14 +35,14 @@ interface MenuHeaderProps
 const Header: React.FC<MenuHeaderProps> = ({ history, match }) => {
   const lang = match.params.lang;
   const { get } = useData();
+
   const pages = get({ collection: 'pages', from: 'system' });
   const menus = get({ collection: 'pageMenus', from: 'state' });
-  const images = get({ collection: 'images', from: 'state' });
+  const images = get({ collection: 'images', from: 'state' }).dictionary;
   const generalInfo = get({ collection: 'generalInfo', from: 'state' });
   const info = generalInfo.dictionary.displayInfo[lang];
 
-  const qrImage = images.dictionary[generalInfo.qrImg!];
-
+  const [qrImage, setQRImage] = useState<Image>({} as Image);
   const [showQRModal, setShowQRModal] = useState(false);
 
   let title = '';
@@ -55,10 +58,7 @@ const Header: React.FC<MenuHeaderProps> = ({ history, match }) => {
   return (
     <IonHeader>
       <IonToolbar style={{ height: '10vh' }}>
-        <IonButtons
-          style={{ height: '10vh' }}
-          className="justify-header-content"
-        >
+        <IonButtons style={{ height: '10vh' }} class="justify-header-content">
           <IonButton
             style={{ height: '100%' }}
             color="dark"
@@ -76,14 +76,26 @@ const Header: React.FC<MenuHeaderProps> = ({ history, match }) => {
           <IonTitle
             style={{
               fontSize: '2em',
+              fontFamily: 'ElMessiri',
               fontWeight: 'bold'
             }}
+            color="dark"
             size="large"
           >
             {title}
           </IonTitle>
           <IonButton
             onClick={() => {
+              setQRImage(images['image->qr->qr-tripadvisor']);
+              setShowQRModal(!showQRModal);
+            }}
+          >
+            <TripadvisorIcon size={36} />
+          </IonButton>
+          <IonLabel style={{ marginRight: '1em' }}>Tripadvisor</IonLabel>
+          <IonButton
+            onClick={() => {
+              setQRImage(images['image->qr->qr-web']);
               setShowQRModal(!showQRModal);
             }}
           >
@@ -95,15 +107,17 @@ const Header: React.FC<MenuHeaderProps> = ({ history, match }) => {
             size="large"
             icon={informationCircleOutline}
           />
-          <IonLabel>{info.extraInfo}</IonLabel>
+          <IonLabel style={{ marginRight: '1em' }}>{info.extraInfo}</IonLabel>
         </IonButtons>
       </IonToolbar>
       <IonModal
-        isOpen={showQRModal}
         className={styles.modal}
+        isOpen={showQRModal}
         onDidDismiss={() => setShowQRModal(!showQRModal)}
       >
-        <img src={qrImage?.full.src} alt="" />
+        {qrImage.full && (
+          <img src={qrImage.full?.src} alt={qrImage.full?.title} />
+        )}
       </IonModal>
     </IonHeader>
   );

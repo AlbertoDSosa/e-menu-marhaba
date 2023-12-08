@@ -36,10 +36,16 @@ const FlagsContainer: React.FC = () => {
 
   return (
     <IonContent fullscreen>
-      <IonGrid style={{ width: '70vw' }}>
+      <IonGrid style={{ width: '70vw', padding: 0 }}>
         <IonRow
           className="ion-justify-content-center ion-align-items-center"
-          style={{ height: '90vh' }}
+          style={{ height: '55vh' }}
+        >
+          <img src="assets/img/system/logo-flags-new.jpg" alt="logo" />
+        </IonRow>
+        <IonRow
+          className="ion-justify-content-center"
+          style={{ height: '45vh' }}
         >
           {appLanguages?.map((lang: string) => {
             const language = languages?.dictionary[lang];
@@ -47,23 +53,15 @@ const FlagsContainer: React.FC = () => {
             const image = images.dictionary[language.mainImg];
 
             return (
-              <IonCol size="3" key={lang}>
+              <IonCol size="2.4" key={lang}>
                 <IonCard routerLink={`/menus/${lang}/pageMenu->main-menu`}>
                   {image && (
                     <IonImg src={image.full.src} alt={image.full.title} />
                   )}
-                  {/* <IonCardHeader>
-                      <IonCardTitle>{title}</IonCardTitle>
-                      <IonCardSubtitle>Plato</IonCardSubtitle>
-                    </IonCardHeader> */}
-                  {/* <IonCardContent>{title}</IonCardContent> */}
                 </IonCard>
               </IonCol>
             );
           })}
-          {/* <IonCol size="3">
-              {qrImg && <IonImg src={qrImg.full.src} alt={qrImg.full.title} />}
-            </IonCol> */}
         </IonRow>
       </IonGrid>
     </IonContent>

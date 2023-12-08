@@ -50,16 +50,13 @@ export const pageMenus: { [key: string]: PageMenu } = {
         slug: 'hoofdmenu'
       }
     },
-    selectableItems: [],
+    selectableItems: ['menuItem->info->gallery'],
     items: [
-      'pageMenuItem->meals',
-      'pageMenuItem->desserts',
-      'pageMenuItem->drinks',
-      'pageMenuItem->wines',
-      'pageMenuItem->info->allergens',
-      'pageMenuItem->info->sanitary-measures',
-      'pageMenuItem->information',
-      'pageMenuItem->info->gallery'
+      'menuItem->meals->starters',
+      'menuItem->meals->skewers',
+      'menuItem->meals->cous-cous',
+      'menuItem->meals->tajin',
+      'menuItem->wines'
     ]
   },
   'pageMenu->meals': {
@@ -111,69 +108,12 @@ export const pageMenus: { [key: string]: PageMenu } = {
         slug: 'voedsel'
       }
     },
-    selectableItems: ['pageMenuItem->meals->extra-menu'],
+    selectableItems: ['menuItem->meals->extra-menu'],
     items: [
-      'pageMenuItem->meals->starters',
-      'pageMenuItem->meals->salads',
-      'pageMenuItem->meals->spoon-dishes',
-      'pageMenuItem->meals->sea-and-mountains',
-      'pageMenuItem->meals->fittings',
-      'pageMenuItem->meals->our-chef-s-suggestions',
-      'pageMenuItem->meals->snacks-and-brunch',
-      'pageMenuItem->meals->childrens'
+      'menuItem->meals->starters',
+      'menuItem->meals->salads',
+      'menuItem->meals->garnishes-or-side-dishes'
     ]
-  },
-  'pageMenu->snacks-and-brunch': {
-    id: 'pageMenu->snacks-and-brunch',
-    active: false,
-    type: 'menu',
-    show: false,
-    showTitle: true,
-    showDescription: false,
-    showExtraInfo: false,
-    defaultImg: '',
-    mainImg: '',
-    editable: false,
-    sortable: true,
-    categories: [],
-    template: '',
-    maxItems: 8,
-    displayInfo: {
-      es: {
-        title: 'Snacks and Brunch',
-        slug: 'snacks-and-brunch'
-      },
-      en: {
-        title: 'Snacks and Brunch',
-        slug: 'snacks-and-brunch'
-      },
-      de: {
-        title: 'Snacks und Brunch',
-        slug: 'snacks-und-brunch'
-      },
-      nb: {
-        title: 'Snacks og Brunsj',
-        slug: 'snacks-og-brunsj'
-      },
-      da: {
-        title: 'Snacks og Brunch',
-        slug: 'snacks-og-brunch'
-      },
-      sv: {
-        title: 'Snacks och Brunch',
-        slug: 'Snacks och Brunch'
-      },
-      fr: {
-        title: 'Collations et brunch',
-        slug: 'collations-et-brunch'
-      },
-      nl: {
-        title: 'Snacks and Brunch',
-        slug: 'snacks-and-brunch'
-      }
-    },
-    selectableItems: [],
-    items: ['pageMenuItem->meals->breakfasts', 'pageMenuItem->meals->sandwich']
   },
   'pageMenu->drinks': {
     id: 'pageMenu->drinks',
@@ -226,12 +166,12 @@ export const pageMenus: { [key: string]: PageMenu } = {
     },
     selectableItems: [],
     items: [
-      'pageMenuItem->drinks->appetizers',
-      'pageMenuItem->drinks->smoothies',
-      'pageMenuItem->drinks->refreshments',
-      'pageMenuItem->drinks->beers',
-      'pageMenuItem->drinks->coffee-shop',
-      'pageMenuItem->drinks->bar'
+      'menuItem->drinks->appetizers',
+      'menuItem->drinks->smoothies',
+      'menuItem->drinks->refreshments',
+      'menuItem->drinks->beers',
+      'menuItem->drinks->coffee-shop',
+      'menuItem->drinks->bar'
     ]
   },
   'pageMenu->wines': {
@@ -285,18 +225,18 @@ export const pageMenus: { [key: string]: PageMenu } = {
     },
     selectableItems: [],
     items: [
-      'pageMenuItem->wines->red-wines',
-      'pageMenuItem->wines->rose-wines',
-      'pageMenuItem->wines->white-wines',
-      'pageMenuItem->wines->sweet-wines',
-      'pageMenuItem->wines->sangrias-and-champagnes'
+      'menuItem->wines->red-wines',
+      'menuItem->wines->rose-wines',
+      'menuItem->wines->white-wines',
+      'menuItem->wines->sweet-wines',
+      'menuItem->wines->sangrias-and-champagnes'
     ]
   }
 };
 
 export const pageMenuItems: { [key: string]: PageMenuItem } = {
-  'pageMenuItem->meals': {
-    id: 'pageMenuItem->meals',
+  'menuItem->meals': {
+    id: 'menuItem->meals',
     type: 'menu',
     active: true,
     showTitle: true,
@@ -313,8 +253,8 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: true,
     subMenu: 'pageMenu->meals'
   },
-  'pageMenuItem->desserts': {
-    id: 'pageMenuItem->desserts',
+  'menuItem->desserts': {
+    id: 'menuItem->desserts',
     itemId: 'item->menu->desserts',
     type: 'menu',
     active: true,
@@ -331,8 +271,8 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->drinks': {
-    id: 'pageMenuItem->drinks',
+  'menuItem->drinks': {
+    id: 'menuItem->drinks',
     itemId: 'item->menu->drinks',
     type: 'menu',
     active: true,
@@ -349,8 +289,8 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: true,
     subMenu: 'pageMenu->drinks'
   },
-  'pageMenuItem->drinks->refreshments': {
-    id: 'pageMenuItem->drinks->refreshments',
+  'menuItem->drinks->refreshments': {
+    id: 'menuItem->drinks->refreshments',
     itemId: 'item->menu->drinks->refreshments',
     type: 'menu',
     active: true,
@@ -361,14 +301,14 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     isModalMode: false,
     href: '',
     template: '',
-    page: 'page->refreshments',
+    page: 'page->drinks->refreshments',
     modal: '',
     isSubMenu: false,
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->drinks->beers': {
-    id: 'pageMenuItem->drinks->beers',
+  'menuItem->drinks->beers': {
+    id: 'menuItem->drinks->beers',
     itemId: 'item->menu->drinks->beers',
     type: 'menu',
     active: true,
@@ -379,14 +319,14 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     isModalMode: false,
     href: '',
     template: '',
-    page: 'page->beers',
+    page: 'page->drinks->beers',
     modal: '',
     isSubMenu: false,
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->drinks->coffee-shop': {
-    id: 'pageMenuItem->drinks->coffee-shop',
+  'menuItem->drinks->coffee-shop': {
+    id: 'menuItem->drinks->coffee-shop',
     itemId: 'item->menu->drinks->coffee-shop',
     type: 'menu',
     active: true,
@@ -397,14 +337,14 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     isModalMode: false,
     href: '',
     template: '',
-    page: 'page->coffee-shop',
+    page: 'page->drinks->coffee-shop',
     modal: '',
     isSubMenu: false,
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->drinks->smoothies': {
-    id: 'pageMenuItem->drinks->smoothies',
+  'menuItem->drinks->smoothies': {
+    id: 'menuItem->drinks->smoothies',
     itemId: 'item->menu->drinks->smoothies',
     type: 'menu',
     active: true,
@@ -415,14 +355,14 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     isModalMode: false,
     href: '',
     template: '',
-    page: 'page->smoothies',
+    page: 'page->drinks->smoothies',
     modal: '',
     isSubMenu: false,
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->drinks->appetizers': {
-    id: 'pageMenuItem->drinks->appetizers',
+  'menuItem->drinks->appetizers': {
+    id: 'menuItem->drinks->appetizers',
     itemId: 'item->menu->drinks->appetizers',
     type: 'menu',
     active: true,
@@ -433,14 +373,14 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     isModalMode: false,
     href: '',
     template: '',
-    page: 'page->appetizers',
+    page: 'page->drinks->appetizers',
     modal: '',
     isSubMenu: false,
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->drinks->bar': {
-    id: 'pageMenuItem->drinks->bar',
+  'menuItem->drinks->bar': {
+    id: 'menuItem->drinks->bar',
     itemId: 'item->menu->drinks->bar',
     type: 'menu',
     active: true,
@@ -457,8 +397,8 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->wines': {
-    id: 'pageMenuItem->wines',
+  'menuItem->wines': {
+    id: 'menuItem->wines',
     itemId: 'item->menu->wines',
     type: 'menu',
     active: true,
@@ -475,8 +415,8 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->info->allergens': {
-    id: 'pageMenuItem->info->allergens',
+  'menuItem->info->allergens': {
+    id: 'menuItem->info->allergens',
     itemId: 'item->menu->info->allergens',
     type: 'menu',
     active: true,
@@ -493,8 +433,8 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->info->sanitary-measures': {
-    id: 'pageMenuItem->info->sanitary-measures',
+  'menuItem->info->sanitary-measures': {
+    id: 'menuItem->info->sanitary-measures',
     itemId: 'item->menu->info->sanitary-measures',
     type: 'menu',
     active: true,
@@ -511,8 +451,8 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->information': {
-    id: 'pageMenuItem->information',
+  'menuItem->information': {
+    id: 'menuItem->information',
     itemId: 'item->menu->info->information',
     type: 'menu',
     active: true,
@@ -523,14 +463,14 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     isModalMode: false,
     href: '',
     template: '',
-    page: 'page->information',
+    page: 'page->info->information',
     modal: '',
     isSubMenu: false,
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->info->gallery': {
-    id: 'pageMenuItem->info->gallery',
+  'menuItem->info->gallery': {
+    id: 'menuItem->info->gallery',
     itemId: 'item->menu->info->gallery',
     type: 'menu',
     active: true,
@@ -547,8 +487,8 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->meals->starters': {
-    id: 'pageMenuItem->meals->starters',
+  'menuItem->meals->starters': {
+    id: 'menuItem->meals->starters',
     itemId: 'item->menu->meals->starters',
     type: 'menu',
     active: true,
@@ -559,14 +499,14 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     isModalMode: false,
     href: '',
     template: '',
-    page: 'page->starters',
+    page: 'page->meals->starters',
     modal: '',
     isSubMenu: true,
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->meals->salads': {
-    id: 'pageMenuItem->meals->salads',
+  'menuItem->meals->salads': {
+    id: 'menuItem->meals->salads',
     itemId: 'item->menu->meals->salads',
     type: 'menu',
     active: true,
@@ -577,86 +517,14 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     isModalMode: false,
     href: '',
     template: '',
-    page: 'page->salads',
+    page: 'page->meals->salads',
     modal: '',
     isSubMenu: true,
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->meals->spoon-dishes': {
-    id: 'pageMenuItem->meals->spoon-dishes',
-    itemId: 'item->menu->meals->spoon-dishes',
-    type: 'menu',
-    active: true,
-    showTitle: true,
-    showDescription: false,
-    showExtraInfo: false,
-    show: true,
-    isModalMode: false,
-    href: '',
-    template: '',
-    page: 'page->spoon-dishes',
-    modal: '',
-    isSubMenu: true,
-    hasSubMenu: false,
-    subMenu: ''
-  },
-  'pageMenuItem->meals->sea-and-mountains': {
-    id: 'pageMenuItem->meals->sea-and-mountains',
-    itemId: 'item->menu->meals->sea-and-mountains',
-    type: 'menu',
-    active: true,
-    showTitle: true,
-    showDescription: false,
-    showExtraInfo: false,
-    show: true,
-    isModalMode: false,
-    href: '',
-    template: '',
-    page: 'page->sea-and-mountains-2',
-    modal: '',
-    isSubMenu: true,
-    hasSubMenu: false,
-    subMenu: ''
-  },
-  'pageMenuItem->meals->our-chef-s-suggestions': {
-    id: 'pageMenuItem->meals->our-chef-s-suggestions',
-    itemId: 'item->menu->meals->our-chef-s-suggestions',
-    type: 'menu',
-    active: true,
-    showTitle: true,
-    showDescription: false,
-    showExtraInfo: false,
-    show: true,
-    isModalMode: false,
-    href: '',
-    template: '',
-    page: 'page->our-chef-s-suggestions',
-    modal: '',
-    isSubMenu: true,
-    hasSubMenu: false,
-    subMenu: ''
-  },
-  'pageMenuItem->meals->snacks-and-brunch': {
-    id: 'pageMenuItem->meals->snacks-and-brunch',
-    itemId: 'item->menu->meals->snacks-and-brunch',
-    type: 'menu',
-    active: true,
-    showTitle: true,
-    showDescription: false,
-    showExtraInfo: false,
-    show: true,
-    isModalMode: false,
-    href: '',
-    template: '',
-    page: 'page->snacks-and-brunch',
-    modal: '',
-    isSubMenu: true,
-    hasSubMenu: false,
-    subMenu: 'pageMenu->snacks-and-brunch'
-  },
-  'pageMenuItem->meals->breakfasts': {
-    id: 'pageMenuItem->meals->breakfasts',
+  'menuItem->meals->breakfasts': {
+    id: 'menuItem->meals->breakfasts',
     itemId: 'item->menu->meals->breakfasts',
     type: 'menu',
     active: true,
@@ -673,8 +541,8 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->meals->sandwich': {
-    id: 'pageMenuItem->meals->sandwich',
+  'menuItem->meals->sandwich': {
+    id: 'menuItem->meals->sandwich',
     itemId: 'item->menu->meals->sandwich',
     type: 'menu',
     active: true,
@@ -691,8 +559,8 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->meals->childrens': {
-    id: 'pageMenuItem->meals->childrens',
+  'menuItem->meals->childrens': {
+    id: 'menuItem->meals->childrens',
     itemId: 'item->menu->meals->childrens',
     type: 'menu',
     active: true,
@@ -703,15 +571,15 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     isModalMode: false,
     template: '',
     href: '',
-    page: 'page->childrens',
+    page: 'page->meals->childrens',
     modal: '',
     isSubMenu: true,
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->meals->fittings': {
-    id: 'pageMenuItem->meals->fittings',
-    itemId: 'item->menu->meals->fittings',
+  'menuItem->meals->garnishes-or-side-dishes': {
+    id: 'menuItem->meals->garnishes-or-side-dishes',
+    itemId: 'item->menu->meals->garnishes-or-side-dishes',
     type: 'menu',
     active: true,
     showTitle: true,
@@ -727,21 +595,57 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     hasSubMenu: false,
     subMenu: ''
   },
-  'pageMenuItem->meals->extra-menu': {
-    id: 'pageMenuItem->meals->extra-menu',
-    itemId: 'item->menu->meals->extra-menu',
+  'menuItem->meals->skewers': {
+    id: 'menuItem->meals->skewers',
+    itemId: 'item->menu->meals->skewers',
     type: 'menu',
-    active: false,
+    active: true,
     showTitle: true,
     showDescription: false,
     showExtraInfo: false,
-    show: false,
-    isModalMode: true,
+    show: true,
+    isModalMode: false,
     template: '',
     href: '',
-    page: '',
-    modal: 'modal->blackboard-list->2',
-    isSubMenu: true,
+    page: 'page->meals->skewers',
+    modal: '',
+    isSubMenu: false,
+    hasSubMenu: false,
+    subMenu: ''
+  },
+  'menuItem->meals->cous-cous': {
+    id: 'menuItem->meals->cous-cous',
+    itemId: 'item->menu->meals->cous-cous',
+    type: 'menu',
+    active: true,
+    showTitle: true,
+    showDescription: false,
+    showExtraInfo: false,
+    show: true,
+    isModalMode: false,
+    template: '',
+    href: '',
+    page: 'page->meals->cous-cous',
+    modal: '',
+    isSubMenu: false,
+    hasSubMenu: false,
+    subMenu: ''
+  },
+  'menuItem->meals->tajin': {
+    id: 'menuItem->meals->tajin',
+    itemId: 'item->menu->meals->tajin',
+    type: 'menu',
+    active: true,
+    showTitle: true,
+    showDescription: false,
+    showExtraInfo: false,
+    show: true,
+    isModalMode: false,
+    template: '',
+    href: '',
+    page: 'page->meals->tajin',
+    modal: '',
+    isSubMenu: false,
     hasSubMenu: false,
     subMenu: ''
   }

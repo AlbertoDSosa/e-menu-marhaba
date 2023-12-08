@@ -19,7 +19,6 @@ const ImageList: React.FC<ImageListProps> = ({ entity, entityName }) => {
       <IonRow>
         {imageList?.map((img: string) => {
           const itemListImg: Image = images.dictionary[img];
-
           return (
             <ImageCard
               key={img}

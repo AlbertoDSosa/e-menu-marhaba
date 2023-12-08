@@ -83,7 +83,7 @@ const EditScreensaverSlides: React.FC = () => {
             </IonButton>
           )}
       </IonListHeader>
-      {!!screensaver.selectableSlides.length &&
+      {Boolean(screensaver.selectableSlides.length) &&
         screensaver.selectableSlides.length < screensaver.maxItems &&
         disabledReorderItems && (
           <IonItem>
