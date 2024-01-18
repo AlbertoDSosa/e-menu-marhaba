@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 import { Item, PageMenuItem } from 'definitions/models';
 import styles from './styles.module.css';
 
@@ -7,12 +7,13 @@ import {
   IonGrid,
   IonRow,
   IonCol,
-  IonCard,
   IonImg,
+  IonCard,
   IonModal,
-  // IonCardContent
+  IonLoading,
   IonCardHeader,
   IonCardTitle
+  // IonCardContent
   // IonCardSubtitle
 } from '@ionic/react';
 
@@ -24,11 +25,35 @@ interface CardListProps {
 }
 
 const CardList: React.FC<CardListProps> = ({ menus, lang }) => {
-  const { get } = useData();
-  const pageMenuItems = get({ collection: 'pageMenuItems', from: 'state' });
-  const items = get({ collection: 'items', from: 'state' });
-  const images = get({ collection: 'images', from: 'state' });
-  const modals = get({ collection: 'modals', from: 'system' });
+  const { dictionary: pageMenuItems, isLoading: isMenuItemsLoading } = useQuery(
+    { key: 'pageMenuItems' }
+  );
+
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  const { dictionary: modals, isLoading: modalsIsLoading } = useQuery({
+    key: 'modals'
+  });
+
+  const { dictionary: images, isLoading: imagesIsLoading } = useQuery({
+    key: 'images'
+  });
+
+  if (
+    itemsIsLoading ||
+    modalsIsLoading ||
+    imagesIsLoading ||
+    isMenuItemsLoading
+  )
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
 
   return (
     <IonGrid style={{ width: '70vw' }}>
@@ -37,14 +62,14 @@ const CardList: React.FC<CardListProps> = ({ menus, lang }) => {
         style={{ height: '80vh' }}
       >
         {menus?.map((menuId) => {
-          const menuItem: PageMenuItem = pageMenuItems.dictionary[menuId];
-          const item: Item = items.dictionary[menuItem.itemId];
+          const menuItem: PageMenuItem = pageMenuItems[menuId];
+          const item: Item = items[menuItem.itemId];
           const info = item.displayInfo;
           const title = info[lang].title;
-          const image = images.dictionary[item.mainImg || item.defaultImg];
+          const image = images[item.mainImg || item.defaultImg];
           const subMenuPath = `/menu/${lang}/submenus/${menuItem.subMenu}`;
           const pagePath = `/menu/${lang}/detail/${menuItem.page}`;
-          const modal = modals.dictionary[menuItem.modal];
+          const modal = modals[menuItem.modal];
 
           const [showModal, setShowModal] = useState(false);
 

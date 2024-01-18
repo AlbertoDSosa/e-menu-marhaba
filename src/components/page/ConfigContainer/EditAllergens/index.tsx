@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { ItemReorderEventDetail } from '@ionic/core';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 import {
   IonItem,
@@ -35,9 +35,21 @@ const customSelectProps = {
 };
 
 const EditAllergens: React.FC<EditAllergensProps> = ({ product }) => {
-  const { reorder, add, remove, get, loading } = useData();
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
 
-  if (loading)
+  const { dictionary: allergens, isLoading: allergensIsLoading } = useQuery({
+    key: 'allergens'
+  });
+
+  const { dictionary: images, isLoading: imagesIsLoading } = useQuery({
+    key: 'images'
+  });
+
+  if (generalInfoIsLoading || allergensIsLoading || imagesIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -46,12 +58,8 @@ const EditAllergens: React.FC<EditAllergensProps> = ({ product }) => {
       />
     );
 
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-  const allergens = get({ collection: 'allergens', from: 'system' });
-
-  const images = get({ collection: 'images', from: 'state' });
   const productAllergens = product.allergens!;
-  const language = generalInfo.dictionary.baseLanguage;
+  const language = generalInfo.baseLanguage;
 
   const [disabledReorderItems, setDisabledReorderItems] = useState(true);
   const [itemIdValue, setItemIdValue] = useState<string>('');
@@ -59,31 +67,31 @@ const EditAllergens: React.FC<EditAllergensProps> = ({ product }) => {
   const doReorder = (event: CustomEvent<ItemReorderEventDetail>) => {
     const from = event.detail.from;
     const to = event.detail.to;
-    reorder({ entity: 'allergenic', entityId: product.id, from, to });
+    // reorder({ entity: 'allergenic', entityId: product.id, from, to });
 
     event.detail.complete();
   };
 
   const doAddAllergenic = (allergenicId: string) => {
-    add({ entity: 'allergenic', entityId: product.id, itemId: allergenicId });
+    // add({ entity: 'allergenic', entityId: product.id, itemId: allergenicId });
   };
 
   const doDeleteAllergenic = (allergenicId: string) => {
-    remove({
-      action: 'one',
-      entity: 'allergenic',
-      entityId: product.id,
-      itemId: allergenicId
-    });
+    // remove({
+    //   action: 'one',
+    //   entity: 'allergenic',
+    //   entityId: product.id,
+    //   itemId: allergenicId
+    // });
   };
 
   const doDeleteAllAllergens = () => {
-    remove({
-      action: 'many',
-      entity: 'allergenic',
-      entityId: product.id,
-      items: product.allergens
-    });
+    // remove({
+    //   action: 'many',
+    //   entity: 'allergenic',
+    //   entityId: product.id,
+    //   items: product.allergens
+    // });
   };
 
   return (
@@ -134,7 +142,7 @@ const EditAllergens: React.FC<EditAllergensProps> = ({ product }) => {
             onIonChange={(e) => setItemIdValue(e.detail.value)}
           >
             {product.selectableAllergens?.map((allergenicId: string) => {
-              const allergenic: Allergenic = allergens.dictionary[allergenicId];
+              const allergenic: Allergenic = allergens[allergenicId];
               const info: DisplayInfo = allergenic.displayInfo[language];
 
               return (
@@ -153,9 +161,9 @@ const EditAllergens: React.FC<EditAllergensProps> = ({ product }) => {
         onIonItemReorder={doReorder}
       >
         {product.allergens!.map((allergenicId: string) => {
-          const allergenic: Allergenic = allergens.dictionary[allergenicId];
+          const allergenic: Allergenic = allergens[allergenicId];
           const allergenicImg: Image =
-            images.dictionary[allergenic.mainImg || allergenic.defaultImg];
+            images[allergenic.mainImg || allergenic.defaultImg];
           const info = allergenic.displayInfo[language];
 
           return (

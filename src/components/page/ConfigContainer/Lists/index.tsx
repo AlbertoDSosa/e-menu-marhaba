@@ -7,12 +7,20 @@ import {
   IonLoading
 } from '@ionic/react';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 const ConfigLists: React.FC = () => {
-  const { get, loading } = useData();
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
 
-  if (loading)
+  const { collection: lists, isLoading: listsIsLoading } = useQuery({
+    key: 'lists'
+  });
+
+  if (generalInfoIsLoading || listsIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -20,15 +28,13 @@ const ConfigLists: React.FC = () => {
         spinner="circles"
       />
     );
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
 
-  const lists = get({ collection: 'lists', from: 'state' });
-  const language = generalInfo.dictionary.baseLanguage;
+  const language = generalInfo.baseLanguage;
 
   return (
     <IonContent>
       <IonList>
-        {lists.collection.map((list: any) => {
+        {lists?.map((list: any) => {
           const info = list.displayInfo[language];
           return (
             <IonItem key={list.id} routerLink={`/config/lists/${list.id}`}>

@@ -33,8 +33,8 @@ const ItemList: React.FC<ItemListProps> = ({ list, lang }) => {
         )}
       </IonRow>
       {list?.items.map((itemId: string) => {
-        const listItem: ProductListItem = listItems.dictionary[itemId];
-        const item: Product = items.dictionary[listItem.itemId];
+        const listItem: ProductListItem = listItems[itemId];
+        const item: Product = items[listItem.itemId];
         const itemInfo: DisplayInfo = item.displayInfo[lang];
 
         return (

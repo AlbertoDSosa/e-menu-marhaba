@@ -12,7 +12,8 @@ import {
   IonButton,
   IonTitle,
   IonLabel,
-  IonModal
+  IonModal,
+  IonLoading
 } from '@ionic/react';
 
 import {
@@ -22,7 +23,7 @@ import {
   qrCode
 } from 'ionicons/icons';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 import { Image } from 'definitions/models';
 
 interface MenuHeaderProps
@@ -34,25 +35,47 @@ interface MenuHeaderProps
 
 const Header: React.FC<MenuHeaderProps> = ({ history, match }) => {
   const lang = match.params.lang;
-  const { get } = useData();
 
-  const pages = get({ collection: 'pages', from: 'system' });
-  const menus = get({ collection: 'pageMenus', from: 'state' });
-  const images = get({ collection: 'images', from: 'state' }).dictionary;
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-  const info = generalInfo.dictionary.displayInfo[lang];
+  const { dictionary: pages, isLoading: isPagesLoading } = useQuery({
+    key: 'pages'
+  });
+  const { dictionary: menus, isLoading: isMenusLoading } = useQuery({
+    key: 'pageMenus'
+  });
+  const { isLoading: isGeneralInfoLoading, dictionary: generalInfo } = useQuery(
+    { key: 'generalInfo' }
+  );
+  const { isLoading: isImagesLoading, dictionary: images } = useQuery({
+    key: 'images'
+  });
 
   const [qrImage, setQRImage] = useState<Image>({} as Image);
   const [showQRModal, setShowQRModal] = useState(false);
 
   let title = '';
 
+  if (
+    isGeneralInfoLoading ||
+    isImagesLoading ||
+    isPagesLoading ||
+    isMenusLoading
+  )
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+
+  const info = generalInfo.displayInfo[lang];
+
   if (match.path === '/page/:lang/:pageId') {
     const pageId = match.params.pageId;
-    title = pages.dictionary[pageId].displayInfo[lang].title;
+    title = pages[pageId].displayInfo[lang].title;
   } else {
     const menuId = match.params.menuId;
-    title = menus.dictionary[menuId].displayInfo[lang].title;
+    title = menus[menuId].displayInfo[lang].title;
   }
 
   return (

@@ -6,12 +6,20 @@ import {
   IonLoading
 } from '@ionic/react';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 const ConfigCategories: React.FC = () => {
-  const { get, loading } = useData();
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
 
-  if (loading)
+  const { collection: categories, isLoading: categoriesIsLoading } = useQuery({
+    key: 'categories'
+  });
+
+  if (generalInfoIsLoading || categoriesIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -20,22 +28,20 @@ const ConfigCategories: React.FC = () => {
       />
     );
 
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-  const categories = get({ collection: 'categories', from: 'state' });
-  const language = generalInfo.dictionary.baseLanguage;
+  const lang = generalInfo.baseLanguage;
 
   return (
     <IonContent>
       <IonList>
-        {categories.collection.map((category: any) => {
+        {categories?.map((category: any) => {
           return (
             <IonItem
               key={category?.id}
               routerLink={`/config/categories/${category?.id}`}
             >
               <IonLabel>
-                <h3>{category.displayInfo[language]?.title}</h3>
-                <p>{category.displayInfo[language]?.description}</p>
+                <h3>{category.displayInfo[lang].title}</h3>
+                <p>{category.displayInfo[lang].description}</p>
               </IonLabel>
             </IonItem>
           );

@@ -1,3 +1,4 @@
+import { Dictionary } from 'definitions/dataContext';
 import { categories } from './categories';
 import { images } from './images';
 import { items } from './items';
@@ -6,8 +7,35 @@ import { lists } from './lists';
 import { pageMenus, pageMenuItems } from './menus';
 import { slides } from './slides';
 import { systemData } from './system';
+import { allergens } from './allergens';
+import { languages } from './languages';
+import { modals } from './modals';
+import { templates } from './templates';
+import { variants } from './variants';
+import { pages } from './pages';
+import { sections } from './sections';
 
-const initialData = {
+type InitialData = {
+  generalInfo: Dictionary;
+  screensaver: Dictionary;
+  categories: Dictionary;
+  images: Dictionary;
+  items: Dictionary;
+  listItems: Dictionary;
+  lists: Dictionary;
+  pageMenus: Dictionary;
+  pageMenuItems: Dictionary;
+  slides: Dictionary;
+  allergens: Dictionary;
+  languages: Dictionary;
+  modals: Dictionary;
+  templates: Dictionary;
+  variants: Dictionary;
+  pages: Dictionary;
+  sections: Dictionary;
+};
+
+const initialData: InitialData = {
   generalInfo: systemData.generalInfo,
   screensaver: systemData.screensaver,
   categories,
@@ -17,6 +45,13 @@ const initialData = {
   lists,
   pageMenus,
   pageMenuItems,
-  slides
+  slides,
+  allergens,
+  languages,
+  modals,
+  templates,
+  variants,
+  pages,
+  sections
 };
 export default initialData;

@@ -1,9 +1,9 @@
 import React from 'react';
 // import styles from './styles.module.css';
 
-import { IonGrid, IonRow, IonCol, IonText } from '@ionic/react';
+import { IonGrid, IonRow, IonCol, IonText, IonLoading } from '@ionic/react';
 
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 import { List, ListItem } from '../../../../../../../definitions/models';
 
 import InfoCard from '../../../List/Templates/InfoCardList/InfoCard';
@@ -14,8 +14,20 @@ interface InfoCardListProps {
 }
 
 const InfoCardList: React.FC<InfoCardListProps> = ({ list, lang }) => {
-  const { get } = useData();
-  const listItems = get({ key: 'listItems', from: 'state' });
+  const { isLoading: listItemsIsLoading, dictionary: listItems } = useQuery({
+    key: 'listItems'
+  });
+
+  if (listItemsIsLoading) {
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+  }
+
   const listInfo = list.displayInfo[lang];
 
   return (
@@ -35,7 +47,7 @@ const InfoCardList: React.FC<InfoCardListProps> = ({ list, lang }) => {
         className="ion-align-items-center ion-justify-content-center"
       >
         {list.items.map((itemId) => {
-          const listItem: ListItem = listItems.dictionary[itemId];
+          const listItem: ListItem = listItems[itemId];
           return (
             listItem.show && (
               <IonCol key={itemId} size="4">

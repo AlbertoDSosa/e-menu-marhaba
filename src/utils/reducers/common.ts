@@ -130,6 +130,8 @@ export const commonReducers = ({ entity, collection }: ReducerParams) => {
         items: newItems
       };
 
+      console.log('reducer', newEntity);
+
       return {
         ...state,
         [collection]: { ...state[collection], [entityId]: newEntity }

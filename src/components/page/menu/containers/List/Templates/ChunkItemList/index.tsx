@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { chunk } from 'lodash';
 
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 
 import {
   IonLabel,
@@ -9,7 +9,8 @@ import {
   IonGrid,
   IonRow,
   IonCol,
-  IonIcon
+  IonIcon,
+  IonLoading
 } from '@ionic/react';
 
 import { informationCircleOutline, radioButtonOnOutline } from 'ionicons/icons';
@@ -35,12 +36,29 @@ const ChunkItemList: React.FC<ChunkItemListProps> = ({
   lang,
   chunkNumber
 }) => {
-  const { get } = useData();
-  const items = get({ collection: 'items', from: 'state' });
-  const listItems = get({ collection: 'listItems', from: 'state' });
-  const templates = get({ collection: 'templates', from: 'system' });
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
 
-  const listTemplate = templates.dictionary[list.template];
+  const { isLoading: listItemsIsLoading, dictionary: listItems } = useQuery({
+    key: 'listItems'
+  });
+
+  const { isLoading: templatesIsLoading, dictionary: templates } = useQuery({
+    key: 'templates'
+  });
+
+  if (templatesIsLoading || listItemsIsLoading || itemsIsLoading) {
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+  }
+
+  const listTemplate = templates[list.template];
   const { styles: listStyles } = listTemplate as ListTemplate;
 
   const chunkLists = chunk(list.items, chunkNumber);
@@ -52,8 +70,8 @@ const ChunkItemList: React.FC<ChunkItemListProps> = ({
           <IonCol key={index}>
             <IonGrid>
               {chunkList?.map((itemId: string) => {
-                const listItem: ProductListItem = listItems.dictionary[itemId];
-                const item: Product = items.dictionary[listItem.itemId];
+                const listItem: ProductListItem = listItems[itemId];
+                const item: Product = items[listItem.itemId];
                 const itemInfo: DisplayInfo = item.displayInfo[lang];
 
                 const [showModal, setShowModal] = useState(false);

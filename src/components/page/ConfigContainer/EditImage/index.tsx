@@ -8,7 +8,6 @@ import {
   IonIcon
 } from '@ionic/react';
 
-import { useData } from '../../../../contexts/DataContext';
 import { AddToEntityItem, EditImageEntity } from 'definitions/dataContext';
 import { ImageSaveParams } from 'definitions/editions';
 import { addOutline } from 'ionicons/icons';
@@ -26,23 +25,22 @@ interface EditImageProps {
 }
 
 const EditImage: React.FC<EditImageProps> = ({ entity, size, addToEntity }) => {
-  const { create } = useData();
   const [showImageEditor, setShowImageEditor] = useState<boolean>(false);
 
   const doSaveImage = (imageSaveParams: ImageSaveParams) => {
-    create({
-      collection: 'images',
-      entity: 'image',
-      addToEntity,
-      entityId: entity.id,
-      payload: {
-        lang: 'es',
-        image: imageSaveParams.src,
-        displayInfo: {
-          es: { title: imageSaveParams.title, slug: imageSaveParams.title }
-        }
-      }
-    });
+    // create({
+    //   collection: 'images',
+    //   entity: 'image',
+    //   addToEntity,
+    //   entityId: entity.id,
+    //   payload: {
+    //     lang: 'es',
+    //     image: imageSaveParams.src,
+    //     displayInfo: {
+    //       es: { title: imageSaveParams.title, slug: imageSaveParams.title }
+    //     }
+    //   }
+    // });
   };
 
   return (

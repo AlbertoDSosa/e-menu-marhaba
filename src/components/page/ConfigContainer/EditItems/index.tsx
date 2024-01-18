@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import { ItemReorderEventDetail } from '@ionic/core';
 
-import { Results, ArrayEditEntity } from 'definitions/dataContext';
+import { ArrayEditEntity, Dictionary } from 'definitions/dataContext';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 import './styles.css';
 
@@ -48,56 +48,84 @@ const customSelectProps = {
 };
 
 const EditItems: React.FC<EditItemsProps> = ({ entityId, entity }) => {
-  const { reorder, add, set, remove, get, loading } = useData();
-
-  if (loading)
-    return (
-      <IonLoading
-        className="custom-loading"
-        trigger="open-loading"
-        message="Loading"
-      />
-    );
-
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-  const items = get({ collection: 'items', from: 'state' });
-
-  let list: List | PageMenu;
-  let listItems: Results;
-
-  if (entity === 'pageMenu') {
-    const menus = get({ collection: 'pageMenus', from: 'state' });
-    listItems = get({ collection: 'pageMenuItems', from: 'state' });
-    list = menus.dictionary[entityId] as PageMenu;
-  } else {
-    const lists = get({ collection: 'lists', from: 'state' });
-    listItems = get({ collection: 'listItems', from: 'state' });
-    list = lists.dictionary[entityId] as List;
-  }
-
-  const language = generalInfo.dictionary.baseLanguage;
-
   const [disabledReorderItems, setDisabledReorderItems] = useState(true);
   const [itemIdValue, setItemIdValue] = useState<string>('');
 
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
+
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  const { dictionary: menus, isLoading: pageMenusIsLoading } = useQuery({
+    key: 'pageMenus'
+  });
+
+  const { dictionary: pageMenuItems, isLoading: pageMenuItemsIsLoading } =
+    useQuery({
+      key: 'pageMenuItems'
+    });
+
+  const { dictionary: lists, isLoading: listsIsLoading } = useQuery({
+    key: 'lists'
+  });
+
+  const { dictionary: _listItems, isLoading: listItemsIsLoading } = useQuery({
+    key: 'listItems'
+  });
+
+  if (
+    generalInfoIsLoading ||
+    itemsIsLoading ||
+    pageMenusIsLoading ||
+    pageMenuItemsIsLoading ||
+    listsIsLoading ||
+    listItemsIsLoading
+  )
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+
+  const language = generalInfo.baseLanguage;
+  let list: List | PageMenu;
+  let listItems: Dictionary;
+
+  if (entity === 'pageMenu') {
+    listItems = pageMenuItems;
+    list = menus[entityId] as PageMenu;
+  } else {
+    listItems = _listItems;
+    list = lists[entityId] as List;
+  }
+
+  console.log(entity, entityId, list.items, listItems);
+
   const doReorder = (event: CustomEvent<ItemReorderEventDetail>) => {
-    const from = event.detail.from;
-    const to = event.detail.to;
-    reorder({ entity, entityId, from, to });
+    // const from = event.detail.from;
+    // const to = event.detail.to;
+    // reorder({ entity, entityId, from, to });
 
     event.detail.complete();
   };
 
   const doAddItem = (itemId: string) => {
-    add({ entity, entityId, itemId });
+    // add({ entity, entityId, itemId });
   };
 
   const doDeleteItem = (itemId: string) => {
-    remove({ entity, entityId, itemId, action: 'one' });
+    // remove({ entity, entityId, itemId, action: 'one' });
   };
 
   const doDeleteAllItems = () => {
-    remove({ action: 'many', entity, entityId, items: list.items });
+    // remove({ action: 'many', entity, entityId, items: list.items });
   };
 
   return (
@@ -155,17 +183,17 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity }) => {
               {list.selectableItems.map((itemId: string) => {
                 let listItem: PageMenuItem | ListItem;
                 if (entity === 'pageMenu') {
-                  listItem = listItems?.dictionary[itemId] as PageMenuItem;
+                  listItem = listItems[itemId] as PageMenuItem;
                 } else {
-                  listItem = listItems?.dictionary[itemId] as ListItem;
+                  listItem = listItems[itemId] as ListItem;
                 }
 
-                const item: Item = items.dictionary[listItem.itemId];
-                const info: DisplayInfo = item.displayInfo[language];
+                const item: Item = items[listItem.itemId];
+                const info: DisplayInfo = item?.displayInfo[language];
 
                 return (
                   <IonSelectOption key={itemId} value={itemId}>
-                    {info.title}
+                    {info?.title}
                   </IonSelectOption>
                 );
               })}
@@ -177,11 +205,9 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity }) => {
         onIonItemReorder={doReorder}
       >
         {list.items.map((itemId: string) => {
-          const listItem: ListItem | PageMenuItem =
-            listItems.dictionary[itemId];
-          const item = items.dictionary[listItem.itemId];
-          const info = item.displayInfo[language];
-
+          const listItem: ListItem | PageMenuItem = listItems[itemId];
+          const item = items[listItem?.itemId];
+          const info = item?.displayInfo[language];
           return (
             <IonItemSliding key={itemId}>
               <IonItemOptions side="end">
@@ -204,23 +230,21 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity }) => {
                   </IonReorder>
                   <IonLabel>{info?.title}</IonLabel>
                   {disabledReorderItems && (
-                    <>
-                      <IonText>
-                        <p style={{ marginRight: '1em' }}>Mostrar Artículo</p>
-                      </IonText>
-                      <IonToggle
-                        color="dark"
-                        checked={listItem.show}
-                        onIonChange={() => {
-                          set({
-                            action: 'show',
-                            info: 'item',
-                            entity: 'pageMenuItem',
-                            id: itemId
-                          });
-                        }}
-                      />
-                    </>
+                    <IonToggle
+                      color="dark"
+                      justify="space-between"
+                      checked={listItem.show}
+                      // onIonChange={() => {
+                      //   set({
+                      //     action: 'show',
+                      //     info: 'item',
+                      //     entity: 'pageMenuItem',
+                      //     id: itemId
+                      //   });
+                      // }}
+                    >
+                      Mostrar {info.title}
+                    </IonToggle>
                   )}
                 </IonItem>
               ) : (
@@ -228,7 +252,7 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity }) => {
                   <IonReorder slot="start">
                     <IonIcon icon={reorderFourOutline} />
                   </IonReorder>
-                  <IonLabel>{info.title}</IonLabel>
+                  <IonLabel>{info?.title}</IonLabel>
                 </IonItem>
               )}
             </IonItemSliding>

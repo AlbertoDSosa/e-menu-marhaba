@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useData } from '../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../hooks/useQuery';
 import slugify from 'slugify';
 import styles from './styles.module.css';
 import { Collapse } from 'react-collapse';
@@ -32,8 +32,23 @@ export interface AddSlideInfo {
 }
 
 const AddSlide: React.FC = () => {
-  const { create, get, loading } = useData();
-  if (loading)
+  const [showAddSlideModal, setShowAddSlideModal] = useState<boolean>(false);
+  const [collapseList, setCollapseList] = useState<boolean>(false);
+  const [slideInfoValue, setSlideInfoValue] = useState<AddSlideInfo>(
+    {} as AddSlideInfo
+  );
+
+  const { dictionary: screensaver, isLoading: screensaverIsLoading } = useQuery(
+    {
+      key: 'screensaver'
+    }
+  );
+
+  const { dictionary: slides, isLoading: slidesIsLoading } = useQuery({
+    key: 'slides'
+  });
+
+  if (screensaverIsLoading || slidesIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -41,28 +56,17 @@ const AddSlide: React.FC = () => {
         spinner="circles"
       />
     );
-  const screensaver = get({
-    collection: 'screensaver',
-    from: 'state'
-  }).dictionary;
-  const slides = get({ collection: 'slides', from: 'state' });
-
-  const [showAddSlideModal, setShowAddSlideModal] = useState<boolean>(false);
-  const [collapseList, setCollapseList] = useState<boolean>(false);
-  const [slideInfoValue, setSlideInfoValue] = useState<AddSlideInfo>(
-    {} as AddSlideInfo
-  );
 
   const onAddSlide = () => {
-    create({
-      entity: 'slide',
-      payload: {
-        lang: 'es',
-        displayInfo: { es: slideInfoValue }
-      },
-      addToEntity: 'screensaver',
-      collection: 'slides'
-    });
+    // create({
+    //   entity: 'slide',
+    //   payload: {
+    //     lang: 'es',
+    //     displayInfo: { es: slideInfoValue }
+    //   },
+    //   addToEntity: 'screensaver',
+    //   collection: 'slides'
+    // });
     setShowAddSlideModal(false);
     setSlideInfoValue({} as AddSlideInfo);
   };
@@ -176,7 +180,7 @@ const AddSlide: React.FC = () => {
       </IonListHeader>
       <Collapse isOpened={collapseList} checkTimeout={800}>
         {screensaver.selectableSlides.map((slideId: string) => {
-          const slide: Slide = slides.dictionary[slideId];
+          const slide: Slide = slides[slideId];
           const slideInfo: DisplayInfo = slide.displayInfo['es'];
 
           return (

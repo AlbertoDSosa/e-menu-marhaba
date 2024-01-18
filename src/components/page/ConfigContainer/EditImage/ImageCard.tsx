@@ -1,5 +1,5 @@
 import React from 'react';
-import { useData } from '../../../../contexts/DataContext';
+
 import {
   IonCol,
   IonCard,
@@ -25,13 +25,12 @@ const ImageCard: React.FC<ImageCardProps> = ({
   entityId,
   entity
 }) => {
-  const { update } = useData();
   const doSetMainImage = () => {
-    update({
-      entity,
-      field: 'image',
-      payload: { entityId, id: img.id }
-    });
+    // update({
+    //   entity,
+    //   field: 'image',
+    //   payload: { entityId, id: img.id }
+    // });
   };
 
   return (

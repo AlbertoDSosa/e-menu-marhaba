@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 
-import { IonText, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonText, IonGrid, IonRow, IonCol, IonLoading } from '@ionic/react';
 import {
   Allergenic,
   List,
@@ -18,17 +18,41 @@ interface ItemListProps {
 }
 
 const AllegenicList: React.FC<ItemListProps> = ({ list, lang }) => {
-  const { get } = useData();
-  const items = get({ collection: 'items', from: 'state' });
-  const listItems = get({ collection: 'listItems', from: 'state' });
-  const allergens = get({ collection: 'allergens', from: 'system' });
-  const images = get({ collection: 'images', from: 'state' });
+  const { dictionary: listItems, isLoading: listItemsIsLoading } = useQuery({
+    key: 'listItems'
+  });
+
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  const { dictionary: allergens, isLoading: allergensIsLoading } = useQuery({
+    key: 'allergens'
+  });
+
+  const { dictionary: images, isLoading: imagesIsLoading } = useQuery({
+    key: 'images'
+  });
+
+  if (
+    itemsIsLoading ||
+    allergensIsLoading ||
+    imagesIsLoading ||
+    listItemsIsLoading
+  )
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
 
   return (
     <IonGrid>
       {list?.items.map((itemId: string) => {
-        const listItem: ProductListItem = listItems.dictionary[itemId];
-        const item: Product = items.dictionary[listItem.itemId];
+        const listItem: ProductListItem = listItems[itemId];
+        const item: Product = items[listItem.itemId];
         const itemInfo: DisplayInfo = item.displayInfo[lang];
 
         return (
@@ -48,13 +72,10 @@ const AllegenicList: React.FC<ItemListProps> = ({ list, lang }) => {
                 </IonText>
               </IonCol>
               {item.allergens!.map((alergenicId) => {
-                const allergenic: Allergenic =
-                  allergens.dictionary[alergenicId];
+                const allergenic: Allergenic = allergens[alergenicId];
                 const info = allergenic.displayInfo[lang];
                 const img: Image =
-                  images.dictionary[
-                    allergenic.mainImg || allergenic.defaultImg
-                  ];
+                  images[allergenic.mainImg || allergenic.defaultImg];
 
                 return (
                   <IonCol

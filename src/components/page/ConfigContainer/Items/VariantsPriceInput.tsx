@@ -8,29 +8,46 @@ import {
   DisplayInfo
 } from 'definitions/models';
 
-import { IonLabel, IonItem, IonIcon, IonInput } from '@ionic/react';
+import { IonLabel, IonItem, IonIcon, IonInput, IonLoading } from '@ionic/react';
 
 import { createOutline, saveOutline, closeCircleOutline } from 'ionicons/icons';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 interface VariantsPriceInputProps {
   product: Product;
 }
 
 const VariantsPriceInput: React.FC<VariantsPriceInputProps> = ({ product }) => {
-  const { update, get } = useData();
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-  const { itemVariantPrices } = product;
-  const variants: Variants = get({ collection: 'variants', from: 'system' })
-    .dictionary[product.variants!];
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
 
-  const itemVariantsArray = Object.values(variants.itemVariants);
+  const { dictionary: dictionaryVariants, isLoading: variantsIsLoading } =
+    useQuery({
+      key: 'variants'
+    });
+
+  if (generalInfoIsLoading || variantsIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+
+  const { itemVariantPrices } = product;
+  const itemVariantsArray = Object.values(
+    dictionaryVariants[product.variants!].itemVariants
+  );
   const lang = generalInfo.baseLanguage;
 
   return (
     <>
-      {itemVariantsArray.map((variant: ItemVariant) => {
+      {itemVariantsArray.map((variant: any) => {
         const price: Price = itemVariantPrices![variant.id];
         const info: DisplayInfo = variant.displayInfo[lang];
         const [showVariantPriceInput, setShowVariantPriceInput] =
@@ -40,11 +57,11 @@ const VariantsPriceInput: React.FC<VariantsPriceInputProps> = ({ product }) => {
         );
 
         const updateVariantPrice = (price: Price) => {
-          update({
-            field: 'itemVariantPrice',
-            entity: 'item',
-            payload: { itemId: product.id, variantId: variant.id, price }
-          });
+          // update({
+          //   field: 'itemVariantPrice',
+          //   entity: 'item',
+          //   payload: { itemId: product.id, variantId: variant.id, price }
+          // });
           setShowVariantPriceInput(!showVariantPriceInput);
         };
 

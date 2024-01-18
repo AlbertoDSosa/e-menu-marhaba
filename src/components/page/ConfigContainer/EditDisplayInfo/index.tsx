@@ -18,33 +18,36 @@ import {
 
 import { Collapse } from 'react-collapse';
 
-import { useData } from '../../../../contexts/DataContext';
-
-import EditDisplayInfoModal from './Modal';
+import { useQuery } from '../../../../hooks/useQuery';
 
 import { UpdateEntity, DisplayInfoEntity } from 'definitions/dataContext';
 
-import { DisplayInfo } from 'definitions/models';
+import LangList from './LangList';
 
-interface LangListProps {
+export interface LangListProps {
   entity: DisplayInfoEntity;
   entityName: UpdateEntity;
 }
 
 const EditDisplayInfo: React.FC<LangListProps> = ({ entityName, entity }) => {
-  const { update, get, loading } = useData();
+  const [collapseList, setCollapseList] = useState(false);
 
-  if (loading)
+  const { isLoading: generalInfoIsLoading } = useQuery({
+    key: 'generalInfo'
+  });
+
+  const { isLoading: languagesIsLoading } = useQuery({
+    key: 'languages'
+  });
+
+  if (generalInfoIsLoading || languagesIsLoading)
     return (
       <IonLoading
         className="custom-loading"
-        trigger="open-loading"
         message="Loading"
+        spinner="circles"
       />
     );
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-  const languages = get({ collection: 'languages', from: 'system' });
-  const [collapseList, setCollapseList] = useState(false);
 
   return (
     <IonList>
@@ -59,59 +62,7 @@ const EditDisplayInfo: React.FC<LangListProps> = ({ entityName, entity }) => {
         </IonButton>
       </IonListHeader>
       <Collapse isOpened={collapseList} checkTimeout={800}>
-        {generalInfo.dictionary.appLanguages.map((lang: string) => {
-          const info: DisplayInfo = entity.displayInfo[lang];
-          const language =
-            languages.dictionary[lang].title[
-              generalInfo.dictionary.baseLanguage
-            ];
-
-          const [showModal, setShowModal] = useState(false);
-
-          const updateDisplayInfo = (displayInfo: any) => {
-            update({
-              field: 'info',
-              entity: entityName,
-              payload: { id: entity.id, displayInfo, lang }
-            });
-            setShowModal(false);
-          };
-
-          return (
-            <IonItem key={lang}>
-              <EditDisplayInfoModal
-                updateDisplayInfo={updateDisplayInfo}
-                showModal={showModal}
-                setShowModal={setShowModal}
-                displayInfo={info}
-              />
-              <IonLabel>
-                <h2>{language}</h2>
-              </IonLabel>
-              <IonLabel>
-                <h3>Nombre</h3>
-                <p>{info?.title}</p>
-              </IonLabel>
-              {info.description && (
-                <IonLabel>
-                  <h3>Descripción</h3>
-                  <p>{info.description}</p>
-                </IonLabel>
-              )}
-              {info.extraInfo && (
-                <IonLabel>
-                  <h3>Información Extra</h3>
-                  <p>{info.extraInfo}</p>
-                </IonLabel>
-              )}
-              <IonIcon
-                icon={createOutline}
-                color="dark"
-                onClick={() => setShowModal(true)}
-              />
-            </IonItem>
-          );
-        })}
+        <LangList entity={entity} entityName={entityName} />
       </Collapse>
     </IonList>
   );

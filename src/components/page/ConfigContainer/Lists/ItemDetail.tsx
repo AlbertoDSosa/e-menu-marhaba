@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 import {
   IonContent,
@@ -10,7 +10,8 @@ import {
   IonItem,
   IonLabel,
   IonToggle,
-  IonButton
+  IonButton,
+  IonLoading
 } from '@ionic/react';
 
 // import { createOutline } from 'ionicons/icons';
@@ -28,15 +29,34 @@ interface ListItemDetailPageProps
   }> {}
 
 const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
-  const { set, get } = useData();
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-
   const key = match.params.key;
+
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
+
+  const { dictionary: listItems, isLoading: listItemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  if (generalInfoIsLoading || itemsIsLoading || listItemsIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+
   const lang = generalInfo.baseLanguage;
-  const listItems = get({ collection: 'listItems', from: 'state' });
-  const items = get({ collection: 'items', from: 'state' });
-  const listItem: ProductListItem = listItems.dictionary[key];
-  const item: Product | Info = items.dictionary[listItem.itemId];
+  const listItem: ProductListItem = listItems[key];
+  const item: Product | Info = items[listItem.itemId];
   const itemInfo: DisplayInfo = item.displayInfo[lang];
 
   return (
@@ -61,12 +81,12 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
             color="dark"
             checked={listItem.show}
             onIonChange={() => {
-              set({
-                action: 'show',
-                info: 'item',
-                entity: 'listItem',
-                id: listItem.id
-              });
+              // set({
+              //   action: 'show',
+              //   info: 'item',
+              //   entity: 'listItem',
+              //   id: listItem.id
+              // });
             }}
           />
         </IonItem>
@@ -77,12 +97,12 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
               color="dark"
               checked={listItem.showPrice}
               onIonChange={() => {
-                set({
-                  action: 'show',
-                  info: 'price',
-                  entity: 'listItem',
-                  id: listItem.id
-                });
+                // set({
+                //   action: 'show',
+                //   info: 'price',
+                //   entity: 'listItem',
+                //   id: listItem.id
+                // });
               }}
             />
           </IonItem>
@@ -94,12 +114,12 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
               color="dark"
               checked={listItem.showTitle}
               onIonChange={() => {
-                set({
-                  action: 'show',
-                  info: 'title',
-                  entity: 'listItem',
-                  id: listItem.id
-                });
+                // set({
+                //   action: 'show',
+                //   info: 'title',
+                //   entity: 'listItem',
+                //   id: listItem.id
+                // });
               }}
             />
           </IonItem>
@@ -111,12 +131,12 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
               color="dark"
               checked={listItem.showDescription}
               onIonChange={() => {
-                set({
-                  action: 'show',
-                  info: 'description',
-                  entity: 'listItem',
-                  id: listItem.id
-                });
+                // set({
+                //   action: 'show',
+                //   info: 'description',
+                //   entity: 'listItem',
+                //   id: listItem.id
+                // });
               }}
             />
           </IonItem>
@@ -128,12 +148,12 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
               color="dark"
               checked={listItem.showExtraInfo}
               onIonChange={() => {
-                set({
-                  action: 'show',
-                  info: 'extra-info',
-                  entity: 'listItem',
-                  id: listItem.id
-                });
+                // set({
+                //   action: 'show',
+                //   info: 'extra-info',
+                //   entity: 'listItem',
+                //   id: listItem.id
+                // });
               }}
             />
           </IonItem>

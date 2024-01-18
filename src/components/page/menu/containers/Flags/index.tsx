@@ -1,5 +1,5 @@
 import React from 'react';
-import { useData } from '../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../hooks/useQuery';
 import {
   IonContent,
   IonGrid,
@@ -15,9 +15,17 @@ import {
 } from '@ionic/react';
 
 const FlagsContainer: React.FC = () => {
-  const { get, loading } = useData();
+  const { isLoading: isLangugesLoading, dictionary: languages } = useQuery({
+    key: 'languages'
+  });
+  const { isLoading: isGeneralInfoLoading, dictionary: generalInfo } = useQuery(
+    { key: 'generalInfo' }
+  );
+  const { isLoading: isImagesLoading, dictionary: images } = useQuery({
+    key: 'images'
+  });
 
-  if (loading)
+  if (isLangugesLoading || isGeneralInfoLoading || isImagesLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -26,13 +34,7 @@ const FlagsContainer: React.FC = () => {
       />
     );
 
-  const languages = get({ collection: 'languages', from: 'system' });
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-  const appLanguages = generalInfo.dictionary.appLanguages;
-
-  const images = get({ collection: 'images', from: 'state' });
-
-  // const qrImg = images.dictionary['image->qr->qr-flag'];
+  const { appLanguages } = generalInfo;
 
   return (
     <IonContent fullscreen>
@@ -47,10 +49,10 @@ const FlagsContainer: React.FC = () => {
           className="ion-justify-content-center"
           style={{ height: '45vh' }}
         >
-          {appLanguages?.map((lang: string) => {
-            const language = languages?.dictionary[lang];
+          {appLanguages.map((lang: string) => {
+            const language = languages[lang];
             // const title = language.title[baseLanguage];
-            const image = images.dictionary[language.mainImg];
+            const image = images[language.mainImg];
 
             return (
               <IonCol size="2.4" key={lang}>

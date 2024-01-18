@@ -10,7 +10,7 @@ import {
   PageSection
 } from 'definitions/models';
 
-export type StateColletion =
+export type Key =
   | 'lists'
   | 'items'
   | 'categories'
@@ -20,10 +20,7 @@ export type StateColletion =
   | 'images'
   | 'slides'
   | 'generalInfo'
-  | 'screensaver';
-
-export type SystemCollection =
-  | 'images'
+  | 'screensaver'
   | 'languages'
   | 'variants'
   | 'allergens'
@@ -63,8 +60,9 @@ export type Dictionary = {
 };
 
 export type Results = {
-  collection: Dictionary[];
-  dictionary: Dictionary;
+  collection: Dictionary[] | null;
+  dictionary: Dictionary | undefined;
+  isLoading: boolean;
 };
 
 export type DisplayInfoEntity =
@@ -117,11 +115,6 @@ export type EditImageCollection =
   | 'items'
   | 'pageMenuItems'
   | 'modals';
-
-export interface GetDataProps {
-  collection: SystemCollection | StateColletion;
-  from: 'system' | 'state';
-}
 
 export type SetEntity =
   | 'item'

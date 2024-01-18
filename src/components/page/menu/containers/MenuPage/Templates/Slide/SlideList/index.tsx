@@ -1,7 +1,8 @@
 import React from 'react';
 import { SwiperSlide } from 'swiper/react';
+import { IonLoading } from '@ionic/react';
 
-import { useData } from '../../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../../hooks/useQuery';
 
 import PageSectionTemplate from '../../../../Section';
 import { PageSection } from '../../../../../../../../definitions/models';
@@ -12,14 +13,23 @@ interface SlideListProps {
 }
 
 const SlideList: React.FC<SlideListProps> = ({ sectionIds, lang }) => {
-  const { get } = useData();
+  const { isLoading: sectionsIsLoading, dictionary: sections } = useQuery({
+    key: 'sections'
+  });
 
-  const sections = get({ collection: 'pageSections', from: 'system' });
+  if (sectionsIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
 
   return (
     <>
       {sectionIds.map((sectionKey) => {
-        const section: PageSection = sections.dictionary[sectionKey];
+        const section: PageSection = sections[sectionKey];
         return (
           <SwiperSlide key={sectionKey}>
             <PageSectionTemplate section={section} lang={lang} />

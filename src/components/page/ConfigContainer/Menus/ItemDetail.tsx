@@ -32,8 +32,8 @@ const PageMenuItemDetail: React.FC<PageMenuItemDetailPageProps> = ({
 
   const pageMenuItems = get({ key: 'pageMenuItems', from: 'state' });
   const items = get({ collection: 'items', from: 'state' });
-  const pageMenuItem: PageMenuItem = pageMenuItems.dictionary[key];
-  const item = items.dictionary[pageMenuItem.itemId];
+  const pageMenuItem: PageMenuItem = pageMenuItems[key];
+  const item = items[pageMenuItem.itemId];
   const itemInfo: DisplayInfo = item.displayInfo[lang];
 
   return (

@@ -8,12 +8,20 @@ import {
   IonLoading
 } from '@ionic/react';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 const ConfigItems: React.FC = () => {
-  const { get, loading } = useData();
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
 
-  if (loading)
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  if (generalInfoIsLoading || itemsIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -21,10 +29,8 @@ const ConfigItems: React.FC = () => {
         spinner="circles"
       />
     );
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
 
-  const items = get({ collection: 'items', from: 'state' });
-  const language = generalInfo.dictionary.baseLanguage;
+  const language = generalInfo.baseLanguage;
 
   return (
     <IonContent>

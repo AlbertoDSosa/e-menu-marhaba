@@ -1,11 +1,18 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 import styles from '../../styles.module.css';
 import slideStyles from './styles.module.css';
 
-import { IonGrid, IonRow, IonCol, IonIcon, IonButton } from '@ionic/react';
+import {
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonIcon,
+  IonButton,
+  IonLoading
+} from '@ionic/react';
 import { chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
 
 import { TemplatesProps } from '../index';
@@ -13,13 +20,22 @@ import PageSectionTemplate from '../../../Section';
 import { PageSection } from 'definitions/models';
 
 const SlideSection: React.FC<TemplatesProps> = ({ page, lang }) => {
-  const { get } = useData();
-
-  const sections = get({ collection: 'pageSections', from: 'system' });
-
   const [slider, setSlider] = useState<null | any>(null);
   const [isBeginning, setIsBeginning] = useState<boolean>(true);
   const [isEnd, setIsEnd] = useState<boolean>(false);
+
+  const { isLoading: sectionsIsLoading, dictionary: sections } = useQuery({
+    key: 'sections'
+  });
+
+  if (sectionsIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
 
   return (
     <IonGrid
@@ -48,7 +64,7 @@ const SlideSection: React.FC<TemplatesProps> = ({ page, lang }) => {
             }}
           >
             {page.sections.map((sectionKey) => {
-              const section: PageSection = sections.dictionary[sectionKey];
+              const section: PageSection = sections[sectionKey];
               return (
                 <SwiperSlide key={sectionKey}>
                   <PageSectionTemplate section={section} lang={lang} />

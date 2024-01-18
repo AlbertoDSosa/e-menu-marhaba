@@ -1,9 +1,10 @@
 import React from 'react';
 
-import { IonGrid, IonRow, IonCol, IonText } from '@ionic/react';
+import { IonGrid, IonRow, IonCol, IonText, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
+
 import {
   List,
   Image,
@@ -13,18 +14,34 @@ import {
 import ChunkItemList from '../../../List/Templates/ChunkItemList';
 
 const TwoRowsMultiCol: React.FC<TemplatesProps> = ({ section, lang }) => {
-  const { get } = useData();
-  const lists = get({ collection: 'lists', from: 'state' });
-  const images = get({ collection: 'images', from: 'state' });
-  const templates = get({ collection: 'templates', from: 'system' });
+  const { isLoading: templatesIsLoading, dictionary: templates } = useQuery({
+    key: 'templates'
+  });
 
-  const list: List = lists?.dictionary[section.lists[0]];
-  const sectionTemplate = templates?.dictionary[section.template];
+  const { isLoading: imagesIsLoading, dictionary: images } = useQuery({
+    key: 'images'
+  });
+
+  const { isLoading: listsIsLoading, dictionary: lists } = useQuery({
+    key: 'lists'
+  });
+
+  if (imagesIsLoading || listsIsLoading || templatesIsLoading) {
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+  }
+
+  const list: List = lists[section.lists[0]];
+  const sectionTemplate = templates[section.template];
   const { styles: sectionStyles } = sectionTemplate as SectionTemplate;
 
   const sectionInfo = section.displayInfo[lang];
-  const sectionImg: Image =
-    images?.dictionary[section.mainImg || section.defaultImg];
+  const sectionImg: Image = images[section.mainImg || section.defaultImg];
 
   return (
     <IonGrid style={{ height: '80vh' }}>
@@ -33,9 +50,9 @@ const TwoRowsMultiCol: React.FC<TemplatesProps> = ({ section, lang }) => {
           <IonCol color="dark" size="12">
             <IonText className="ion-text-center">
               <h2 style={{ marginTop: '0.45em', fontWeight: 'bold' }}>
-                {sectionInfo?.title}
+                {sectionInfo.title}
               </h2>
-              {section.showExtraInfo && <p>{sectionInfo?.extraInfo}</p>}
+              {section.showExtraInfo && <p>{sectionInfo.extraInfo}</p>}
             </IonText>
           </IonCol>
         ) : (

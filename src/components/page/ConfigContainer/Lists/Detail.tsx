@@ -11,7 +11,7 @@ import {
   IonLoading
 } from '@ionic/react';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 import EditDisplayInfo from '../EditDisplayInfo';
 import EditItems from '../EditItems';
@@ -22,8 +22,17 @@ interface ListDetailPageProps
   }> {}
 
 const ListDetail: React.FC<ListDetailPageProps> = ({ match }) => {
-  const { set, get, loading } = useData();
-  if (loading)
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
+
+  const { dictionary: lists, isLoading: listsIsLoading } = useQuery({
+    key: 'lists'
+  });
+
+  if (generalInfoIsLoading || listsIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -31,11 +40,10 @@ const ListDetail: React.FC<ListDetailPageProps> = ({ match }) => {
         spinner="circles"
       />
     );
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-  const lang = generalInfo.dictionary.baseLanguage;
+
   const key = match.params.key;
-  const lists = get({ collection: 'lists', from: 'state' });
-  const list = lists.dictionary[key];
+  const lang = generalInfo.baseLanguage;
+  const list = lists[key];
   const listInfo = list.displayInfo[lang];
 
   return (
@@ -65,12 +73,12 @@ const ListDetail: React.FC<ListDetailPageProps> = ({ match }) => {
             color="dark"
             checked={list.showTitle}
             onIonChange={() => {
-              set({
-                action: 'show',
-                info: 'title',
-                entity: 'list',
-                id: list.id
-              });
+              // set({
+              //   action: 'show',
+              //   info: 'title',
+              //   entity: 'list',
+              //   id: list.id
+              // });
             }}
           />
         </IonItem>
@@ -82,12 +90,12 @@ const ListDetail: React.FC<ListDetailPageProps> = ({ match }) => {
               color="dark"
               checked={list.showDescription}
               onIonChange={() => {
-                set({
-                  action: 'show',
-                  info: 'description',
-                  entity: 'list',
-                  id: list.id
-                });
+                // set({
+                //   action: 'show',
+                //   info: 'description',
+                //   entity: 'list',
+                //   id: list.id
+                // });
               }}
             />
           </IonItem>
@@ -99,12 +107,12 @@ const ListDetail: React.FC<ListDetailPageProps> = ({ match }) => {
               color="dark"
               checked={list.showExtraInfo}
               onIonChange={() => {
-                set({
-                  action: 'show',
-                  info: 'extra-info',
-                  entity: 'list',
-                  id: list.id
-                });
+                // set({
+                //   action: 'show',
+                //   info: 'extra-info',
+                //   entity: 'list',
+                //   id: list.id
+                // });
               }}
             />
           </IonItem>

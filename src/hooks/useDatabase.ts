@@ -1,4 +1,4 @@
-import { useReducer, useEffect, useState, useCallback } from 'react';
+import { useReducer, useEffect, useState } from 'react';
 import { useStorageItem } from './useStorage';
 
 import initialData from '../utils/initial-data';
@@ -8,15 +8,13 @@ import { State, Action } from 'definitions/reducers';
 
 import { reducers } from '../utils/reducers';
 
-const initState = (initialData: any) => initialData;
-
 const reducer = (state: State, action: Action) => {
   const { entity, collection, type, payload } = action;
 
   if (type === 'state->init') {
     const _payload =
       typeof payload === 'string' ? JSON.parse(payload) : payload;
-    return initState(_payload);
+    return _payload;
   }
 
   const actionReducer = reducers(entity, collection)[type];
@@ -25,27 +23,24 @@ const reducer = (state: State, action: Action) => {
 
 function useDatabase(): any {
   const [initialState, setInitialState] = useStorageItem('state', initialData);
-  const [state, dispatch] = useReducer(reducer, initialState, initState);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const [isDatabaseReady, setIsDatabaseReady] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (initialState) {
-      dispatch({
-        type: 'state->init',
-        payload: initialState,
-        collection: '',
-        entity: ''
-      });
+    if (initialState && !isDatabaseReady) {
+      setIsDatabaseReady(true);
     }
-  }, [initialState]);
+  }, [initialState, isDatabaseReady]);
 
   useEffect(() => {
     if (Boolean(state)) {
+      const _state = JSON.stringify(state);
       const _initialState =
         typeof initialState === 'string'
-          ? JSON.parse(initialState)
-          : initialState;
-      if (state !== _initialState) {
+          ? initialState
+          : JSON.stringify(initialState);
+      if (_state !== _initialState) {
         setInitialState(state);
       }
       setLoading(false);
@@ -56,7 +51,16 @@ function useDatabase(): any {
     state,
     system: systemData,
     dispatch,
-    loading
+    loading,
+    init() {
+      dispatch({
+        type: 'state->init',
+        payload: initialState,
+        collection: '',
+        entity: ''
+      });
+    },
+    isDatabaseReady
   };
 }
 

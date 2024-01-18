@@ -1,15 +1,26 @@
 import React from 'react';
 
-import { IonRow, IonCol } from '@ionic/react';
+import { IonRow, IonCol, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
 import ItemList from './ItemList';
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 
 const AllergenicList: React.FC<TemplatesProps> = ({ section, lang }) => {
-  const { get } = useData();
-  const lists = get({ key: 'lists', from: 'state' });
-  const list = lists.dictionary[section.lists[0]];
+  const { isLoading: listsIsLoading, dictionary: lists } = useQuery({
+    key: 'lists'
+  });
+
+  if (listsIsLoading) {
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+  }
+  const list = lists[section.lists[0]];
 
   return (
     <IonRow>

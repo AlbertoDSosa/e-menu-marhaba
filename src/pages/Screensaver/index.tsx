@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-// import { RouteComponentProps } from 'react-router-dom';
+import React, { useState } from 'react';
+
 import {
   IonPage,
   IonContent,
@@ -11,15 +11,26 @@ import {
   IonRow,
   IonCol
 } from '@ionic/react';
+
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { play, restaurant, pause } from 'ionicons/icons';
 import { Image, Slide } from '../../definitions/models';
 
-import { useData } from '../../contexts/DataContext';
+import { useQuery } from '../../hooks/useQuery';
 
 const ScreensaverPage: React.FC = () => {
-  const { get, loading } = useData();
+  const { isLoading: slidesIsLoading, dictionary: slides } = useQuery({
+    key: 'slides'
+  });
+
+  const { isLoading: imagesIsLoading, dictionary: images } = useQuery({
+    key: 'images'
+  });
+
+  const { isLoading: screensaverIsLoading, dictionary: screensaver } = useQuery(
+    { key: 'screensaver' }
+  );
 
   const [slider, setSlider] = useState<null | any>(null);
   const [slideRun, setSlideRun] = useState(true);
@@ -34,7 +45,7 @@ const ScreensaverPage: React.FC = () => {
     }
   };
 
-  if (loading)
+  if (screensaverIsLoading || slidesIsLoading || imagesIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -42,13 +53,6 @@ const ScreensaverPage: React.FC = () => {
         spinner="circles"
       />
     );
-
-  const screensaver = get({
-    collection: 'screensaver',
-    from: 'state'
-  }).dictionary;
-  const slides = get({ collection: 'slides', from: 'state' });
-  const images = get({ collection: 'images', from: 'state' });
 
   return (
     <IonPage>
@@ -151,9 +155,9 @@ const ScreensaverPage: React.FC = () => {
                 }}
               >
                 {screensaver.slides?.map((slideId: string) => {
-                  const slide: Slide = slides.dictionary[slideId];
+                  const slide: Slide = slides[slideId];
                   const slideImg: Image =
-                    images.dictionary[slide?.mainImg || slide?.defaultImg];
+                    images[slide?.mainImg || slide?.defaultImg];
 
                   return (
                     <SwiperSlide key={slideId}>

@@ -5,26 +5,24 @@ import { IonLabel, IonItem, IonIcon, IonInput } from '@ionic/react';
 
 import { createOutline, saveOutline, closeCircleOutline } from 'ionicons/icons';
 
-import { useData } from '../../../../contexts/DataContext';
+// import { useData } from '../../../../contexts/DataContext';
 
 interface PriceInputProps {
   product: Product;
 }
 
 const PriceInput: React.FC<PriceInputProps> = ({ product }) => {
-  const { update } = useData();
-
   const { price } = product;
 
   const [showPriceInput, setShowPriceInput] = useState(false);
   const [priceValue, setPriceValue] = useState<string>(price.amount);
 
   const updatePrice = (price: Price) => {
-    update({
-      field: 'price',
-      entity: 'item',
-      payload: { id: product.id, price }
-    });
+    // update({
+    //   field: 'price',
+    //   entity: 'item',
+    //   payload: { id: product.id, price }
+    // });
     setShowPriceInput(!showPriceInput);
   };
 

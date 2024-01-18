@@ -1,9 +1,9 @@
 import React from 'react';
-import { useData } from '../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../hooks/useQuery';
 import { PageMenuItem } from '../../../../../../definitions/models';
 import MenuCard from '../MenuCard';
 
-import { IonGrid, IonRow } from '@ionic/react';
+import { IonGrid, IonRow, IonLoading } from '@ionic/react';
 
 interface CardListProps {
   menus: Array<string>;
@@ -11,9 +11,17 @@ interface CardListProps {
 }
 
 const CardList: React.FC<CardListProps> = ({ menus, lang }) => {
-  const { get } = useData();
-  const pageMenuItems = get({ collection: 'pageMenuItems', from: 'state' });
-
+  const { dictionary: pageMenuItems, isLoading: isMenuItemsLoading } = useQuery(
+    { key: 'pageMenuItems' }
+  );
+  if (isMenuItemsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
   return (
     <IonGrid style={{ width: '70vw' }}>
       <IonRow
@@ -21,10 +29,10 @@ const CardList: React.FC<CardListProps> = ({ menus, lang }) => {
         style={{ height: '80vh' }}
       >
         {menus?.map((menuId) => {
-          const menuItem: PageMenuItem = pageMenuItems.dictionary[menuId];
+          const menuItem: PageMenuItem = pageMenuItems[menuId];
 
           if (!menuItem.show) {
-            return false;
+            return null;
           }
 
           return <MenuCard key={menuId} lang={lang} menuItem={menuItem} />;

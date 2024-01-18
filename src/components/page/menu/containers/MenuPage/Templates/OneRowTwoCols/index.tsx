@@ -2,19 +2,29 @@ import React from 'react';
 
 import styles from '../../styles.module.css';
 
-import { IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonGrid, IonRow, IonCol, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 import { PageSection } from '../../../../../../../definitions/models';
 import PageSectionTemplate from '../../../Section';
 
 const OneRowTwoCols: React.FC<TemplatesProps> = ({ page, lang }) => {
-  const { get } = useData();
-  const sections = get({ collection: 'pageSections', from: 'system' });
+  const { isLoading: sectionsIsLoading, dictionary: sections } = useQuery({
+    key: 'sections'
+  });
 
-  let colOneSection: PageSection = sections.dictionary[page.sections[0]];
-  let colTwoSection: PageSection = sections.dictionary[page.sections[1]];
+  if (sectionsIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+
+  let colOneSection: PageSection = sections[page.sections[0]];
+  let colTwoSection: PageSection = sections[page.sections[1]];
 
   return (
     <IonGrid

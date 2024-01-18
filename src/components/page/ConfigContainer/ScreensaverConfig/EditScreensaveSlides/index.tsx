@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ItemReorderEventDetail } from '@ionic/core';
-import { useData } from '../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../hooks/useQuery';
 import {
   IonList,
   IonListHeader,
@@ -22,9 +22,20 @@ import { reorderFourOutline } from 'ionicons/icons';
 import { DisplayInfo, Slide } from 'definitions/models';
 
 const EditScreensaverSlides: React.FC = () => {
-  const { reorder, add, remove, get, loading } = useData();
+  const [disabledReorderItems, setDisabledReorderItems] = useState(true);
+  const [itemIdValue, setItemIdValue] = useState<string>('');
 
-  if (loading)
+  const { dictionary: screensaver, isLoading: screensaverIsLoading } = useQuery(
+    {
+      key: 'screensaver'
+    }
+  );
+
+  const { dictionary: slides, isLoading: slidesIsLoading } = useQuery({
+    key: 'slides'
+  });
+
+  if (screensaverIsLoading || slidesIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -33,27 +44,17 @@ const EditScreensaverSlides: React.FC = () => {
       />
     );
 
-  const screensaver = get({
-    collection: 'screensaver',
-    from: 'state'
-  }).dictionary;
-
-  const slides = get({ collection: 'slides', from: 'state' });
-
-  const [disabledReorderItems, setDisabledReorderItems] = useState(true);
-  const [itemIdValue, setItemIdValue] = useState<string>('');
-
   const doReorder = (event: CustomEvent<ItemReorderEventDetail>) => {
-    const from = event.detail.from;
-    const to = event.detail.to;
+    // const from = event.detail.from;
+    // const to = event.detail.to;
 
-    reorder({ entity: 'screensaver', entityId: '', from, to });
+    // reorder({ entity: 'screensaver', entityId: '', from, to });
 
     event.detail.complete();
   };
 
   const doAdd = () => {
-    add({ entity: 'screensaver', entityId: '', itemId: itemIdValue });
+    // add({ entity: 'screensaver', entityId: '', itemId: itemIdValue });
     setItemIdValue('');
   };
 
@@ -95,8 +96,8 @@ const EditScreensaverSlides: React.FC = () => {
               okText="Elegir"
               onIonChange={(e) => setItemIdValue(e.detail.value)}
             >
-              {screensaver.selectableSlides?.map((slideId: string) => {
-                const slide: Slide = slides.dictionary[slideId];
+              {screensaver.selectableSlides.map((slideId: string) => {
+                const slide: Slide = slides[slideId];
                 const info: DisplayInfo = slide.displayInfo['es'];
 
                 return (
@@ -113,7 +114,7 @@ const EditScreensaverSlides: React.FC = () => {
         onIonItemReorder={doReorder}
       >
         {screensaver?.slides.map((slideId: string) => {
-          const slide: Slide = slides.dictionary[slideId];
+          const slide: Slide = slides[slideId];
           const slideInfo: DisplayInfo = slide.displayInfo['es'];
 
           return (
@@ -122,12 +123,12 @@ const EditScreensaverSlides: React.FC = () => {
                 {disabledReorderItems && (
                   <IonItemOption
                     onClick={() => {
-                      remove({
-                        action: 'one',
-                        itemId: slideId,
-                        entity: 'slide',
-                        entityId: ''
-                      });
+                      // remove({
+                      //   action: 'one',
+                      //   itemId: slideId,
+                      //   entity: 'slide',
+                      //   entityId: ''
+                      // });
                     }}
                     color="danger"
                     expandable

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 import {
   IonContent,
@@ -30,9 +30,14 @@ interface SlideDetailProps
 
 const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
   const key = match.params.key;
-  const { update, get, loading } = useData();
+  const [disableButtons, setDisableButtons] = useState<boolean>(true);
+  const [collapseForm, setCollapseForm] = useState<boolean>(false);
 
-  if (loading)
+  const { dictionary: slides, isLoading: slidesIsLoading } = useQuery({
+    key: 'slides'
+  });
+
+  if (slidesIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -40,23 +45,18 @@ const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
         spinner="circles"
       />
     );
-
-  const slides = get({ collection: 'slides', from: 'state' });
-  const slide: Slide = slides.dictionary[key];
+  const slide: Slide = slides[key];
   const slideInfo = slide.displayInfo['es'];
 
-  const [displayInfoValue, setDisplayInfoValue] =
-    useState<DisplayInfo>(slideInfo);
-
-  const [disableButtons, setDisableButtons] = useState<boolean>(true);
-  const [collapseForm, setCollapseForm] = useState<boolean>(false);
+  // const [displayInfoValue, setDisplayInfoValue] =
+  //   useState<DisplayInfo>(slideInfo);
 
   const updateDisplayInfo = () => {
-    update({
-      field: 'info',
-      entity: 'slide',
-      payload: { id: slide.id, displayInfo: displayInfoValue, lang: 'es' }
-    });
+    // update({
+    //   field: 'info',
+    //   entity: 'slide',
+    //   payload: { id: slide.id, displayInfo: displayInfoValue, lang: 'es' }
+    // });
     setDisableButtons(true);
   };
 
@@ -86,13 +86,13 @@ const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
               wrap="off"
               cols={30}
               rows={6}
-              value={displayInfoValue.title}
-              onIonChange={(e) => {
-                setDisplayInfoValue((info: DisplayInfo) => {
-                  return { ...info, title: e.detail.value as string };
-                });
-                setDisableButtons(false);
-              }}
+              value={slideInfo.title}
+              // onIonChange={(e) => {
+              //   setDisplayInfoValue((info: DisplayInfo) => {
+              //     return { ...info, title: e.detail.value as string };
+              //   });
+              //   setDisableButtons(false);
+              // }}
             />
           </IonItem>
           <IonItem>
@@ -102,13 +102,13 @@ const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
               wrap="off"
               cols={30}
               rows={6}
-              value={displayInfoValue.description}
-              onIonChange={(e) => {
-                setDisplayInfoValue((info: DisplayInfo) => {
-                  return { ...info, description: e.detail.value as string };
-                });
-                setDisableButtons(false);
-              }}
+              value={slideInfo.description}
+              // onIonChange={(e) => {
+              //   setDisplayInfoValue((info: DisplayInfo) => {
+              //     return { ...info, description: e.detail.value as string };
+              //   });
+              //   setDisableButtons(false);
+              // }}
             />
           </IonItem>
           <IonItem className="ion-padding-vertical" lines="none">
@@ -116,10 +116,10 @@ const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
               expand="block"
               slot="end"
               size="default"
-              onClick={() => {
-                setDisplayInfoValue(slideInfo);
-                setDisableButtons(true);
-              }}
+              // onClick={() => {
+              //   setDisplayInfoValue(slideInfo);
+              //   setDisableButtons(true);
+              // }}
               disabled={disableButtons}
             >
               Cancelar

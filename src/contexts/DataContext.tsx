@@ -1,4 +1,9 @@
-import React, { createContext, useContext, PropsWithChildren } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  PropsWithChildren
+} from 'react';
 import useDatabase from '../hooks/useDatabase';
 
 import {
@@ -30,7 +35,14 @@ export interface DataContextState {
 const DataContext = createContext<DataContextState>({} as DataContextState);
 
 export const DataProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const { state, system, dispatch, loading } = useDatabase();
+  const { state, system, dispatch, loading, init, isDatabaseReady } =
+    useDatabase();
+
+  useEffect(() => {
+    if (isDatabaseReady) {
+      init();
+    }
+  }, [isDatabaseReady]);
 
   return (
     <DataContext.Provider

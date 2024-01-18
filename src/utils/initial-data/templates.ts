@@ -10,56 +10,6 @@ interface Templates {
 }
 
 export const templates: Templates = {
-  'template->page->': {
-    id: 'template->page->',
-    type: 'page',
-    active: true,
-    displayInfo: {
-      es: {
-        title: '',
-        slug: ''
-      },
-      en: {
-        title: '',
-        slug: ''
-      }
-    },
-    styles: {
-      title: {
-        textJustify: 'center'
-      },
-      grid: {
-        width: '',
-        height: ''
-      }
-    }
-  } as PageTemplate,
-  'template->page->-': {
-    id: 'template->page->-',
-    active: true,
-    type: 'page',
-    displayInfo: {
-      es: {
-        title: '',
-        description: '',
-        slug: ''
-      },
-      en: {
-        title: '',
-        description: '',
-        slug: ''
-      }
-    },
-    styles: {
-      title: {
-        textJustify: 'center'
-      },
-      grid: {
-        width: '',
-        height: ''
-      }
-    }
-  } as PageTemplate,
   'template->pageSection->two-rows-multi-col': {
     id: 'template->pageSection->two-rows-multi-col',
     type: 'section',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 import {
   IonContent,
   IonList,
@@ -15,9 +15,11 @@ import EditScreensaverSlides from './EditScreensaveSlides';
 import AddSlide from './AddSlide';
 
 const ScreensaverConfig: React.FC = () => {
-  const { get, loading } = useData();
+  const { dictionary: screensaver, isLoading } = useQuery({
+    key: 'screensaver'
+  });
 
-  if (loading)
+  if (isLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -25,15 +27,12 @@ const ScreensaverConfig: React.FC = () => {
         spinner="circles"
       />
     );
-  const screensaver = get({ collection: 'screensaver', from: 'state' });
-  const timeToShow =
-    screensaver.dictionary.selectableTimesToShow[
-      screensaver.dictionary.timeToShow
-    ];
+
+  const timeToShow = screensaver.selectableTimesToShow[screensaver.timeToShow];
   const timeToShowInfo = timeToShow.displayInfo['es'];
 
   const selectableTimesToShowArray = Object.values(
-    screensaver.dictionary.selectableTimesToShow
+    screensaver.selectableTimesToShow
   );
 
   const onChangeTimeToShow = (e: any) => {

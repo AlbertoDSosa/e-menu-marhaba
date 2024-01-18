@@ -2,6 +2,8 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
+import { useStorage } from './hooks/useStorage';
+
 import Home from './pages/Home';
 import Screensaver from './pages/Screensaver';
 import MenuPage from './pages/Menu';
@@ -37,6 +39,10 @@ import '@ionic/react/css/ionic-swiper.css';
 setupIonicReact();
 
 const App: React.FC = () => {
+  const { databaseSeedeer } = useStorage();
+
+  databaseSeedeer();
+
   return (
     <IonApp>
       <IonReactRouter>

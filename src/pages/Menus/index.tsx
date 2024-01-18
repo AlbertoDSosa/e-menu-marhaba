@@ -1,13 +1,11 @@
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 
 import MenusContainer from '../../components/page/menu/containers/Menus';
-import { IonPage, IonLoading } from '@ionic/react';
+import { IonPage } from '@ionic/react';
 import Header from '../../components/page/layout/Header';
-import { useData } from '../../contexts/DataContext';
 
 const Menus: React.FC<RouteComponentProps> = ({ history }) => {
   let touchScreen: any;
-  const { loading } = useData();
 
   const activeScreensaver = () => {
     clearTimeout(touchScreen);
@@ -27,17 +25,6 @@ const Menus: React.FC<RouteComponentProps> = ({ history }) => {
   document.addEventListener('touchmove', () => {
     activeScreensaver();
   });
-
-  if (loading)
-    return (
-      <IonPage>
-        <IonLoading
-          className="custom-loading"
-          trigger="open-loading"
-          message="Loading"
-        />
-      </IonPage>
-    );
 
   return (
     <IonPage>

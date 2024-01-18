@@ -1,7 +1,7 @@
 import React from 'react';
-import { IonGrid, IonRow, IonCol, IonText } from '@ionic/react';
+import { IonGrid, IonRow, IonCol, IonText, IonLoading } from '@ionic/react';
 
-import { useData } from '../../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../../hooks/useQuery';
 import {
   ListItem,
   Info,
@@ -14,12 +14,26 @@ interface InfoCardProps {
 }
 
 const InfoCard: React.FC<InfoCardProps> = ({ listItem, lang }) => {
-  const { get } = useData();
-  const items = get({ collection: 'items', from: 'state' });
-  const images = get({ collection: 'images', from: 'state' });
-  const item: Info = items.dictionary[listItem.itemId];
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  const { dictionary: images, isLoading: imagesIsLoading } = useQuery({
+    key: 'images'
+  });
+
+  if (itemsIsLoading || imagesIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+
+  const item: Info = items[listItem.itemId];
   const itemInfo = item.displayInfo[lang];
-  const infoImg: Image = images.dictionary[item.mainImg || item.defaultImg];
+  const infoImg: Image = images[item.mainImg || item.defaultImg];
 
   return (
     <IonGrid>

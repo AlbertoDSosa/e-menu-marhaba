@@ -1,15 +1,36 @@
 import { Drivers, Storage } from '@ionic/storage';
+import initialData from '../initial-data';
+import { Dictionary } from 'definitions/dataContext';
 
 const storage = new Storage({
-  name: '__mydb',
+  name: 'marhaba_db',
   driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
 });
 
 await storage.create();
 
+export type Key =
+  | 'lists'
+  | 'items'
+  | 'categories'
+  | 'listItems'
+  | 'pageMenus'
+  | 'pageMenuItems'
+  | 'images'
+  | 'slides'
+  | 'generalInfo'
+  | 'screensaver'
+  | 'languages'
+  | 'variants'
+  | 'allergens'
+  | 'templates'
+  | 'modals'
+  | 'pages'
+  | 'sections';
+
 export const get = async (key: string) => {
   const value = await storage.get(key);
-  return Boolean(value) ? value : null;
+  return Boolean(value) ? JSON.parse(value) : null;
 };
 
 export const set = async (key: string, value: any) => {
@@ -26,4 +47,18 @@ export const getKeys = async () => {
 
 export const clear = async () => {
   return await storage.clear();
+};
+
+export const checkIfDatabaseIsReady = async () => {
+  return Boolean((await getKeys()).length);
+};
+
+export const databaseSeedeer = async () => {
+  if (!(await checkIfDatabaseIsReady())) {
+    for (const key in initialData) {
+      await set(key, initialData[key as Key]);
+    }
+  }
+
+  return;
 };

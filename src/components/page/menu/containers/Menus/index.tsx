@@ -1,10 +1,10 @@
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { IonContent } from '@ionic/react';
+import { IonContent, IonLoading } from '@ionic/react';
 // import styles from './styles.module.css';
 import CardList from './CardList';
 
-import { useData } from '../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../hooks/useQuery';
 
 interface MenusProps
   extends RouteComponentProps<{
@@ -16,10 +16,20 @@ const MenusContainer: React.FC<MenusProps> = ({ match }) => {
   const lang = match.params.lang;
   const menuId = match.params.menuId;
 
-  const { get } = useData();
+  const { dictionary: menus, isLoading: isMenusLoading } = useQuery({
+    key: 'pageMenus'
+  });
 
-  const pageMenus = get({ collection: 'pageMenus', from: 'state' });
-  const menu = pageMenus.dictionary[menuId];
+  if (isMenusLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+
+  const menu = menus[menuId];
 
   return (
     <IonContent fullscreen>

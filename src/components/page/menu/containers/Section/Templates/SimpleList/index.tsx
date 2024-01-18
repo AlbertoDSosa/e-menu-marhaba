@@ -1,20 +1,33 @@
 import React from 'react';
 
-import { IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonGrid, IonRow, IonCol, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 import { Image } from '../../../../../../../definitions/models';
 
 import ItemList from '../../../List/Templates/ItemList';
 
 const SimplsList: React.FC<TemplatesProps> = ({ section, lang }) => {
-  const { get } = useData();
-  const lists = get({ collection: 'lists', from: 'state' });
-  const images = get({ collection: 'images', from: 'state' });
-  const list = lists.dictionary[section.lists[0]];
-  const sectionImg: Image =
-    images.dictionary[section.mainImg || section.defaultImg];
+  const { isLoading: imagesIsLoading, dictionary: images } = useQuery({
+    key: 'images'
+  });
+
+  const { isLoading: listsIsLoading, dictionary: lists } = useQuery({
+    key: 'lists'
+  });
+
+  if (imagesIsLoading || listsIsLoading) {
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+  }
+  const list = lists[section.lists[0]];
+  const sectionImg: Image = images[section.mainImg || section.defaultImg];
 
   return (
     <IonGrid style={{ padding: 0 }}>

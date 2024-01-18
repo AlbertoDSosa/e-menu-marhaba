@@ -8,6 +8,8 @@
 # testing
 /coverage
 
+/public/assets/img/*
+
 # production
 /dist
 

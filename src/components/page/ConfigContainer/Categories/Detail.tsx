@@ -10,20 +10,33 @@ import {
   // IonToggle
 } from '@ionic/react';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 // import EditDisplayInfo from '../EditDisplayInfo';
 import { Category, Item } from 'definitions/models';
+import { Key } from 'definitions/dataContext';
 
 interface CategoryDetailPageProps
   extends RouteComponentProps<{
-    key: string;
+    key: Key;
   }> {}
 
 const CategoryDetail: React.FC<CategoryDetailPageProps> = ({ match }) => {
-  const { get, loading } = useData();
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
 
-  if (loading)
+  const { dictionary: categories, isLoading: categoriesIsLoading } = useQuery({
+    key: 'categories'
+  });
+
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  if (itemsIsLoading || categoriesIsLoading || generalInfoIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -32,11 +45,8 @@ const CategoryDetail: React.FC<CategoryDetailPageProps> = ({ match }) => {
       />
     );
 
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-  const language = generalInfo.dictionary.baseLanguage;
-  const categories = get({ collection: 'categories', from: 'state' });
-  const items = get({ collection: 'items', from: 'state' });
-  const category: Category = categories.dictionary[match.params.key];
+  const lang = generalInfo.baseLanguage;
+  const category: Category = categories[match.params.key];
 
   return (
     <IonContent>
@@ -64,9 +74,9 @@ const CategoryDetail: React.FC<CategoryDetailPageProps> = ({ match }) => {
         <IonListHeader color="dark">
           <h4>Artículos de la Categoría</h4>
         </IonListHeader>
-        {category.items.map((itemId: string) => {
-          const item: Item = items.dictionary[itemId];
-          const info = item.displayInfo[language];
+        {category.items?.map((itemId: string) => {
+          const item: Item = items[itemId];
+          const info = item?.displayInfo[lang];
           return (
             <IonItem key={itemId} routerLink={`/config/items/${itemId}`}>
               <IonLabel>{info?.title}</IonLabel>

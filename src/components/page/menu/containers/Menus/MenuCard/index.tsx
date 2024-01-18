@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useData } from '../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../hooks/useQuery';
 import styles from './styles.module.css';
 
 import Modal from '../../../../../../components/page/menu/containers/Modal';
@@ -9,9 +9,10 @@ import {
   IonCard,
   IonImg,
   IonModal,
-  // IonCardContent
+  IonLoading,
   IonCardHeader,
   IonCardTitle
+  // IonCardContent
   // IonCardSubtitle
 } from '@ionic/react';
 
@@ -21,20 +22,34 @@ interface MenuCardPros {
 }
 
 const MenuCard: React.FC<MenuCardPros> = ({ menuItem, lang }) => {
-  const { get } = useData();
-  const items = get({ collection: 'items', from: 'state' });
-  const images = get({ collection: 'images', from: 'state' });
-  const modals = get({ collection: 'modals', from: 'system' });
+  const [showModal, setShowModal] = useState(false);
 
-  const item: Item = items.dictionary[menuItem.itemId];
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+  const { dictionary: modals, isLoading: modalsIsLoading } = useQuery({
+    key: 'modals'
+  });
+  const { dictionary: images, isLoading: imagesIsLoading } = useQuery({
+    key: 'images'
+  });
+
+  if (itemsIsLoading || modalsIsLoading || imagesIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+
+  const item: Item = items[menuItem.itemId];
   const info = item.displayInfo;
   const title = info[lang].title;
-  const image = images.dictionary[item.mainImg || item.defaultImg];
+  const image = images[item.mainImg || item.defaultImg];
   const subMenuPath = `/menus/${lang}/${menuItem.subMenu}`;
   const pagePath = `/page/${lang}/${menuItem.page}`;
-  const modal = modals.dictionary[menuItem.modal];
-
-  const [showModal, setShowModal] = useState(false);
+  const modal = modals[menuItem.modal];
 
   return menuItem.isModalMode ? (
     <IonCol size="3">

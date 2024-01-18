@@ -1,7 +1,14 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { IonModal, IonText, IonGrid, IonRow, IonCol } from '@ionic/react';
-import { useData } from '../../../../../../contexts/DataContext';
+import {
+  IonModal,
+  IonText,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonLoading
+} from '@ionic/react';
+import { useQuery } from '../../../../../../hooks/useQuery';
 
 import {
   ProductListItem,
@@ -16,23 +23,34 @@ interface ItemDetailProps {
   setShowModal(state: boolean): void;
   lang: string;
   item: Product;
-  listItem: ProductListItem;
+  listItem?: ProductListItem;
 }
 
 const ItemDetail: React.FC<ItemDetailProps> = ({
   lang,
   showModal,
   setShowModal,
-  item,
-  listItem
+  item
 }) => {
-  const { get } = useData();
-  const images = get({ collection: 'images', from: 'state' });
-  const allergens = get({ collection: 'allergens', from: 'system' });
-  const allergensFreeImg =
-    images.dictionary['image->allergens->allergen-free-1'];
+  const { dictionary: allergens, isLoading: allergensIsLoading } = useQuery({
+    key: 'allergens'
+  });
 
-  const itemImg: Image = images.dictionary[item.mainImg || item.defaultImg];
+  const { dictionary: images, isLoading: imagesIsLoading } = useQuery({
+    key: 'images'
+  });
+
+  if (allergensIsLoading || imagesIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+  const allergensFreeImg = images['image->allergens->allergen-free-1'];
+
+  const itemImg: Image = images[item.mainImg || item.defaultImg];
 
   return (
     <IonModal
@@ -45,11 +63,11 @@ const ItemDetail: React.FC<ItemDetailProps> = ({
       <IonGrid style={{ width: '95%' }}>
         <IonRow>
           {item.hasAllergens &&
-            item.allergens!.map((allergenicId) => {
-              const allergenic: Allergenic = allergens.dictionary[allergenicId];
+            item.allergens?.map((allergenicId) => {
+              const allergenic: Allergenic = allergens[allergenicId];
               const allergenicInfo: DisplayInfo = allergenic.displayInfo[lang];
               const allergenicImg: Image =
-                images.dictionary[allergenic.mainImg || allergenic.defaultImg];
+                images[allergenic.mainImg || allergenic.defaultImg];
               return (
                 <IonCol size="2" key={allergenicId}>
                   <img

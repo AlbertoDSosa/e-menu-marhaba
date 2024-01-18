@@ -1,19 +1,41 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Drivers, Storage } from '@ionic/storage';
 import { AvailableResult } from '../utils/storage/models';
+import initialData from '../utils/initial-data';
+import { Dictionary } from '../definitions/dataContext';
+
+export type Key =
+  | 'lists'
+  | 'items'
+  | 'categories'
+  | 'listItems'
+  | 'pageMenus'
+  | 'pageMenuItems'
+  | 'images'
+  | 'slides'
+  | 'generalInfo'
+  | 'screensaver'
+  | 'languages'
+  | 'variants'
+  | 'allergens'
+  | 'templates'
+  | 'modals'
+  | 'pages'
+  | 'sections';
 
 interface StorageResult extends AvailableResult {
   get: (key: string) => Promise<string | null>;
-  set: (key: string, value: string) => Promise<void>;
+  set: (key: string, value: Dictionary) => Promise<void>;
   remove: (key: string) => void;
   getKeys: () => Promise<string[]>;
   clear: () => Promise<void>;
+  databaseSeedeer: () => Promise<void>;
 }
 
 type StorageItemResult<T> = [T | undefined, (value: T) => Promise<void>];
 
 const storage = new Storage({
-  name: '__mydb',
+  name: 'marhaba_db',
   driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
 });
 
@@ -22,18 +44,18 @@ await storage.create();
 export function useStorage(): StorageResult {
   const get = useCallback(async (key: string) => {
     const value = await storage.get(key);
-    return Boolean(value) ? value : null;
+    return Boolean(value) ? JSON.parse(value) : null;
   }, []);
 
-  const set = useCallback(async (key: string, value: string) => {
-    return await storage.set(key, value);
+  const set = useCallback(async (key: string, value: Dictionary) => {
+    return await storage.set(key, JSON.stringify(value));
   }, []);
 
   const remove = useCallback(async (key: string) => {
     return await storage.remove(key);
   }, []);
 
-  const getKeys = useCallback(async () => {
+  const getKeys = useCallback(async (): Promise<string[]> => {
     return await storage.keys();
   }, []);
 
@@ -41,7 +63,29 @@ export function useStorage(): StorageResult {
     return await storage.clear();
   }, []);
 
-  return { get, set, remove, getKeys, clear, isAvailable: true };
+  const checkIfDatabaseIsReady = useCallback(async () => {
+    return Boolean((await getKeys()).length);
+  }, []);
+
+  const databaseSeedeer = useCallback(async () => {
+    if (!(await checkIfDatabaseIsReady())) {
+      for (const key in initialData) {
+        await set(key, initialData[key as Key]);
+      }
+    }
+
+    return;
+  }, []);
+
+  return {
+    get,
+    set,
+    remove,
+    getKeys,
+    clear,
+    isAvailable: true,
+    databaseSeedeer
+  };
 }
 
 export function useStorageItem<T>(

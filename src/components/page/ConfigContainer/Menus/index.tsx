@@ -7,12 +7,20 @@ import {
   IonLoading
 } from '@ionic/react';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 const ConfigMenus: React.FC = () => {
-  const { get, loading } = useData();
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
 
-  if (loading)
+  const { collection: menus, isLoading: menusIsLoading } = useQuery({
+    key: 'pageMenus'
+  });
+
+  if (generalInfoIsLoading || menusIsLoading)
     return (
       <IonLoading
         className="custom-loading"
@@ -20,15 +28,12 @@ const ConfigMenus: React.FC = () => {
         spinner="circles"
       />
     );
-
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
-  const menus = get({ collection: 'pageMenus', from: 'state' });
-  const language = generalInfo.dictionary.baseLanguage;
+  const language = generalInfo.baseLanguage;
 
   return (
     <IonContent>
       <IonList>
-        {menus.collection.map((menu: any) => {
+        {menus?.map((menu: any) => {
           const info = menu.displayInfo[language];
 
           return (

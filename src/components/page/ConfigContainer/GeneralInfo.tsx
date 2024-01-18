@@ -1,23 +1,36 @@
 import React from 'react';
-import { IonContent, IonList, IonItem, IonLabel } from '@ionic/react';
+import {
+  IonContent,
+  IonList,
+  IonItem,
+  IonLabel,
+  IonLoading
+} from '@ionic/react';
 
-import { useData } from '../../../contexts/DataContext';
+import { useQuery } from '../../../hooks/useQuery';
 
 const ConfigGeneralInfo: React.FC = () => {
-  const { get, loading } = useData();
+  const { dictionary: generalInfo, isLoading } = useQuery({
+    key: 'generalInfo'
+  });
 
-  if (loading) return 'Loading...';
-
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
+  if (isLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
 
   return (
     <IonContent>
       <IonList>
         <IonItem>
-          <IonLabel>{`Nombre: ${generalInfo.dictionary.companyName}`}</IonLabel>
+          <IonLabel>{`Nombre: ${generalInfo.companyName}`}</IonLabel>
         </IonItem>
         <IonItem>
-          <IonLabel>{`Web: ${generalInfo.dictionary.url}`}</IonLabel>
+          <IonLabel>{`Web: ${generalInfo.url}`}</IonLabel>
         </IonItem>
         <IonItem>
           <IonLabel>Lenguaje base: Español</IonLabel>

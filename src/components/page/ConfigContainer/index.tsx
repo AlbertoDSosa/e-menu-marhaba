@@ -19,9 +19,26 @@ import { RouteComponentProps, withRouter } from 'react-router-dom';
 
 import ConfigMenu from './ConfigMenu';
 
-import { SystemCollection, StateColletion } from 'definitions/dataContext';
+import { useQuery } from '../../../hooks/useQuery';
 
-import { useData } from '../../../contexts/DataContext';
+type Collection =
+  | 'lists'
+  | 'items'
+  | 'categories'
+  | 'listItems'
+  | 'pageMenus'
+  | 'pageMenuItems'
+  | 'images'
+  | 'slides'
+  | 'generalInfo'
+  | 'screensaver'
+  | 'languages'
+  | 'variants'
+  | 'allergens'
+  | 'templates'
+  | 'modals'
+  | 'pages'
+  | 'pageSections';
 
 interface ContainerProps
   extends PropsWithChildren,
@@ -30,7 +47,7 @@ interface ContainerProps
       lang: string;
     }> {
   title: string;
-  collection?: SystemCollection | StateColletion;
+  collection?: Collection;
 }
 
 const ConfigContainer: React.FC<ContainerProps> = ({
@@ -40,24 +57,23 @@ const ConfigContainer: React.FC<ContainerProps> = ({
   collection,
   title
 }) => {
-  const { get, loading } = useData();
-
-  if (loading)
-    return (
-      <IonLoading
-        className="custom-loading"
-        message="Loading"
-        spinner="circles"
-      />
-    );
-
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
   const key = match.params.key;
-  const lang = generalInfo.dictionary.baseLanguage;
-  const collectionTitle = collection
-    ? get({ collection: collection, from: 'state' }).dictionary[key]
-        .displayInfo[lang]?.title
-    : '';
+  let collectionTitle = '';
+
+  if (collection) {
+    const { isLoading, dictionary } = useQuery({ key: collection });
+
+    if (isLoading)
+      return (
+        <IonLoading
+          className="custom-loading"
+          message="Loading"
+          spinner="circles"
+        />
+      );
+
+    collectionTitle = dictionary[key]?.displayInfo['es'].title;
+  }
 
   return (
     <IonSplitPane contentId="config">

@@ -1,18 +1,27 @@
 import React from 'react';
-
+import { IonLoading } from '@ionic/react';
 import styles from '../../styles.module.css';
 
 import { TemplatesProps } from '../index';
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 
 import PageSectionTemplate from '../../../Section';
 import { PageSection } from '../../../../../../../definitions/models';
 
 const SingleSection: React.FC<TemplatesProps> = ({ page, lang }) => {
-  const { get } = useData();
-  const sections = get({ collection: 'pageSections', from: 'system' });
-  const section: PageSection = sections.dictionary[page.sections[0]];
+  const { isLoading: sectionsIsLoading, dictionary: sections } = useQuery({
+    key: 'sections'
+  });
 
+  if (sectionsIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+  const section: PageSection = sections[page.sections[0]];
   return (
     <div
       className={styles.backgroundImg}

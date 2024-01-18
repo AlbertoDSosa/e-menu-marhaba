@@ -1,17 +1,29 @@
 import React from 'react';
 
-import { IonCol, IonGrid, IonRow, IonText } from '@ionic/react';
+import { IonCol, IonGrid, IonRow, IonText, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 import { List } from '../../../../../../../definitions/models';
 
 import ChunkItemList from '../../../List/Templates/ChunkItemList';
 
 const OneRowMultiCol: React.FC<TemplatesProps> = ({ section, lang }) => {
-  const { get } = useData();
-  const lists = get({ collection: 'lists', from: 'state' });
-  const list: List = lists.dictionary[section.lists[0]];
+  const { isLoading: listsIsLoading, dictionary: lists } = useQuery({
+    key: 'lists'
+  });
+
+  if (listsIsLoading) {
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+  }
+
+  const list: List = lists[section.lists[0]];
   const sectionInfo = section.displayInfo[lang];
 
   return (

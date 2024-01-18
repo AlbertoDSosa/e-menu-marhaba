@@ -14,14 +14,14 @@ const BlackboardList: React.FC<TemplatesProps> = ({ modal, lang }) => {
   const { get } = useData();
   const images = get({ collection: 'images', from: 'state' });
   const lists = get({ collection: 'lists', from: 'state' });
-  const backgroundImg = images.dictionary[modal.backgroundImg];
+  const backgroundImg = images[modal.backgroundImg];
   const modalInfo = modal.displayInfo[lang];
 
   const listModal: ListModal = modal;
 
-  const listMain = lists.dictionary[listModal.lists[0]];
+  const listMain = lists[listModal.lists[0]];
   const listInfo = listMain.displayInfo[lang];
-  const modalImg = images.dictionary[modal.mainImg || modal.defaultImg];
+  const modalImg = images[modal.mainImg || modal.defaultImg];
 
   return (
     <div className={styles.container}>
@@ -40,7 +40,7 @@ const BlackboardList: React.FC<TemplatesProps> = ({ modal, lang }) => {
         </IonRow>
         <IonRow className="ion-justify-content-center">
           {listModal?.lists.map((listKey) => {
-            const list: List = lists.dictionary[listKey];
+            const list: List = lists[listKey];
             return (
               <IonCol style={{ paddingLeft: '2em' }} key={listKey} size="6">
                 <ItemList list={list} lang={lang} />

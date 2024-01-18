@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { IonRow, IonCol, IonGrid } from '@ionic/react';
+import { IonRow, IonCol, IonGrid, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useData } from '../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 import {
   Image,
   SectionTemplate
@@ -11,16 +11,33 @@ import {
 import ItemList from '../../../List/Templates/ItemList';
 
 const OneRowTwoCols: React.FC<TemplatesProps> = ({ section, lang }) => {
-  const { get } = useData();
-  const lists = get({ collection: 'lists', from: 'state' });
-  const images = get({ collection: 'images', from: 'state' });
-  const templates = get({ collection: 'templates', from: 'system' });
-  const sectionTemplate = templates.dictionary[section.template];
+  const { isLoading: templatesIsLoading, dictionary: templates } = useQuery({
+    key: 'templates'
+  });
+
+  const { isLoading: imagesIsLoading, dictionary: images } = useQuery({
+    key: 'images'
+  });
+
+  const { isLoading: listsIsLoading, dictionary: lists } = useQuery({
+    key: 'lists'
+  });
+
+  if (imagesIsLoading || listsIsLoading || templatesIsLoading) {
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+  }
+
+  const sectionTemplate = templates[section.template];
   const { styles: sectionStyles } = sectionTemplate as SectionTemplate;
 
-  const list = lists.dictionary[section.lists[0]];
-  const sectionImg: Image =
-    images.dictionary[section.mainImg || section.defaultImg];
+  const list = lists[section.lists[0]];
+  const sectionImg: Image = images[section.mainImg || section.defaultImg];
 
   return (
     <IonGrid style={{ height: '85vh', width: '90vw' }}>
