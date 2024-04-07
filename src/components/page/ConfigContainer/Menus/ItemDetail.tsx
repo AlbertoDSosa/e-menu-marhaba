@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 
-import { useData } from '../../../../contexts/DataContext';
+import { useQuery } from '../../../../hooks/useQuery';
 
 import {
   IonContent,
@@ -10,7 +10,8 @@ import {
   IonListHeader,
   IonItem,
   IonLabel,
-  IonToggle
+  IonToggle,
+  IonLoading
 } from '@ionic/react';
 
 // import { createOutline } from 'ionicons/icons';
@@ -25,13 +26,33 @@ interface PageMenuItemDetailPageProps
 const PageMenuItemDetail: React.FC<PageMenuItemDetailPageProps> = ({
   match
 }) => {
-  const { set, get } = useData();
-  const generalInfo = get({ collection: 'generalInfo', from: 'state' });
   const key = match.params.key;
-  const lang = generalInfo.baseLanguage;
 
-  const pageMenuItems = get({ key: 'pageMenuItems', from: 'state' });
-  const items = get({ collection: 'items', from: 'state' });
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
+
+  const { dictionary: pageMenuItems, isLoading: pageMenuItemsIsLoading } =
+    useQuery({
+      key: 'pageMenuItems'
+    });
+
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  if (pageMenuItemsIsLoading || itemsIsLoading || generalInfoIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+
+  const lang = generalInfo.baseLanguage;
   const pageMenuItem: PageMenuItem = pageMenuItems[key];
   const item = items[pageMenuItem.itemId];
   const itemInfo: DisplayInfo = item.displayInfo[lang];
@@ -58,12 +79,12 @@ const PageMenuItemDetail: React.FC<PageMenuItemDetailPageProps> = ({
             color="dark"
             checked={pageMenuItem.show}
             onIonChange={() => {
-              set({
-                action: 'show',
-                info: 'item',
-                entity: 'pageMenuItem',
-                id: pageMenuItem.id
-              });
+              // set({
+              //   action: 'show',
+              //   info: 'item',
+              //   entity: 'pageMenuItem',
+              //   id: pageMenuItem.id
+              // });
             }}
           />
         </IonItem>
@@ -74,12 +95,12 @@ const PageMenuItemDetail: React.FC<PageMenuItemDetailPageProps> = ({
               color="dark"
               checked={pageMenuItem.showTitle}
               onIonChange={() => {
-                set({
-                  action: 'show',
-                  info: 'title',
-                  entity: 'pageMenuItem',
-                  id: pageMenuItem.id
-                });
+                // set({
+                //   action: 'show',
+                //   info: 'title',
+                //   entity: 'pageMenuItem',
+                //   id: pageMenuItem.id
+                // });
               }}
             />
           </IonItem>
@@ -91,12 +112,12 @@ const PageMenuItemDetail: React.FC<PageMenuItemDetailPageProps> = ({
               color="dark"
               checked={pageMenuItem.showDescription}
               onIonChange={() => {
-                set({
-                  action: 'show',
-                  info: 'description',
-                  entity: 'pageMenuItem',
-                  id: pageMenuItem.id
-                });
+                // set({
+                //   action: 'show',
+                //   info: 'description',
+                //   entity: 'pageMenuItem',
+                //   id: pageMenuItem.id
+                // });
               }}
             />
           </IonItem>
@@ -108,12 +129,12 @@ const PageMenuItemDetail: React.FC<PageMenuItemDetailPageProps> = ({
               color="dark"
               checked={pageMenuItem.showExtraInfo}
               onIonChange={() => {
-                set({
-                  action: 'show',
-                  info: 'extra-info',
-                  entity: 'pageMenuItem',
-                  id: pageMenuItem.id
-                });
+                // set({
+                //   action: 'show',
+                //   info: 'extra-info',
+                //   entity: 'pageMenuItem',
+                //   id: pageMenuItem.id
+                // });
               }}
             />
           </IonItem>

@@ -15,6 +15,7 @@ type Key =
   | 'pageMenuItems'
   | 'images'
   | 'slides'
+  | 'sections'
   | 'generalInfo'
   | 'screensaver'
   | 'languages'
@@ -40,10 +41,11 @@ type QueryResp = {
   collection: Dictionary[] | null;
   isLoading: boolean;
   isFetched: boolean;
+  refetch: () => {};
 };
 
 export const useQuery = ({ key }: QueryArgs): QueryResp => {
-  const { data, isLoading, isFetched } = query({
+  const { data, isLoading, isFetched, refetch } = query({
     queryKey: [key],
     queryFn: async () => await get(key)
   });
@@ -52,7 +54,8 @@ export const useQuery = ({ key }: QueryArgs): QueryResp => {
     collection: data ? Object.values(data) : null,
     dictionary: data,
     isLoading,
-    isFetched
+    isFetched,
+    refetch
   };
 };
 

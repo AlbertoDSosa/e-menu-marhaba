@@ -20,18 +20,22 @@ import { Collapse } from 'react-collapse';
 
 import { useQuery } from '../../../../hooks/useQuery';
 
-import { UpdateEntity, DisplayInfoEntity } from 'definitions/dataContext';
+import { UpdateEntity, DisplayInfoEntity, Key } from 'definitions/dataContext';
 
 import LangList from './LangList';
 
 export interface LangListProps {
   entity: DisplayInfoEntity;
   entityName: UpdateEntity;
+  resource: Key;
 }
 
-const EditDisplayInfo: React.FC<LangListProps> = ({ entityName, entity }) => {
+const EditDisplayInfo: React.FC<LangListProps> = ({
+  entityName,
+  entity,
+  resource
+}) => {
   const [collapseList, setCollapseList] = useState(false);
-
   const { isLoading: generalInfoIsLoading } = useQuery({
     key: 'generalInfo'
   });
@@ -62,7 +66,7 @@ const EditDisplayInfo: React.FC<LangListProps> = ({ entityName, entity }) => {
         </IonButton>
       </IonListHeader>
       <Collapse isOpened={collapseList} checkTimeout={800}>
-        <LangList entity={entity} entityName={entityName} />
+        <LangList entity={entity} entityName={entityName} resource={resource} />
       </Collapse>
     </IonList>
   );

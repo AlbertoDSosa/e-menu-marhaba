@@ -14,6 +14,7 @@ import {
 import { createOutline, saveOutline, closeCircleOutline } from 'ionicons/icons';
 
 import { useQuery } from '../../../../hooks/useQuery';
+import { useMutation } from '../../../../hooks/useMutation';
 
 import EditDisplayInfo from '../EditDisplayInfo';
 import EditAllergens from '../EditAllergens';
@@ -29,8 +30,10 @@ interface ItemDetailPageProps
   }> {}
 
 const ItemDetail: React.FC<ItemDetailPageProps> = ({ match }) => {
-  const [showNumberInput, setShowNumberInput] = useState(false);
-  const [numberValue, setNumberValue] = useState('');
+  const { mutate: updateNumber } = useMutation({
+    resource: 'items',
+    action: 'update'
+  });
 
   const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
     key: 'items'
@@ -46,20 +49,22 @@ const ItemDetail: React.FC<ItemDetailPageProps> = ({ match }) => {
     );
 
   const item: Product = items[match.params.key];
+  const [showNumberInput, setShowNumberInput] = useState(false);
+  const [numberValue, setNumberValue] = useState(item.number);
 
-  const updateNumber = (number: string) => {
-    // update({
-    //   field: 'number',
-    //   entity: 'item',
-    //   payload: { id: item.id, number }
-    // });
+  const doUpdateNumber = (number: string) => {
+    updateNumber({
+      field: 'number',
+      entity: 'item',
+      payload: { id: item.id, number }
+    });
     setShowNumberInput(!showNumberInput);
   };
 
   return (
     item && (
       <IonContent>
-        <EditDisplayInfo entityName="item" entity={item} />
+        <EditDisplayInfo entityName="item" entity={item} resource="items" />
         <IonList>
           <IonListHeader color="dark">
             <h4>Otra Información</h4>
@@ -74,7 +79,7 @@ const ItemDetail: React.FC<ItemDetailPageProps> = ({ match }) => {
             <IonItem>
               {!showNumberInput ? (
                 <>
-                  <IonLabel>{`Número de Artículo: ${item.number}`}</IonLabel>
+                  <IonLabel>{`Número de Artículo: ${numberValue}`}</IonLabel>
                   <IonIcon
                     icon={createOutline}
                     size="large"
@@ -87,8 +92,9 @@ const ItemDetail: React.FC<ItemDetailPageProps> = ({ match }) => {
                 <>
                   <IonLabel>Número de Artículo: </IonLabel>
                   <IonInput
-                    value={item.number}
-                    onIonChange={(e) => setNumberValue(e.detail.value || '')}
+                    label="Número de artículo:"
+                    value={numberValue}
+                    onIonInput={(e) => setNumberValue(e.detail.value || '')}
                   />
                   <IonIcon
                     icon={closeCircleOutline}
@@ -103,7 +109,7 @@ const ItemDetail: React.FC<ItemDetailPageProps> = ({ match }) => {
                     icon={saveOutline}
                     size="large"
                     color="dark"
-                    onClick={() => updateNumber(numberValue)}
+                    onClick={() => doUpdateNumber(numberValue)}
                   />
                 </>
               )}
@@ -115,13 +121,14 @@ const ItemDetail: React.FC<ItemDetailPageProps> = ({ match }) => {
             color="dark"
             checked={item.active}
             onIonChange={() => {
-              setActive('item', item.id);
+              doSetActive('item', item.id);
             }}
           />
         </IonItem> */}
         </IonList>
         {item?.hasAllergens && <EditAllergens product={item} />}
         <EditImage
+          resource="items"
           entity={item}
           size={{ width: 1000, height: 600 }}
           addToEntity="item"

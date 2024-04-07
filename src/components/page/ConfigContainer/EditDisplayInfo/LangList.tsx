@@ -5,11 +5,17 @@ import { IonLabel, IonItem, IonIcon } from '@ionic/react';
 import { createOutline } from 'ionicons/icons';
 
 import { useQuery } from '../../../../hooks/useQuery';
+import { useMutation } from '../../../../hooks/useMutation';
 import { DisplayInfo } from 'definitions/models';
+
 import EditDisplayInfoModal from './Modal';
 import { LangListProps } from '.';
 
-const LangList: React.FC<LangListProps> = ({ entityName, entity }) => {
+const LangList: React.FC<LangListProps> = ({
+  entityName,
+  entity,
+  resource
+}) => {
   const { dictionary: generalInfo } = useQuery({
     key: 'generalInfo'
   });
@@ -22,16 +28,22 @@ const LangList: React.FC<LangListProps> = ({ entityName, entity }) => {
     <>
       {generalInfo.appLanguages.map((lang: string) => {
         const info: DisplayInfo = entity.displayInfo[lang];
+        const { mutate } = useMutation({
+          resource,
+          action: 'update'
+        });
+
         const language = languages[lang].title[generalInfo.baseLanguage];
 
         const [showModal, setShowModal] = useState(false);
 
         const updateDisplayInfo = (displayInfo: any) => {
-          // update({
-          //   field: 'info',
-          //   entity: entityName,
-          //   payload: { id: entity.id, displayInfo, lang }
-          // });
+          mutate({
+            field: 'info',
+            entity: entityName,
+            payload: { id: entity.id, displayInfo, lang }
+          });
+
           setShowModal(false);
         };
 

@@ -30,7 +30,7 @@ const SingleSection: React.FC<TemplatesProps> = ({ page, lang }) => {
       <div
         style={{
           padding: '.5em',
-          width: '90vw',
+          width: '95vw',
           height: '88.5vh',
           margin: '0 auto',
           backgroundColor: 'rgba(255,255,255,90%)'

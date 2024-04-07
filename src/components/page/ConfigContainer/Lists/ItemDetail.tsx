@@ -38,7 +38,7 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
   );
 
   const { dictionary: listItems, isLoading: listItemsIsLoading } = useQuery({
-    key: 'items'
+    key: 'listItems'
   });
 
   const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
@@ -76,7 +76,6 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
           <h3>Opciones de Artículo de Lista</h3>
         </IonListHeader>
         <IonItem>
-          <IonLabel>Mostrar Artículo</IonLabel>
           <IonToggle
             color="dark"
             checked={listItem.show}
@@ -88,11 +87,12 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
               //   id: listItem.id
               // });
             }}
-          />
+          >
+            Mostrar Artículo
+          </IonToggle>
         </IonItem>
         {item.type === 'product' && (
           <IonItem>
-            <IonLabel>Mostrar Precio</IonLabel>
             <IonToggle
               color="dark"
               checked={listItem.showPrice}
@@ -104,12 +104,13 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
                 //   id: listItem.id
                 // });
               }}
-            />
+            >
+              Mostrar Precio
+            </IonToggle>
           </IonItem>
         )}
         {listItem.showTitle && (
           <IonItem>
-            <IonLabel>Mostrar Título</IonLabel>
             <IonToggle
               color="dark"
               checked={listItem.showTitle}
@@ -121,12 +122,13 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
                 //   id: listItem.id
                 // });
               }}
-            />
+            >
+              Mostrar Título
+            </IonToggle>
           </IonItem>
         )}
         {itemInfo.description && (
           <IonItem>
-            <IonLabel>Mostrar Descripción</IonLabel>
             <IonToggle
               color="dark"
               checked={listItem.showDescription}
@@ -138,12 +140,13 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
                 //   id: listItem.id
                 // });
               }}
-            />
+            >
+              Mostrar Descripción
+            </IonToggle>
           </IonItem>
         )}
         {itemInfo.extraInfo && (
           <IonItem>
-            <IonLabel>Mostrar Información Extra</IonLabel>
             <IonToggle
               color="dark"
               checked={listItem.showExtraInfo}
@@ -155,7 +158,9 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
                 //   id: listItem.id
                 // });
               }}
-            />
+            >
+              Mostrar Información Extra
+            </IonToggle>
           </IonItem>
         )}
       </IonList>

@@ -1,5 +1,5 @@
-import { Dispatch } from 'react';
 import uid from 'short-uuid';
+
 import {
   SetProps,
   AddProps,
@@ -26,477 +26,451 @@ import {
   imageActions
 } from './types';
 
-import { DisplayInfo } from 'definitions/models';
+import { DisplayInfo } from '../../definitions/models';
+import { resolvers } from '../../utils/resolvers';
+import { State } from '../../definitions/resolvers';
 
-export const add = (
-  dispatch: Dispatch<any>,
-  { entity, entityId, itemId }: AddProps
-) => {
-  const _add: { [key: string]: () => void } = {
+export const add = (state: State, { entity, entityId, itemId }: AddProps) => {
+  const resolver = resolvers(entity);
+
+  const _add: { [key: string]: () => State } = {
     list: () => {
-      dispatch({
+      return resolver[listActions.ADD_ITEM](state, {
         type: listActions.ADD_ITEM,
         entity: entity,
-        collection: 'lists',
         payload: { entityId, itemId }
       });
     },
     pageMenu: () => {
-      dispatch({
+      return resolver[pageMenuActions.ADD_ITEM](state, {
         type: pageMenuActions.ADD_ITEM,
         entity: entity,
-        collection: 'pageMenus',
         payload: { entityId, itemId }
       });
     },
     allergenic: () => {
-      dispatch({
+      return resolver[allergenicActions.ADD](state, {
         type: allergenicActions.ADD,
         entity: entity,
-        collection: 'items',
         payload: { entityId, itemId }
       });
     },
     screensaver: () => {
-      dispatch({
+      return resolver[screensaverActions.ADD_SLIDE](state, {
         type: screensaverActions.ADD_SLIDE,
         entity: entity,
-        collection: 'slides',
         payload: { itemId }
       });
     },
     slide: () => {
-      dispatch({
+      return resolver[slideActions.ADD_IMAGE](state, {
         type: slideActions.ADD_IMAGE,
         entity: entity,
-        collection: 'slides',
         payload: { itemId }
       });
     }
   };
 
-  _add[entity]();
+  return _add[entity]();
 };
 
 export const reorder = (
-  dispatch: Dispatch<any>,
+  state: State,
   { entity, entityId, from, to }: ReorderProps
 ) => {
-  const _reorder: { [key: string]: () => void } = {
+  const resolver = resolvers(entity);
+
+  const _reorder: { [key: string]: () => State } = {
     list: () => {
-      dispatch({
+      return resolver[listActions.REORDER_ITEMS](state, {
         type: listActions.REORDER_ITEMS,
         entity: entity,
-        collection: 'lists',
         payload: { entityId, from, to }
       });
     },
     pageMenu: () => {
-      dispatch({
+      return resolver[pageMenuActions.REORDER_ITEMS](state, {
         type: pageMenuActions.REORDER_ITEMS,
         entity: entity,
-        collection: 'pageMenus',
         payload: { entityId, from, to }
       });
     },
     allergenic: () => {
-      dispatch({
+      return resolver[allergenicActions.REORDER](state, {
         type: allergenicActions.REORDER,
         entity: entity,
-        collection: 'items',
         payload: { entityId, from, to }
       });
     },
     screensaver: () => {
-      dispatch({
+      return resolver[screensaverActions.REORDER_SLIDES](state, {
         type: screensaverActions.REORDER_SLIDES,
         entity: entity,
-        collection: 'slides',
         payload: { from, to }
       });
     }
   };
 
-  _reorder[entity]();
+  return _reorder[entity]();
 };
 
 export const remove = (
-  dispatch: Dispatch<any>,
+  state: State,
   { action, entity, entityId, itemId, items }: RemoveProps
 ) => {
+  const resolver = resolvers(entity);
+
   if (action === 'one') {
-    const _remove: { [key: string]: () => void } = {
+    const _remove: { [key: string]: () => State } = {
       list: () => {
-        dispatch({
+        return resolver[listActions.REMOVE_ITEM](state, {
           type: listActions.REMOVE_ITEM,
           entity: entity,
-          collection: 'lists',
           payload: { entityId, itemId }
         });
       },
       pageMenu: () => {
-        dispatch({
+        return resolver[pageMenuActions.REMOVE_ITEM](state, {
           type: pageMenuActions.REMOVE_ITEM,
           entity: entity,
-          collection: 'pageMenus',
           payload: { entityId, itemId }
         });
       },
       allergenic: () => {
-        dispatch({
+        return resolver[pageMenuActions.REMOVE_ITEM](state, {
           type: allergenicActions.REMOVE,
           entity: entity,
-          collection: 'items',
           payload: { entityId, itemId }
         });
       },
       slide: () => {
-        dispatch({
+        return resolver[screensaverActions.REMOVE_SLIDE](state, {
           type: screensaverActions.REMOVE_SLIDE,
           entity: entity,
-          collection: 'screensaver',
           payload: { itemId }
         });
       }
     };
 
-    _remove[entity]();
+    return _remove[entity]();
   } else {
-    const removeAll: { [key: string]: () => void } = {
+    const removeAll: { [key: string]: () => State } = {
       list: () => {
-        dispatch({
+        return resolver[listActions.REMOVE_ALL_ITEMS](state, {
           type: listActions.REMOVE_ALL_ITEMS,
           entity: entity,
-          collection: 'lists',
           payload: { entityId, items }
         });
       },
       pageMenu: () => {
-        dispatch({
+        return resolver[listActions.REMOVE_ALL_ITEMS](state, {
           type: pageMenuActions.REMOVE_ALL_ITEMS,
           entity: entity,
-          collection: 'pageMenus',
           payload: { entityId, items }
         });
       },
       allergenic: () => {
-        dispatch({
+        return resolver[allergenicActions.REMOVE_ALL](state, {
           type: allergenicActions.REMOVE_ALL,
           entity: entity,
-          collection: 'items',
           payload: { entityId, items }
         });
       }
     };
 
-    removeAll[entity]();
+    return removeAll[entity]();
   }
 };
 
 // Set field
 
-export const set = (
-  dispatch: Dispatch<any>,
-  { action, info, entity, id }: SetProps
-) => {
+export const set = (state: State, { action, info, entity, id }: SetProps) => {
+  const resolver = resolvers(entity);
   if (action === 'show') {
     if (info === 'item') {
-      const _set: { [key: string]: () => void } = {
+      const _set: { [key: string]: () => State } = {
         list: () => {
-          dispatch({
+          return resolver[listActions.SET_SHOW](state, {
             type: listActions.SET_SHOW,
             payload: id,
-            entity: entity,
-            collection: 'lists'
+            entity: entity
           });
         },
         pageMenuItem: () => {
-          dispatch({
+          return resolver[pageMenuItemActions.SET_SHOW](state, {
             type: pageMenuItemActions.SET_SHOW,
             payload: id,
-            entity: entity,
-            collection: 'pageMenuItems'
+            entity: entity
           });
         },
         listItem: () => {
-          dispatch({
+          return resolver[listItemActions.SET_SHOW](state, {
             type: listItemActions.SET_SHOW,
             payload: id,
-            entity: entity,
-            collection: 'listItems'
+            entity: entity
           });
         }
       };
 
-      _set[entity]();
+      return _set[entity]();
     } else if (info === 'title') {
-      const _set: { [key: string]: () => void } = {
+      const _set: { [key: string]: () => State } = {
         list: () => {
-          dispatch({
+          return resolver[listActions.SET_SHOW_TITLE](state, {
             type: listActions.SET_SHOW_TITLE,
             payload: id,
-            entity: entity,
-            collection: 'lists'
+            entity: entity
           });
         },
         listItem: () => {
-          dispatch({
+          return resolver[listItemActions.SET_SHOW_TITLE](state, {
             type: listItemActions.SET_SHOW_TITLE,
             payload: id,
-            entity: entity,
-            collection: 'listItems'
+            entity: entity
           });
         },
         pageMenuItem: () => {
-          dispatch({
+          return resolver[pageMenuItemActions.SET_SHOW_TITLE](state, {
             type: pageMenuItemActions.SET_SHOW_TITLE,
             payload: id,
-            entity: entity,
-            collection: 'pageMenuItems'
+            entity: entity
           });
         }
       };
 
-      _set[entity]();
+      return _set[entity]();
     } else if (info === 'description') {
-      const _set: { [key: string]: () => void } = {
+      const _set: { [key: string]: () => State } = {
         list: () => {
-          dispatch({
+          return resolver[listActions.SET_SHOW_DESCRIPTION](state, {
             type: listActions.SET_SHOW_DESCRIPTION,
             payload: id,
-            entity: entity,
-            collection: 'lists'
+            entity: entity
           });
         },
         listItem: () => {
-          dispatch({
+          return resolver[listItemActions.SET_SHOW_DESCRIPTION](state, {
             type: listItemActions.SET_SHOW_DESCRIPTION,
             payload: id,
-            entity: entity,
-            collection: 'listItems'
+            entity: entity
           });
         },
         pageMenuItem: () => {
-          dispatch({
+          return resolver[pageMenuItemActions.SET_SHOW_DESCRIPTION](state, {
             type: pageMenuItemActions.SET_SHOW_DESCRIPTION,
             payload: id,
-            entity: entity,
-            collection: 'pageMenuItems'
+            entity: entity
           });
         }
       };
 
-      _set[entity]();
+      return _set[entity]();
     } else if (info === 'extra-info') {
-      const _set: { [key: string]: () => void } = {
+      const _set: { [key: string]: () => State } = {
         list: () => {
-          dispatch({
+          return resolver[listActions.SET_SHOW_EXTRA_INFO](state, {
             type: listActions.SET_SHOW_EXTRA_INFO,
             payload: id,
-            entity: entity,
-            collection: 'lists'
+            entity: entity
           });
         },
         listItem: () => {
-          dispatch({
+          return resolver[listItemActions.SET_SHOW_EXTRA_INFO](state, {
             type: listItemActions.SET_SHOW_EXTRA_INFO,
             payload: id,
-            entity: entity,
-            collection: 'listItems'
+            entity: entity
           });
         },
         pageMenuItem: () => {
-          dispatch({
+          return resolver[pageMenuItemActions.SET_SHOW_EXTRA_INFO](state, {
             type: pageMenuItemActions.SET_SHOW_EXTRA_INFO,
             payload: id,
-            entity: entity,
-            collection: 'pageMenuItems'
+            entity: entity
           });
         }
       };
 
-      _set[entity]();
+      return _set[entity]();
     } else if (info === 'price') {
-      const update: { [key: string]: () => void } = {
+      const _set: { [key: string]: () => State } = {
         listItem: () => {
-          dispatch({
+          return resolver[listItemActions.SET_SHOW_PRICE](state, {
             type: listItemActions.SET_SHOW_PRICE,
             payload: id,
-            entity: entity,
-            collection: 'listItems'
+            entity: entity
           });
         }
       };
 
-      update[entity]();
+      return _set[entity]();
     }
   } else if (action === 'active') {
-    const _set: { [key: string]: () => void } = {
+    const _set: { [key: string]: () => State } = {
       item: () => {
-        dispatch({
+        return resolver[itemActions.SET_ACTIVE](state, {
           type: itemActions.SET_ACTIVE,
           payload: id,
-          entity: entity,
-          collection: 'items'
+          entity: entity
         });
       },
       category: () => {
-        dispatch({
+        return resolver[categoryActions.SET_ACTIVE](state, {
           type: categoryActions.SET_ACTIVE,
           payload: id,
-          entity: entity,
-          collection: 'categories'
+          entity: entity
         });
       }
     };
 
-    _set[entity]();
+    return _set[entity]();
   }
 };
 
 // CRUD
 
 export const create = (
-  dispatch: Dispatch<any>,
-  { collection, entity, payload, addToEntity, entityId }: CreateProps
+  state: State,
+  { entity, payload, addToEntity, entityId }: CreateProps
 ) => {
+  const resolver = resolvers(entity);
   const { displayInfo, lang, image } = payload;
   const { slug }: DisplayInfo = displayInfo[lang];
   const id = `${entity}->${addToEntity}->${slug}->${uid.generate()}`;
-  const _create: { [key: string]: () => void } = {
-    slide: () => {
-      dispatch({
-        type: slideActions.CREATE_SLIDE,
-        entity: addToEntity,
-        payload: { id, displayInfo },
-        collection
-      });
 
+  const _create: { [key: string]: () => State } = {
+    slide: () => {
       if (addToEntity === 'screensaver') {
-        dispatch({
+        resolver[screensaverActions.ADD_SELECTABLE_SLIDE](state, {
           type: screensaverActions.ADD_SELECTABLE_SLIDE,
           entity: addToEntity,
-          payload: { id, displayInfo },
-          collection
+          payload: { id, displayInfo }
         });
       }
+
+      return resolver[slideActions.CREATE_SLIDE](state, {
+        type: slideActions.CREATE_SLIDE,
+        entity: addToEntity,
+        payload: { id, displayInfo }
+      });
     },
     image: () => {
-      dispatch({
-        type: imageActions.CREATE,
-        entity: addToEntity,
-        payload: { id, displayInfo, lang, image },
-        collection
-      });
-
       if (addToEntity === 'slide') {
-        dispatch({
+        resolver[slideActions.ADD_IMAGE](state, {
           type: slideActions.ADD_IMAGE,
           entity: addToEntity,
-          payload: { id, entityId },
-          collection
+          payload: { id, entityId }
         });
       }
+
       if (addToEntity === 'item') {
-        dispatch({
+        return resolver[itemActions.ADD_IMAGE](state, {
           type: itemActions.ADD_IMAGE,
           entity: addToEntity,
-          payload: { id, entityId },
-          collection
+          payload: { id, entityId }
         });
       }
+
+      return resolver[imageActions.CREATE](state, {
+        type: imageActions.CREATE,
+        entity: addToEntity,
+        payload: { id, displayInfo, lang, image }
+      });
     }
   };
-  _create[entity]();
+
+  return _create[entity]();
 };
 
 export const update = (
-  dispatch: Dispatch<any>,
+  state: State,
   { field, entity, payload }: UpdateProps
 ) => {
+  const resolver = resolvers(entity);
+
   if (field === 'info') {
-    const _update: { [key: string]: () => void } = {
+    const _update: { [key: string]: () => State } = {
       item: () => {
-        dispatch({
+        return resolver[itemActions.UPDATE_DISPLAY_INFO](state, {
           type: itemActions.UPDATE_DISPLAY_INFO,
           entity: entity,
-          collection: 'items',
           payload: payload as NewDisplayInfo
         });
       },
       category: () => {
-        dispatch({
+        return resolver[categoryActions.UPDATE_DISPLAY_INFO](state, {
           type: categoryActions.UPDATE_DISPLAY_INFO,
           entity: entity,
-          collection: 'categories',
           payload: payload as NewDisplayInfo
         });
       },
       list: () => {
-        dispatch({
+        return resolver[listActions.UPDATE_DISPLAY_INFO](state, {
           type: listActions.UPDATE_DISPLAY_INFO,
           entity: entity,
-          collection: 'lists',
           payload: payload as NewDisplayInfo
         });
       },
       pageMenu: () => {
-        dispatch({
+        return resolver[pageMenuActions.UPDATE_DISPLAY_INFO](state, {
           type: pageMenuActions.UPDATE_DISPLAY_INFO,
           entity: entity,
-          collection: 'pageMenus',
           payload: payload as NewDisplayInfo
         });
       },
       slide: () => {
-        dispatch({
+        return resolver[slideActions.UPDATE_DISPLAY_INFO](state, {
           type: slideActions.UPDATE_DISPLAY_INFO,
           entity: entity,
-          collection: 'slides',
           payload: payload as NewDisplayInfo
         });
       }
     };
 
-    _update[entity]();
+    return _update[entity]();
   } else if (field === 'price') {
-    dispatch({
+    return resolver[itemActions.UPDATE_ITEM_PRICE](state, {
       type: itemActions.UPDATE_ITEM_PRICE,
+      entity: entity,
       payload: payload as NewPrice
     });
   } else if (field === 'itemVariantPrice') {
-    dispatch({
+    return resolver[itemActions.UPDATE_ITEM_VARIANT_PRICE](state, {
       type: itemActions.UPDATE_ITEM_VARIANT_PRICE,
+      entity: entity,
       payload: payload as NewVariantPrice
     });
   } else if (field === 'number') {
-    dispatch({
+    return resolver[itemActions.UPDATE_ITEM_NUMBER](state, {
       type: itemActions.UPDATE_ITEM_NUMBER,
+      entity: entity,
       payload: payload as NewNumber
     });
   } else if (field === 'image') {
-    const _set: { [key: string]: () => void } = {
+    const _set: { [key: string]: () => State } = {
       slide: () => {
-        dispatch({
+        return resolver[slideActions.SET_MAIN_IMAGE](state, {
           type: slideActions.SET_MAIN_IMAGE,
           payload: payload as NewMainImage,
-          entity: entity,
-          collection: 'slides'
+          entity: entity
         });
       },
       item: () => {
-        dispatch({
+        return resolver[itemActions.SET_MAIN_IMAGE](state, {
           type: itemActions.SET_MAIN_IMAGE,
           payload: payload as NewMainImage,
-          entity: entity,
-          collection: 'items'
+          entity: entity
         });
       }
     };
-    _set[entity]();
+    return _set[entity]();
   }
 };
 
-export const destroy = () => {};
-
-export const softDelete = () => {};
+export default {
+  add,
+  reorder,
+  remove,
+  set,
+  create,
+  update
+};

@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'io.beatandcode.marhaba',
   appName: 'e-menu-marhaba',
   webDir: 'dist',
   server: {

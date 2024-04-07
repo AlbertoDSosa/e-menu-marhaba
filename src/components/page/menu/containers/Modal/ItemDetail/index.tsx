@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './styles.module.css';
 import {
   IonModal,
-  IonText,
-  IonGrid,
-  IonRow,
-  IonCol,
+  // IonText,
+  // IonGrid,
+  // IonRow,
+  // IonCol,
   IonLoading
 } from '@ionic/react';
 import { useQuery } from '../../../../../../hooks/useQuery';
@@ -13,9 +13,9 @@ import { useQuery } from '../../../../../../hooks/useQuery';
 import {
   ProductListItem,
   Product,
-  DisplayInfo,
-  Image,
-  Allergenic
+  Image
+  // DisplayInfo,
+  // Allergenic
 } from '../../../../../../definitions/models';
 
 interface ItemDetailProps {
@@ -48,8 +48,8 @@ const ItemDetail: React.FC<ItemDetailProps> = ({
         spinner="circles"
       />
     );
-  const allergensFreeImg = images['image->allergens->allergen-free-1'];
 
+  // const allergensFreeImg = images['image->allergens->allergen-free-1'];
   const itemImg: Image = images[item.mainImg || item.defaultImg];
 
   return (
@@ -60,7 +60,7 @@ const ItemDetail: React.FC<ItemDetailProps> = ({
     >
       <img loading="lazy" src={itemImg.full?.src} alt={itemImg.full?.title} />
 
-      <IonGrid style={{ width: '95%' }}>
+      {/* <IonGrid style={{ width: '95%' }}>
         <IonRow>
           {item.hasAllergens &&
             item.allergens?.map((allergenicId) => {
@@ -106,7 +106,7 @@ const ItemDetail: React.FC<ItemDetailProps> = ({
             />
           )}
         </IonRow>
-      </IonGrid>
+      </IonGrid> */}
     </IonModal>
   );
 };

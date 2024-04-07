@@ -9,7 +9,7 @@ export const pages: { [key: string]: Page } = {
     defaultImg: '',
     mainImg: '',
     template: 'template->page->slide',
-    sections: ['pageSection->wines-4', 'pageSection->wines-5'],
+    sections: ['pageSection->wines-1', 'pageSection->wines-2'],
     isPolySection: true,
     displayInfo: {
       es: {
@@ -43,51 +43,6 @@ export const pages: { [key: string]: Page } = {
       nl: {
         title: 'Wijn',
         slug: 'wijn'
-      }
-    }
-  },
-  'page->drinks': {
-    id: 'page->drinks',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->slide',
-    sections: [],
-    isPolySection: true,
-    displayInfo: {
-      es: {
-        title: 'Bebidas',
-        slug: 'bebidas'
-      },
-      en: {
-        title: 'Drinks',
-        slug: 'category-drinks'
-      },
-      de: {
-        title: 'Getränke',
-        slug: 'getranke'
-      },
-      nb: {
-        title: 'Drikker',
-        slug: 'drikker'
-      },
-      da: {
-        title: 'Drikkevarer',
-        slug: 'drikkevarer'
-      },
-      sv: {
-        title: 'Drycker',
-        slug: 'drycker'
-      },
-      fr: {
-        title: 'Boissons',
-        slug: 'boissons'
-      },
-      nl: {
-        title: 'Drankjes',
-        slug: 'drankjes'
       }
     }
   },
@@ -185,186 +140,6 @@ export const pages: { [key: string]: Page } = {
       }
     }
   },
-  'page->meals->salads': {
-    id: 'page->meals->salads',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->single-section',
-    sections: ['pageSection->meals->salads-1'],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'Ensaladas',
-        slug: 'ensaladas'
-      },
-      en: {
-        title: 'Salads',
-        slug: 'salads'
-      },
-      de: {
-        title: 'Salate',
-        slug: 'salate'
-      },
-      nb: {
-        title: 'Salater',
-        slug: 'salater'
-      },
-      da: {
-        title: 'Salater',
-        slug: 'salater'
-      },
-      sv: {
-        title: 'Sallader',
-        slug: 'sallader'
-      },
-      fr: {
-        title: 'Salades',
-        slug: 'salades'
-      },
-      nl: {
-        title: 'Verfrissend',
-        slug: 'verfrissend'
-      }
-    }
-  },
-  'page->meals->sandwich': {
-    id: 'page->meals->sandwich',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->single-section',
-    sections: ['pageSection->meals->sandwich-1'],
-    isPolySection: true,
-    displayInfo: {
-      es: {
-        title: 'Bocadillos',
-        slug: 'con-las-manos'
-      },
-      en: {
-        title: 'Snacks',
-        slug: 'snacks'
-      },
-      de: {
-        title: 'Snacks',
-        slug: 'snacks'
-      },
-      nb: {
-        title: 'Snacks',
-        slug: 'snacks'
-      },
-      da: {
-        title: 'Snacks',
-        slug: 'snacks'
-      },
-      sv: {
-        title: 'Snacks',
-        slug: 'snacks'
-      },
-      fr: {
-        title: 'Collations',
-        slug: 'collations'
-      },
-      nl: {
-        title: 'Tussendoortjes',
-        slug: 'tussendoortjes'
-      }
-    }
-  },
-  'page->meals->spoon-dishes': {
-    id: 'page->meals->spoon-dishes',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->single-section',
-    sections: ['pageSection->meals->spoon-dishes-1'],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'Platos de Cuchara',
-        slug: 'platos-de-cuchara'
-      },
-      en: {
-        title: 'Spoon dishes',
-        slug: 'spoon-dishes'
-      },
-      de: {
-        title: 'Löffelgerichte',
-        slug: 'loffelgerichte'
-      },
-      nb: {
-        title: 'Skje retter',
-        slug: 'skje-retter'
-      },
-      da: {
-        title: 'Ske retter',
-        slug: 'ske-retter'
-      },
-      sv: {
-        title: 'Sked rätter',
-        slug: 'sked-ratter'
-      },
-      fr: {
-        title: 'Plats à la Cuillère',
-        slug: 'plats-a-la-cuillere'
-      },
-      nl: {
-        title: 'Lepel gerechten',
-        slug: 'lepel-gerechten'
-      }
-    }
-  },
-  'page->meals->childrens': {
-    id: 'page->meals->childrens',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->single-section',
-    sections: ['pageSection->meals->childrens-1'],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'Menú Infantil',
-        slug: 'menu-infantil'
-      },
-      en: {
-        title: `Children's Menu`,
-        slug: 'children-s-menu'
-      },
-      de: {
-        title: 'Kindermenü',
-        slug: 'kindermenu'
-      },
-      nb: {
-        title: 'Meny for de Små',
-        slug: 'meny-for-de-sma'
-      },
-      da: {
-        title: 'Børnemenu',
-        slug: 'bornemenu'
-      },
-      sv: {
-        title: 'Meny för Barnen',
-        slug: 'meny-for-barnen'
-      },
-      fr: {
-        title: 'Menu Enfant',
-        slug: 'menu-enfant'
-      },
-      nl: {
-        title: 'Kindermenu',
-        slug: 'kindermenu'
-      }
-    }
-  },
   'page->info->allergens': {
     id: 'page->info->allergens',
     menuId: '',
@@ -417,99 +192,6 @@ export const pages: { [key: string]: Page } = {
       }
     }
   },
-  'page->info->sanitary-measures': {
-    id: 'page->info->sanitary-measures',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->slide',
-    sections: [
-      'pageSection->info->sanitary-measures-1',
-      'pageSection->info->sanitary-measures-2'
-    ],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'Medidas Sanitarias',
-        slug: 'medidas-sanitarias'
-      },
-      en: {
-        title: 'Sanitary measures',
-        slug: 'sanitary-measures'
-      },
-      de: {
-        title: 'Hygienemaßnahmen',
-        slug: 'hygienemassnahmen'
-      },
-      nb: {
-        title: 'Sanitære tiltak',
-        slug: 'sanitaere-tiltak'
-      },
-      da: {
-        title: 'Sanitære foranstaltninger',
-        slug: 'sanitaere-foranstaltninger'
-      },
-      sv: {
-        title: 'Sanitära åtgärder',
-        slug: 'sanitara-atgarder'
-      },
-      fr: {
-        title: 'Mesures sanitaires',
-        slug: 'mesures-sanitaires'
-      },
-      nl: {
-        title: 'Sanitaire maatregelen',
-        slug: 'sanitaire-maatregelen'
-      }
-    }
-  },
-  'page->info->information': {
-    id: 'page->info->information',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->single-section',
-    sections: ['pageSection->information'],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'Información',
-        slug: 'informacion'
-      },
-      en: {
-        title: 'Information',
-        slug: 'information'
-      },
-      de: {
-        title: 'Information',
-        slug: 'information'
-      },
-      nb: {
-        title: 'Informasjon',
-        slug: 'informasjon'
-      },
-      da: {
-        title: 'Information',
-        slug: 'information'
-      },
-      sv: {
-        title: 'Information',
-        slug: 'information'
-      },
-      fr: {
-        title: 'Informations',
-        slug: 'informations'
-      },
-      nl: {
-        title: 'Informatie',
-        slug: 'informatie'
-      }
-    }
-  },
   'page->info->gallery': {
     id: 'page->info->gallery',
     menuId: '',
@@ -555,284 +237,6 @@ export const pages: { [key: string]: Page } = {
       }
     }
   },
-  'page->drinks->refreshments': {
-    id: 'page->drinks->refreshments',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->single-section',
-    sections: ['pageSection->drinks->refreshments-1'],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'Refrescos',
-        slug: 'refrescos'
-      },
-      en: {
-        title: 'Refreshments',
-        slug: 'refreshments'
-      },
-      de: {
-        title: 'Erfrischungen',
-        slug: 'erfrischungen'
-      },
-      nb: {
-        title: 'Forfriskninger',
-        slug: 'forfriskninger'
-      },
-      da: {
-        title: 'Forfriskninger',
-        slug: 'forfriskninger'
-      },
-      sv: {
-        title: 'Förfriskningar',
-        slug: 'forfriskningar'
-      },
-      fr: {
-        title: 'Rafraîchissements',
-        slug: 'rafraichissements'
-      },
-      nl: {
-        title: 'Verfrissingen',
-        slug: 'verfrissingen'
-      }
-    }
-  },
-  'page->drinks->beers': {
-    id: 'page->drinks->beers',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->single-section',
-    sections: ['pageSection->drinks->beers-1'],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'Cervezas',
-        slug: 'cervezas'
-      },
-      en: {
-        title: 'Beers',
-        slug: 'beers'
-      },
-      de: {
-        title: 'Biere',
-        slug: 'biere'
-      },
-      nb: {
-        title: 'Øl',
-        slug: 'ol'
-      },
-      da: {
-        title: 'Øl',
-        slug: 'ol'
-      },
-      sv: {
-        title: 'Öl',
-        slug: 'ol'
-      },
-      fr: {
-        title: 'Bières',
-        slug: 'bieres'
-      },
-      nl: {
-        title: 'Bieren',
-        slug: 'bieren'
-      }
-    }
-  },
-  'page->drinks->coffee-shop': {
-    id: 'page->drinks->coffee-shop',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->single-section',
-    sections: ['pageSection->drinks->coffee-shop-1'],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'Cafetería',
-        slug: 'cafeteria'
-      },
-      en: {
-        title: 'Coffee Shop',
-        slug: 'coffee-shop'
-      },
-      de: {
-        title: 'Café',
-        slug: 'cafe'
-      },
-      nb: {
-        title: 'Kaffebutikk',
-        slug: 'kaffebutikk'
-      },
-      da: {
-        title: 'Kaffebar',
-        slug: 'kaffebar'
-      },
-      sv: {
-        title: 'Kafé',
-        slug: 'kafe'
-      },
-      fr: {
-        title: 'Café',
-        slug: 'cafe'
-      },
-      nl: {
-        title: 'Cafetaria',
-        slug: 'cafetaria'
-      }
-    }
-  },
-  'page->drinks->bar': {
-    id: 'page->drinks->bar',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->slide',
-    sections: [
-      'pageSection->drinks->whiskies-1',
-      'pageSection->drinks->rums-2',
-      'pageSection->drinks->combined-3',
-      'pageSection->drinks->gins-4',
-      'pageSection->drinks->cognac-and-brandy-5',
-      'pageSection->drinks->liqueurs-6',
-      'pageSection->drinks->cocktails-7'
-    ],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'El bar',
-        slug: 'el-bar'
-      },
-      en: {
-        title: 'The bar',
-        slug: 'the-bar'
-      },
-      de: {
-        title: 'Die Bar',
-        slug: 'die-bar'
-      },
-      nb: {
-        title: 'Baren',
-        slug: 'baren'
-      },
-      da: {
-        title: 'Baren',
-        slug: 'baren'
-      },
-      sv: {
-        title: 'Baren',
-        slug: 'baren'
-      },
-      fr: {
-        title: 'Le bar',
-        slug: 'le-bar'
-      },
-      nl: {
-        title: 'De bar',
-        slug: 'de-bar'
-      }
-    }
-  },
-  'page->drinks->smoothies': {
-    id: 'page->drinks->smoothies',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->single-section',
-    sections: ['pageSection->drinks->smoothies-2'],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      en: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      de: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      nb: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      da: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      sv: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      fr: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      nl: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      }
-    }
-  },
-  'page->drinks->appetizers': {
-    id: 'page->drinks->appetizers',
-    menuId: '',
-    active: true,
-    type: 'page',
-    defaultImg: '',
-    mainImg: '',
-    template: 'template->page->single-section',
-    sections: ['pageSection->drinks->appetizers-1'],
-    isPolySection: false,
-    displayInfo: {
-      es: {
-        title: 'Aperitivos',
-        slug: 'aperitivos'
-      },
-      en: {
-        title: 'Appetizers',
-        slug: 'appetizers'
-      },
-      de: {
-        title: 'Vorspeisen',
-        slug: 'Vorspeisen'
-      },
-      nb: {
-        title: 'Forretter',
-        slug: 'forretter'
-      },
-      da: {
-        title: 'Forretter',
-        slug: 'forretter'
-      },
-      sv: {
-        title: 'Förrätter',
-        slug: 'forratter'
-      },
-      fr: {
-        title: 'Apéritifs',
-        slug: 'aperitifs'
-      },
-      nl: {
-        title: 'Voorgerechten',
-        slug: 'voorgerechten'
-      }
-    }
-  },
   'page->meals->skewers': {
     id: 'page->meals->skewers',
     menuId: '',
@@ -869,12 +273,12 @@ export const pages: { [key: string]: Page } = {
         slug: ''
       },
       fr: {
-        title: '',
-        slug: ''
+        title: 'Brochettes',
+        slug: 'brochettes'
       },
       nl: {
-        title: '',
-        slug: ''
+        title: 'Sjasliek',
+        slug: 'sjasliek'
       }
     }
   },
@@ -914,12 +318,12 @@ export const pages: { [key: string]: Page } = {
         slug: ''
       },
       fr: {
-        title: '',
-        slug: ''
+        title: 'Cous Cous',
+        slug: 'cous-cous'
       },
       nl: {
-        title: '',
-        slug: ''
+        title: 'Cous Cous',
+        slug: 'cous-cous'
       }
     }
   },
@@ -943,8 +347,8 @@ export const pages: { [key: string]: Page } = {
         slug: 'tajin'
       },
       de: {
-        title: 'Tajin',
-        slug: 'tajin'
+        title: 'Tajine',
+        slug: 'tajine'
       },
       nb: {
         title: '',
@@ -959,12 +363,57 @@ export const pages: { [key: string]: Page } = {
         slug: ''
       },
       fr: {
+        title: 'Tajine',
+        slug: 'tajine'
+      },
+      nl: {
+        title: 'Tajine',
+        slug: 'tajine'
+      }
+    }
+  },
+  'page->meals->specials': {
+    id: 'page->meals->specials',
+    menuId: '',
+    active: true,
+    type: 'page',
+    defaultImg: '',
+    mainImg: '',
+    template: 'template->page->single-section',
+    sections: ['pageSection->meals->specials-1'],
+    isPolySection: false,
+    displayInfo: {
+      es: {
+        title: 'Especialidades',
+        slug: 'especialidades'
+      },
+      en: {
+        title: 'Specials',
+        slug: 'specials'
+      },
+      de: {
+        title: 'Spezialitäten',
+        slug: 'spezialitaten'
+      },
+      nb: {
         title: '',
         slug: ''
       },
-      nl: {
+      da: {
         title: '',
         slug: ''
+      },
+      sv: {
+        title: '',
+        slug: ''
+      },
+      fr: {
+        title: 'Spécialité',
+        slug: 'specialite'
+      },
+      nl: {
+        title: 'Specialiteit',
+        slug: 'specialiteit'
       }
     }
   }

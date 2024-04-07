@@ -38,7 +38,7 @@ const TwoRowsOneCol: React.FC<TemplatesProps> = ({ page, lang }) => {
         <IonRow
           className="ion-align-items-center"
           style={{
-            width: '90vw',
+            width: '95vw',
             margin: '0 auto'
           }}
         >
@@ -48,7 +48,7 @@ const TwoRowsOneCol: React.FC<TemplatesProps> = ({ page, lang }) => {
         </IonRow>
         <IonRow
           className="ion-align-items-center"
-          style={{ width: '90vw', margin: '0 auto' }}
+          style={{ width: '95vw', margin: '0 auto' }}
         >
           <IonCol>
             <PageSectionTemplate section={section2} lang={lang} />

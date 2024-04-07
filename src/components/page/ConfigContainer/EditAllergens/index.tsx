@@ -24,7 +24,13 @@ import {
 
 import { reorderFourOutline } from 'ionicons/icons';
 
-import { Allergenic, DisplayInfo, Product, Image } from 'definitions/models';
+import {
+  Allergenic,
+  DisplayInfo,
+  Product,
+  Image
+} from '../../../../definitions/models';
+import { useMutation } from '../../../../hooks/useMutation';
 
 interface EditAllergensProps {
   product: Product;
@@ -35,6 +41,21 @@ const customSelectProps = {
 };
 
 const EditAllergens: React.FC<EditAllergensProps> = ({ product }) => {
+  const { mutate: reorderAllergens } = useMutation({
+    resource: 'items',
+    action: 'reorder'
+  });
+
+  const { mutate: addAllergens } = useMutation({
+    resource: 'items',
+    action: 'add'
+  });
+
+  const { mutate: removeAllergens } = useMutation({
+    resource: 'items',
+    action: 'remove'
+  });
+
   const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
     {
       key: 'generalInfo'
@@ -64,34 +85,44 @@ const EditAllergens: React.FC<EditAllergensProps> = ({ product }) => {
   const [disabledReorderItems, setDisabledReorderItems] = useState(true);
   const [itemIdValue, setItemIdValue] = useState<string>('');
 
-  const doReorder = (event: CustomEvent<ItemReorderEventDetail>) => {
+  const doReorderAllergens = (event: CustomEvent<ItemReorderEventDetail>) => {
     const from = event.detail.from;
     const to = event.detail.to;
-    // reorder({ entity: 'allergenic', entityId: product.id, from, to });
+
+    reorderAllergens({
+      entity: 'allergenic',
+      entityId: product.id,
+      from,
+      to
+    });
 
     event.detail.complete();
   };
 
   const doAddAllergenic = (allergenicId: string) => {
-    // add({ entity: 'allergenic', entityId: product.id, itemId: allergenicId });
+    addAllergens({
+      entity: 'allergenic',
+      entityId: product.id,
+      itemId: allergenicId
+    });
   };
 
-  const doDeleteAllergenic = (allergenicId: string) => {
-    // remove({
-    //   action: 'one',
-    //   entity: 'allergenic',
-    //   entityId: product.id,
-    //   itemId: allergenicId
-    // });
+  const doRemoveAllergenic = (allergenicId: string) => {
+    removeAllergens({
+      action: 'one',
+      entity: 'allergenic',
+      entityId: product.id,
+      itemId: allergenicId
+    });
   };
 
-  const doDeleteAllAllergens = () => {
-    // remove({
-    //   action: 'many',
-    //   entity: 'allergenic',
-    //   entityId: product.id,
-    //   items: product.allergens
-    // });
+  const doRemoveAllAllergens = () => {
+    removeAllergens({
+      action: 'many',
+      entity: 'allergenic',
+      entityId: product.id,
+      items: product.allergens
+    });
   };
 
   return (
@@ -124,7 +155,7 @@ const EditAllergens: React.FC<EditAllergensProps> = ({ product }) => {
           <IonButton
             disabled={!disabledReorderItems}
             color="danger"
-            onClick={doDeleteAllAllergens}
+            onClick={doRemoveAllAllergens}
           >
             Borrar Todo
           </IonButton>
@@ -158,7 +189,7 @@ const EditAllergens: React.FC<EditAllergensProps> = ({ product }) => {
       )}
       <IonReorderGroup
         disabled={disabledReorderItems}
-        onIonItemReorder={doReorder}
+        onIonItemReorder={doReorderAllergens}
       >
         {product.allergens!.map((allergenicId: string) => {
           const allergenic: Allergenic = allergens[allergenicId];
@@ -172,7 +203,7 @@ const EditAllergens: React.FC<EditAllergensProps> = ({ product }) => {
                 {disabledReorderItems && (
                   <IonItemOption
                     onClick={() => {
-                      doDeleteAllergenic(allergenicId);
+                      doRemoveAllergenic(allergenicId);
                     }}
                     color="danger"
                     expandable

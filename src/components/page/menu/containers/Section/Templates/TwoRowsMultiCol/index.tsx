@@ -82,7 +82,7 @@ const TwoRowsMultiCol: React.FC<TemplatesProps> = ({ section, lang }) => {
             : '40vh',
           width: sectionStyles.img?.rowWidth
             ? sectionStyles.img?.rowWidth
-            : '80vw',
+            : '70vw',
           margin: '0 auto',
           padding: '.5em'
         }}

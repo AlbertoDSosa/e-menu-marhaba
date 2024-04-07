@@ -4,8 +4,7 @@ import { Product, Price } from 'definitions/models';
 import { IonLabel, IonItem, IonIcon, IonInput } from '@ionic/react';
 
 import { createOutline, saveOutline, closeCircleOutline } from 'ionicons/icons';
-
-// import { useData } from '../../../../contexts/DataContext';
+import { useMutation } from '../../../../hooks/useMutation';
 
 interface PriceInputProps {
   product: Product;
@@ -13,16 +12,20 @@ interface PriceInputProps {
 
 const PriceInput: React.FC<PriceInputProps> = ({ product }) => {
   const { price } = product;
-
+  const { mutate: updatePrice } = useMutation({
+    resource: 'items',
+    action: 'update'
+  });
   const [showPriceInput, setShowPriceInput] = useState(false);
   const [priceValue, setPriceValue] = useState<string>(price.amount);
 
-  const updatePrice = (price: Price) => {
-    // update({
-    //   field: 'price',
-    //   entity: 'item',
-    //   payload: { id: product.id, price }
-    // });
+  const doUpdatePrice = (newPrice: Price) => {
+    updatePrice({
+      field: 'price',
+      entity: 'item',
+      payload: { id: product.id, price: newPrice }
+    });
+
     setShowPriceInput(!showPriceInput);
   };
 
@@ -44,7 +47,9 @@ const PriceInput: React.FC<PriceInputProps> = ({ product }) => {
           <IonLabel>Precio: </IonLabel>
           <IonInput
             value={priceValue}
-            onIonChange={(e) => setPriceValue(e.detail.value || '')}
+            onIonInput={(e) => {
+              setPriceValue(e.detail.value || '');
+            }}
           />
           <IonIcon
             icon={closeCircleOutline}
@@ -59,7 +64,7 @@ const PriceInput: React.FC<PriceInputProps> = ({ product }) => {
             icon={saveOutline}
             size="large"
             color="dark"
-            onClick={() => updatePrice({ amount: priceValue })}
+            onClick={(e) => doUpdatePrice({ amount: priceValue })}
           />
         </>
       )}

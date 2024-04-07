@@ -115,14 +115,16 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       }
     },
     items: [
-      'listItem->product->meals->starters->vegetable-and-meat-soup-1',
-      'listItem->product->meals->starters->arab-patty-with-cheese-and-honey-2',
-      'listItem->product->meals->starters->arab-patty-with-vegetables-3',
-      'listItem->product->meals->starters->arab-patty-with-spinach-4',
-      'listItem->product->meals->starters->arab-patty-with-chicken-and-spices-5',
-      'listItem->product->meals->starters->arab-patty-with-meat-and-pinions-6',
-      'listItem->product->meals->starters->chickpeas-croquettes-7',
-      'listItem->product->meals->starters->arab-patty-with-seadfood-8'
+      'listItem->product->meals->starters->pan-arabe-1',
+      'listItem->product->meals->starters->pan-con-alioli-2',
+      'listItem->product->meals->starters->vegetable-and-meat-soup-3',
+      'listItem->product->meals->starters->arab-patty-with-cheese-and-honey-4',
+      'listItem->product->meals->starters->arab-patty-with-vegetables-5',
+      'listItem->product->meals->starters->arab-patty-with-spinach-6',
+      'listItem->product->meals->starters->arab-patty-with-chicken-and-spices-7',
+      'listItem->product->meals->starters->arab-patty-with-meat-and-pinions-8',
+      'listItem->product->meals->starters->chickpeas-croquettes-9',
+      'listItem->product->meals->starters->arab-patty-with-seadfood-10'
     ]
   } as ProductList,
   'list->meals->starters-2': {
@@ -178,13 +180,15 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       }
     },
     items: [
-      'listItem->product->meals->starters->spinachs-croquettes-9',
-      'listItem->product->meals->starters->lamb-croquettes-10',
-      'listItem->product->meals->starters->hummus-11',
-      'listItem->product->meals->starters->-12',
-      'listItem->product->meals->starters->-13',
-      'listItem->product->meals->starters->-14',
-      'listItem->product->meals->starters->-15'
+      'listItem->product->meals->starters->pastela-de-pollo-con-almendra-11',
+      'listItem->product->meals->starters->spinachs-croquettes-12',
+      'listItem->product->meals->starters->lamb-croquettes-13',
+      'listItem->product->meals->starters->croquetas-de-datiles-con-pera-14',
+      'listItem->product->meals->starters->hummus-15',
+      'listItem->product->meals->starters->hummus-lenteja-16',
+      'listItem->product->meals->starters->zaaluk-17',
+      'listItem->product->meals->starters->ensalada-cous-cous-18',
+      'listItem->product->meals->starters->ensalada-pollo-crujiente-19'
     ]
   } as ProductList,
   'list->meals->starters-3': {
@@ -240,13 +244,15 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       }
     },
     items: [
-      'listItem->product->meals->starters->-16',
-      'listItem->product->meals->starters->-17',
-      'listItem->product->meals->starters->-18',
-      'listItem->product->meals->starters->-19',
-      'listItem->product->meals->starters->-20',
-      'listItem->product->meals->starters->-21',
-      'listItem->product->meals->starters->-22'
+      'listItem->product->meals->starters->ensalada-marroqui-20',
+      'listItem->product->meals->starters->ensalada-gourmet-21',
+      'listItem->product->meals->starters->berengenas-miel-22',
+      'listItem->product->meals->starters->berenjenas-rellenas-de-ternera-23',
+      'listItem->product->meals->starters->pulpo-brasa-24',
+      'listItem->product->meals->starters->queso-ahumado-25',
+      'listItem->product->meals->starters->chistorras-morunas-26',
+      'listItem->product->meals->starters->marchica-27',
+      'listItem->product->meals->starters->gambas-al-pil-pil-28'
     ]
   } as ProductList,
   'list->meals->skewers': {
@@ -299,21 +305,22 @@ export const lists: { [key: string]: ProductList | InfoList } = {
         slug: ''
       },
       fr: {
-        title: '',
-        extraInfo: '',
-        slug: ''
+        title: 'Brochettes',
+        extraInfo: '(Garniture de pommes de terre et de légumes)',
+        slug: 'brochettes'
       },
       nl: {
-        title: '',
-        extraInfo: '',
-        slug: ''
+        title: 'Sjasliek',
+        extraInfo: '(Geserveerd met frieten en groenten)',
+        slug: 'sjasliek'
       }
     },
     items: [
-      'listItem->product->meals->skewers->-1',
-      'listItem->product->meals->skewers->-2',
-      'listItem->product->meals->skewers->-3',
-      'listItem->product->meals->skewers->-4'
+      'listItem->product->meals->skewers->pinchitos-de-pollo-1',
+      'listItem->product->meals->skewers->pinchitos-de-ternera-2',
+      'listItem->product->meals->skewers->pinchitos-de-cordero-3',
+      'listItem->product->meals->skewers->pinchitos-vegetarianos-4',
+      'listItem->product->meals->skewers->mar-y-tierra-5'
     ]
   } as ProductList,
   'list->meals->cous-cous': {
@@ -333,7 +340,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     selectableItems: [],
     editable: false,
     maxItems: 12,
-    categories: ['category->meals->default'],
+    categories: ['category->meals->cous-cous'],
     displayInfo: {
       es: {
         title: 'Cous Cous',
@@ -360,21 +367,21 @@ export const lists: { [key: string]: ProductList | InfoList } = {
         slug: ''
       },
       fr: {
-        title: '',
-        slug: ''
+        title: 'Cous Cous',
+        slug: 'cous-cous'
       },
       nl: {
-        title: '',
-        slug: ''
+        title: 'Cous Cous',
+        slug: 'cous-cous'
       }
     },
     items: [
-      'listItem->product->meals->cous-cous->-1',
-      'listItem->product->meals->cous-cous->-2',
-      'listItem->product->meals->cous-cous->-3',
-      'listItem->product->meals->cous-cous->-4',
-      'listItem->product->meals->cous-cous->-5',
-      'listItem->product->meals->cous-cous->-6'
+      'listItem->product->meals->cous-cous->cous-cous-de-verduras-1',
+      'listItem->product->meals->cous-cous->cous-cous-de-pollo-2',
+      'listItem->product->meals->cous-cous->cous-cous-de-ternera-3',
+      'listItem->product->meals->cous-cous->cous-cous-de-cordero-4',
+      'listItem->product->meals->cous-cous->cous-cous-de-marisco-5',
+      'listItem->product->meals->cous-cous->cous-cous-de-carne-vegetal-6'
     ]
   } as ProductList,
   'list->meals->tajin': {
@@ -392,7 +399,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: false,
     editable: true,
     maxItems: 8,
-    template: 'template->list->default',
+    template: 'template->list->meals->short-title',
     categories: [],
     displayInfo: {
       es: {
@@ -404,8 +411,8 @@ export const lists: { [key: string]: ProductList | InfoList } = {
         slug: 'tajin'
       },
       de: {
-        title: 'Tajin',
-        slug: 'tajin'
+        title: 'Tajine',
+        slug: 'tajine'
       },
       nb: {
         title: '',
@@ -420,1627 +427,94 @@ export const lists: { [key: string]: ProductList | InfoList } = {
         slug: ''
       },
       fr: {
-        title: '',
-        slug: ''
+        title: 'Tajine',
+        slug: 'tajine'
       },
       nl: {
-        title: '',
-        slug: ''
+        title: 'Tajine',
+        slug: 'tajine'
       }
     },
     selectableItems: [],
     items: [
-      'listItem->product->meals->tajin->-1',
-      'listItem->product->meals->tajin->-2',
-      'listItem->product->meals->tajin->-3',
-      'listItem->product->meals->tajin->-4',
-      'listItem->product->meals->tajin->-5'
+      'listItem->product->meals->tajin->tajin-de-ternera-1',
+      'listItem->product->meals->tajin->tajin-de-pollo-2',
+      'listItem->product->meals->tajin->tajin-de-cordero-3',
+      'listItem->product->meals->tajin->tajin-de-kafta-4',
+      'listItem->product->meals->tajin->tajin-con-carne-vegetal-5'
     ]
   } as ProductList,
-  'list->meals->salads': {
-    id: 'list->meals->salads',
+  'list->meals->specials': {
+    id: 'list->meals->specials',
     type: 'product',
-    active: true,
+    active: false,
     defaultImg: '',
     mainImg: '',
     sortable: true,
     hasVariants: false,
     variants: '',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->salads'],
-    displayInfo: {
-      es: {
-        title: 'Ensaladas',
-        slug: 'ensaladas'
-      },
-      en: {
-        title: 'Salads',
-        slug: 'salads'
-      },
-      de: {
-        title: 'Salate',
-        slug: 'salate'
-      },
-      nb: {
-        title: 'Salater',
-        slug: 'salater'
-      },
-      da: {
-        title: 'Salater',
-        slug: 'salater'
-      },
-      sv: {
-        title: 'Sallader',
-        slug: 'sallader'
-      },
-      fr: {
-        title: 'Salades',
-        slug: 'salades'
-      },
-      nl: {
-        title: 'Verfrissend',
-        slug: 'verfrissend'
-      }
-    },
-    items: [
-      'listItem->product->meals->-1',
-      'listItem->product->meals->-2',
-      'listItem->product->meals->-3',
-      'listItem->product->meals->-4'
-    ]
-  } as ProductList,
-  'list->meals->spoon-dishes': {
-    id: 'list->meals->spoon-dishes',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->meals->short-title',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->spoon-dishes'],
-    displayInfo: {
-      es: {
-        title: 'Platos de Cuchara',
-        slug: 'platos-de-cuchara'
-      },
-      en: {
-        title: 'Spoon dishes',
-        slug: 'spoon-dishes'
-      },
-      de: {
-        title: 'Löffelgerichte',
-        slug: 'loffelgerichte'
-      },
-      nb: {
-        title: 'Skje retter',
-        slug: 'skje-retter'
-      },
-      da: {
-        title: 'Ske retter',
-        slug: 'ske-retter'
-      },
-      sv: {
-        title: 'Sked rätter',
-        slug: 'sked-ratter'
-      },
-      fr: {
-        title: 'Plats à la Cuillère',
-        slug: 'plats-a-la-cuillere'
-      },
-      nl: {
-        title: 'Lepel gerechten',
-        slug: 'lepel-gerechten'
-      }
-    },
-    items: [
-      'listItem->product->meals->spoon-dishes->-1',
-      'listItem->product->meals->spoon-dishes->-2',
-      'listItem->product->meals->spoon-dishes->-3',
-      'listItem->product->meals->spoon-dishes->-4',
-      'listItem->product->meals->spoon-dishes->-5',
-      'listItem->product->meals->spoon-dishes->-6'
-    ]
-  } as ProductList,
-  'list->meals->garnishes-or-side-dishes': {
-    id: 'list->meals->garnishes-or-side-dishes',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
+    show: false,
     showDescription: false,
     showExtraInfo: true,
     showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->garnishes-or-side-dishes'],
-    displayInfo: {
-      es: {
-        extraInfo: '(lleva un suplemento - 2,50 €)',
-        title: 'Guarniciones',
-        slug: 'guarniciones'
-      },
-      en: {
-        extraInfo: '(carry a surcharge - 2,50 €)',
-        title: 'Garnishes or Side Dishes',
-        slug: 'garnishes-or-side-dishes'
-      },
-      de: {
-        extraInfo: '(gegen Aufpreis - 2,50 €)',
-        title: 'Beilagen',
-        slug: 'beilagen'
-      },
-      nb: {
-        extraInfo: '(supplement i pris - 2,50 €)',
-        title: 'Garnityrer',
-        slug: 'garnityrer'
-      },
-      da: {
-        extraInfo: '(mod ekstra betaling - 2,50 €)',
-        title: 'Garniture',
-        slug: 'garniture'
-      },
-      sv: {
-        extraInfo: '(bär ett tillägg - 2,50 €)',
-        title: 'Garnering',
-        slug: 'garnering'
-      },
-      fr: {
-        extraInfo: '(avec supplément - 2,50 €)',
-        title: 'Accompagnements',
-        slug: 'accompagnements'
-      },
-      nl: {
-        extraInfo: '(Met toeslag - 2,50 €)',
-        title: 'Bijgerechten',
-        slug: 'bijgerechten'
-      }
-    },
-    items: [
-      'listItem->product->meals->garnishes-or-side-dishes->chips-1',
-      'listItem->product->meals->garnishes-or-side-dishes->wrinkled-potatoes-2',
-      'listItem->product->meals->garnishes-or-side-dishes->sweet-potato-fries-3',
-      'listItem->product->meals->garnishes-or-side-dishes->salad-4',
-      'listItem->product->meals->garnishes-or-side-dishes->basmati-rice-5',
-      'listItem->product->meals->garnishes-or-side-dishes->ratatouille-6'
-    ]
-  } as ProductList,
-  'list->meals->breakfasts': {
-    id: 'list->meals->breakfasts',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: false,
     template: 'template->list->meals->short-title',
     selectableItems: [],
     editable: false,
     maxItems: 12,
-    categories: ['category->meals->breakfasts'],
+    categories: ['category->meals->specials'],
     displayInfo: {
       es: {
-        title: 'Desayunos',
-        slug: 'desayunos'
+        title: 'Especialidades',
+        slug: 'especialidades',
+        extraInfo: 'servidos con guarnición'
       },
       en: {
-        title: 'Breakfasts',
-        slug: 'breakfasts'
+        title: 'Specials',
+        slug: 'specials',
+        extraInfo: 'served with garnish'
       },
       de: {
-        title: 'Frühstück',
-        slug: 'fruhstuck'
+        title: 'Spezialitäten',
+        slug: 'spezialitaten',
+        extraInfo: 'mit Beilagen'
       },
       nb: {
-        title: 'Frokoster',
-        slug: 'frokoster'
+        title: '',
+        slug: '',
+        extraInfo: ''
       },
       da: {
-        title: 'Morgenmad',
-        slug: 'morgenmad'
+        title: '',
+        slug: '',
+        extraInfo: ''
       },
       sv: {
-        title: 'Frukostar',
-        slug: 'frukostar'
+        title: '',
+        slug: '',
+        extraInfo: ''
       },
       fr: {
-        title: 'Petits déjeuners',
-        slug: 'petits-dejeuners'
+        title: 'Spécialité',
+        slug: 'specialite',
+        extraInfo: 'avec garniture'
       },
       nl: {
-        title: 'Ontbijten',
-        slug: 'ontbijten'
+        title: 'Specialiteit',
+        slug: 'specialiteit',
+        extraInfo: 'met garnituur'
       }
     },
     items: [
-      'listItem->product->meals->breakfasts->-1',
-      'listItem->product->meals->breakfasts->-2',
-      'listItem->product->meals->breakfasts->-3',
-      'listItem->product->meals->breakfasts->-4',
-      'listItem->product->meals->breakfasts->-5',
-      'listItem->product->meals->breakfasts->-6'
+      'listItem->product->meals->specials->chuletas-de-cordero-1',
+      'listItem->product->meals->specials->calamar-a-la-brasa-2',
+      'listItem->product->meals->specials->atun-rojo-a-la-brasa-3',
+      'listItem->product->meals->specials->t-bone-a-la-brasa-4',
+      'listItem->product->meals->specials->solomillo-a-la-brasa-5',
+      'listItem->product->meals->specials->hamburguesa-atun-rojo-6',
+      'listItem->product->meals->specials->hamburguesa-de-pollo-7',
+      'listItem->product->meals->specials->hamburguesa-de-ternera-8'
     ]
   } as ProductList,
-  'list->meals->sandwich': {
-    id: 'list->meals->sandwich',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->sandwich'],
-    displayInfo: {
-      es: {
-        title: 'Bocadillos',
-        slug: 'bocadillos'
-      },
-      en: {
-        title: 'Sandwich',
-        slug: 'sandwich'
-      },
-      de: {
-        title: 'Snacks',
-        slug: 'snacks'
-      },
-      nb: {
-        title: 'Snacks',
-        slug: 'snacks'
-      },
-      da: {
-        title: 'Snacks',
-        slug: 'snacks'
-      },
-      sv: {
-        title: 'Snacks',
-        slug: 'snacks'
-      },
-      fr: {
-        title: 'Collations',
-        slug: 'collations'
-      },
-      nl: {
-        title: 'Tussendoortjes',
-        slug: 'tussendoortjes'
-      }
-    },
-    items: [
-      'listItem->product->meals->sandwich->-1',
-      'listItem->product->meals->sandwich->-2',
-      'listItem->product->meals->sandwich->-3',
-      'listItem->product->meals->sandwich->-4',
-      'listItem->product->meals->sandwich->-5',
-      'listItem->product->meals->sandwich->-6'
-    ]
-  } as ProductList,
-  'list->meals->childrens': {
-    id: 'list->meals->childrens',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: false,
-    template: 'template->list->meals->short-title',
-    selectableItems: [
-      'listItem->product->meals->childrens->grilled-fish-with-side-dishes-2',
-      'listItem->product->meals->childrens->nuggets-with-french-fries-5'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->childrens'],
-    displayInfo: {
-      es: {
-        title: 'Menú Infantil',
-        slug: 'menu-infantil'
-      },
-      en: {
-        title: `Children's Menu`,
-        slug: 'children-s-menu'
-      },
-      de: {
-        title: 'Kindermenü',
-        slug: 'kindermenu'
-      },
-      nb: {
-        title: 'Meny for de Små',
-        slug: 'meny-for-de-sma'
-      },
-      da: {
-        title: 'Børnemenu',
-        slug: 'bornemenu'
-      },
-      sv: {
-        title: 'Meny för Barnen',
-        slug: 'meny-for-barnen'
-      },
-      fr: {
-        title: 'Menu Enfant',
-        slug: 'menu-enfant'
-      },
-      nl: {
-        title: 'Kindermenu',
-        slug: 'kindermenu'
-      }
-    },
-    items: [
-      'listItem->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1',
-      'listItem->product->meals->childrens->ham-and-cheese-omelette-6',
-      'listItem->product->meals->childrens->hamburger-with-tomato-and-cheese-3',
-      'listItem->product->meals->childrens->pizza-4'
-    ]
-  } as ProductList,
-  'list->drinks->refreshments': {
-    id: 'list->drinks->refreshments',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->drinks',
-    selectableItems: [
-      'listItem->product->drinks->refreshments->pepsi-light-2',
-      'listItem->product->drinks->refreshments->orange-juice-11',
-      'listItem->product->drinks->refreshments->multifruit-juice-12',
-      'listItem->product->drinks->refreshments->tomato-juice-15'
-    ],
-    editable: false,
-    maxItems: 20,
-    listItemsForCol: 10,
-    categories: ['category->drinks->refreshments'],
-    displayInfo: {
-      es: {
-        title: 'Refrescos',
-        slug: 'refrescos'
-      },
-      en: {
-        title: 'Refreshments',
-        slug: 'refreshments'
-      },
-      de: {
-        title: 'Erfrischungen',
-        slug: 'erfrischungen'
-      },
-      nb: {
-        title: 'Forfriskninger',
-        slug: 'forfriskninger'
-      },
-      da: {
-        title: 'Forfriskninger',
-        slug: 'forfriskninger'
-      },
-      sv: {
-        title: 'Förfriskningar',
-        slug: 'forfriskningar'
-      },
-      fr: {
-        title: 'Rafraîchissements',
-        slug: 'rafraichissements'
-      },
-      nl: {
-        title: 'Verfrissingen',
-        slug: 'verfrissingen'
-      }
-    },
-    items: [
-      'listItem->product->drinks->refreshments->pepsi-1',
-      'listItem->product->drinks->refreshments->pepsi-max-3',
-      'listItem->product->drinks->refreshments->schweppes-orange-4',
-      'listItem->product->drinks->refreshments->schweppes-lemon-5',
-      'listItem->product->drinks->refreshments->seven-up-6',
-      'listItem->product->drinks->refreshments->appletiser-7',
-      'listItem->product->drinks->refreshments->tonic-8',
-      'listItem->product->drinks->refreshments->soda-jug-18',
-      'listItem->product->drinks->refreshments->lipton-tea-9',
-      'listItem->product->drinks->refreshments->peach-juice-10',
-      'listItem->product->drinks->refreshments->apple-juice-13',
-      'listItem->product->drinks->refreshments->pear-pineapple-juice-14',
-      'listItem->product->drinks->refreshments->mineral-water-16',
-      'listItem->product->drinks->refreshments->soda-water-17',
-      'listItem->product->drinks->refreshments->natural-orange-juice-19'
-    ]
-  } as ProductList,
-  'list->drinks->beers': {
-    id: 'list->drinks->beers',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->drinks',
-    selectableItems: [
-      'listItem->product->drinks->beers->1906-reserva-especial-5',
-      'listItem->product->drinks->beers->judas-9',
-      'listItem->product->drinks->beers->mort-subite-10',
-      'listItem->product->drinks->beers->peroni-12'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->drinks->beers'],
-    displayInfo: {
-      es: {
-        title: 'Cervezas',
-        slug: 'cervezas'
-      },
-      en: {
-        title: 'Beers',
-        slug: 'beers'
-      },
-      de: {
-        title: 'Biere',
-        slug: 'biere'
-      },
-      nb: {
-        title: 'Øl',
-        slug: 'ol'
-      },
-      da: {
-        title: 'Øl',
-        slug: 'ol'
-      },
-      sv: {
-        title: 'Öl',
-        slug: 'ol'
-      },
-      fr: {
-        title: 'Bières',
-        slug: 'bieres'
-      },
-      nl: {
-        title: 'Bieren',
-        slug: 'bieren'
-      }
-    },
-    items: [
-      'listItem->product->drinks->beers->beer-cane-1',
-      'listItem->product->drinks->beers->beer-jar-2',
-      'listItem->product->drinks->beers->cruzcampo-especial-3',
-      'listItem->product->drinks->beers->el-aguila-sin-filtrar-4',
-      'listItem->product->drinks->beers->coronita-6',
-      'listItem->product->drinks->beers->desperados-7',
-      'listItem->product->drinks->beers->heineken-8',
-      'listItem->product->drinks->beers->paulaner-11',
-      'listItem->product->drinks->beers->raddler-13',
-      'listItem->product->drinks->beers->18-70-14',
-      'listItem->product->drinks->beers->sin-gluten-15'
-    ]
-  } as ProductList,
-  'list->drinks->coffee-shop': {
-    id: 'list->drinks->coffee-shop',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: false,
-    template: 'template->list->drinks',
-    selectableItems: [],
-    editable: false,
-    maxItems: 10,
-    categories: ['category->meals->coffee-shop'],
-    displayInfo: {
-      es: {
-        title: 'Cafetería',
-        slug: 'cafeteria'
-      },
-      en: {
-        title: 'Coffee Shop',
-        slug: 'coffee-shop'
-      },
-      de: {
-        title: 'Café',
-        slug: 'cafe'
-      },
-      nb: {
-        title: 'Kaffebutikk',
-        slug: 'kaffebutikk'
-      },
-      da: {
-        title: 'Kaffebar',
-        slug: 'kaffebar'
-      },
-      sv: {
-        title: 'Kafé',
-        slug: 'kafe'
-      },
-      fr: {
-        title: 'Café',
-        slug: 'cafe'
-      },
-      nl: {
-        title: 'Cafetaria',
-        slug: 'cafetaria'
-      }
-    },
-    items: [
-      'listItem->product->drinks->coffee-shop->black-coffe-or-expresso-1',
-      'listItem->product->drinks->coffee-shop->cut-coffee-2',
-      'listItem->product->drinks->coffee-shop->coffee-with-milk-3',
-      'listItem->product->drinks->coffee-shop->coffee-with-condensed-milk-4',
-      'listItem->product->drinks->coffee-shop->cola-cao-5',
-      'listItem->product->drinks->coffee-shop->cappuccino-6',
-      'listItem->product->drinks->coffee-shop->irish-coffee-7',
-      'listItem->product->drinks->coffee-shop->french-coffee-8',
-      'listItem->product->drinks->coffee-shop->infusion-9'
-    ]
-  } as ProductList,
-  'list->drinks->rums': {
-    id: 'list->drinks->rums',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->drinks',
-    selectableItems: ['listItem->product->drinks->rums->artemi-6'],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->rums'],
-    displayInfo: {
-      es: {
-        title: 'Rones',
-        slug: 'rones'
-      },
-      en: {
-        title: 'Rums',
-        slug: 'rums'
-      },
-      de: {
-        title: 'Rum',
-        slug: 'rum'
-      },
-      nb: {
-        title: 'Rom',
-        slug: 'rom'
-      },
-      da: {
-        title: 'Rom',
-        slug: 'rom'
-      },
-      sv: {
-        title: 'Rum',
-        slug: 'rum'
-      },
-      fr: {
-        title: 'Rhums',
-        slug: 'rhums'
-      },
-      nl: {
-        title: 'Rum',
-        slug: 'rum'
-      }
-    },
-    items: [
-      'listItem->product->drinks->rums->arehucas-1',
-      'listItem->product->drinks->rums->bacardy-2',
-      'listItem->product->drinks->rums->matusalem-3',
-      'listItem->product->drinks->rums->zacapa-4',
-      'listItem->product->drinks->rums->house-honey-rum-5',
-      'listItem->product->drinks->rums->shot-7',
-      'listItem->product->drinks->rums->havana-club-3-8',
-      'listItem->product->drinks->rums->havana-club-7-9',
-      'listItem->product->drinks->rums->flor-de-cana-7-10',
-      'listItem->product->drinks->rums->diplomatico-11'
-    ]
-  } as ProductList,
-  'list->drinks->whiskies': {
-    id: 'list->drinks->whiskies',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->meals->short-title',
-    selectableItems: [
-      'listItem->product->drinks->whiskies->jhon-haig-4',
-      'listItem->product->drinks->whiskies->house-whisky-6',
-      'listItem->product->drinks->whiskies->100-pipers-7',
-      'listItem->product->drinks->whiskies->ballantines-8',
-      'listItem->product->drinks->whiskies->chivas-regal-12-10',
-      'listItem->product->drinks->whiskies->jack-daniels-12'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->whiskies'],
-    displayInfo: {
-      es: {
-        title: 'Whiskies',
-        slug: 'whiskies'
-      },
-      en: {
-        title: 'Whiskeys',
-        slug: 'whiskeys'
-      },
-      de: {
-        title: 'Whiskys',
-        slug: 'whiskys'
-      },
-      nb: {
-        title: 'Whisky',
-        slug: 'whisky'
-      },
-      da: {
-        title: 'Whisky',
-        slug: 'whisky'
-      },
-      sv: {
-        title: 'Whisky',
-        slug: 'whisky'
-      },
-      fr: {
-        title: 'Whiskies',
-        slug: 'whiskies'
-      },
-      nl: {
-        title: 'Whisky',
-        slug: 'whisky'
-      }
-    },
-    items: [
-      'listItem->product->drinks->whiskies->tullamore-dew-1',
-      'listItem->product->drinks->whiskies->red-label-2',
-      'listItem->product->drinks->whiskies->black-label-3',
-      'listItem->product->drinks->whiskies->lagavulin-16-5',
-      'listItem->product->drinks->whiskies->chanceler-9',
-      'listItem->product->drinks->whiskies->j-and-b-11'
-    ]
-  } as ProductList,
-  'list->drinks->gins': {
-    id: 'list->drinks->gins',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->drinks',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->gins'],
-    displayInfo: {
-      es: {
-        title: 'Ginebras',
-        slug: 'ginebras'
-      },
-      en: {
-        title: 'Gins',
-        slug: 'gins'
-      },
-      de: {
-        title: 'Gins',
-        slug: 'gins'
-      },
-      nb: {
-        title: 'Gins',
-        slug: 'gins'
-      },
-      da: {
-        title: 'Gins',
-        slug: 'gins'
-      },
-      sv: {
-        title: 'Gins',
-        slug: 'gins'
-      },
-      fr: {
-        title: 'Gins',
-        slug: 'gins'
-      },
-      nl: {
-        title: 'Gin',
-        slug: 'gin'
-      }
-    },
-    items: [
-      'listItem->product->drinks->gins->gordons-1',
-      'listItem->product->drinks->gins->beefeater-2',
-      'listItem->product->drinks->gins->bombay-sapphire-3',
-      'listItem->product->drinks->gins->hendricks-4',
-      'listItem->product->drinks->gins->tanqueray-5',
-      'listItem->product->drinks->gins->martin-millers-6',
-      'listItem->product->drinks->gins->bulldog-7',
-      'listItem->product->drinks->gins->gvine-8',
-      'listItem->product->drinks->gins->house-gin-9',
-      'listItem->product->drinks->gins->macaronesian-10',
-      'listItem->product->drinks->gins->royal-kingston-11'
-    ]
-  } as ProductList,
-  'list->drinks->cognac-and-brandy': {
-    id: 'list->drinks->cognac-and-brandy',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->meals->short-title',
-    selectableItems: [
-      'listItem->product->drinks->cognac-and-brandy->gran-duque-de-alba-3',
-      'listItem->product->drinks->cognac-and-brandy->pedro-3-4',
-      'listItem->product->drinks->cognac-and-brandy->alma-de-magno-7',
-      'listItem->product->drinks->cognac-and-brandy->carlos-3-10',
-      'listItem->product->drinks->cognac-and-brandy->remy-martin-vsop-11',
-      'listItem->product->drinks->cognac-and-brandy->torres-5-12'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->cognac-and-brandy'],
-    displayInfo: {
-      es: {
-        title: 'Coñac y Brandy',
-        slug: 'cognac'
-      },
-      en: {
-        title: 'Cognac and Brandy',
-        slug: 'cognac-and-brandy'
-      },
-      de: {
-        title: 'Cognac und Brandy',
-        slug: 'cognac-und-brandy'
-      },
-      nb: {
-        title: 'Cognac og konjakk',
-        slug: 'cognac-og-konjakk'
-      },
-      da: {
-        title: 'Cognac og brandy',
-        slug: 'cognac-og-brandy'
-      },
-      sv: {
-        title: 'Cognac och konjak',
-        slug: 'cognac-och-konjak'
-      },
-      fr: {
-        title: 'Cognac et eau-de-vie',
-        slug: 'cognac-et-eau-de-vie'
-      },
-      nl: {
-        title: 'Cognac en Brandy',
-        slug: 'cognac-en-brandy'
-      }
-    },
-    items: [
-      'listItem->product->drinks->cognac-and-brandy->veterano-1',
-      'listItem->product->drinks->cognac-and-brandy->carlos-1-2',
-      'listItem->product->drinks->cognac-and-brandy->magno-5',
-      'listItem->product->drinks->cognac-and-brandy->103-etiqueta-blanca-6',
-      'listItem->product->drinks->cognac-and-brandy->brandy-local-8',
-      'listItem->product->drinks->cognac-and-brandy->cardenal-de-mendoza-9'
-    ]
-  } as ProductList,
-  'list->drinks->vodkas': {
-    id: 'list->drinks->vodkas',
-    type: 'product',
-    active: true,
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->drinks',
-    defaultImg: 'image->list->aside-700-350-default',
-    mainImg: 'image->list->aside-700-350-vodka',
-    selectableItems: [
-      'listItem->product->drinks->vodkas->absolut-2',
-      'listItem->product->drinks->vodkas->aniuska-3'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->drinks->vodkas'],
-    displayInfo: {
-      es: {
-        title: 'Vodkas',
-        slug: 'vodkas'
-      },
-      en: {
-        title: 'Vodkas',
-        slug: 'vodkas'
-      },
-      de: {
-        title: 'Wodkas',
-        slug: 'wodkas'
-      },
-      nb: {
-        title: 'Vodkaer',
-        slug: 'vodkaer'
-      },
-      da: {
-        title: 'Vodkaer',
-        slug: 'vodkaer'
-      },
-      sv: {
-        title: 'Vodka',
-        slug: 'vodka'
-      },
-      fr: {
-        title: 'Vodkas',
-        slug: 'vodkas'
-      },
-      nl: {
-        title: 'Wodka',
-        slug: 'wodka'
-      }
-    },
-    items: [
-      'listItem->product->drinks->vodkas->smirnoff-red-1',
-      'listItem->product->drinks->vodkas->moskovskaya-4',
-      'listItem->product->drinks->vodkas->house-vodka-5'
-    ]
-  } as ProductList,
-  'list->drinks->ciders': {
-    id: 'list->drinks->ciders',
-    type: 'product',
-    active: true,
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->drinks',
-    defaultImg: 'image->list->aside-700-350-default',
-    mainImg: 'image->list->aside-700-350-cider',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->drinks->ciders'],
-    displayInfo: {
-      es: {
-        title: 'Sidras',
-        slug: 'sidras'
-      },
-      en: {
-        title: 'Ciders',
-        slug: 'ciders'
-      },
-      de: {
-        title: 'Apfelwein',
-        slug: 'apfelwein'
-      },
-      nb: {
-        title: 'Cider',
-        slug: 'cider'
-      },
-      da: {
-        title: 'Cider',
-        slug: 'cider'
-      },
-      sv: {
-        title: 'Cider',
-        slug: 'cider'
-      },
-      fr: {
-        title: 'Cidres',
-        slug: 'cidres'
-      },
-      nl: {
-        title: 'Cider',
-        slug: 'cider'
-      }
-    },
-    items: [
-      'listItem->product->drinks->ciders->ladron-de-manzanas-1',
-      'listItem->product->drinks->ciders->strongbow-2'
-    ]
-  } as ProductList,
-  'list->drinks->appetizers': {
-    id: 'list->drinks->appetizers',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->drinks',
-    selectableItems: ['listItem->product->drinks->appetizers->pernod-8'],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->appetizers'],
-    displayInfo: {
-      es: {
-        title: 'Aperitivos',
-        slug: 'aperitivos'
-      },
-      en: {
-        title: 'Appetizers',
-        slug: 'appetizers'
-      },
-      de: {
-        title: 'Vorspeisen',
-        slug: 'Vorspeisen'
-      },
-      nb: {
-        title: 'Forretter',
-        slug: 'forretter'
-      },
-      da: {
-        title: 'Forretter',
-        slug: 'forretter'
-      },
-      sv: {
-        title: 'Förrätter',
-        slug: 'forratter'
-      },
-      fr: {
-        title: 'Apéritifs',
-        slug: 'aperitifs'
-      },
-      nl: {
-        title: 'Voorgerechten',
-        slug: 'voorgerechten'
-      }
-    },
-    items: [
-      'listItem->product->drinks->appetizers->campari-1',
-      'listItem->product->drinks->appetizers->tio-pepe-2',
-      'listItem->product->drinks->appetizers->aperol-spritz-3',
-      'listItem->product->drinks->appetizers->hugo-spritz-9',
-      'listItem->product->drinks->appetizers->martini-bianco-4',
-      'listItem->product->drinks->appetizers->martini-dry-5',
-      'listItem->product->drinks->appetizers->martini-rosso-6',
-      'listItem->product->drinks->appetizers->oporto-7'
-    ]
-  } as ProductList,
-  'list->drinks->liqueurs': {
-    id: 'list->drinks->liqueurs',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: false,
-    template: 'template->list->drinks',
-    selectableItems: [
-      'listItem->product->drinks->liqueurs->gammel-dansk-2',
-      'listItem->product->drinks->liqueurs->benedictine-15',
-      'listItem->product->drinks->liqueurs->cynar-16',
-      'listItem->product->drinks->liqueurs->grand-marnier-cordon-jaune-18',
-      'listItem->product->drinks->liqueurs->grand-marnier-cordon-rouge-19',
-      'listItem->product->drinks->liqueurs->galliano-20',
-      'listItem->product->drinks->liqueurs->marie-brizard-24',
-      'listItem->product->drinks->liqueurs->ricard-26',
-      'listItem->product->drinks->liqueurs->peppermint-27'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->liqueurs'],
-    displayInfo: {
-      es: {
-        title: 'Licores',
-        slug: 'licores'
-      },
-      en: {
-        title: 'Liqueurs',
-        slug: 'liqueurs'
-      },
-      de: {
-        title: 'Spirituosen',
-        slug: 'spirituosen'
-      },
-      nb: {
-        title: 'Brennevin',
-        slug: 'brennevin'
-      },
-      da: {
-        title: 'Spiritus',
-        slug: 'spiritus'
-      },
-      sv: {
-        title: 'Sprit',
-        slug: 'sprit'
-      },
-      fr: {
-        title: 'Esprits',
-        slug: 'esprits'
-      },
-      nl: {
-        title: 'Geesten',
-        slug: 'geesten'
-      }
-    },
-    items: [
-      'listItem->product->drinks->liqueurs->aquavit-gammel-opland-1',
-      'listItem->product->drinks->liqueurs->jagermeister-3',
-      'listItem->product->drinks->liqueurs->fernet-branca-4',
-      'listItem->product->drinks->liqueurs->baileys-5',
-      'listItem->product->drinks->liqueurs->cointreau-6',
-      'listItem->product->drinks->liqueurs->frangelico-7',
-      'listItem->product->drinks->liqueurs->limoncello-8',
-      'listItem->product->drinks->liqueurs->drambuie-9',
-      'listItem->product->drinks->liqueurs->triple-seco-10',
-      'listItem->product->drinks->liqueurs->malibu-11',
-      'listItem->product->drinks->liqueurs->linie-aquavit-12',
-      'listItem->product->drinks->liqueurs->archers-peach-schnapps-13',
-      'listItem->product->drinks->liqueurs->banana-liqueur-14',
-      'listItem->product->drinks->liqueurs->tequila-17',
-      'listItem->product->drinks->liqueurs->grappa-21',
-      'listItem->product->drinks->liqueurs->licor-43-22',
-      'listItem->product->drinks->liqueurs->herbal-liquor-23',
-      'listItem->product->drinks->liqueurs->ramazzotti-25',
-      'listItem->product->drinks->liqueurs->sambuca-28',
-      'listItem->product->drinks->liqueurs->tia-maria-29',
-      'listItem->product->drinks->liqueurs->amaretto-30'
-    ]
-  } as ProductList,
-  'list->drinks->cocktails': {
-    id: 'list->drinks->cocktails',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->drinks',
-    selectableItems: [
-      'listItem->product->drinks->cocktails->caipirihnha-6',
-      'listItem->product->drinks->cocktails->cosmopolitan-3'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->cocktails'],
-    displayInfo: {
-      es: {
-        title: 'Cócteles',
-        slug: 'cocteles'
-      },
-      en: {
-        title: 'Cocktails',
-        slug: 'cocktails'
-      },
-      de: {
-        title: 'Cocktails',
-        slug: 'cocktails'
-      },
-      nb: {
-        title: 'Cocktailer',
-        slug: 'cocktailer'
-      },
-      da: {
-        title: 'Cocktails',
-        slug: 'cocktails'
-      },
-      sv: {
-        title: 'Cocktails',
-        slug: 'cocktails'
-      },
-      fr: {
-        title: 'Cocktails',
-        slug: 'cocktails'
-      },
-      nl: {
-        title: 'Cocktails',
-        slug: 'cocktails'
-      }
-    },
-    items: [
-      'listItem->product->drinks->cocktails->margarita-1',
-      'listItem->product->drinks->cocktails->moscow-mule-2',
-      'listItem->product->drinks->cocktails->mojito-4',
-      'listItem->product->drinks->cocktails->pina-colada-5',
-      'listItem->product->drinks->cocktails->long-island-ice-tea-7'
-    ]
-  } as ProductList,
-  'list->drinks->smoothies-1': {
-    id: 'list->drinks->smoothies-1',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->drinks',
-    selectableItems: [
-      'listItem->product->drinks->smoothies->canarian-kiss-2',
-      'listItem->product->drinks->smoothies->mango-heaven-3',
-      'listItem->product->drinks->smoothies->green-machine-5'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->drinks->smoothies'],
-    displayInfo: {
-      es: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      en: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      de: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      nb: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      da: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      sv: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      fr: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      nl: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      }
-    },
-    items: [
-      'listItem->product->drinks->smoothies->berry-burst-1',
-      'listItem->product->drinks->smoothies->strawberry-split-4',
-      'listItem->product->drinks->smoothies->tropical-colada-6'
-    ]
-  } as ProductList,
-  'list->drinks->smoothies-2': {
-    id: 'list->drinks->smoothies-2',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: false,
-    template: 'template->list->drinks',
-    selectableItems: [
-      'listItem->product->drinks->smoothies->canarian-kiss-2',
-      'listItem->product->drinks->smoothies->mango-heaven-3',
-      'listItem->product->drinks->smoothies->green-machine-5'
-    ],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->drinks->smoothies'],
-    displayInfo: {
-      es: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      en: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      de: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      nb: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      da: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      sv: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      fr: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      },
-      nl: {
-        title: 'Smoothies',
-        slug: 'smoothies'
-      }
-    },
-    items: [
-      'listItem->product->drinks->smoothies->berry-burst-1',
-      'listItem->product->drinks->smoothies->strawberry-split-4',
-      'listItem->product->drinks->smoothies->tropical-colada-6'
-    ]
-  } as ProductList,
-  'list->wines->red-wines': {
-    id: 'list->wines->red-wines',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->default',
-    selectableItems: ['listItem->product->wines->vizcarra-15-meses-6'],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->red-wines'],
-    displayInfo: {
-      es: {
-        title: 'Vinos Tintos',
-        slug: 'tintos'
-      },
-      en: {
-        title: 'Red Wines',
-        slug: 'red-wines'
-      },
-      de: {
-        title: 'Rotweine',
-        slug: 'rotweine'
-      },
-      nb: {
-        title: 'Røde viner',
-        slug: 'rode-viner'
-      },
-      da: {
-        title: 'Røde viner',
-        slug: 'rode-viner'
-      },
-      sv: {
-        title: 'Röda viner',
-        slug: 'roda-viner'
-      },
-      fr: {
-        title: 'Vins rouges',
-        slug: 'vins-rouges'
-      },
-      nl: {
-        title: 'Rode wijnen',
-        slug: 'rode-wijnen'
-      }
-    },
-    hasVariants: true,
-    variants: 'variant->bottle-capacity',
-    items: [
-      'listItem->product->wines->wine-from-the-house-1',
-      'listItem->product->wines->erial-2',
-      'listItem->product->wines->agala-1175-3',
-      'listItem->product->wines->carmelo-rodero-9-meses-24',
-      'listItem->product->wines->tierra-fundida-4',
-      'listItem->product->wines->rodriguez-de-vera-5',
-      'listItem->product->wines->ostatu-7',
-      'listItem->product->wines->artillero-8'
-    ]
-  } as ProductList,
-  'list->wines->white-wines': {
-    id: 'list->wines->white-wines',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->default',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->white-wines'],
-    displayInfo: {
-      es: {
-        title: 'Vinos Blancos',
-        slug: 'vinos-blancos'
-      },
-      en: {
-        title: 'White Wines',
-        slug: 'white-wines'
-      },
-      de: {
-        title: 'Weißweine',
-        slug: 'weibweine'
-      },
-      nb: {
-        title: 'Hvite vine',
-        slug: 'hvite-vine'
-      },
-      da: {
-        title: 'Hvide vine',
-        slug: 'hvide-vine'
-      },
-      sv: {
-        title: 'Vita viner',
-        slug: 'vita-viner'
-      },
-      fr: {
-        title: 'Vins blancs',
-        slug: 'vins-blancs'
-      },
-      nl: {
-        title: 'Witte wijnen',
-        slug: 'witte-wijnen'
-      }
-    },
-    hasVariants: true,
-    variants: 'variant->bottle-capacity',
-    items: [
-      'listItem->product->wines->wine-from-the-house-9',
-      'listItem->product->wines->rubicon-10',
-      'listItem->product->wines->paco-and-lola-11',
-      'listItem->product->wines->paisaje-de-las-islas-12',
-      'listItem->product->wines->tajinaste-13',
-      'listItem->product->wines->godelia-godello-14',
-      'listItem->product->wines->chivite-legardeta-25',
-      'listItem->product->wines->limite-norte-24',
-      'listItem->product->wines->belondrade-quinta-apolonia-15'
-    ]
-  } as ProductList,
-  'list->wines->rose-wines': {
-    id: 'list->wines->rose-wines',
-    type: 'product',
-    active: true,
-    sortable: true,
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->default',
-    defaultImg: 'image->list->aside-700-250-default',
-    mainImg: 'image->list->aside-700-250-rose-wine',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->rose-wines'],
-    displayInfo: {
-      es: {
-        title: 'Vinos Rosados',
-        slug: 'vinos-rosados'
-      },
-      en: {
-        title: 'Rosé Wines',
-        slug: 'rose-wines'
-      },
-      de: {
-        title: 'Roséweine',
-        slug: 'roseweine'
-      },
-      nb: {
-        title: 'Rosé Wines',
-        slug: 'rose-wines'
-      },
-      da: {
-        title: 'Rosé Wines',
-        slug: 'rose-wines'
-      },
-      sv: {
-        title: 'Rosé Wines',
-        slug: 'rose-wines'
-      },
-      fr: {
-        title: 'Vins rosés',
-        slug: 'vins-roses'
-      },
-      nl: {
-        title: 'Rosé wijnen',
-        slug: 'rose-wijnen'
-      }
-    },
-    hasVariants: true,
-    variants: 'variant->bottle-capacity',
-    items: [
-      'listItem->product->wines->wine-from-the-house-16',
-      'listItem->product->wines->ochoa-lagrima-rosa-17',
-      'listItem->product->wines->chivite-las-fincas-18'
-    ]
-  } as ProductList,
-  'list->wines->sweet-wines': {
-    id: 'list->wines->sweet-wines',
-    type: 'product',
-    active: true,
-    sortable: true,
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->default',
-    defaultImg: 'image->list->aside-700-250-default',
-    mainImg: 'image->list->aside-700-250-sweet-wine',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->sweet-wines'],
-    displayInfo: {
-      es: {
-        title: 'Vinos Dulces',
-        slug: 'vinos-duces'
-      },
-      en: {
-        title: 'Sweet Wines',
-        slug: 'sweet-wines'
-      },
-      de: {
-        title: 'Süße Weine',
-        slug: 'sube-weine'
-      },
-      nb: {
-        title: 'Søte viner',
-        slug: 'sote-viner'
-      },
-      da: {
-        title: 'Søde vine',
-        slug: 'sode-vine'
-      },
-      sv: {
-        title: 'Söta viner',
-        slug: 'sota-viner'
-      },
-      fr: {
-        title: 'Vins doux',
-        slug: 'vins-doux'
-      },
-      nl: {
-        title: 'Zoete wijnen',
-        slug: 'zoete-wijnen'
-      }
-    },
-    hasVariants: true,
-    variants: 'variant->bottle-capacity',
-    items: ['listItem->product->wines->don-px-2018-19']
-  } as ProductList,
-  'list->wines->sangrias-and-champagnes': {
-    id: 'list->wines->sangrias-and-champagnes',
-    type: 'product',
-    active: true,
-    sortable: true,
-    show: true,
-    showDescription: false,
-    showExtraInfo: false,
-    showTitle: true,
-    template: 'template->list->default',
-    defaultImg: 'image->list->aside-700-250-default',
-    mainImg: 'image->list->aside-700-250-sangrias-and-champagnes',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->meals->sangrias-and-champagnes'],
-    displayInfo: {
-      es: {
-        title: 'Sangrías y Champagnes',
-        slug: 'sangrias-y-champagnes'
-      },
-      en: {
-        title: 'Sangrias and Champagnes',
-        slug: 'sangrias-and-champagnes'
-      },
-      de: {
-        title: 'Sangrías und Champagner',
-        slug: 'sangrias-und-champagner'
-      },
-      nb: {
-        title: 'Sangrías og Champagnes',
-        slug: 'sangrias-og-champagnes'
-      },
-      da: {
-        title: 'Sangrías og Champagnes',
-        slug: 'sangrias-og-champagnes'
-      },
-      sv: {
-        title: 'Sangrías och champagner',
-        slug: 'sangrias-och-champagner'
-      },
-      fr: {
-        title: 'Sangrias et champagnes',
-        slug: 'sangrias-et-champagnes'
-      },
-      nl: {
-        title: 'Sangrías en champagnes',
-        slug: 'sangrias-en-champagnes'
-      }
-    },
-    hasVariants: true,
-    variants: 'variant->bottle-capacity',
-    items: [
-      'listItem->product->wines->raventos-i-blanc-de-nit-20',
-      'listItem->product->wines->raventos-de-nit-rose-21',
-      'listItem->product->wines->taittinger-brut-reserve-22',
-      'listItem->product->wines->sangria-23'
-    ]
-  } as ProductList,
-
   'list->wines->white-wines-1': {
     id: 'list->wines->white-wines-1',
     type: 'product',
@@ -2114,7 +588,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     selectableItems: [],
     editable: false,
     maxItems: 6,
-    categories: ['category->meals->white-wines'],
+    categories: [''],
     displayInfo: {
       es: {
         title: 'Vinos Blancos del Resto de España',
@@ -2326,7 +800,6 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     variants: '',
     items: ['listItem->product->wines->-7']
   } as ProductList,
-
   'list->info->allergens': {
     id: 'list->info->allergens',
     type: 'product',
@@ -2379,12 +852,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
         slug: 'allergenen'
       }
     },
-    items: [
-      'listItem->product->meals->childrens->spaghetti-with-tomato-and-grated-cheese-1',
-      'listItem->product->meals->childrens->ham-and-cheese-omelette-6',
-      'listItem->product->meals->childrens->hamburger-with-tomato-and-cheese-3',
-      'listItem->product->meals->childrens->pizza-4'
-    ]
+    items: []
   } as ProductList,
   'list->info->gallery': {
     id: 'list->info->gallery',
@@ -2439,339 +907,5 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       }
     },
     items: []
-  } as ProductList,
-  'list->info->sanitary-measures-1': {
-    id: 'list->info->sanitary-measures-1',
-    type: 'info',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->info->sanitary-measures'],
-    displayInfo: {
-      es: {
-        title: 'Medidas Sanitarias 1',
-        slug: 'medidas-sanitarias-1'
-      },
-      en: {
-        title: 'Sanitary measures 1',
-        slug: 'sanitary-measures-1'
-      },
-      de: {
-        title: 'Hygienemaßnahmen 1',
-        slug: 'hygienemassnahmen-1'
-      },
-      nb: {
-        title: 'Sanitære tiltak 1',
-        slug: 'sanitaere-tiltak-1'
-      },
-      da: {
-        title: 'Sanitære foranstaltninger 1',
-        slug: 'sanitaere-foranstaltninger-1'
-      },
-      sv: {
-        title: 'Sanitära åtgärder 1',
-        slug: 'sanitara-atgarder-1'
-      },
-      fr: {
-        title: 'Mesures sanitaires 1',
-        slug: 'mesures-sanitaires-1'
-      },
-      nl: {
-        title: 'Sanitaire maatregelen',
-        slug: 'sanitaire-maatregelen'
-      }
-    },
-    items: [
-      'listItem->info->sanitary-measures->1',
-      'listItem->info->sanitary-measures->2',
-      'listItem->info->sanitary-measures->3',
-      'listItem->info->sanitary-measures->4',
-      'listItem->info->sanitary-measures->5',
-      'listItem->info->sanitary-measures->6'
-    ]
-  } as InfoList,
-  'list->info->sanitary-measures-2': {
-    id: 'list->info->sanitary-measures-2',
-    type: 'info',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->info->sanitary-measures'],
-    displayInfo: {
-      es: {
-        title: 'Medidas Sanitarias 2',
-        slug: 'medidas-sanitarias-2'
-      },
-      en: {
-        title: 'Sanitary measures 2',
-        slug: 'sanitary-measures-2'
-      },
-      de: {
-        title: 'Hygienemaßnahmen 2',
-        slug: 'hygienemassnahmen-2'
-      },
-      nb: {
-        title: 'Sanitære tiltak 2',
-        slug: 'sanitaere-tiltak-2'
-      },
-      da: {
-        title: 'Sanitære foranstaltninger 2',
-        slug: 'sanitaere-foranstaltninger-2'
-      },
-      sv: {
-        title: 'Sanitära åtgärder 2',
-        slug: 'sanitara-atgarder-2'
-      },
-      fr: {
-        title: 'Mesures sanitaires 2',
-        slug: 'mesures-sanitaires-2'
-      },
-      nl: {
-        title: 'Sanitaire maatregelen',
-        slug: 'sanitaire-maatregelen'
-      }
-    },
-    items: [
-      'listItem->info->sanitary-measures->7',
-      'listItem->info->sanitary-measures->8',
-      'listItem->info->sanitary-measures->9',
-      'listItem->info->sanitary-measures->10',
-      'listItem->info->sanitary-measures->11',
-      'listItem->info->sanitary-measures->12'
-    ]
-  } as InfoList,
-  'list->info->information': {
-    id: 'list->info->information',
-    type: 'info',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->default',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->info->information'],
-    displayInfo: {
-      es: {
-        title: 'Información',
-        slug: 'informacion'
-      },
-      en: {
-        title: 'Information',
-        slug: 'information'
-      },
-      de: {
-        title: 'Information',
-        slug: 'information'
-      },
-      nb: {
-        title: 'Informasjon',
-        slug: 'informasjon'
-      },
-      da: {
-        title: 'Information',
-        slug: 'information'
-      },
-      sv: {
-        title: 'Information',
-        slug: 'information'
-      },
-      fr: {
-        title: 'Informations',
-        slug: 'informations'
-      },
-      nl: {
-        title: 'Informatie',
-        slug: 'informatie'
-      }
-    },
-    items: [
-      'listItem->info->information-1',
-      'listItem->info->information-2',
-      'listItem->info->information-3',
-      'listItem->info->information-4',
-      'listItem->info->information-5',
-      'listItem->info->information-6'
-    ]
-  } as InfoList
-  // 'list->meals->extra-menu': {
-  //   id: 'list->meals->extra-menu',
-  //   type: 'product',
-  //   active: false,
-  //   defaultImg: '',
-  //   mainImg: '',
-  //   sortable: true,
-  //   hasVariants: false,
-  //   variants: '',
-  //   show: false,
-  //   showDescription: false,
-  //   showExtraInfo: false,
-  //   showTitle: false,
-  //   template: 'template->list->default',
-  //   selectableItems: [],
-  //   editable: false,
-  //   maxItems: 12,
-  //   categories: ['category->meals->extra-menu'],
-  //   displayInfo: {
-  //     es: {
-  //       title: 'Extra menu',
-  //       slug: 'extra-menu'
-  //     },
-  //     en: {
-  //       title: 'Extra menu',
-  //       slug: 'extra-menu'
-  //     },
-  //     de: {
-  //       title: 'Extra menu',
-  //       slug: 'extra-menu'
-  //     },
-  //     nb: {
-  //       title: 'Extra menu',
-  //       slug: 'extra-menu'
-  //     },
-  //     da: {
-  //       title: 'Extra menu',
-  //       slug: 'extra-menu'
-  //     },
-  //     sv: {
-  //       title: 'Extra menu',
-  //       slug: 'extra-menu'
-  //     },
-  //     fr: {
-  //       title: 'Extra menu',
-  //       slug: 'extra-menu'
-  //     },
-  //     nl: {
-  //       title: 'Extra menu',
-  //       slug: 'extra-menu'
-  //     }
-  //   },
-  //   items: [
-  //     'listItem->product->meals->extra-menu->-1',
-  //     'listItem->product->meals->extra-menu->-2',
-  //     'listItem->product->meals->extra-menu->-3',
-  //     'listItem->product->meals->extra-menu->-4',
-  //     'listItem->product->meals->extra-menu->-5',
-  //     'listItem->product->meals->extra-menu->-6',
-  //     'listItem->product->meals->extra-menu->-7',
-  //     'listItem->product->meals->extra-menu->-8',
-  //     'listItem->product->meals->extra-menu->-9',
-  //     'listItem->product->meals->extra-menu->-10',
-  //     'listItem->product->meals->extra-menu->-11',
-  //     'listItem->product->meals->extra-menu->-12',
-  //     'listItem->product->meals->extra-menu->-13',
-  //     'listItem->product->meals->extra-menu->-14',
-  //     'listItem->product->meals->extra-menu->-15',
-  //     'listItem->product->meals->extra-menu->-16',
-  //     'listItem->product->meals->extra-menu->-17',
-  //     'listItem->product->meals->extra-menu->-19',
-  //     'listItem->product->meals->extra-menu->-19',
-  //     'listItem->product->meals->extra-menu->-20'
-  //   ]
-  // } as ProductList,
-  // 'list->meals->default': {
-  //   id: 'list->meals->default',
-  //   type: 'product',
-  //   active: false,
-  //   defaultImg: '',
-  //   mainImg: '',
-  //   sortable: true,
-  //   hasVariants: false,
-  //   variants: '',
-  //   show: false,
-  //   showExtraInfo: false,
-  //   showDescription: false,
-  //   showTitle: false,
-  //   editable: true,
-  //   maxItems: 8,
-  //   template: 'template->list->default',
-  //   categories: ['category->default'],
-  //   displayInfo: {
-  //     es: {
-  //       title: '',
-  //       slug: ''
-  //     },
-  //     en: {
-  //       title: '',
-  //       slug: ''
-  //     },
-  //     de: {
-  //       title: '',
-  //       slug: ''
-  //     },
-  //     nb: {
-  //       title: '',
-  //       slug: ''
-  //     },
-  //     da: {
-  //       title: '',
-  //       slug: ''
-  //     },
-  //     sv: {
-  //       title: '',
-  //       slug: ''
-  //     },
-  //     fr: {
-  //       title: '',
-  //       slug: ''
-  //     },
-  //     nl: {
-  //       title: '',
-  //       slug: ''
-  //     }
-  //   },
-  //   selectableItems: [
-  //     'listItem->product->meals->default->-4',
-  //     'listItem->product->meals->default->-5',
-  //     'listItem->product->meals->default->-6',
-  //     'listItem->product->meals->default->-7',
-  //     'listItem->product->meals->default->-8',
-  //     'listItem->product->meals->default->-9',
-  //     'listItem->product->meals->default->-10',
-  //     'listItem->product->meals->default->-11',
-  //     'listItem->product->meals->default->-12',
-  //     'listItem->product->meals->default->-13',
-  //     'listItem->product->meals->default->-14',
-  //     'listItem->product->meals->default->-15',
-  //     'listItem->product->meals->default->-16',
-  //     'listItem->product->meals->default->-17',
-  //     'listItem->product->meals->default->-18',
-  //     'listItem->product->meals->default->-19',
-  //     'listItem->product->meals->default->-20'
-  //   ],
-  //   items: [
-  //     'listItem->product->meals->suggestions-of-the-day->norwegian-pickled-herring-1',
-  //     'listItem->product->meals->suggestions-of-the-day->steak-tartar-2',
-  //     'listItem->product->meals->suggestions-of-the-day->tuna-tartare-3'
-  //   ]
-  // } as ProductList
+  } as ProductList
 };

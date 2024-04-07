@@ -6,15 +6,15 @@ import {
   IonList,
   IonListHeader,
   IonItem,
-  IonLabel,
-  IonToggle,
   IonLoading
 } from '@ionic/react';
 
 import { useQuery } from '../../../../hooks/useQuery';
+// import { useMutation } from '../../../../hooks/useMutation';
 
 import EditDisplayInfo from '../EditDisplayInfo';
-import EditItems from '../EditItems';
+import EditItems from './EditItems';
+import ToggleSlide from '../../../../components/ui/ToggleSlide';
 
 interface ListDetailPageProps
   extends RouteComponentProps<{
@@ -48,71 +48,81 @@ const ListDetail: React.FC<ListDetailPageProps> = ({ match }) => {
 
   return (
     <IonContent>
-      <EditDisplayInfo entityName="list" entity={list} />
+      <EditDisplayInfo entityName="list" entity={list} resource="lists" />
 
-      <EditItems entityId={key} entity="list" />
+      <EditItems entityId={key} entity="list" index="lists" />
+
       <IonList>
         <IonListHeader color="dark">
           <h3>Opciones de Lista</h3>
         </IonListHeader>
 
         {/* <IonItem>
-          <IonLabel>Mostrar Lista</IonLabel>
-          <IonToggle
-            color="dark"
-            checked={list.show}
-            onIonChange={() => {
-              set({});
+          <ToggleSlide
+            show={list.show}
+            title="Mostrar Lista"
+            variables={{
+              resource: 'lists',
+              action: 'set',
+              args: {
+                action: 'show',
+                info: 'item',
+                entity: 'list',
+                id: list.id
+              }
             }}
           />
         </IonItem> */}
 
         <IonItem>
-          <IonLabel>Mostrar Título</IonLabel>
-          <IonToggle
-            color="dark"
-            checked={list.showTitle}
-            onIonChange={() => {
-              // set({
-              //   action: 'show',
-              //   info: 'title',
-              //   entity: 'list',
-              //   id: list.id
-              // });
+          <ToggleSlide
+            show={list.showTitle}
+            title="Mostrar Título"
+            variables={{
+              resource: 'lists',
+              action: 'set',
+              args: {
+                action: 'show',
+                info: 'title',
+                entity: 'list',
+                id: list.id
+              }
             }}
           />
         </IonItem>
 
         {listInfo.description && (
           <IonItem>
-            <IonLabel>Mostrar Descripción</IonLabel>
-            <IonToggle
-              color="dark"
-              checked={list.showDescription}
-              onIonChange={() => {
-                // set({
-                //   action: 'show',
-                //   info: 'description',
-                //   entity: 'list',
-                //   id: list.id
-                // });
+            <ToggleSlide
+              show={list.showDescription}
+              title="Mostrar Descripción"
+              variables={{
+                resource: 'lists',
+                action: 'set',
+                args: {
+                  action: 'show',
+                  info: 'description',
+                  entity: 'list',
+                  id: list.id
+                }
               }}
             />
           </IonItem>
         )}
         {listInfo.extraInfo && (
           <IonItem>
-            <IonLabel>Mostrar Información Extra</IonLabel>
-            <IonToggle
-              color="dark"
-              checked={list.showExtraInfo}
-              onIonChange={() => {
-                // set({
-                //   action: 'show',
-                //   info: 'extra-info',
-                //   entity: 'list',
-                //   id: list.id
-                // });
+            <ToggleSlide
+              show={list.showExtraInfo}
+              title="Mostrar Información Extra"
+              variables={{
+                resource: 'lists',
+                action: 'set',
+                args: {
+                  action: 'show',
+                  info: 'extra-info',
+                  entity: 'list',
+                  id: list.id
+                }
               }}
             />
           </IonItem>

@@ -3,17 +3,30 @@ import styles from './styles.module.css';
 
 import { TemplatesProps } from '../index';
 
-import useData from '../../../../../../../hooks/useDatabase';
+import { useQuery } from '../../../../../../../hooks/useQuery';
 import { List, ListModal } from '../../../../../../../definitions/models';
 
 import ItemList from './ItemList';
 
-import { IonGrid, IonRow, IonCol, IonText } from '@ionic/react';
+import { IonGrid, IonRow, IonCol, IonText, IonLoading } from '@ionic/react';
 
 const BlackboardList: React.FC<TemplatesProps> = ({ modal, lang }) => {
-  const { get } = useData();
-  const images = get({ collection: 'images', from: 'state' });
-  const lists = get({ collection: 'lists', from: 'state' });
+  const { dictionary: lists, isLoading: listsIsLoading } = useQuery({
+    key: 'lists'
+  });
+
+  const { dictionary: images, isLoading: imagesIsLoading } = useQuery({
+    key: 'images'
+  });
+
+  if (listsIsLoading || imagesIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
   const backgroundImg = images[modal.backgroundImg];
   const modalInfo = modal.displayInfo[lang];
 

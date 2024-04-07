@@ -53,7 +53,7 @@ const CategoryDetail: React.FC<CategoryDetailPageProps> = ({ match }) => {
       {/* <EditDisplayInfo
         entityName="category"
         entity={category}
-        update={updateDisplayInfo}
+        key="categories"
       /> */}
       {/* <IonList>
         <IonListHeader color="dark">

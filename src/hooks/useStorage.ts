@@ -39,7 +39,9 @@ const storage = new Storage({
   driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
 });
 
-await storage.create();
+(async () => {
+  await storage.create();
+})();
 
 export function useStorage(): StorageResult {
   const get = useCallback(async (key: string) => {

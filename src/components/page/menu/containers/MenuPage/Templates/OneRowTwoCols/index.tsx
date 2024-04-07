@@ -33,7 +33,7 @@ const OneRowTwoCols: React.FC<TemplatesProps> = ({ page, lang }) => {
     >
       <IonRow
         style={{
-          width: '90vw',
+          width: '95vw',
           height: '88.5vh',
           margin: '0 auto',
           backgroundColor: 'rgba(255,255,255,90%)'

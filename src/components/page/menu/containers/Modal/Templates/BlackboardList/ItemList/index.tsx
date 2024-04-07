@@ -1,9 +1,9 @@
 import React from 'react';
 // import styles from './styles.module.css';
 
-import { IonText, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonText, IonGrid, IonRow, IonCol, IonLoading } from '@ionic/react';
 
-import { useData } from '../../../../../../../../contexts/DataContext';
+import { useQuery } from '../../../../../../../../hooks/useQuery';
 import {
   DisplayInfo,
   ProductListItem,
@@ -17,9 +17,22 @@ interface ItemListProps {
 }
 
 const ItemList: React.FC<ItemListProps> = ({ list, lang }) => {
-  const { get } = useData();
-  const items = get({ collection: 'items', from: 'state' });
-  const listItems = get({ collection: 'listItems', from: 'state' });
+  const { dictionary: listItems, isLoading: listItemsIsLoading } = useQuery({
+    key: 'listItems'
+  });
+
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  if (listItemsIsLoading || itemsIsLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
   const listInfo = list.displayInfo[lang];
 
   return (

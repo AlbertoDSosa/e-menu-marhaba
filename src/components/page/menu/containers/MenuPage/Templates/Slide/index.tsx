@@ -45,7 +45,7 @@ const SlideSection: React.FC<TemplatesProps> = ({ page, lang }) => {
       <IonRow
         className="ion-align-items-center"
         style={{
-          width: '90vw',
+          width: '95vw',
           height: '89vh',
           margin: '0 auto',
           backgroundColor: 'rgba(255,255,255,90%)'

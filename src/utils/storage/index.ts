@@ -1,13 +1,15 @@
 import { Drivers, Storage } from '@ionic/storage';
 import initialData from '../initial-data';
-import { Dictionary } from 'definitions/dataContext';
+// import { Dictionary } from 'definitions/dataContext';
 
 const storage = new Storage({
   name: 'marhaba_db',
   driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
 });
 
-await storage.create();
+(async () => {
+  await storage.create();
+})();
 
 export type Key =
   | 'lists'

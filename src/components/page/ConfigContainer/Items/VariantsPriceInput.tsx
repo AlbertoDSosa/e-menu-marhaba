@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import {
   Product,
   Price,
-  Variants,
-  ItemVariant,
+  // Variants,
+  // ItemVariant,
   DisplayInfo
 } from 'definitions/models';
 
@@ -13,12 +13,17 @@ import { IonLabel, IonItem, IonIcon, IonInput, IonLoading } from '@ionic/react';
 import { createOutline, saveOutline, closeCircleOutline } from 'ionicons/icons';
 
 import { useQuery } from '../../../../hooks/useQuery';
+import { useMutation } from '../../../../hooks/useMutation';
 
 interface VariantsPriceInputProps {
   product: Product;
 }
 
 const VariantsPriceInput: React.FC<VariantsPriceInputProps> = ({ product }) => {
+  const { mutate: updateVariantPrice } = useMutation({
+    resource: 'items',
+    action: 'update'
+  });
   const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
     {
       key: 'generalInfo'
@@ -56,12 +61,12 @@ const VariantsPriceInput: React.FC<VariantsPriceInputProps> = ({ product }) => {
           price.amount
         );
 
-        const updateVariantPrice = (price: Price) => {
-          // update({
-          //   field: 'itemVariantPrice',
-          //   entity: 'item',
-          //   payload: { itemId: product.id, variantId: variant.id, price }
-          // });
+        const doUpdateVariantPrice = (newPrice: Price) => {
+          updateVariantPrice({
+            field: 'price',
+            entity: 'item',
+            payload: { id: product.id, price: newPrice }
+          });
           setShowVariantPriceInput(!showVariantPriceInput);
         };
 
@@ -87,9 +92,7 @@ const VariantsPriceInput: React.FC<VariantsPriceInputProps> = ({ product }) => {
                 <IonLabel> {`Precio de ${info.title}:`}</IonLabel>
                 <IonInput
                   value={variantPriceValue}
-                  onIonChange={(e) =>
-                    setVariantPriceValue(e.detail.value || '')
-                  }
+                  onIonInput={(e) => setVariantPriceValue(e.detail.value || '')}
                 />
                 <IonIcon
                   icon={closeCircleOutline}
@@ -105,7 +108,7 @@ const VariantsPriceInput: React.FC<VariantsPriceInputProps> = ({ product }) => {
                   size="large"
                   color="dark"
                   onClick={() =>
-                    updateVariantPrice({ amount: variantPriceValue })
+                    doUpdateVariantPrice({ amount: variantPriceValue })
                   }
                 />
               </>

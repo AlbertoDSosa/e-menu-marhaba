@@ -8,8 +8,10 @@ import {
   IonIcon
 } from '@ionic/react';
 
-import { AddToEntityItem, EditImageEntity } from 'definitions/dataContext';
-import { ImageSaveParams } from 'definitions/editions';
+import { useMutation } from '../../../../hooks/useMutation';
+
+import { AddToEntityItem, EditImageEntity, Key } from 'definitions/dataContext';
+import { ImageSaveParams } from '../../../../definitions/editions';
 import { addOutline } from 'ionicons/icons';
 
 import ImageList from './ImageList';
@@ -22,25 +24,34 @@ interface EditImageProps {
     height: number;
   };
   addToEntity: AddToEntityItem;
+  resource: Key;
 }
 
-const EditImage: React.FC<EditImageProps> = ({ entity, size, addToEntity }) => {
+const EditImage: React.FC<EditImageProps> = ({
+  entity,
+  size,
+  addToEntity,
+  resource
+}) => {
   const [showImageEditor, setShowImageEditor] = useState<boolean>(false);
+  const { mutate } = useMutation({ resource, action: 'create' });
 
   const doSaveImage = (imageSaveParams: ImageSaveParams) => {
-    // create({
-    //   collection: 'images',
-    //   entity: 'image',
-    //   addToEntity,
-    //   entityId: entity.id,
-    //   payload: {
-    //     lang: 'es',
-    //     image: imageSaveParams.src,
-    //     displayInfo: {
-    //       es: { title: imageSaveParams.title, slug: imageSaveParams.title }
-    //     }
-    //   }
-    // });
+    mutate({
+      entity: 'image',
+      addToEntity,
+      entityId: entity.id,
+      payload: {
+        lang: 'es',
+        image: imageSaveParams.src,
+        displayInfo: {
+          es: {
+            title: imageSaveParams.title,
+            slug: imageSaveParams.title
+          }
+        }
+      }
+    });
   };
 
   return (
@@ -61,7 +72,11 @@ const EditImage: React.FC<EditImageProps> = ({ entity, size, addToEntity }) => {
         />
       </IonListHeader>
       <IonItem>
-        <ImageList entity={entity} entityName={addToEntity} />
+        <ImageList
+          entity={entity}
+          entityName={addToEntity}
+          resource={resource}
+        />
       </IonItem>
     </IonList>
   );

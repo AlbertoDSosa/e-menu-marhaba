@@ -8,29 +8,36 @@ import {
   IonIcon,
   IonButton
 } from '@ionic/react';
-import { Image } from 'definitions/models';
+
+import { useMutation } from '../../../../hooks/useMutation';
+
+import { Image } from '../../../../definitions/models';
 import { trashOutline } from 'ionicons/icons';
-import { AddToEntityItem } from 'definitions/dataContext';
+import { AddToEntityItem, Key } from '../../../../definitions/dataContext';
 
 interface ImageCardProps {
   img: Image;
   isMainImg: boolean;
   entityId: string;
   entity: AddToEntityItem;
+  resource: Key;
 }
 
 const ImageCard: React.FC<ImageCardProps> = ({
   img,
   isMainImg,
   entityId,
-  entity
+  entity,
+  resource
 }) => {
+  const { mutate } = useMutation({ resource, action: 'update' });
+
   const doSetMainImage = () => {
-    // update({
-    //   entity,
-    //   field: 'image',
-    //   payload: { entityId, id: img.id }
-    // });
+    mutate({
+      entity,
+      field: 'image',
+      payload: { entityId, id: img.id }
+    });
   };
 
   return (
