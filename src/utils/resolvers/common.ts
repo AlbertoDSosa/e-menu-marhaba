@@ -148,6 +148,25 @@ export const commonResolvers = ({ entity }: ResolverParams) => {
         newEntity
       };
     },
+    [`${entity}->setShowItemDetail`]: (
+      state: State,
+      variables: Variables
+    ): Resolution => {
+      const id = variables.payload;
+      const oldEntity = state[id];
+      const newEntity = {
+        ...oldEntity,
+        showItemDetail: !oldEntity.showItemDetail
+      };
+
+      return {
+        newState: {
+          ...state,
+          [id]: newEntity
+        },
+        newEntity
+      };
+    },
     [`${entity}->setMainImage`]: (
       state: State,
       variables: Variables

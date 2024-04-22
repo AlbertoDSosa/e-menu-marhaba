@@ -141,8 +141,9 @@ export type ArrayEditEntity =
 
 export interface AddProps {
   entity: ArrayEditEntity;
-  entityId: string;
-  itemId?: string;
+  entityId?: string;
+  itemId: string;
+  addToList: 'selectableItems' | 'items' | 'images';
 }
 
 export interface ReorderProps {
@@ -163,9 +164,9 @@ export interface RemoveProps {
 export type AddToEntityItem = 'screensaver' | 'slide' | 'item';
 
 export interface CreateProps {
-  collection: 'slides' | 'images';
   entity: 'slide' | 'image';
-  addToEntity: AddToEntityItem;
+  addToResource: AddToEntityItem;
+  addToList: 'selectableItems' | 'items' | 'images';
   entityId?: string;
   payload: {
     lang: string;

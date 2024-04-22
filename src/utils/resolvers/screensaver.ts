@@ -8,16 +8,14 @@ export const screensaverResolvers = () => {
       state: State,
       variables: Variables
     ): Resolution => {
-      const { id } = variables.payload;
-      const oldSelectableSlides = state.screensaver.selectableSlides;
-      const newSelectableSlides = [...oldSelectableSlides, id];
+      const { itemId } = variables.payload;
+      const oldSelectableSlides = state.selectableSlides;
+      const newSelectableSlides = [...oldSelectableSlides, itemId];
+
       return {
         newState: {
           ...state,
-          screensaver: {
-            ...state.screensaver,
-            selectableSlides: newSelectableSlides
-          }
+          selectableSlides: newSelectableSlides
         },
         newEntity: newSelectableSlides
       };
@@ -27,18 +25,15 @@ export const screensaverResolvers = () => {
       variables: Variables
     ): Resolution => {
       const { itemId: slideId } = variables.payload;
-      const oldSlides = state.screensaver.slides;
-      const newSelectableSlides = state.screensaver.selectableSlides!.filter(
+      const oldSlides = state.slides;
+      const newSelectableSlides = state.selectableSlides!.filter(
         (slide: string) => slide !== slideId
       );
       return {
         newState: {
           ...state,
-          screensaver: {
-            ...state.screensaver,
-            slides: [...oldSlides, slideId],
-            selectableSlides: newSelectableSlides
-          }
+          slides: [...(oldSlides as string[]), slideId],
+          selectableSlides: newSelectableSlides
         },
         newEntity: newSelectableSlides
       };
@@ -48,18 +43,15 @@ export const screensaverResolvers = () => {
       variables: Variables
     ): Resolution => {
       const { itemId: slideId } = variables.payload;
-      const oldSelectableslides = state.screensaver.selectableSlides;
-      const newSlides = state.screensaver.slides!.filter(
+      const oldSelectableslides = state.selectableSlides;
+      const newSlides = state.slides!.filter(
         (slide: string) => slide !== slideId
       );
       return {
         newState: {
           ...state,
-          screensaver: {
-            ...state.screensaver,
-            selectableSlides: [...oldSelectableslides, slideId],
-            slides: newSlides
-          }
+          selectableSlides: [...oldSelectableslides, slideId],
+          slides: newSlides
         },
         newEntity: newSlides
       };
@@ -70,16 +62,12 @@ export const screensaverResolvers = () => {
     ): Resolution => {
       const { to, from } = variables.payload;
 
-      const newScreensaverSlides = moveArrayItem(
-        state.screensaver.slides,
-        from,
-        to
-      );
+      const newScreensaverSlides = moveArrayItem(state.slides, from, to);
 
       return {
         newState: {
           ...state,
-          screensaver: { ...state.screensaver, slides: newScreensaverSlides }
+          slides: newScreensaverSlides
         },
         newEntity: newScreensaverSlides
       };

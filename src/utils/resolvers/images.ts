@@ -2,14 +2,9 @@ import { Image } from 'definitions/models';
 
 import { imageActions } from '../../utils/actions/types';
 
-import {
-  ResolverParams,
-  State,
-  Variables,
-  Resolution
-} from '../../definitions/resolvers';
+import { State, Variables, Resolution } from '../../definitions/resolvers';
 
-export const imageResolvers = ({ entity }: ResolverParams) => {
+export const imageResolvers = () => {
   return {
     [imageActions.CREATE]: (state: State, variables: Variables): Resolution => {
       const { payload } = variables;
@@ -19,7 +14,7 @@ export const imageResolvers = ({ entity }: ResolverParams) => {
       const newImage: Image = {
         id,
         thumbnail: {
-          src: image,
+          src: '',
           title
         },
         full: {

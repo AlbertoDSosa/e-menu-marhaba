@@ -37,7 +37,10 @@ const customSelectProps = {
 const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
   const [disabledReorderItems, setDisabledReorderItems] = useState(true);
   const [itemIdValue, setItemIdValue] = useState<string>('');
-  const { mutate } = useMutation({ resource: 'pageMenus', action: 'reorder' });
+  const { mutate: reorder } = useMutation({
+    resource: 'pageMenus',
+    action: 'reorder'
+  });
 
   const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
     {
@@ -78,7 +81,7 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
   const doReorder = (event: CustomEvent<ItemReorderEventDetail>) => {
     const from = event.detail.from;
     const to = event.detail.to;
-    // reorder({ entity, entityId, from, to });
+    reorder({ entity, entityId, from, to });
 
     event.detail.complete();
   };

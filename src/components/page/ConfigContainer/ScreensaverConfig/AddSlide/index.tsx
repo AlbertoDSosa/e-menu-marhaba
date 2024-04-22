@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from '../../../../../hooks/useQuery';
+import { useMutation } from '../../../../../hooks/useMutation';
 import slugify from 'slugify';
 import styles from './styles.module.css';
 import { Collapse } from 'react-collapse';
@@ -38,6 +39,11 @@ const AddSlide: React.FC = () => {
     {} as AddSlideInfo
   );
 
+  const { mutate: create } = useMutation({
+    resource: 'slides',
+    action: 'create'
+  });
+
   const { dictionary: screensaver, isLoading: screensaverIsLoading } = useQuery(
     {
       key: 'screensaver'
@@ -57,16 +63,18 @@ const AddSlide: React.FC = () => {
       />
     );
 
-  const onAddSlide = () => {
-    // create({
-    //   entity: 'slide',
-    //   payload: {
-    //     lang: 'es',
-    //     displayInfo: { es: slideInfoValue }
-    //   },
-    //   addToEntity: 'screensaver',
-    //   collection: 'slides'
-    // });
+  const onAddSlide = async () => {
+    await create({
+      entity: 'slide',
+      payload: {
+        lang: 'es',
+        displayInfo: { es: slideInfoValue }
+      },
+      addToResource: 'screensaver',
+      addToList: 'selectableItems',
+      addToEntity: 'screensaver'
+    });
+
     setShowAddSlideModal(false);
     setSlideInfoValue({} as AddSlideInfo);
   };
@@ -95,10 +103,11 @@ const AddSlide: React.FC = () => {
               <h1>Añadir Diapositiva</h1>
             </IonListHeader>
             <IonItem>
-              <IonLabel>Título:</IonLabel>
+              {/* <IonLabel>Título:</IonLabel> */}
               <IonTextarea
                 inputmode="text"
                 wrap="off"
+                label="Título:"
                 cols={30}
                 rows={6}
                 value={slideInfoValue.title}
@@ -114,10 +123,11 @@ const AddSlide: React.FC = () => {
               />
             </IonItem>
             <IonItem>
-              <IonLabel>Descripción:</IonLabel>
+              {/* <IonLabel>Descripción:</IonLabel> */}
               <IonTextarea
                 inputmode="text"
                 wrap="off"
+                label="Descripción:"
                 cols={30}
                 rows={6}
                 value={slideInfoValue.description}
@@ -129,9 +139,10 @@ const AddSlide: React.FC = () => {
               />
             </IonItem>
             <IonItem>
-              <IonLabel>Slug:</IonLabel>
+              {/* <IonLabel>Slug:</IonLabel> */}
               <IonTextarea
                 inputmode="text"
+                label="Slug:"
                 wrap="off"
                 cols={30}
                 rows={6}
@@ -179,9 +190,9 @@ const AddSlide: React.FC = () => {
         )}
       </IonListHeader>
       <Collapse isOpened={collapseList} checkTimeout={800}>
-        {screensaver.selectableSlides.map((slideId: string) => {
+        {screensaver.selectableSlides?.map((slideId: string) => {
           const slide: Slide = slides[slideId];
-          const slideInfo: DisplayInfo = slide.displayInfo['es'];
+          const slideInfo: DisplayInfo = slide?.displayInfo['es'];
 
           return (
             <IonItemSliding key={slideId}>
@@ -198,7 +209,7 @@ const AddSlide: React.FC = () => {
               </IonItemOptions>
 
               <IonItem routerLink={`/config/slides/${slideId}`}>
-                <IonLabel>{slideInfo.title}</IonLabel>
+                <IonLabel>{slideInfo?.title}</IonLabel>
               </IonItem>
             </IonItemSliding>
           );

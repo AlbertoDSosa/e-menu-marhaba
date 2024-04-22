@@ -1,55 +1,55 @@
 import { InfoCategory, ProductCategory } from 'definitions/models';
 
 export const categories: { [key: string]: ProductCategory | InfoCategory } = {
-  'category->desserts': {
-    id: 'category->desserts',
-    type: 'product',
-    active: false,
-    hasVariants: false,
-    variants: '',
-    displayInfo: {
-      es: {
-        title: 'Postres',
-        slug: 'postres'
-      },
-      en: {
-        title: 'Desserts',
-        slug: 'desserts'
-      },
-      de: {
-        title: 'Nachspeisen',
-        slug: 'nachspeisen'
-      },
-      nb: {
-        title: 'Desserter',
-        slug: 'desserter'
-      },
-      da: {
-        title: 'Desserter',
-        slug: 'desserter'
-      },
-      sv: {
-        title: 'Efterrätter',
-        slug: 'efterratter'
-      },
-      fr: {
-        title: 'Desserts',
-        slug: 'desserts'
-      },
-      nl: {
-        title: 'Desserts',
-        slug: 'desserts'
-      }
-    },
-    items: [
-      'item->product->desserts->-1',
-      'item->product->desserts->-2',
-      'item->product->desserts->-3',
-      'item->product->desserts->-4',
-      'item->product->desserts->-5',
-      'item->product->desserts->-6'
-    ]
-  },
+  // 'category->desserts': {
+  //   id: 'category->desserts',
+  //   type: 'product',
+  //   active: false,
+  //   hasVariants: false,
+  //   variants: '',
+  //   displayInfo: {
+  //     es: {
+  //       title: 'Postres',
+  //       slug: 'postres'
+  //     },
+  //     en: {
+  //       title: 'Desserts',
+  //       slug: 'desserts'
+  //     },
+  //     de: {
+  //       title: 'Nachspeisen',
+  //       slug: 'nachspeisen'
+  //     },
+  //     nb: {
+  //       title: 'Desserter',
+  //       slug: 'desserter'
+  //     },
+  //     da: {
+  //       title: 'Desserter',
+  //       slug: 'desserter'
+  //     },
+  //     sv: {
+  //       title: 'Efterrätter',
+  //       slug: 'efterratter'
+  //     },
+  //     fr: {
+  //       title: 'Desserts',
+  //       slug: 'desserts'
+  //     },
+  //     nl: {
+  //       title: 'Desserts',
+  //       slug: 'desserts'
+  //     }
+  //   },
+  //   items: [
+  //     'item->product->desserts->-1',
+  //     'item->product->desserts->-2',
+  //     'item->product->desserts->-3',
+  //     'item->product->desserts->-4',
+  //     'item->product->desserts->-5',
+  //     'item->product->desserts->-6'
+  //   ]
+  // },
   'category->meals->starters': {
     id: 'category->meals->starters',
     active: true,

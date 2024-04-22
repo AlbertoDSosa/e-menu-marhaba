@@ -28,50 +28,42 @@ const LangList: React.FC<LangListProps> = ({
     <>
       {generalInfo.appLanguages.map((lang: string) => {
         const info: DisplayInfo = entity.displayInfo[lang];
-        const { mutate } = useMutation({
-          resource,
-          action: 'update'
-        });
 
         const language = languages[lang].title[generalInfo.baseLanguage];
 
         const [showModal, setShowModal] = useState(false);
-
-        const updateDisplayInfo = (displayInfo: any) => {
-          mutate({
-            field: 'info',
-            entity: entityName,
-            payload: { id: entity.id, displayInfo, lang }
-          });
-
-          setShowModal(false);
-        };
-
+        const [displayInfo, setDisplayInfo] = useState(info);
         return (
           <IonItem key={lang}>
             <EditDisplayInfoModal
-              updateDisplayInfo={updateDisplayInfo}
               showModal={showModal}
               setShowModal={setShowModal}
-              displayInfo={info}
+              displayInfo={displayInfo}
+              setDisplayInfo={setDisplayInfo}
+              args={{
+                resource,
+                entityName,
+                entity,
+                lang
+              }}
             />
             <IonLabel>
               <h2>{language}</h2>
             </IonLabel>
             <IonLabel>
               <h3>Nombre</h3>
-              <p>{info?.title}</p>
+              <p>{displayInfo.title}</p>
             </IonLabel>
             {info.description && (
               <IonLabel>
                 <h3>Descripción</h3>
-                <p>{info.description}</p>
+                <p>{displayInfo.description}</p>
               </IonLabel>
             )}
-            {info.extraInfo && (
+            {displayInfo.extraInfo && (
               <IonLabel>
                 <h3>Información Extra</h3>
-                <p>{info.extraInfo}</p>
+                <p>{displayInfo.extraInfo}</p>
               </IonLabel>
             )}
             <IonIcon

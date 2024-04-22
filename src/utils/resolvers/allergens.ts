@@ -2,13 +2,8 @@
 import { allergenicActions } from '../../utils/actions/types';
 import { moveArrayItem } from '.';
 
-import {
-  ResolverParams,
-  State,
-  Variables,
-  Resolution
-} from '../../definitions/resolvers';
-export const allergenicResolvers = ({ entity }: ResolverParams) => {
+import { State, Variables, Resolution } from '../../definitions/resolvers';
+export const allergenicResolvers = () => {
   return {
     [allergenicActions.REORDER]: (
       state: State,

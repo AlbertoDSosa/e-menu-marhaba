@@ -1,4 +1,6 @@
-// import { useState } from 'react';
+import { useState } from 'react';
+
+import { useMutation } from '../../../../hooks/useMutation';
 import styles from './styles.module.css';
 
 import {
@@ -15,18 +17,34 @@ import { DisplayInfo } from 'definitions/models';
 interface ModalProps {
   showModal: boolean;
   setShowModal(show: boolean): void;
-  updateDisplayInfo(displayInfo: DisplayInfo): void;
   displayInfo: any;
+  args: any;
+  setDisplayInfo(info: any): void;
 }
 
 const EditDisplayInfoModal: React.FC<ModalProps> = ({
   showModal,
   setShowModal,
-  updateDisplayInfo,
-  displayInfo
+  displayInfo,
+  setDisplayInfo,
+  args
 }) => {
-  // const [displayInfoValue, setDisplayInfoValue] = useState(displayInfo);
+  const { entityName, lang, entity, resource } = args;
 
+  const { mutate } = useMutation({
+    resource,
+    action: 'update'
+  });
+
+  const updateDisplayInfo = () => {
+    mutate({
+      field: 'info',
+      entity: entityName,
+      payload: { id: entity.id, displayInfo: displayInfo, lang }
+    });
+
+    setShowModal(false);
+  };
   return (
     <IonModal
       className={styles.modal}
@@ -45,11 +63,11 @@ const EditDisplayInfoModal: React.FC<ModalProps> = ({
             cols={30}
             rows={6}
             value={displayInfo.title}
-            // onIonChange={(e) => {
-            //   setDisplayInfoValue((info: DisplayInfo) => {
-            //     return { ...info, title: e.detail.value };
-            //   });
-            // }}
+            onIonChange={(e) => {
+              setDisplayInfo((info: any) => {
+                return { ...info, title: e.detail.value };
+              });
+            }}
           />
         </IonItem>
         <IonItem>
@@ -60,11 +78,11 @@ const EditDisplayInfoModal: React.FC<ModalProps> = ({
             cols={30}
             rows={6}
             value={displayInfo.description}
-            // onIonChange={(e) => {
-            //   setDisplayInfoValue((info: DisplayInfo) => {
-            //     return { ...info, description: e.detail.value };
-            //   });
-            // }}
+            onIonChange={(e) => {
+              setDisplayInfo((info: DisplayInfo) => {
+                return { ...info, description: e.detail.value };
+              });
+            }}
           />
         </IonItem>
         <IonItem>
@@ -75,11 +93,11 @@ const EditDisplayInfoModal: React.FC<ModalProps> = ({
             cols={30}
             rows={6}
             value={displayInfo.extraInfo}
-            // onIonChange={(e) => {
-            //   setDisplayInfoValue((info: DisplayInfo) => {
-            //     return { ...info, extraInfo: e.detail.value };
-            //   });
-            // }}
+            onIonChange={(e) => {
+              setDisplayInfo((info: DisplayInfo) => {
+                return { ...info, extraInfo: e.detail.value };
+              });
+            }}
           />
         </IonItem>
         <IonItem className="ion-padding-vertical" lines="none">
@@ -87,10 +105,10 @@ const EditDisplayInfoModal: React.FC<ModalProps> = ({
             expand="block"
             slot="end"
             size="default"
-            // onClick={() => {
-            //   setDisplayInfoValue(displayInfo);
-            //   setShowModal(false);
-            // }}
+            onClick={() => {
+              setDisplayInfo(displayInfo);
+              setShowModal(false);
+            }}
           >
             Cancelar
           </IonButton>
@@ -98,10 +116,7 @@ const EditDisplayInfoModal: React.FC<ModalProps> = ({
             slot="end"
             size="default"
             expand="block"
-            // onClick={() => {
-            //   updateDisplayInfo(displayInfoValue);
-            //   setShowModal(false);
-            // }}
+            onClick={updateDisplayInfo}
           >
             Guardar
           </IonButton>

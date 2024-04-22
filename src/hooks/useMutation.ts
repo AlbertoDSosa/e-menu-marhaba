@@ -1,17 +1,5 @@
-import { useMutation as Mutation } from '@tanstack/react-query';
-
-import { set, get } from '../utils/storage';
-import { Resolution, State } from '../definitions/resolvers';
-import {
-  SetProps,
-  AddProps,
-  RemoveProps,
-  UpdateProps,
-  CreateProps,
-  DeleteProps,
-  ReorderProps
-} from '../definitions/dataContext';
-import actions from '../utils/actions';
+import { useMutation as Mutation, useQueryClient } from '@tanstack/react-query';
+import { resolveState } from '../utils/resolveState';
 
 type Resource =
   | 'lists'
@@ -33,32 +21,42 @@ type Resource =
   | 'pages'
   | 'pageSections';
 
-// type MutationData =
-//   | SetProps
-//   | AddProps
-//   | RemoveProps
-//   | UpdateProps
-//   | CreateProps
-//   | DeleteProps
-//   | ReorderProps;
-
 type MutationsArgs = {
   resource: Resource;
   action: 'add' | 'reorder' | 'remove' | 'set' | 'create' | 'update';
 };
 
 export const useMutation = ({ resource, action }: MutationsArgs) => {
-  const { mutate, isPending, isError, isIdle } = Mutation({
+  const queryClient = useQueryClient();
+
+  const { mutateAsync, isPending, isError, isIdle } = Mutation({
     mutationFn: async (variables: any) => {
-      const state: State = await get(resource);
-      const { newState, newEntity } = actions[action](
-        state,
-        variables
-      ) as Resolution;
-      await set(resource, newState);
-      return newEntity;
+      return await resolveState({
+        resource,
+        variables,
+        action
+      });
+    },
+    onSuccess: async (data, variables) => {
+      await queryClient.invalidateQueries({ queryKey: [resource] });
+
+      if (action === 'create') {
+        const { addToResource, addToList, addToEntity, entityId } = variables;
+
+        await resolveState({
+          resource: addToResource,
+          variables: {
+            entity: addToEntity,
+            itemId: data.id,
+            addToList,
+            entityId
+          },
+          action: 'add'
+        });
+        await queryClient.invalidateQueries({ queryKey: [addToResource] });
+      }
     }
   });
 
-  return { mutate, isPending, isError, isIdle };
+  return { mutate: mutateAsync, isPending, isError, isIdle };
 };

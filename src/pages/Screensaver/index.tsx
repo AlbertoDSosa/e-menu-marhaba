@@ -158,7 +158,6 @@ const ScreensaverPage: React.FC = () => {
                   const slide: Slide = slides[slideId];
                   const slideImg: Image =
                     images[slide?.mainImg || slide?.defaultImg];
-
                   return (
                     <SwiperSlide key={slideId}>
                       <img src={slideImg.full.src} alt={slideImg.full.title} />

@@ -6,7 +6,7 @@ export type ResolverParams = {
 
 export type Resolution = {
   newState: State;
-  newEntity: Dictionary;
+  newEntity: any;
 };
 
 type Dictionary = {
@@ -20,5 +20,5 @@ export type Variables = {
 };
 
 export type State = {
-  [key: string]: Dictionary;
+  [key: string]: any;
 };

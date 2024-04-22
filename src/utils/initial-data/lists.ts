@@ -1,67 +1,67 @@
 import { ProductList, InfoList } from 'definitions/models';
 
 export const lists: { [key: string]: ProductList | InfoList } = {
-  'list->desserts': {
-    id: 'list->desserts',
-    type: 'product',
-    active: true,
-    defaultImg: '',
-    mainImg: '',
-    sortable: true,
-    hasVariants: false,
-    variants: '',
-    show: true,
-    showExtraInfo: false,
-    showDescription: false,
-    showTitle: false,
-    template: 'template->list->meals->short-title',
-    selectableItems: [],
-    editable: false,
-    maxItems: 12,
-    categories: ['category->desserts'],
-    displayInfo: {
-      es: {
-        title: 'Postres',
-        slug: 'postres'
-      },
-      en: {
-        title: 'Desserts',
-        slug: 'desserts'
-      },
-      de: {
-        title: 'Nachspeisen',
-        slug: 'nachspeisen'
-      },
-      nb: {
-        title: 'Desserter',
-        slug: 'desserter'
-      },
-      da: {
-        title: 'Desserter',
-        slug: 'desserter'
-      },
-      sv: {
-        title: 'Efterrätter',
-        slug: 'efterratter'
-      },
-      fr: {
-        title: 'Desserts',
-        slug: 'desserts'
-      },
-      nl: {
-        title: 'Desserts',
-        slug: 'desserts'
-      }
-    },
-    items: [
-      'listItem->product->desserts->our-creamy-cheesecake-1',
-      'listItem->product->desserts->homemade-sweets-from-tejeda-2',
-      'listItem->product->desserts->trompe-l-oeil-ferrero-rocher-3',
-      'listItem->product->desserts->banana-ice-cream-4',
-      'listItem->product->desserts->homemade-ice-cream-5',
-      'listItem->product->desserts->our-chef-s-suggested-sweet-6'
-    ]
-  } as ProductList,
+  // 'list->desserts': {
+  //   id: 'list->desserts',
+  //   type: 'product',
+  //   active: true,
+  //   defaultImg: '',
+  //   mainImg: '',
+  //   sortable: true,
+  //   hasVariants: false,
+  //   variants: '',
+  //   show: true,
+  //   showExtraInfo: false,
+  //   showDescription: false,
+  //   showTitle: false,
+  //   template: 'template->list->meals->short-title',
+  //   selectableItems: [],
+  //   editable: false,
+  //   maxItems: 12,
+  //   categories: ['category->desserts'],
+  //   displayInfo: {
+  //     es: {
+  //       title: 'Postres',
+  //       slug: 'postres'
+  //     },
+  //     en: {
+  //       title: 'Desserts',
+  //       slug: 'desserts'
+  //     },
+  //     de: {
+  //       title: 'Nachspeisen',
+  //       slug: 'nachspeisen'
+  //     },
+  //     nb: {
+  //       title: 'Desserter',
+  //       slug: 'desserter'
+  //     },
+  //     da: {
+  //       title: 'Desserter',
+  //       slug: 'desserter'
+  //     },
+  //     sv: {
+  //       title: 'Efterrätter',
+  //       slug: 'efterratter'
+  //     },
+  //     fr: {
+  //       title: 'Desserts',
+  //       slug: 'desserts'
+  //     },
+  //     nl: {
+  //       title: 'Desserts',
+  //       slug: 'desserts'
+  //     }
+  //   },
+  //   items: [
+  //     'listItem->product->desserts->our-creamy-cheesecake-1',
+  //     'listItem->product->desserts->homemade-sweets-from-tejeda-2',
+  //     'listItem->product->desserts->trompe-l-oeil-ferrero-rocher-3',
+  //     'listItem->product->desserts->banana-ice-cream-4',
+  //     'listItem->product->desserts->homemade-ice-cream-5',
+  //     'listItem->product->desserts->our-chef-s-suggested-sweet-6'
+  //   ]
+  // } as ProductList,
   'list->meals->starters-1': {
     id: 'list->meals->starters-1',
     type: 'product',

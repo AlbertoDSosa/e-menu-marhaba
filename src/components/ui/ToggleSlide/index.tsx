@@ -29,7 +29,7 @@ const ToggleSlide: React.FC<ToggleSlideProps> = ({
         mutate(args);
       }}
     >
-      Mostrar {title}
+      {title}
     </IonToggle>
   );
 };

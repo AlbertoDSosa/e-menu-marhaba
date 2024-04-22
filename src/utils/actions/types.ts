@@ -32,7 +32,8 @@ export enum listItemActions {
   SET_SHOW_PRICE = 'listItem->setShowPrice',
   SET_SHOW_TITLE = 'listItem->setShowTitle',
   SET_SHOW_EXTRA_INFO = 'listItem->setShowExtraInfo',
-  SET_SHOW_DESCRIPTION = 'listItem->setShowDescription'
+  SET_SHOW_DESCRIPTION = 'listItem->setShowDescription',
+  SET_SHOW_ITEM_DETAIL = 'listItem->setShowItemDetail'
 }
 
 export enum pageMenuActions {

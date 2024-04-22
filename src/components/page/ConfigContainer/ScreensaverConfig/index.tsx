@@ -1,5 +1,7 @@
 import React from 'react';
 import { useQuery } from '../../../../hooks/useQuery';
+// import { useMutation } from '../../../../hooks/useMutation';
+
 import {
   IonContent,
   IonList,
@@ -28,6 +30,10 @@ const ScreensaverConfig: React.FC = () => {
       />
     );
 
+  // const { mutate: updateNumber } = useMutation({
+  //   resource: 'screensaver',
+  //   action: 'update'
+  // });
   const timeToShow = screensaver.selectableTimesToShow[screensaver.timeToShow];
   const timeToShowInfo = timeToShow.displayInfo['es'];
 
@@ -46,8 +52,9 @@ const ScreensaverConfig: React.FC = () => {
           <h2>Editar Opciones de Salvapantallas</h2>
         </IonListHeader>
         <IonItem>
-          <IonLabel>Duración de inactividad</IonLabel>
+          {/* <IonLabel>Duración de inactividad</IonLabel> */}
           <IonSelect
+            label="Duración de inactividad"
             value={timeToShow.id}
             placeholder={timeToShowInfo.title}
             onIonChange={onChangeTimeToShow}

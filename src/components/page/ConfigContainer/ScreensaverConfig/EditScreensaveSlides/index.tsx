@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ItemReorderEventDetail } from '@ionic/core';
 import { useQuery } from '../../../../../hooks/useQuery';
+import { useMutation } from '../../../../../hooks/useMutation';
 import {
   IonList,
   IonListHeader,
@@ -25,6 +26,16 @@ const EditScreensaverSlides: React.FC = () => {
   const [disabledReorderItems, setDisabledReorderItems] = useState(true);
   const [itemIdValue, setItemIdValue] = useState<string>('');
 
+  const { mutate: reorder } = useMutation({
+    resource: 'screensaver',
+    action: 'reorder'
+  });
+
+  const { mutate: add } = useMutation({
+    resource: 'screensaver',
+    action: 'add'
+  });
+
   const { dictionary: screensaver, isLoading: screensaverIsLoading } = useQuery(
     {
       key: 'screensaver'
@@ -45,16 +56,21 @@ const EditScreensaverSlides: React.FC = () => {
     );
 
   const doReorder = (event: CustomEvent<ItemReorderEventDetail>) => {
-    // const from = event.detail.from;
-    // const to = event.detail.to;
+    const from = event.detail.from;
+    const to = event.detail.to;
 
-    // reorder({ entity: 'screensaver', entityId: '', from, to });
+    reorder({ entity: 'screensaver', entityId: '', from, to });
 
     event.detail.complete();
   };
 
   const doAdd = () => {
-    // add({ entity: 'screensaver', entityId: '', itemId: itemIdValue });
+    add({
+      entity: 'screensaver',
+      entityId: '',
+      itemId: itemIdValue,
+      addToList: 'items'
+    });
     setItemIdValue('');
   };
 
@@ -88,21 +104,22 @@ const EditScreensaverSlides: React.FC = () => {
         screensaver.selectableSlides.length < screensaver.maxItems &&
         disabledReorderItems && (
           <IonItem>
-            <IonLabel>Diapositivas Disponibles</IonLabel>
+            {/* <IonLabel>Diapositivas Disponibles</IonLabel> */}
             <IonSelect
+              label="Diapositivas Disponibles"
               value={itemIdValue}
               placeholder="Selecciona Slide"
               cancelText="Cancelar"
               okText="Elegir"
               onIonChange={(e) => setItemIdValue(e.detail.value)}
             >
-              {screensaver.selectableSlides.map((slideId: string) => {
+              {screensaver.selectableSlides?.map((slideId: string) => {
                 const slide: Slide = slides[slideId];
-                const info: DisplayInfo = slide.displayInfo['es'];
+                const info: DisplayInfo = slide?.displayInfo['es'];
 
                 return (
                   <IonSelectOption key={slideId} value={slideId}>
-                    {info.title}
+                    {info?.title}
                   </IonSelectOption>
                 );
               })}
@@ -113,9 +130,9 @@ const EditScreensaverSlides: React.FC = () => {
         disabled={disabledReorderItems}
         onIonItemReorder={doReorder}
       >
-        {screensaver?.slides.map((slideId: string) => {
+        {screensaver.slides?.map((slideId: string) => {
           const slide: Slide = slides[slideId];
-          const slideInfo: DisplayInfo = slide.displayInfo['es'];
+          const slideInfo: DisplayInfo = slide?.displayInfo['es'];
 
           return (
             <IonItemSliding key={slideId}>

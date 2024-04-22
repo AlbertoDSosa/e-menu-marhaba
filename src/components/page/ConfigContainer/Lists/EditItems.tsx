@@ -45,7 +45,20 @@ const customSelectProps = {
 const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
   const [disabledReorderItems, setDisabledReorderItems] = useState(true);
   const [itemIdValue, setItemIdValue] = useState<string>('');
-  const { mutate } = useMutation({ resource: 'lists', action: 'set' });
+  const { mutate: reorder } = useMutation({
+    resource: 'lists',
+    action: 'reorder'
+  });
+
+  const { mutate: add } = useMutation({
+    resource: 'lists',
+    action: 'add'
+  });
+
+  const { mutate: remove } = useMutation({
+    resource: 'lists',
+    action: 'remove'
+  });
 
   const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
     {
@@ -85,28 +98,28 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
   const doReorder = (event: CustomEvent<ItemReorderEventDetail>) => {
     const from = event.detail.from;
     const to = event.detail.to;
-    // reorder({ entity, entityId, from, to });
+    reorder({ entity, entityId, from, to });
 
     event.detail.complete();
   };
 
   const doAddItem = (itemId: string) => {
-    // add({ entity, entityId, itemId });
+    add({ entity, entityId, itemId });
   };
 
   const doRemoveItem = (itemId: string) => {
-    // remove({ entity, entityId, itemId, action: 'one' });
+    remove({ entity, entityId, itemId, action: 'one' });
   };
 
   const doRemoveAllItems = () => {
-    // remove({ action: 'many', entity, entityId, items: list.items });
+    remove({ action: 'many', entity, entityId, items: list.items });
   };
 
   return (
     <IonList>
       <IonListHeader color="dark">
         <IonLabel>
-          <h2>Artículosde la lista</h2>
+          <h2>Artículos de la lista</h2>
         </IonLabel>
         {list.items.length > 1 && (
           <IonButton

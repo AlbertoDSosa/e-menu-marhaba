@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { useQuery } from '../../../../hooks/useQuery';
+import { useMutation } from '../../../../hooks/useMutation';
 
 import {
   IonContent,
@@ -30,11 +31,16 @@ interface SlideDetailProps
 
 const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
   const key = match.params.key;
-  const [disableButtons, setDisableButtons] = useState<boolean>(true);
   const [collapseForm, setCollapseForm] = useState<boolean>(false);
+  const [displayInfoValue, setDisplayInfoValue] = useState({});
 
   const { dictionary: slides, isLoading: slidesIsLoading } = useQuery({
     key: 'slides'
+  });
+
+  const { mutate: update } = useMutation({
+    resource: 'slides',
+    action: 'update'
   });
 
   if (slidesIsLoading)
@@ -45,19 +51,16 @@ const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
         spinner="circles"
       />
     );
+
   const slide: Slide = slides[key];
   const slideInfo = slide.displayInfo['es'];
 
-  // const [displayInfoValue, setDisplayInfoValue] =
-  //   useState<DisplayInfo>(slideInfo);
-
   const updateDisplayInfo = () => {
-    // update({
-    //   field: 'info',
-    //   entity: 'slide',
-    //   payload: { id: slide.id, displayInfo: displayInfoValue, lang: 'es' }
-    // });
-    setDisableButtons(true);
+    update({
+      field: 'info',
+      entity: 'slide',
+      payload: { id: slide.id, displayInfo: displayInfoValue, lang: 'es' }
+    });
   };
 
   return (
@@ -80,35 +83,37 @@ const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
         </IonListHeader>
         <Collapse isOpened={collapseForm} checkTimeout={800}>
           <IonItem>
-            <IonLabel>Título:</IonLabel>
+            {/* <IonLabel>Título:</IonLabel> */}
             <IonTextarea
+              label="Título:"
               inputmode="text"
               wrap="off"
               cols={30}
               rows={6}
               value={slideInfo.title}
-              // onIonChange={(e) => {
-              //   setDisplayInfoValue((info: DisplayInfo) => {
-              //     return { ...info, title: e.detail.value as string };
-              //   });
-              //   setDisableButtons(false);
-              // }}
+              onIonChange={(e) => {
+                setDisplayInfoValue({
+                  ...slideInfo,
+                  title: e.detail.value as string
+                });
+              }}
             />
           </IonItem>
           <IonItem>
-            <IonLabel>Descripción:</IonLabel>
+            {/* <IonLabel>Descripción:</IonLabel> */}
             <IonTextarea
+              label="Descripción:"
               inputmode="text"
               wrap="off"
               cols={30}
               rows={6}
               value={slideInfo.description}
-              // onIonChange={(e) => {
-              //   setDisplayInfoValue((info: DisplayInfo) => {
-              //     return { ...info, description: e.detail.value as string };
-              //   });
-              //   setDisableButtons(false);
-              // }}
+              onIonChange={(e) => {
+                setDisplayInfoValue({
+                  ...slideInfo,
+                  description: e.detail.value as string
+                });
+              }}
             />
           </IonItem>
           <IonItem className="ion-padding-vertical" lines="none">
@@ -116,11 +121,10 @@ const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
               expand="block"
               slot="end"
               size="default"
-              // onClick={() => {
-              //   setDisplayInfoValue(slideInfo);
-              //   setDisableButtons(true);
-              // }}
-              disabled={disableButtons}
+              onClick={() => {
+                setDisplayInfoValue(slideInfo);
+                setCollapseForm(!collapseForm);
+              }}
             >
               Cancelar
             </IonButton>
@@ -129,7 +133,6 @@ const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
               size="default"
               expand="block"
               onClick={updateDisplayInfo}
-              disabled={disableButtons}
             >
               Guardar
             </IonButton>
@@ -137,6 +140,7 @@ const ConfigSlideDetail: React.FC<SlideDetailProps> = ({ match }) => {
         </Collapse>
       </IonList>
       <EditImage
+        resource="slides"
         entity={slide}
         size={{ width: 1920, height: 1080 }}
         addToEntity="slide"

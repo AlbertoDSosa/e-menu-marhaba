@@ -22,6 +22,7 @@ import {
   Info,
   DisplayInfo
 } from 'definitions/models';
+import ToggleSlide from '../../../../components/ui/ToggleSlide';
 
 interface ListItemDetailPageProps
   extends RouteComponentProps<{
@@ -76,93 +77,109 @@ const ListItemDetail: React.FC<ListItemDetailPageProps> = ({ match }) => {
           <h3>Opciones de Artículo de Lista</h3>
         </IonListHeader>
         <IonItem>
-          <IonToggle
-            color="dark"
-            checked={listItem.show}
-            onIonChange={() => {
-              // set({
-              //   action: 'show',
-              //   info: 'item',
-              //   entity: 'listItem',
-              //   id: listItem.id
-              // });
+          <ToggleSlide
+            show={listItem.show}
+            title="Mostrar Artículo"
+            variables={{
+              resource: 'listItems',
+              action: 'set',
+              args: {
+                action: 'show',
+                info: 'item',
+                entity: 'listItem',
+                id: listItem.id
+              }
             }}
-          >
-            Mostrar Artículo
-          </IonToggle>
+          />
         </IonItem>
         {item.type === 'product' && (
           <IonItem>
-            <IonToggle
-              color="dark"
-              checked={listItem.showPrice}
-              onIonChange={() => {
-                // set({
-                //   action: 'show',
-                //   info: 'price',
-                //   entity: 'listItem',
-                //   id: listItem.id
-                // });
+            <ToggleSlide
+              show={listItem.showPrice}
+              title="Mostrar Precio"
+              variables={{
+                resource: 'listItems',
+                action: 'set',
+                args: {
+                  action: 'show',
+                  info: 'price',
+                  entity: 'listItem',
+                  id: listItem.id
+                }
               }}
-            >
-              Mostrar Precio
-            </IonToggle>
+            />
           </IonItem>
         )}
         {listItem.showTitle && (
           <IonItem>
-            <IonToggle
-              color="dark"
-              checked={listItem.showTitle}
-              onIonChange={() => {
-                // set({
-                //   action: 'show',
-                //   info: 'title',
-                //   entity: 'listItem',
-                //   id: listItem.id
-                // });
+            <ToggleSlide
+              show={listItem.showTitle}
+              title="Mostrar Título"
+              variables={{
+                resource: 'listItems',
+                action: 'set',
+                args: {
+                  action: 'show',
+                  info: 'title',
+                  entity: 'listItem',
+                  id: listItem.id
+                }
               }}
-            >
-              Mostrar Título
-            </IonToggle>
+            />
           </IonItem>
         )}
         {itemInfo.description && (
           <IonItem>
-            <IonToggle
-              color="dark"
-              checked={listItem.showDescription}
-              onIonChange={() => {
-                // set({
-                //   action: 'show',
-                //   info: 'description',
-                //   entity: 'listItem',
-                //   id: listItem.id
-                // });
+            <ToggleSlide
+              show={listItem.showDescription}
+              title="Mostrar Descripción"
+              variables={{
+                resource: 'listItems',
+                action: 'set',
+                args: {
+                  action: 'show',
+                  info: 'description',
+                  entity: 'listItem',
+                  id: listItem.id
+                }
               }}
-            >
-              Mostrar Descripción
-            </IonToggle>
+            />
           </IonItem>
         )}
-        {itemInfo.extraInfo && (
-          <IonItem>
-            <IonToggle
-              color="dark"
-              checked={listItem.showExtraInfo}
-              onIonChange={() => {
-                // set({
-                //   action: 'show',
-                //   info: 'extra-info',
-                //   entity: 'listItem',
-                //   id: listItem.id
-                // });
-              }}
-            >
-              Mostrar Información Extra
-            </IonToggle>
-          </IonItem>
-        )}
+
+        <IonItem>
+          <ToggleSlide
+            show={listItem.showExtraInfo}
+            title="Mostrar Información Extra"
+            variables={{
+              resource: 'listItems',
+              action: 'set',
+              args: {
+                action: 'show',
+                info: 'extra-info',
+                entity: 'listItem',
+                id: listItem.id
+              }
+            }}
+          />
+        </IonItem>
+
+        <IonItem>
+          <ToggleSlide
+            show={listItem.showItemDetail}
+            title="Mostrar Detalles"
+            variables={{
+              resource: 'listItems',
+              action: 'set',
+              args: {
+                action: 'show',
+                info: 'item-detail',
+                entity: 'listItem',
+                id: listItem.id
+              }
+            }}
+          />
+        </IonItem>
       </IonList>
     </IonContent>
   );

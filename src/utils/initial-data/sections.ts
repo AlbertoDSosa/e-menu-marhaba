@@ -349,7 +349,7 @@ export const sections: { [key: string]: PageSection } = {
     type: 'section',
     active: true,
     defaultImg: 'image->section->aside-650-750-default',
-    mainImg: '',
+    mainImg: 'image->section->aside-650-750-especials',
     template: 'template->pageSection->one-row-two-cols',
     show: true,
     showExtraInfo: false,

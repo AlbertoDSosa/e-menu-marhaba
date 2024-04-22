@@ -6,10 +6,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->pan-arabe-1': {
     id: 'item->product->meals->starters->pan-arabe-1',
     type: 'product',
-    images: [],
+    images: ['image->item->product->pan-arabe-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->pan-arabe-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -150,7 +150,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->vegetable-and-meat-soup-3': {
     id: 'item->product->meals->starters->vegetable-and-meat-soup-3',
     type: 'product',
-    images: [],
+    images: ['image->item->product->sopa-harera-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->sopa-harera-1',
@@ -222,7 +222,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->arab-patty-with-cheese-and-honey-4': {
     id: 'item->product->meals->starters->arab-patty-with-cheese-and-honey-4',
     type: 'product',
-    images: [],
+    images: ['image->item->product->briwat-queso-miel-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->briwat-queso-miel-1',
@@ -294,7 +294,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->arab-patty-with-vegetables-5': {
     id: 'item->product->meals->starters->arab-patty-with-vegetables-5',
     type: 'product',
-    images: [],
+    images: ['image->item->product->briwat-verduras-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->briwat-verduras-1',
@@ -366,7 +366,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->arab-patty-with-spinach-6': {
     id: 'item->product->meals->starters->arab-patty-with-spinach-6',
     type: 'product',
-    images: [],
+    images: ['image->item->product->briwat-espinacas-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->briwat-espinacas-1',
@@ -439,7 +439,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->arab-patty-with-chicken-and-spices-7': {
     id: 'item->product->meals->starters->arab-patty-with-chicken-and-spices-7',
     type: 'product',
-    images: [],
+    images: ['image->item->product->briwat-pollo-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->briwat-pollo-1',
@@ -511,7 +511,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->arab-patty-with-meat-and-pinions-8': {
     id: 'item->product->meals->starters->arab-patty-with-meat-and-pinions-8',
     type: 'product',
-    images: [],
+    images: ['image->item->product->briwat-carne-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->briwat-carne-1',
@@ -583,7 +583,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->chickpeas-croquettes-9': {
     id: 'item->product->meals->starters->chickpeas-croquettes-9',
     type: 'product',
-    images: [],
+    images: ['image->item->product->falafel-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->falafel-1',
@@ -655,7 +655,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->arab-patty-with-seadfood-10': {
     id: 'item->product->meals->starters->arab-patty-with-seadfood-10',
     type: 'product',
-    images: [],
+    images: ['image->item->product->pastelas-marisco-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->pastelas-marisco-1',
@@ -799,7 +799,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->spinachs-croquettes-12': {
     id: 'item->product->meals->starters->spinachs-croquettes-12',
     type: 'product',
-    images: [],
+    images: ['image->item->product->croqueta-espinacas-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->croqueta-espinacas-1',
@@ -871,7 +871,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->lamb-croquettes-13': {
     id: 'item->product->meals->starters->lamb-croquettes-13',
     type: 'product',
-    images: [],
+    images: ['image->item->product->croqueta-cordero-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->croqueta-cordero-1',
@@ -1015,7 +1015,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->hummus-15': {
     id: 'item->product->meals->starters->hummus-15',
     type: 'product',
-    images: [],
+    images: ['image->item->product->hummus-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->hummus-1',
@@ -1087,7 +1087,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->hummus-lenteja-16': {
     id: 'item->product->meals->starters->hummus-lenteja-16',
     type: 'product',
-    images: [],
+    images: ['image->item->product->hummus-lentejas-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->hummus-lentejas-1',
@@ -1159,7 +1159,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->zaaluk-17': {
     id: 'item->product->meals->starters->zaaluk-17',
     type: 'product',
-    images: [],
+    images: ['image->item->product->zaaluk-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->zaaluk-1',
@@ -1231,7 +1231,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->ensalada-cous-cous-18': {
     id: 'item->product->meals->starters->ensalada-cous-cous-18',
     type: 'product',
-    images: [],
+    images: ['image->item->product->ensalada-cous-cous-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->ensalada-cous-cous-1',
@@ -1303,7 +1303,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->ensalada-pollo-crujiente-19': {
     id: 'item->product->meals->starters->ensalada-pollo-crujiente-19',
     type: 'product',
-    images: [],
+    images: ['image->item->product->ensalada-pollo-crujiente-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->ensalada-pollo-crujiente-1',
@@ -1375,10 +1375,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->ensalada-marroqui-20': {
     id: 'item->product->meals->starters->ensalada-marroqui-20',
     type: 'product',
-    images: [],
+    images: ['image->item->product->ensalada-marroqui-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->ensalada-marroqui-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -1447,7 +1447,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->ensalada-gourmet-21': {
     id: 'item->product->meals->starters->ensalada-gourmet-21',
     type: 'product',
-    images: [],
+    images: ['image->item->product->ensalada-gourmet-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->ensalada-gourmet-1',
@@ -1519,7 +1519,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->berengenas-miel-22': {
     id: 'item->product->meals->starters->berengenas-miel-22',
     type: 'product',
-    images: [],
+    images: ['image->item->product->berengenas-miel-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->berengenas-miel-1',
@@ -1591,7 +1591,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->berenjenas-rellenas-de-ternera-23': {
     id: 'item->product->meals->starters->berenjenas-rellenas-de-ternera-23',
     type: 'product',
-    images: [],
+    images: ['image->item->product->berengena-rellena-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->berengena-rellena-1',
@@ -1663,10 +1663,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->pulpo-brasa-24': {
     id: 'item->product->meals->starters->pulpo-brasa-24',
     type: 'product',
-    images: [],
+    images: ['image->item->product->pulpo-brasa-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->pulpo-brasa-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -1735,7 +1735,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->queso-ahumado-25': {
     id: 'item->product->meals->starters->queso-ahumado-25',
     type: 'product',
-    images: [],
+    images: ['image->item->product->queso-ahumado-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->queso-ahumado-1',
@@ -1807,7 +1807,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->chistorras-morunas-26': {
     id: 'item->product->meals->starters->chistorras-morunas-26',
     type: 'product',
-    images: [],
+    images: ['image->item->product->chistorras-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->chistorras-1',
@@ -1879,7 +1879,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->marchica-27': {
     id: 'item->product->meals->starters->marchica-27',
     type: 'product',
-    images: [],
+    images: ['image->item->product->marchica-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->marchica-1',
@@ -1951,7 +1951,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->gambas-al-pil-pil-28': {
     id: 'item->product->meals->starters->gambas-al-pil-pil-28',
     type: 'product',
-    images: [],
+    images: ['image->item->product->gambas-pil-pil-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->gambas-pil-pil-1',
@@ -2025,7 +2025,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->skewers->pinchitos-de-pollo-1': {
     id: 'item->product->meals->skewers->pinchitos-de-pollo-1',
     type: 'product',
-    images: [],
+    images: ['image->item->product->pinchos-pollo-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->pinchos-pollo-1',
@@ -2097,7 +2097,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->skewers->pinchitos-de-ternera-2': {
     id: 'item->product->meals->skewers->pinchitos-de-ternera-2',
     type: 'product',
-    images: [],
+    images: ['image->item->product->pinchos-ternera-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->pinchos-ternera-1',
@@ -2169,7 +2169,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->skewers->pinchitos-de-cordero-3': {
     id: 'item->product->meals->skewers->pinchitos-de-cordero-3',
     type: 'product',
-    images: [],
+    images: ['image->item->product->pinchos-cordero-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->pinchos-cordero-1',
@@ -2241,7 +2241,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->skewers->pinchitos-vegetarianos-4': {
     id: 'item->product->meals->skewers->pinchitos-vegetarianos-4',
     type: 'product',
-    images: [],
+    images: ['image->item->product->default-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: '',
@@ -2313,10 +2313,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->skewers->mar-y-tierra-5': {
     id: 'item->product->meals->skewers->mar-y-tierra-5',
     type: 'product',
-    images: [],
+    images: ['image->item->product->pinchos-mar-tierra-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->pinchos-mar-tierra-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -2387,7 +2387,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->cous-cous->cous-cous-de-verduras-1': {
     id: 'item->product->meals->cous-cous->cous-cous-de-verduras-1',
     type: 'product',
-    images: [],
+    images: ['image->item->product->cous-cous-verduras-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->cous-cous-verduras-1',
@@ -2459,7 +2459,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->cous-cous->cous-cous-de-pollo-2': {
     id: 'item->product->meals->cous-cous->cous-cous-de-pollo-2',
     type: 'product',
-    images: [],
+    images: ['image->item->product->cous-cous-pollo-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->cous-cous-pollo-1',
@@ -2531,7 +2531,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->cous-cous->cous-cous-de-ternera-3': {
     id: 'item->product->meals->cous-cous->cous-cous-de-ternera-3',
     type: 'product',
-    images: [],
+    images: ['image->item->product->default-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: '',
@@ -2603,7 +2603,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->cous-cous->cous-cous-de-cordero-4': {
     id: 'item->product->meals->cous-cous->cous-cous-de-cordero-4',
     type: 'product',
-    images: [],
+    images: ['image->item->product->cous-cous-cordero-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->cous-cous-cordero-1',
@@ -2752,7 +2752,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->cous-cous->cous-cous-de-carne-vegetal-6': {
     id: 'item->product->meals->cous-cous->cous-cous-de-carne-vegetal-6',
     type: 'product',
-    images: [],
+    images: ['image->item->product->cous-cous-verduras-tofu-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->cous-cous-verduras-tofu-1',
@@ -2826,7 +2826,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->tajin->tajin-de-ternera-1': {
     id: 'item->product->meals->tajin->tajin-de-ternera-1',
     type: 'product',
-    images: [],
+    images: ['image->item->product->tajin-ternera-huevo-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->tajin-ternera-huevo-1',
@@ -2899,7 +2899,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->tajin->tajin-de-pollo-2': {
     id: 'item->product->meals->tajin->tajin-de-pollo-2',
     type: 'product',
-    images: [],
+    images: ['image->item->product->tajin-pollo-verduras-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->tajin-pollo-verduras-1',
@@ -2971,7 +2971,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->tajin->tajin-de-cordero-3': {
     id: 'item->product->meals->tajin->tajin-de-cordero-3',
     type: 'product',
-    images: [],
+    images: ['image->item->product->tajin-cordero-verduras-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->tajin-cordero-verduras-1',
@@ -3044,7 +3044,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->tajin->tajin-de-kafta-4': {
     id: 'item->product->meals->tajin->tajin-de-kafta-4',
     type: 'product',
-    images: [],
+    images: ['image->item->product->tajin-albondigas-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->tajin-albondigas-1',
@@ -3116,7 +3116,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->tajin->tajin-con-carne-vegetal-5': {
     id: 'item->product->meals->tajin->tajin-con-carne-vegetal-5',
     type: 'product',
-    images: [],
+    images: ['image->item->product->tajin-verduras-tofu-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
     mainImg: 'image->item->product->tajin-verduras-tofu-1',
@@ -3246,10 +3246,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->specials->calamar-a-la-brasa-2': {
     id: 'item->product->meals->specials->calamar-a-la-brasa-2',
     type: 'product',
-    images: [],
+    images: ['image->item->product->calamar-brasa-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->calamar-brasa-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -3303,10 +3303,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->specials->atun-rojo-a-la-brasa-3': {
     id: 'item->product->meals->specials->atun-rojo-a-la-brasa-3',
     type: 'product',
-    images: [],
+    images: ['image->item->product->atun-brasa-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->atun-brasa-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -3360,10 +3360,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->specials->t-bone-a-la-brasa-4': {
     id: 'item->product->meals->specials->t-bone-a-la-brasa-4',
     type: 'product',
-    images: [],
+    images: ['image->item->product->t-bone-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->t-bone-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -3417,10 +3417,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->specials->solomillo-a-la-brasa-5': {
     id: 'item->product->meals->specials->solomillo-a-la-brasa-5',
     type: 'product',
-    images: [],
+    images: ['image->item->product->solomillo-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->solomillo-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -4917,7 +4917,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals': {
     id: 'item->menu->meals',
     type: 'menu',
-    images: [],
+    images: ['image->menus->meals-1'],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->meals-1',
     hasVariants: false,
@@ -4961,7 +4961,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->desserts': {
     id: 'item->menu->desserts',
     type: 'menu',
-    images: [],
+    images: ['image->menus->desserts-1'],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->desserts-1',
     hasVariants: false,
@@ -5005,7 +5005,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->wines': {
     id: 'item->menu->wines',
     type: 'menu',
-    images: [],
+    images: ['image->menus->wines-1'],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->wines-1',
     hasVariants: false,
@@ -5049,7 +5049,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->info->allergens': {
     id: 'item->menu->info->allergens',
     type: 'menu',
-    images: [],
+    images: ['image->menus->allergens-1'],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->allergens-1',
     hasVariants: false,
@@ -5093,7 +5093,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->info->gallery': {
     id: 'item->menu->info->gallery',
     type: 'menu',
-    images: [],
+    images: ['image->menus->gallery-1'],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->gallery-1',
     hasVariants: false,
@@ -5137,7 +5137,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals->starters': {
     id: 'item->menu->meals->starters',
     type: 'menu',
-    images: [],
+    images: ['image->menus->starters-1'],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->starters-1',
     hasVariants: false,
@@ -5181,7 +5181,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals->skewers': {
     id: 'item->menu->meals->skewers',
     type: 'menu',
-    images: [],
+    images: ['image->menus->skewers-1'],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->skewers-1',
     hasVariants: false,
@@ -5225,7 +5225,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals->cous-cous': {
     id: 'item->menu->meals->cous-cous',
     type: 'menu',
-    images: [],
+    images: ['image->menus->cous-cous-1'],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->cous-cous-1',
     hasVariants: false,
@@ -5269,7 +5269,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals->tajin': {
     id: 'item->menu->meals->tajin',
     type: 'menu',
-    images: [],
+    images: ['image->menus->tajin-1'],
     defaultImg: 'image->menus->default-menu-item',
     mainImg: 'image->menus->tajin-1',
     hasVariants: false,
@@ -5313,9 +5313,9 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->menu->meals->specials': {
     id: 'item->menu->meals->specials',
     type: 'menu',
-    images: [],
+    images: ['image->menus->specials-1'],
     defaultImg: 'image->menus->default-menu-item',
-    mainImg: '',
+    mainImg: 'image->menus->specials-1',
     hasVariants: false,
     variants: '',
     active: true,

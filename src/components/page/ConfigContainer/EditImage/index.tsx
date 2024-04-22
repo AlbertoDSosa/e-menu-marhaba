@@ -34,11 +34,16 @@ const EditImage: React.FC<EditImageProps> = ({
   resource
 }) => {
   const [showImageEditor, setShowImageEditor] = useState<boolean>(false);
-  const { mutate } = useMutation({ resource, action: 'create' });
+  const { mutate: create } = useMutation({
+    resource: 'images',
+    action: 'create'
+  });
 
   const doSaveImage = (imageSaveParams: ImageSaveParams) => {
-    mutate({
+    create({
       entity: 'image',
+      addToList: 'images',
+      addToResource: resource,
       addToEntity,
       entityId: entity.id,
       payload: {

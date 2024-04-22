@@ -12,13 +12,13 @@ import {
   Resolution
 } from 'definitions/resolvers';
 
-export const slideResolvers = ({ entity }: ResolverParams) => {
+export const slideResolvers = () => {
   return {
     [slideActions.CREATE_SLIDE]: (
       state: State,
       variables: Variables
     ): Resolution => {
-      const { payload } = variables;
+      const { payload, entity } = variables;
       const { displayInfo, id } = payload;
       const newSlide: Slide = {
         id,
@@ -34,7 +34,7 @@ export const slideResolvers = ({ entity }: ResolverParams) => {
       return {
         newState: {
           ...state,
-          [newSlide.id]: newSlide
+          [id]: newSlide
         },
         newEntity: newSlide
       };

@@ -23,7 +23,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
-    showItemDetail: true,
+    showItemDetail: false,
     showPrice: true,
     showDescription: false,
     itemId: 'item->product->meals->starters->pan-con-alioli-2'
@@ -789,7 +789,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: false,
+    showItemDetail: true,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->chuletas-de-cordero-1'
   },
@@ -803,7 +803,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showPrice: true,
     showDescription: false,
     showExtraInfo: false,
-    showItemDetail: false,
+    showItemDetail: true,
     itemId: 'item->product->meals->specials->calamar-a-la-brasa-2'
   },
   'listItem->product->meals->specials->atun-rojo-a-la-brasa-3': {
@@ -815,7 +815,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showPrice: true,
     showDescription: false,
     showTitle: true,
-    showItemDetail: false,
+    showItemDetail: true,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->atun-rojo-a-la-brasa-3'
   },
@@ -828,7 +828,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showPrice: true,
     showDescription: false,
     showTitle: true,
-    showItemDetail: false,
+    showItemDetail: true,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->t-bone-a-la-brasa-4'
   },
@@ -841,7 +841,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: false,
+    showItemDetail: true,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->solomillo-a-la-brasa-5'
   },
@@ -854,7 +854,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: false,
+    showItemDetail: true,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->hamburguesa-atun-rojo-6'
   },
@@ -867,7 +867,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: false,
+    showItemDetail: true,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->hamburguesa-de-pollo-7'
   },
@@ -880,7 +880,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: false,
+    showItemDetail: true,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->hamburguesa-de-ternera-8'
   },

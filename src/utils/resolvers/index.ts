@@ -20,11 +20,11 @@ export const resolvers = (
   entity: string
 ): { [key: string]: (state: State, variables: Variables) => {} } => {
   return {
-    ...allergenicResolvers({ entity }),
+    ...allergenicResolvers(),
     ...commonResolvers({ entity }),
-    ...imageResolvers({ entity }),
+    ...imageResolvers(),
     ...itemResolvers(),
     ...screensaverResolvers(),
-    ...slideResolvers({ entity })
+    ...slideResolvers()
   };
 };

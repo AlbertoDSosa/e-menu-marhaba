@@ -30,7 +30,10 @@ import { DisplayInfo } from '../../definitions/models';
 import { resolvers } from '../../utils/resolvers';
 import { State } from '../../definitions/resolvers';
 
-export const add = (state: State, { entity, entityId, itemId }: AddProps) => {
+export const add = (
+  state: State,
+  { entity, entityId, itemId, addToList }: AddProps
+) => {
   const resolver = resolvers(entity);
 
   const _add: { [key: string]: () => State } = {
@@ -56,18 +59,39 @@ export const add = (state: State, { entity, entityId, itemId }: AddProps) => {
       });
     },
     screensaver: () => {
+      if (addToList === 'selectableItems') {
+        return resolver[screensaverActions.ADD_SELECTABLE_SLIDE](state, {
+          type: screensaverActions.ADD_SELECTABLE_SLIDE,
+          entity: 'selectableSlides',
+          payload: { itemId }
+        });
+      }
+
       return resolver[screensaverActions.ADD_SLIDE](state, {
         type: screensaverActions.ADD_SLIDE,
-        entity: entity,
+        entity: 'slides',
         payload: { itemId }
       });
     },
     slide: () => {
-      return resolver[slideActions.ADD_IMAGE](state, {
-        type: slideActions.ADD_IMAGE,
-        entity: entity,
-        payload: { itemId }
-      });
+      if (addToList === 'images') {
+        return resolver[slideActions.ADD_IMAGE](state, {
+          type: slideActions.ADD_IMAGE,
+          entity: entity,
+          payload: { id: itemId, entityId }
+        });
+      }
+      return state;
+    },
+    item: () => {
+      if (addToList === 'images') {
+        return resolver[itemActions.ADD_IMAGE](state, {
+          type: itemActions.ADD_IMAGE,
+          entity: entity,
+          payload: { id: itemId, entityId }
+        });
+      }
+      return state;
     }
   };
 
@@ -303,6 +327,12 @@ export const set = (state: State, { action, info, entity, id }: SetProps) => {
       };
 
       return _set[entity]();
+    } else if (info === 'item-detail') {
+      return resolver[listItemActions.SET_SHOW_ITEM_DETAIL](state, {
+        type: listItemActions.SET_SHOW_ITEM_DETAIL,
+        payload: id,
+        entity: entity
+      });
     }
   } else if (action === 'active') {
     const _set: { [key: string]: () => State } = {
@@ -330,49 +360,25 @@ export const set = (state: State, { action, info, entity, id }: SetProps) => {
 
 export const create = (
   state: State,
-  { entity, payload, addToEntity, entityId }: CreateProps
+  { entity, payload, addToResource, entityId }: CreateProps
 ) => {
   const resolver = resolvers(entity);
   const { displayInfo, lang, image } = payload;
   const { slug }: DisplayInfo = displayInfo[lang];
-  const id = `${entity}->${addToEntity}->${slug}->${uid.generate()}`;
+  const id = `${entity}->${addToResource}->${slug}->${uid.generate()}`;
 
   const _create: { [key: string]: () => State } = {
     slide: () => {
-      if (addToEntity === 'screensaver') {
-        resolver[screensaverActions.ADD_SELECTABLE_SLIDE](state, {
-          type: screensaverActions.ADD_SELECTABLE_SLIDE,
-          entity: addToEntity,
-          payload: { id, displayInfo }
-        });
-      }
-
       return resolver[slideActions.CREATE_SLIDE](state, {
         type: slideActions.CREATE_SLIDE,
-        entity: addToEntity,
+        entity: addToResource,
         payload: { id, displayInfo }
       });
     },
     image: () => {
-      if (addToEntity === 'slide') {
-        resolver[slideActions.ADD_IMAGE](state, {
-          type: slideActions.ADD_IMAGE,
-          entity: addToEntity,
-          payload: { id, entityId }
-        });
-      }
-
-      if (addToEntity === 'item') {
-        return resolver[itemActions.ADD_IMAGE](state, {
-          type: itemActions.ADD_IMAGE,
-          entity: addToEntity,
-          payload: { id, entityId }
-        });
-      }
-
       return resolver[imageActions.CREATE](state, {
         type: imageActions.CREATE,
-        entity: addToEntity,
+        entity: entity,
         payload: { id, displayInfo, lang, image }
       });
     }

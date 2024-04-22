@@ -74,11 +74,6 @@ export const images: { [key: string]: Image } = {
     full: { title: 'Information', src: 'assets/img/menus/info-1.png' },
     thumbnail: { title: 'Information', src: 'assets/img/menus/info-1.png' }
   },
-  'image->menus->covid-1': {
-    id: 'image->menus->covid-1',
-    full: { title: 'Covid', src: 'assets/img/menus/covid-1.png' },
-    thumbnail: { title: 'Covid', src: 'assets/img/menus/covid-1.png' }
-  },
   'image->menus->allergens-1': {
     id: 'image->menus->allergens-1',
     full: { title: 'Allergens', src: 'assets/img/menus/allergens-1.png' },
@@ -89,107 +84,10 @@ export const images: { [key: string]: Image } = {
     full: { title: 'Wines', src: 'assets/img/menus/wines-1.png' },
     thumbnail: { title: 'Wines', src: 'assets/img/menus/wines-1.png' }
   },
-  'image->menus->drinks-1': {
-    id: 'image->menus->drinks-1',
-    full: { title: 'Drinks', src: 'assets/img/menus/drinks-1.png' },
-    thumbnail: { title: 'Drinks', src: 'assets/img/menus/drinks-1.png' }
-  },
   'image->menus->desserts-1': {
     id: 'image->menus->desserts-1',
     full: { title: 'Desserts', src: 'assets/img/menus/desserts-1.png' },
     thumbnail: { title: 'Desserts', src: 'assets/img/menus/desserts-1.png' }
-  },
-  'image->menus->meals-1': {
-    id: 'image->menus->meals-1',
-    full: { title: 'Meals', src: 'assets/img/menus/meals-1.png' },
-    thumbnail: { title: 'Meals', src: 'assets/img/menus/meals-1.png' }
-  },
-  'image->menus->meals-fresh-1': {
-    id: 'image->menus->meals-fresh-1',
-    full: {
-      title: 'Something Fresh',
-      src: 'assets/img/menus/meals-fresh-1.png'
-    },
-    thumbnail: {
-      title: 'Something Fresh',
-      src: 'assets/img/menus/meals-fresh-1.png'
-    }
-  },
-  'image->menus->spoon-dishes-1': {
-    id: 'image->menus->spoon-dishes-1',
-    full: { title: 'Spoon Dishes', src: 'assets/img/menus/spoon-dishes-1.png' },
-    thumbnail: {
-      title: 'Spoon Dishes',
-      src: 'assets/img/menus/spoon-dishes-1.png'
-    }
-  },
-  'image->menus->hands-1': {
-    id: 'image->menus->hands-1',
-    full: { title: 'Whith the Hands', src: 'assets/img/menus/hands-1.png' },
-    thumbnail: { title: 'Whith the Hands', src: 'assets/img/menus/hands-1.png' }
-  },
-  'image->menus->share-snack-1': {
-    id: 'image->menus->share-snack-1',
-    full: {
-      title: 'To share or to snack',
-      src: 'assets/img/menus/share-snack-1.png'
-    },
-    thumbnail: {
-      title: 'To share or to snack',
-      src: 'assets/img/menus/share-snack-1.png'
-    }
-  },
-  'image->menus->children-1': {
-    id: 'image->menus->children-1',
-    full: {
-      title: '',
-      src: 'assets/img/menus/children-1.png'
-    },
-    thumbnail: {
-      title: '',
-      src: 'assets/img/menus/children-1.png'
-    }
-  },
-  'image->menus->garnishes-or-side-dishes-1': {
-    id: 'image->menus->garnishes-or-side-dishes-1',
-    full: { title: 'Fittings', src: 'assets/img/menus/fittings-1.png' },
-    thumbnail: {
-      title: 'Fittings',
-      src: 'assets/img/menus/fittings-1.png'
-    }
-  },
-  'image->menus->smoothies-1': {
-    id: 'image->menus->smoothies-1',
-    full: {
-      title: '',
-      src: 'assets/img/menus/smoothies-1.png'
-    },
-    thumbnail: {
-      title: '',
-      src: 'assets/img/menus/smoothies-1.png'
-    }
-  },
-  'image->menus->appetizers-1': {
-    id: 'image->menus->appetizers-1',
-    full: {
-      title: '',
-      src: 'assets/img/menus/appetizers-1.png'
-    },
-    thumbnail: {
-      title: '',
-      src: 'assets/img/menus/appetizers-1.png'
-    }
-  },
-  'image->menus->refreshments-1': {
-    id: 'image->menus->refreshments-1',
-    full: {
-      title: '',
-      src: 'assets/img/menus/refreshments-1.png'
-    },
-    thumbnail: {
-      title: '',
-      src: 'assets/img/menus/refreshments-1.png'
-    }
   },
   'image->menus->tajin-1': {
     id: 'image->menus->tajin-1',
@@ -235,6 +133,17 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/menus/starters-1.png'
     }
   },
+  'image->menus->specials-1': {
+    id: 'image->menus->specials-1',
+    full: {
+      title: '',
+      src: 'assets/img/menus/specials-1.png'
+    },
+    thumbnail: {
+      title: '',
+      src: 'assets/img/menus/specials-1.png'
+    }
+  },
   'image->qr->qr-web': {
     id: 'image->qr->qr-web',
     full: { title: 'QR Web', src: 'assets/img/qr/qr-web.png' },
@@ -257,28 +166,6 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: '',
       src: 'assets/img/menus/coffee-shop-1.png'
-    }
-  },
-  'image->menus->beers-1': {
-    id: 'image->menus->beers-1',
-    full: {
-      title: '',
-      src: 'assets/img/menus/beers-1.png'
-    },
-    thumbnail: {
-      title: '',
-      src: 'assets/img/menus/beers-1.png'
-    }
-  },
-  'image->menus->bar-1': {
-    id: 'image->menus->bar-1',
-    full: {
-      title: '',
-      src: 'assets/img/menus/bar-1.png'
-    },
-    thumbnail: {
-      title: '',
-      src: 'assets/img/menus/bar-1.png'
     }
   },
   'image->allergens->fish-1': {
@@ -864,26 +751,15 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/section/aside-650-750-white-wine.png'
     }
   },
-  'image->section->aside-650-750-beers': {
-    id: 'image->section->aside-650-750-beers',
+  'image->section->aside-650-750-especials': {
+    id: 'image->section->aside-650-750-especials',
     full: {
       title: 'Aside Dummy',
-      src: 'assets/img/section/aside-650-750-beers.png'
+      src: 'assets/img/section/aside-650-750-especials.png'
     },
     thumbnail: {
       title: 'Aside Dummy',
-      src: 'assets/img/section/aside-650-750-beers.png'
-    }
-  },
-  'image->section->aside-650-750-rums': {
-    id: 'image->section->aside-650-750-rums',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-650-750-rums.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-650-750-rums.png'
+      src: 'assets/img/section/aside-650-750-especials.png'
     }
   },
   'image->section->aside-1500-300-default': {
@@ -895,83 +771,6 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Aside Dummy',
       src: 'assets/img/section/aside-1500-300-default.png'
-    }
-  },
-  'image->section->aside-1500-300-beers': {
-    id: 'image->section->aside-1500-300-beers',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-beers.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-beers.png'
-    }
-  },
-  'image->section->aside-1500-300-whisky': {
-    id: 'image->section->aside-1500-300-whisky',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-whisky.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-whisky.png'
-    }
-  },
-  'image->section->aside-1500-300-gins': {
-    id: 'image->section->aside-1500-300-gins',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-gins.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-gins.png'
-    }
-  },
-  'image->section->aside-1500-300-cognac': {
-    id: 'image->section->aside-1500-300-cognac',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-cognac.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-cognac.png'
-    }
-  },
-  'image->section->aside-1500-300-childrens': {
-    id: 'image->section->aside-1500-300-childrens',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-childrens.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-childrens.png'
-    }
-  },
-  'image->section->aside-1500-300-breakfasts': {
-    id: 'image->section->aside-1500-300-breakfasts',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-breakfasts.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-breakfasts.png'
-    }
-  },
-  'image->section->aside-1500-300-refreshments': {
-    id: 'image->section->aside-1500-300-refreshments',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-refreshments.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-300-refreshments.png'
     }
   },
   'image->section->aside-1500-350-default': {
@@ -996,50 +795,6 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/section/aside-1500-350-starters.png'
     }
   },
-  'image->section->aside-1500-350-appetizers': {
-    id: 'image->section->aside-1500-350-appetizers',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-350-appetizers.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-350-appetizers.png'
-    }
-  },
-  'image->section->aside-1500-350-surf': {
-    id: 'image->section->aside-1500-350-surf',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-350-surf.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-350-surf.png'
-    }
-  },
-  'image->section->aside-1500-350-turf': {
-    id: 'image->section->aside-1500-350-turf',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-350-turf.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-350-turf.png'
-    }
-  },
-  'image->section->aside-1500-350-cocktails': {
-    id: 'image->section->aside-1500-350-cocktails',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-350-cocktails.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-350-cocktails.png'
-    }
-  },
   'image->section->aside-1500-400-default': {
     id: 'image->section->aside-1500-400-default',
     full: {
@@ -1060,17 +815,6 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Aside Dummy',
       src: 'assets/img/section/aside-1500-400-desserts.png'
-    }
-  },
-  'image->section->aside-1500-400-spoon-dishes': {
-    id: 'image->section->aside-1500-400-spoon-dishes',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-400-spoon-dishes.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-400-spoon-dishes.png'
     }
   },
   'image->section->aside-1500-400-skewers': {
@@ -1106,17 +850,6 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/section/aside-1500-400-tajin.png'
     }
   },
-  'image->section->aside-1500-400-salads': {
-    id: 'image->section->aside-1500-400-salads',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-400-salads.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-400-salads.png'
-    }
-  },
   'image->section->aside-1500-450-default': {
     id: 'image->section->aside-1500-450-default',
     full: {
@@ -1126,17 +859,6 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Aside Dummy',
       src: 'assets/img/section/aside-1500-450-default.png'
-    }
-  },
-  'image->section->aside-1500-450-salads': {
-    id: 'image->section->aside-1500-450-salads',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-450-salads.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-450-salads.png'
     }
   },
   'image->section->aside-1500-450-desserts': {
@@ -1150,28 +872,6 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/section/aside-1500-450-desserts.png'
     }
   },
-  'image->section->aside-1500-450-childrens': {
-    id: 'image->section->aside-1500-450-childrens',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-450-childrens.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-450-childrens.png'
-    }
-  },
-  'image->section->aside-1500-450-spoon-dishes': {
-    id: 'image->section->aside-1500-450-spoon-dishes',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-450-spoon-dishes.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/section/aside-1500-450-spoon-dishes.png'
-    }
-  },
   'image->list->aside-700-350-default': {
     id: 'image->list->aside-700-350-default',
     full: {
@@ -1181,17 +881,6 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Aside Dummy',
       src: 'assets/img/list/aside-700-350-default.png'
-    }
-  },
-  'image->list->aside-700-350-vodka': {
-    id: 'image->list->aside-700-350-vodka',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/list/aside-700-350-vodka.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/list/aside-700-350-vodka.png'
     }
   },
   'image->list->aside-700-350-cider': {
@@ -1238,17 +927,6 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/list/aside-700-250-sweet-wine.png'
     }
   },
-  'image->list->aside-700-250-sangrias-and-champagnes': {
-    id: 'image->list->aside-700-250-sangrias-and-champagnes',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/list/aside-700-250-sangrias-and-champagnes.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/list/aside-700-250-sangrias-and-champagnes.png'
-    }
-  },
   'image->section->aside-1000-420-default': {
     id: 'image->section->aside-1000-420-default',
     full: {
@@ -1280,39 +958,6 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Aside Dummy',
       src: 'assets/img/item/info/info-card-250-2-default.png'
-    }
-  },
-  'image->item->product->250-2-smoothi-1': {
-    id: 'image->item->product->250-2-smoothi-1',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/250-2-smoothi-1.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/250-2-smoothi-1.png'
-    }
-  },
-  'image->item->product->250-2-smoothi-4': {
-    id: 'image->item->product->250-2-smoothi-4',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/250-2-smoothi-4.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/250-2-smoothi-4.png'
-    }
-  },
-  'image->item->product->250-2-smoothi-6': {
-    id: 'image->item->product->250-2-smoothi-6',
-    full: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/250-2-smoothi-6.png'
-    },
-    thumbnail: {
-      title: 'Aside Dummy',
-      src: 'assets/img/item/product/250-2-smoothi-6.png'
     }
   },
   'image->item->info->info-card-250-2-sanitary-measures-1': {
@@ -1524,6 +1169,17 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/item/product/thumbnail/default-1.png'
     }
   },
+  'image->item->product->pan-arabe-1': {
+    id: 'image->item->product->pan-arabe-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/pan-arabe-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/pan-arabe-1.png'
+    }
+  },
   'image->item->product->sopa-harera-1': {
     id: 'image->item->product->sopa-harera-1',
     full: {
@@ -1700,6 +1356,28 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/item/product/thumbnail/ensalada-gourmet-1.png'
     }
   },
+  'image->item->product->ensalada-marroqui-1': {
+    id: 'image->item->product->ensalada-marroqui-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/ensalada-marroqui-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/ensalada-marroqui-1.png'
+    }
+  },
+  'image->item->product->pulpo-brasa-1': {
+    id: 'image->item->product->pulpo-brasa-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/pulpo-brasa-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/pulpo-brasa-1.png'
+    }
+  },
   'image->item->product->queso-ahumado-1': {
     id: 'image->item->product->queso-ahumado-1',
     full: {
@@ -1797,6 +1475,17 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Default Image',
       src: 'assets/img/item/product/thumbnail/pinchos-cordero-1.png'
+    }
+  },
+  'image->item->product->pinchos-mar-tierra-1': {
+    id: 'image->item->product->pinchos-mar-tierra-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/pinchos-mar-tierra-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/pinchos-mar-tierra-1.png'
     }
   },
   'image->item->product->cous-cous-verduras-1': {
@@ -1907,6 +1596,50 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Default Image',
       src: 'assets/img/item/product/thumbnail/tajin-pollo-limon-1.png'
+    }
+  },
+  'image->item->product->calamar-brasa-1': {
+    id: 'image->item->product->calamar-brasa-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/calamar-brasa-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/calamar-brasa-1.png'
+    }
+  },
+  'image->item->product->t-bone-1': {
+    id: 'image->item->product->t-bone-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/t-bone-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/t-bone-1.png'
+    }
+  },
+  'image->item->product->solomillo-1': {
+    id: 'image->item->product->solomillo-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/solomillo-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/solomillo-1.png'
+    }
+  },
+  'image->item->product->atun-brasa-1': {
+    id: 'image->item->product->atun-brasa-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/atun-brasa-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/atun-brasa-1.png'
     }
   }
 };
