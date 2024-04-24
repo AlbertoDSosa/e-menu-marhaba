@@ -188,7 +188,13 @@ export type UpdateEntity =
   | 'image';
 
 export interface UpdateProps {
-  field: 'info' | 'price' | 'itemVariantPrice' | 'number' | 'image';
+  field:
+    | 'info'
+    | 'price'
+    | 'itemVariantPrice'
+    | 'number'
+    | 'image'
+    | 'timeToShow';
   entity: UpdateEntity;
   payload:
     | NewDisplayInfo

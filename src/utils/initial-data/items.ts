@@ -3588,10 +3588,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->specials->hamburguesa-de-ternera-8': {
     id: 'item->product->meals->specials->hamburguesa-de-ternera-8',
     type: 'product',
-    images: [],
+    images: ['image->item->product->hamburguesa-ternera-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->hamburguesa-ternera-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',

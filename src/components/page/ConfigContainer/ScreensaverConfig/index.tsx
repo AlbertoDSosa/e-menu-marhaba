@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '../../../../hooks/useQuery';
-// import { useMutation } from '../../../../hooks/useMutation';
+import { useMutation } from '../../../../hooks/useMutation';
 
 import {
   IonContent,
@@ -21,6 +21,11 @@ const ScreensaverConfig: React.FC = () => {
     key: 'screensaver'
   });
 
+  const { mutate: update } = useMutation({
+    resource: 'screensaver',
+    action: 'update'
+  });
+
   if (isLoading)
     return (
       <IonLoading
@@ -30,10 +35,6 @@ const ScreensaverConfig: React.FC = () => {
       />
     );
 
-  // const { mutate: updateNumber } = useMutation({
-  //   resource: 'screensaver',
-  //   action: 'update'
-  // });
   const timeToShow = screensaver.selectableTimesToShow[screensaver.timeToShow];
   const timeToShowInfo = timeToShow.displayInfo['es'];
 
@@ -42,7 +43,11 @@ const ScreensaverConfig: React.FC = () => {
   );
 
   const onChangeTimeToShow = (e: any) => {
-    // console.log(e.detail.value);
+    update({
+      entity: 'screensaver',
+      payload: e.detail.value,
+      field: 'timeToShow'
+    });
   };
 
   return (

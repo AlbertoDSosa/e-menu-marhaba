@@ -62,7 +62,8 @@ export enum screensaverActions {
   ADD_SELECTABLE_SLIDE = 'screensaver->addSelectableSlide',
   ADD_SLIDE = 'screensaver->addSlide',
   REMOVE_SLIDE = 'screensaver->removeSlide',
-  REORDER_SLIDES = 'screensaver->reorderSlides'
+  REORDER_SLIDES = 'screensaver->reorderSlides',
+  UPDATE_TIME_TO_SHOW = 'screensaver->updateTimeToShow'
 }
 
 export enum slideActions {

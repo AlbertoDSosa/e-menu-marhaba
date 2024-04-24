@@ -360,7 +360,7 @@ export const set = (state: State, { action, info, entity, id }: SetProps) => {
 
 export const create = (
   state: State,
-  { entity, payload, addToResource, entityId }: CreateProps
+  { entity, payload, addToResource }: CreateProps
 ) => {
   const resolver = resolvers(entity);
   const { displayInfo, lang, image } = payload;
@@ -393,82 +393,92 @@ export const update = (
 ) => {
   const resolver = resolvers(entity);
 
-  if (field === 'info') {
-    const _update: { [key: string]: () => State } = {
-      item: () => {
-        return resolver[itemActions.UPDATE_DISPLAY_INFO](state, {
-          type: itemActions.UPDATE_DISPLAY_INFO,
-          entity: entity,
-          payload: payload as NewDisplayInfo
-        });
-      },
-      category: () => {
-        return resolver[categoryActions.UPDATE_DISPLAY_INFO](state, {
-          type: categoryActions.UPDATE_DISPLAY_INFO,
-          entity: entity,
-          payload: payload as NewDisplayInfo
-        });
-      },
-      list: () => {
-        return resolver[listActions.UPDATE_DISPLAY_INFO](state, {
-          type: listActions.UPDATE_DISPLAY_INFO,
-          entity: entity,
-          payload: payload as NewDisplayInfo
-        });
-      },
-      pageMenu: () => {
-        return resolver[pageMenuActions.UPDATE_DISPLAY_INFO](state, {
-          type: pageMenuActions.UPDATE_DISPLAY_INFO,
-          entity: entity,
-          payload: payload as NewDisplayInfo
-        });
-      },
-      slide: () => {
-        return resolver[slideActions.UPDATE_DISPLAY_INFO](state, {
-          type: slideActions.UPDATE_DISPLAY_INFO,
-          entity: entity,
-          payload: payload as NewDisplayInfo
-        });
-      }
-    };
+  if (entity === 'screensaver') {
+    if (field === 'timeToShow') {
+      return resolver[screensaverActions.UPDATE_TIME_TO_SHOW](state, {
+        type: screensaverActions.UPDATE_TIME_TO_SHOW,
+        entity: entity,
+        payload: payload
+      });
+    }
+  } else {
+    if (field === 'info') {
+      const _update: { [key: string]: () => State } = {
+        item: () => {
+          return resolver[itemActions.UPDATE_DISPLAY_INFO](state, {
+            type: itemActions.UPDATE_DISPLAY_INFO,
+            entity: entity,
+            payload: payload as NewDisplayInfo
+          });
+        },
+        category: () => {
+          return resolver[categoryActions.UPDATE_DISPLAY_INFO](state, {
+            type: categoryActions.UPDATE_DISPLAY_INFO,
+            entity: entity,
+            payload: payload as NewDisplayInfo
+          });
+        },
+        list: () => {
+          return resolver[listActions.UPDATE_DISPLAY_INFO](state, {
+            type: listActions.UPDATE_DISPLAY_INFO,
+            entity: entity,
+            payload: payload as NewDisplayInfo
+          });
+        },
+        pageMenu: () => {
+          return resolver[pageMenuActions.UPDATE_DISPLAY_INFO](state, {
+            type: pageMenuActions.UPDATE_DISPLAY_INFO,
+            entity: entity,
+            payload: payload as NewDisplayInfo
+          });
+        },
+        slide: () => {
+          return resolver[slideActions.UPDATE_DISPLAY_INFO](state, {
+            type: slideActions.UPDATE_DISPLAY_INFO,
+            entity: entity,
+            payload: payload as NewDisplayInfo
+          });
+        }
+      };
 
-    return _update[entity]();
-  } else if (field === 'price') {
-    return resolver[itemActions.UPDATE_ITEM_PRICE](state, {
-      type: itemActions.UPDATE_ITEM_PRICE,
-      entity: entity,
-      payload: payload as NewPrice
-    });
-  } else if (field === 'itemVariantPrice') {
-    return resolver[itemActions.UPDATE_ITEM_VARIANT_PRICE](state, {
-      type: itemActions.UPDATE_ITEM_VARIANT_PRICE,
-      entity: entity,
-      payload: payload as NewVariantPrice
-    });
-  } else if (field === 'number') {
-    return resolver[itemActions.UPDATE_ITEM_NUMBER](state, {
-      type: itemActions.UPDATE_ITEM_NUMBER,
-      entity: entity,
-      payload: payload as NewNumber
-    });
-  } else if (field === 'image') {
-    const _set: { [key: string]: () => State } = {
-      slide: () => {
-        return resolver[slideActions.SET_MAIN_IMAGE](state, {
-          type: slideActions.SET_MAIN_IMAGE,
-          payload: payload as NewMainImage,
-          entity: entity
-        });
-      },
-      item: () => {
-        return resolver[itemActions.SET_MAIN_IMAGE](state, {
-          type: itemActions.SET_MAIN_IMAGE,
-          payload: payload as NewMainImage,
-          entity: entity
-        });
-      }
-    };
-    return _set[entity]();
+      return _update[entity]();
+    } else if (field === 'price') {
+      return resolver[itemActions.UPDATE_ITEM_PRICE](state, {
+        type: itemActions.UPDATE_ITEM_PRICE,
+        entity: entity,
+        payload: payload as NewPrice
+      });
+    } else if (field === 'itemVariantPrice') {
+      return resolver[itemActions.UPDATE_ITEM_VARIANT_PRICE](state, {
+        type: itemActions.UPDATE_ITEM_VARIANT_PRICE,
+        entity: entity,
+        payload: payload as NewVariantPrice
+      });
+    } else if (field === 'number') {
+      return resolver[itemActions.UPDATE_ITEM_NUMBER](state, {
+        type: itemActions.UPDATE_ITEM_NUMBER,
+        entity: entity,
+        payload: payload as NewNumber
+      });
+    } else if (field === 'image') {
+      const _set: { [key: string]: () => State } = {
+        slide: () => {
+          return resolver[slideActions.SET_MAIN_IMAGE](state, {
+            type: slideActions.SET_MAIN_IMAGE,
+            payload: payload as NewMainImage,
+            entity: entity
+          });
+        },
+        item: () => {
+          return resolver[itemActions.SET_MAIN_IMAGE](state, {
+            type: itemActions.SET_MAIN_IMAGE,
+            payload: payload as NewMainImage,
+            entity: entity
+          });
+        }
+      };
+      return _set[entity]();
+    }
   }
 };
 

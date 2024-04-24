@@ -1641,5 +1641,16 @@ export const images: { [key: string]: Image } = {
       title: 'Default Image',
       src: 'assets/img/item/product/thumbnail/atun-brasa-1.png'
     }
+  },
+  'image->item->product->hamburguesa-ternera-1': {
+    id: 'image->item->product->hamburguesa-ternera-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/hamburguesa-ternera-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/hamburguesa-ternera-1.png'
+    }
   }
 };

@@ -906,6 +906,23 @@ export const lists: { [key: string]: ProductList | InfoList } = {
         slug: 'galerij'
       }
     },
-    items: []
+    items: [
+      'listItem->product->meals->specials->hamburguesa-de-ternera-8',
+      'listItem->product->meals->specials->solomillo-a-la-brasa-5',
+      'listItem->product->meals->specials->t-bone-a-la-brasa-4',
+      'listItem->product->meals->specials->atun-rojo-a-la-brasa-3',
+      'listItem->product->meals->specials->calamar-a-la-brasa-2',
+      'listItem->product->meals->skewers->mar-y-tierra-5',
+      'listItem->product->meals->skewers->pinchitos-de-pollo-1',
+      'listItem->product->meals->starters->pulpo-brasa-24',
+      'listItem->product->meals->starters->berengenas-miel-22',
+      'listItem->product->meals->starters->ensalada-gourmet-21',
+      'listItem->product->meals->starters->ensalada-pollo-crujiente-19',
+      'listItem->product->meals->starters->ensalada-marroqui-20',
+      'listItem->product->meals->starters->queso-ahumado-25',
+      'listItem->product->meals->starters->hummus-lenteja-16',
+      'listItem->product->meals->starters->arab-patty-with-cheese-and-honey-4',
+      'listItem->product->meals->starters->chickpeas-croquettes-9'
+    ]
   } as ProductList
 };

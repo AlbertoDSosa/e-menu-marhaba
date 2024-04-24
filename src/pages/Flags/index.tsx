@@ -1,16 +1,32 @@
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import FlagsContainer from '../../components/page/menu/containers/Flags';
-import { IonPage } from '@ionic/react';
+import { IonPage, IonLoading } from '@ionic/react';
+import { useQuery } from '../../hooks/useQuery';
 
 const Flags: React.FC<RouteComponentProps> = ({ history }) => {
   let touchScreen: any;
+
+  const { dictionary: screensaver, isLoading } = useQuery({
+    key: 'screensaver'
+  });
+
+  if (isLoading)
+    return (
+      <IonLoading
+        className="custom-loading"
+        message="Loading"
+        spinner="circles"
+      />
+    );
+
+  const { timeToShow, selectableTimesToShow } = screensaver;
 
   const activeScreensaver = () => {
     clearTimeout(touchScreen);
     touchScreen = setTimeout(() => {
       history.push('/screensaver');
-    }, 90000);
+    }, selectableTimesToShow[timeToShow]['time']);
   };
 
   document.addEventListener('click', () => {

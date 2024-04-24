@@ -71,6 +71,20 @@ export const screensaverResolvers = () => {
         },
         newEntity: newScreensaverSlides
       };
+    },
+    [screensaverActions.UPDATE_TIME_TO_SHOW]: (
+      state: State,
+      variables: Variables
+    ): Resolution => {
+      const { payload } = variables;
+
+      return {
+        newState: {
+          ...state,
+          timeToShow: payload
+        },
+        newEntity: payload
+      };
     }
   };
 };

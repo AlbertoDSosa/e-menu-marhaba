@@ -57,7 +57,8 @@ export const pageMenus: { [key: string]: PageMenu } = {
       'menuItem->meals->cous-cous',
       'menuItem->meals->tajin',
       'menuItem->meals->specials',
-      'menuItem->wines'
+      'menuItem->wines',
+      'menuItem->info->gallery'
     ]
   },
   'pageMenu->meals': {

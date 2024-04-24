@@ -141,7 +141,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
-    showItemDetail: true,
+    showItemDetail: false,
     showPrice: true,
     showDescription: false,
     itemId: 'item->product->meals->starters->pastela-de-pollo-con-almendra-11'
@@ -180,7 +180,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
-    showItemDetail: true,
+    showItemDetail: false,
     showPrice: true,
     showDescription: false,
     itemId: 'item->product->meals->starters->croquetas-de-datiles-con-pera-14'
@@ -416,7 +416,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
-    showItemDetail: true,
+    showItemDetail: false,
     showPrice: true,
     showDescription: true,
     itemId: 'item->product->meals->skewers->pinchitos-vegetarianos-4'
@@ -470,7 +470,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
-    showItemDetail: true,
+    showItemDetail: false,
     showPrice: true,
     showDescription: true,
     itemId: 'item->product->meals->cous-cous->cous-cous-de-ternera-3'
@@ -496,7 +496,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
-    showItemDetail: true,
+    showItemDetail: false,
     showPrice: true,
     showDescription: true,
     itemId: 'item->product->meals->cous-cous->cous-cous-de-marisco-5'
@@ -789,7 +789,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: true,
+    showItemDetail: false,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->chuletas-de-cordero-1'
   },
@@ -854,7 +854,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: true,
+    showItemDetail: false,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->hamburguesa-atun-rojo-6'
   },
@@ -867,7 +867,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: true,
+    showItemDetail: false,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->hamburguesa-de-pollo-7'
   },

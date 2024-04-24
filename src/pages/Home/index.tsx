@@ -20,7 +20,7 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle className="ion-text-center">Touch Menu Hybrid</IonTitle>
+          <IonTitle className="ion-text-center">EMenu Marhaba</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
