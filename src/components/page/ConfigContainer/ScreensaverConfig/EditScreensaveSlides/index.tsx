@@ -36,6 +36,11 @@ const EditScreensaverSlides: React.FC = () => {
     action: 'add'
   });
 
+  const { mutate: remove } = useMutation({
+    resource: 'screensaver',
+    action: 'remove'
+  });
+
   const { dictionary: screensaver, isLoading: screensaverIsLoading } = useQuery(
     {
       key: 'screensaver'
@@ -104,7 +109,6 @@ const EditScreensaverSlides: React.FC = () => {
         screensaver.selectableSlides.length < screensaver.maxItems &&
         disabledReorderItems && (
           <IonItem>
-            {/* <IonLabel>Diapositivas Disponibles</IonLabel> */}
             <IonSelect
               label="Diapositivas Disponibles"
               value={itemIdValue}
@@ -140,12 +144,12 @@ const EditScreensaverSlides: React.FC = () => {
                 {disabledReorderItems && (
                   <IonItemOption
                     onClick={() => {
-                      // remove({
-                      //   action: 'one',
-                      //   itemId: slideId,
-                      //   entity: 'slide',
-                      //   entityId: ''
-                      // });
+                      remove({
+                        action: 'one',
+                        itemId: slideId,
+                        entity: 'screensaverSlide',
+                        removeToList: 'items'
+                      });
                     }}
                     color="danger"
                     expandable

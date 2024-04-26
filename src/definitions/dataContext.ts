@@ -156,8 +156,9 @@ export interface ReorderProps {
 export interface RemoveProps {
   action: 'one' | 'many';
   entity: ArrayEditEntity;
-  entityId: string;
-  itemId?: string;
+  itemId: string;
+  removeToList: 'selectableItems' | 'items';
+  entityId?: string;
   items?: string[];
 }
 

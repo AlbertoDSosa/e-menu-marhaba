@@ -56,6 +56,22 @@ export const screensaverResolvers = () => {
         newEntity: newSlides
       };
     },
+    [screensaverActions.REMOVE_SELECTABLE_SLIDE]: (
+      state: State,
+      variables: Variables
+    ): Resolution => {
+      const { itemId: slideId } = variables.payload;
+      const newSeletableSlides = state.selectableSlides!.filter(
+        (slide: string) => slide !== slideId
+      );
+      return {
+        newState: {
+          ...state,
+          selectableSlides: newSeletableSlides
+        },
+        newEntity: newSeletableSlides
+      };
+    },
     [screensaverActions.REORDER_SLIDES]: (
       state: State,
       variables: Variables

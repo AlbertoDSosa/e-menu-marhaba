@@ -44,6 +44,11 @@ const AddSlide: React.FC = () => {
     action: 'create'
   });
 
+  // const { mutate: remove } = useMutation({
+  //   resource: 'screensaver',
+  //   action: 'remove'
+  // });
+
   const { dictionary: screensaver, isLoading: screensaverIsLoading } = useQuery(
     {
       key: 'screensaver'
@@ -103,7 +108,6 @@ const AddSlide: React.FC = () => {
               <h1>Añadir Diapositiva</h1>
             </IonListHeader>
             <IonItem>
-              {/* <IonLabel>Título:</IonLabel> */}
               <IonTextarea
                 inputmode="text"
                 wrap="off"
@@ -123,7 +127,6 @@ const AddSlide: React.FC = () => {
               />
             </IonItem>
             <IonItem>
-              {/* <IonLabel>Descripción:</IonLabel> */}
               <IonTextarea
                 inputmode="text"
                 wrap="off"
@@ -139,7 +142,6 @@ const AddSlide: React.FC = () => {
               />
             </IonItem>
             <IonItem>
-              {/* <IonLabel>Slug:</IonLabel> */}
               <IonTextarea
                 inputmode="text"
                 label="Slug:"
@@ -196,17 +198,22 @@ const AddSlide: React.FC = () => {
 
           return (
             <IonItemSliding key={slideId}>
-              <IonItemOptions side="end">
+              {/* <IonItemOptions side="end">
                 <IonItemOption
                   onClick={() => {
-                    // doDeleteItem(itemId);
+                    remove({
+                      action: 'one',
+                      itemId: slideId,
+                      entity: 'screensaverSlide',
+                      removeToList: 'selectableItems'
+                    });
                   }}
                   color="danger"
                   expandable
                 >
                   Borrar
                 </IonItemOption>
-              </IonItemOptions>
+              </IonItemOptions> */}
 
               <IonItem routerLink={`/config/slides/${slideId}`}>
                 <IonLabel>{slideInfo?.title}</IonLabel>

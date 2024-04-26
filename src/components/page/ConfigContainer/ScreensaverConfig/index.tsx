@@ -7,7 +7,6 @@ import {
   IonList,
   IonListHeader,
   IonItem,
-  IonLabel,
   IonSelect,
   IonSelectOption,
   IonLoading
@@ -57,7 +56,6 @@ const ScreensaverConfig: React.FC = () => {
           <h2>Editar Opciones de Salvapantallas</h2>
         </IonListHeader>
         <IonItem>
-          {/* <IonLabel>Duración de inactividad</IonLabel> */}
           <IonSelect
             label="Duración de inactividad"
             value={timeToShow.id}

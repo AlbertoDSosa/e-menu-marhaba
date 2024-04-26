@@ -140,7 +140,7 @@ export const reorder = (
 
 export const remove = (
   state: State,
-  { action, entity, entityId, itemId, items }: RemoveProps
+  { action, entity, entityId, itemId, items, removeToList }: RemoveProps
 ) => {
   const resolver = resolvers(entity);
 
@@ -167,12 +167,20 @@ export const remove = (
           payload: { entityId, itemId }
         });
       },
-      slide: () => {
-        return resolver[screensaverActions.REMOVE_SLIDE](state, {
-          type: screensaverActions.REMOVE_SLIDE,
-          entity: entity,
-          payload: { itemId }
-        });
+      screensaverSlide: () => {
+        if (removeToList === 'items') {
+          return resolver[screensaverActions.REMOVE_SLIDE](state, {
+            type: screensaverActions.REMOVE_SLIDE,
+            entity: entity,
+            payload: { itemId }
+          });
+        } else {
+          return resolver[screensaverActions.REMOVE_SELECTABLE_SLIDE](state, {
+            type: screensaverActions.REMOVE_SELECTABLE_SLIDE,
+            entity: entity,
+            payload: { itemId }
+          });
+        }
       }
     };
 

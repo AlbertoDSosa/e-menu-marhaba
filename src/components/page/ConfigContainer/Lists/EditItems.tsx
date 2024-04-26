@@ -107,9 +107,9 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
     add({ entity, entityId, itemId });
   };
 
-  const doRemoveItem = (itemId: string) => {
-    remove({ entity, entityId, itemId, action: 'one' });
-  };
+  // const doRemoveItem = (itemId: string) => {
+  //   remove({ entity, entityId, itemId, action: 'one' });
+  // };
 
   const doRemoveAllItems = () => {
     remove({ action: 'many', entity, entityId, items: list.items });
@@ -189,7 +189,7 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
           const info = item?.displayInfo[language];
           return (
             <IonItemSliding key={itemId}>
-              <IonItemOptions side="end">
+              {/* <IonItemOptions side="end">
                 {list.editable && disabledReorderItems && (
                   <IonItemOption
                     onClick={() => {
@@ -201,7 +201,7 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
                     Borrar
                   </IonItemOption>
                 )}
-              </IonItemOptions>
+              </IonItemOptions> */}
               <IonItem routerLink={`/config/${entity}Item/${itemId}`}>
                 <IonReorder slot="start">
                   <IonIcon icon={reorderFourOutline} />

@@ -5,12 +5,7 @@ import {
 
 import { slideActions } from '../actions/types';
 
-import {
-  ResolverParams,
-  State,
-  Variables,
-  Resolution
-} from 'definitions/resolvers';
+import { State, Variables, Resolution } from 'definitions/resolvers';
 
 export const slideResolvers = () => {
   return {
