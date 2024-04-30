@@ -141,7 +141,7 @@ const ScreensaverPage: React.FC = () => {
           </IonText>
         </div>
         <IonGrid style={{ padding: 0 }}>
-          <IonRow style={{ height: '100vh' }} class="ion-align-items-center">
+          <IonRow style={{ height: '100vh', overflow: 'hidden' }} class="ion-align-items-center">
             <IonCol>
               <Swiper
                 modules={[Autoplay]}
