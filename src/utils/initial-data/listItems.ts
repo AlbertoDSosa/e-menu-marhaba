@@ -778,6 +778,71 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showDescription: true,
     itemId: 'item->product->wines->-15'
   },
+  'listItem->product->wines->-16': {
+    id: 'listItem->product->wines->-16',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-16'
+  },
+  'listItem->product->wines->-17': {
+    id: 'listItem->product->wines->-17',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-17'
+  },
+  'listItem->product->wines->-18': {
+    id: 'listItem->product->wines->-18',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-18'
+  },
+  'listItem->product->wines->-19': {
+    id: 'listItem->product->wines->-19',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-19'
+  },
+  'listItem->product->wines->-20': {
+    id: 'listItem->product->wines->-20',
+    show: true,
+    template: '',
+    active: true,
+    type: 'product',
+    showTitle: true,
+    showExtraInfo: false,
+    showItemDetail: false,
+    showPrice: true,
+    showDescription: true,
+    itemId: 'item->product->wines->-20'
+  },
 
   ///// list->meals->specials
   'listItem->product->meals->specials->chuletas-de-cordero-1': {

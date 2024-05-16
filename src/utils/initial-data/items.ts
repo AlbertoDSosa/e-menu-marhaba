@@ -4478,6 +4478,281 @@ export const items: { [key: string]: Info | Product | Menu } = {
     price: { amount: '21.00' },
     number: '15'
   } as Product,
+  'item->product->wines->-16': {
+    id: 'item->product->wines->-16',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '00.00' },
+    number: '16'
+  } as Product,
+  'item->product->wines->-17': {
+    id: 'item->product->wines->-17',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '00.00' },
+    number: '17'
+  } as Product,
+  'item->product->wines->-18': {
+    id: 'item->product->wines->-18',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '00.00' },
+    number: '18'
+  } as Product,
+  'item->product->wines->-19': {
+    id: 'item->product->wines->-19',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '00.00' },
+    number: '19'
+  } as Product,
+  'item->product->wines->-20': {
+    id: 'item->product->wines->-20',
+    type: 'product',
+    images: [],
+    active: true,
+    defaultImg: 'image->item->product->default-1',
+    mainImg: '',
+    displayInfo: {
+      es: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      en: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      de: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nb: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      da: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      sv: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      fr: {
+        description: '',
+        title: '',
+        slug: ''
+      },
+      nl: {
+        description: '',
+        title: '',
+        slug: ''
+      }
+    },
+    hasVariants: false,
+    hasAllergens: false,
+    variants: '',
+    price: { amount: '00.00' },
+    number: '20'
+  } as Product,
 
   //// meals->desserts->
   'item->product->desserts->-1': {
