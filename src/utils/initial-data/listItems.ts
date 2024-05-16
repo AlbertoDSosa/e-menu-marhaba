@@ -922,7 +922,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showExtraInfo: false,
     showItemDetail: true,
     showPrice: true,
-    showDescription: false,
+    showDescription: true,
     itemId: 'item->product->desserts->-3'
   },
   'listItem->product->desserts->-4': {

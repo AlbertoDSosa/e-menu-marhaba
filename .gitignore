@@ -8,7 +8,13 @@
 # testing
 /coverage
 
-/public/assets/img/*
+# images
+/public/assets/img/item/product/*
+!/public/assets/img/item/product/thumbnail/default-1.png
+!/public/assets/img/item/product/full/default-1.png
+/public/assets/img/item/product/screensaver/*
+!/public/assets/img/item/product/default-1.png
+
 
 # production
 /dist

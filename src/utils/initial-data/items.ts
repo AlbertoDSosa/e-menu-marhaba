@@ -3649,7 +3649,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -3705,7 +3705,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -3760,7 +3760,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -3815,7 +3815,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -3870,7 +3870,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -3925,7 +3925,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -3980,7 +3980,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -4035,7 +4035,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -4098,7 +4098,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -4153,7 +4153,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -4208,7 +4208,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -4263,7 +4263,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -4318,7 +4318,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -4373,7 +4373,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -4428,7 +4428,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     type: 'product',
     images: [],
     active: true,
-    defaultImg: '',
+    defaultImg: 'image->item->product->default-1',
     mainImg: '',
     displayInfo: {
       es: {
@@ -4510,18 +4510,18 @@ export const items: { [key: string]: Info | Product | Menu } = {
     displayInfo: {
       es: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Yogur con Almendra, Pasas y Miel de Palma',
+        slug: 'yogur-con-almendra-pasas-y-miel-de-palma'
       },
       en: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Yogurt with Almond, Raisins and Palm Honey',
+        slug: 'yogurt-with-almond-raisins-and-palm-honey'
       },
       de: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Joghurt mit Mandeln, Rosinen und Palmhonig',
+        slug: 'joghurt-mit-mandeln-rosinen-und-palmhonig'
       },
       nb: {
         description: '',
@@ -4540,13 +4540,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
       },
       fr: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Yaourt aux amandes, raisins secs et miel de palme',
+        slug: 'yaourt-aux-amandes-raisins-secs-et-miel-de-palme'
       },
       nl: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Yoghurt met amandel, rozijnen en palmhoning',
+        slug: 'yoghurt-met-amandel-rozijnen-en-palmhoning'
       }
     },
     price: { amount: '0.00' },
@@ -4582,18 +4582,18 @@ export const items: { [key: string]: Info | Product | Menu } = {
     displayInfo: {
       es: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Flan de Dátiles',
+        slug: 'flan-de-datiles'
       },
       en: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Date Flan',
+        slug: 'date-flan'
       },
       de: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Dattelflan',
+        slug: 'aattelflan'
       },
       nb: {
         description: '',
@@ -4612,13 +4612,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
       },
       fr: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Flan aux dattes',
+        slug: 'flan-aux-dattes'
       },
       nl: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Datum vlaai',
+        slug: 'datum-vlaai'
       }
     },
     price: { amount: '0.00' },
@@ -4653,19 +4653,19 @@ export const items: { [key: string]: Info | Product | Menu } = {
     allergens: [],
     displayInfo: {
       es: {
-        description: '',
-        title: '',
-        slug: ''
+        description: '(Bizcocho Casero con Helado)',
+        title: 'Volcán de Chocolate',
+        slug: 'volcan-de-chocolate'
       },
       en: {
-        description: '',
-        title: '',
-        slug: ''
+        description: '(Homemade Cake with Ice Cream)',
+        title: 'Chocolate volcano',
+        slug: 'chocolate-volcano'
       },
       de: {
-        description: '',
-        title: '',
-        slug: ''
+        description: '(Hausgemachter Kuchen mit Eis)',
+        title: 'Schokoladenvulkan',
+        slug: 'schokoladenvulkan'
       },
       nb: {
         description: '',
@@ -4683,14 +4683,14 @@ export const items: { [key: string]: Info | Product | Menu } = {
         slug: ''
       },
       fr: {
-        description: '',
-        title: '',
-        slug: ''
+        description: '(Gâteau fait maison avec glace)',
+        title: 'Volcan de chocolat',
+        slug: 'volcan-de-chocolat'
       },
       nl: {
-        description: '',
-        title: '',
-        slug: ''
+        description: '(Zelfgemaakte taart met ijs)',
+        title: 'Chocolade vulkaan',
+        slug: 'chocolade-vulkaan'
       }
     },
     price: { amount: '0.00' },
@@ -4726,18 +4726,18 @@ export const items: { [key: string]: Info | Product | Menu } = {
     displayInfo: {
       es: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Tarta de Queso con Higo',
+        slug: 'tarta-de-queso-con-higo'
       },
       en: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Cheesecake with Fig',
+        slug: 'cheesecake-with-fig'
       },
       de: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Käsekuchen mit Feige',
+        slug: 'kasekuchen-mit-feige'
       },
       nb: {
         description: '',
@@ -4756,13 +4756,13 @@ export const items: { [key: string]: Info | Product | Menu } = {
       },
       fr: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Cheesecake aux Figue',
+        slug: 'cheesecake-aux-figue'
       },
       nl: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Cheesecake met vijg',
+        slug: 'cheesecake-met-vijg'
       }
     },
     price: { amount: '0.00' },
@@ -4798,43 +4798,43 @@ export const items: { [key: string]: Info | Product | Menu } = {
     displayInfo: {
       es: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       en: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       de: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       nb: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       da: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       sv: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       fr: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       nl: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       }
     },
     price: { amount: '0.00' },
@@ -4870,43 +4870,43 @@ export const items: { [key: string]: Info | Product | Menu } = {
     displayInfo: {
       es: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       en: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       de: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       nb: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       da: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       sv: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       fr: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 5',
+        slug: 'desert-5'
       },
       nl: {
         description: '',
-        title: '',
-        slug: ''
+        title: 'Desert 6',
+        slug: 'desert-6'
       }
     },
     price: { amount: '0.00' },

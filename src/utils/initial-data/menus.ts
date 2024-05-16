@@ -57,6 +57,7 @@ export const pageMenus: { [key: string]: PageMenu } = {
       'menuItem->meals->cous-cous',
       'menuItem->meals->tajin',
       'menuItem->meals->specials',
+      'menuItem->desserts',
       'menuItem->wines',
       'menuItem->info->gallery'
     ]
@@ -138,7 +139,7 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     id: 'menuItem->desserts',
     itemId: 'item->menu->desserts',
     type: 'menu',
-    active: false,
+    active: true,
     showTitle: true,
     showDescription: false,
     showExtraInfo: false,
