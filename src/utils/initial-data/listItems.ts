@@ -57,7 +57,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
   'listItem->product->meals->starters->arab-patty-with-vegetables-5': {
     id: 'listItem->product->meals->starters->arab-patty-with-vegetables-5',
     show: true,
-    showItemDetail: true,
+    showItemDetail: false,
     template: '',
     active: true,
     type: 'product',
@@ -140,8 +140,8 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
+    showExtraInfo: true,
+    showItemDetail: true,
     showPrice: true,
     showDescription: false,
     itemId: 'item->product->meals->starters->pastela-de-pollo-con-almendra-11'
@@ -470,7 +470,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     type: 'product',
     showTitle: true,
     showExtraInfo: false,
-    showItemDetail: false,
+    showItemDetail: true,
     showPrice: true,
     showDescription: true,
     itemId: 'item->product->meals->cous-cous->cous-cous-de-ternera-3'
@@ -778,71 +778,6 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showDescription: true,
     itemId: 'item->product->wines->-15'
   },
-  'listItem->product->wines->-16': {
-    id: 'listItem->product->wines->-16',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->wines->-16'
-  },
-  'listItem->product->wines->-17': {
-    id: 'listItem->product->wines->-17',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->wines->-17'
-  },
-  'listItem->product->wines->-18': {
-    id: 'listItem->product->wines->-18',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->wines->-18'
-  },
-  'listItem->product->wines->-19': {
-    id: 'listItem->product->wines->-19',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->wines->-19'
-  },
-  'listItem->product->wines->-20': {
-    id: 'listItem->product->wines->-20',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: true,
-    itemId: 'item->product->wines->-20'
-  },
 
   ///// list->meals->specials
   'listItem->product->meals->specials->chuletas-de-cordero-1': {
@@ -854,7 +789,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: false,
+    showItemDetail: true,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->chuletas-de-cordero-1'
   },
@@ -919,7 +854,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: false,
+    showItemDetail: true,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->hamburguesa-atun-rojo-6'
   },
@@ -932,7 +867,7 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     active: true,
     type: 'product',
     showTitle: true,
-    showItemDetail: false,
+    showItemDetail: true,
     showExtraInfo: false,
     itemId: 'item->product->meals->specials->hamburguesa-de-pollo-7'
   },
@@ -1002,31 +937,5 @@ export const listItems: { [key: string]: ProductListItem | InfoListItem } = {
     showPrice: true,
     showDescription: false,
     itemId: 'item->product->desserts->-4'
-  },
-  'listItem->product->desserts->-5': {
-    id: 'listItem->product->desserts->-5',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: true,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->desserts->-5'
-  },
-  'listItem->product->desserts->-6': {
-    id: 'listItem->product->desserts->-6',
-    show: true,
-    template: '',
-    active: true,
-    type: 'product',
-    showTitle: true,
-    showExtraInfo: false,
-    showItemDetail: false,
-    showPrice: true,
-    showDescription: false,
-    itemId: 'item->product->desserts->-6'
   }
 };

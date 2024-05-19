@@ -60,7 +60,7 @@ const Card: React.FC<GaleryCardProps> = ({ itemId, lang }) => {
         setShowModal={setShowModal}
       />
       <IonCard style={{ height: '23em' }} onClick={() => setShowModal(true)}>
-        {image && <IonImg src={image.full.src} alt={image.full.title} />}
+        {image && <IonImg src={image.thumbnail.src} alt={image.thumbnail.title} />}
         <IonCardHeader>
           <IonCardSubtitle color="dark">{info.title}</IonCardSubtitle>
         </IonCardHeader>

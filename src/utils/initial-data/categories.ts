@@ -45,9 +45,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
       'item->product->desserts->-1',
       'item->product->desserts->-2',
       'item->product->desserts->-3',
-      'item->product->desserts->-4',
-      'item->product->desserts->-5',
-      'item->product->desserts->-6'
+      'item->product->desserts->-4'
     ]
   },
   'category->meals->starters': {
@@ -203,12 +201,12 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
         slug: ''
       },
       fr: {
-        title: '',
-        slug: ''
+        title: 'Cous Cous',
+        slug: 'cous-cous'
       },
       nl: {
-        title: '',
-        slug: ''
+        title: 'Cous Cous',
+        slug: 'cous-cous'
       }
     },
     items: [
@@ -252,12 +250,12 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
         slug: ''
       },
       fr: {
-        title: '',
-        slug: ''
+        title: 'Tajin',
+        slug: 'tajin'
       },
       nl: {
-        title: '',
-        slug: ''
+        title: 'Tajin',
+        slug: 'tajin'
       }
     },
     items: [
@@ -374,12 +372,7 @@ export const categories: { [key: string]: ProductCategory | InfoCategory } = {
       'item->product->wines->-12',
       'item->product->wines->-13',
       'item->product->wines->-14',
-      'item->product->wines->-15',
-      'item->product->wines->-16',
-      'item->product->wines->-17',
-      'item->product->wines->-18',
-      'item->product->wines->-19',
-      'item->product->wines->-20'
+      'item->product->wines->-15'
     ]
   }
 };

@@ -1257,6 +1257,17 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/item/product/thumbnail/pastelas-marisco-1.png'
     }
   },
+  'image->item->product->pastela-pollo-1': {
+    id: 'image->item->product->pastela-pollo-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/pastela-pollo-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/pastela-pollo-1.png'
+    }
+  },
   'image->item->product->croqueta-espinacas-1': {
     id: 'image->item->product->croqueta-espinacas-1',
     full: {
@@ -1499,6 +1510,17 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/item/product/thumbnail/cous-cous-verduras-1.png'
     }
   },
+  'image->item->product->cous-cous-ternera-1': {
+    id: 'image->item->product->cous-cous-ternera-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/cous-cous-ternera-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/cous-cous-ternera-1.png'
+    }
+  },
   'image->item->product->cous-cous-cordero-1': {
     id: 'image->item->product->cous-cous-cordero-1',
     full: {
@@ -1609,6 +1631,17 @@ export const images: { [key: string]: Image } = {
       src: 'assets/img/item/product/thumbnail/calamar-brasa-1.png'
     }
   },
+  'image->item->product->chuletas-cordero-1': {
+    id: 'image->item->product->chuletas-cordero-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/chuletas-cordero-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/chuletas-cordero-1.png'
+    }
+  },
   'image->item->product->t-bone-1': {
     id: 'image->item->product->t-bone-1',
     full: {
@@ -1651,6 +1684,72 @@ export const images: { [key: string]: Image } = {
     thumbnail: {
       title: 'Default Image',
       src: 'assets/img/item/product/thumbnail/hamburguesa-ternera-1.png'
+    }
+  },
+  'image->item->product->hamburguesa-atun-1': {
+    id: 'image->item->product->hamburguesa-atun-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/hamburguesa-atun-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/hamburguesa-atun-1.png'
+    }
+  },
+  'image->item->product->hamburguesa-pollo-1': {
+    id: 'image->item->product->hamburguesa-pollo-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/hamburguesa-pollo-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/hamburguesa-pollo-1.png'
+    }
+  },
+  'image->item->product->flan-de-datiles-1': {
+    id: 'image->item->product->flan-de-datiles-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/flan-de-datiles-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/flan-de-datiles-1.png'
+    }
+  },
+  'image->item->product->volcan-de-chocolate-1': {
+    id: 'image->item->product->volcan-de-chocolate-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/volcan-de-chocolate-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/volcan-de-chocolate-1.png'
+    }
+  },
+  'image->item->product->yogurt-con-almendra-1': {
+    id: 'image->item->product->yogurt-con-almendra-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/yogurt-con-almendra-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/yogurt-con-almendra-1.png'
+    }
+  },
+  'image->item->product->tarta-de-queso-1': {
+    id: 'image->item->product->tarta-de-queso-1',
+    full: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/full/tarta-de-queso-1.png'
+    },
+    thumbnail: {
+      title: 'Default Image',
+      src: 'assets/img/item/product/thumbnail/tarta-de-queso-1.png'
     }
   }
 };

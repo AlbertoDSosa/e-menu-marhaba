@@ -297,7 +297,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     images: ['image->item->product->briwat-verduras-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: 'image->item->product->briwat-verduras-1',
+    mainImg: '',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -393,7 +393,7 @@ export const items: { [key: string]: Info | Product | Menu } = {
     displayInfo: {
       es: {
         description: '',
-        title: 'Briwat de Espinacas con Langostinos y Champiñones',
+        title: 'Briwat de Espinacas, Langostinos y Champiñones',
         slug: 'briwat-de-espinacas'
       },
       en: {
@@ -727,10 +727,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->starters->pastela-de-pollo-con-almendra-11': {
     id: 'item->product->meals->starters->pastela-de-pollo-con-almendra-11',
     type: 'product',
-    images: [],
+    images: ['image->item->product->pastela-pollo-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->pastela-pollo-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -2531,10 +2531,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->cous-cous->cous-cous-de-ternera-3': {
     id: 'item->product->meals->cous-cous->cous-cous-de-ternera-3',
     type: 'product',
-    images: ['image->item->product->default-1'],
+    images: ['image->item->product->cous-cous-ternera-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->cous-cous-ternera-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -3189,10 +3189,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->specials->chuletas-de-cordero-1': {
     id: 'item->product->meals->specials->chuletas-de-cordero-1',
     type: 'product',
-    images: [],
+    images: ['image->item->product->chuletas-cordero-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->chuletas-cordero-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -3474,10 +3474,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->specials->hamburguesa-atun-rojo-6': {
     id: 'item->product->meals->specials->hamburguesa-atun-rojo-6',
     type: 'product',
-    images: [],
+    images: ['image->item->product->hamburguesa-atun-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->hamburguesa-atun-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -3531,10 +3531,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->meals->specials->hamburguesa-de-pollo-7': {
     id: 'item->product->meals->specials->hamburguesa-de-pollo-7',
     type: 'product',
-    images: [],
+    images: ['image->item->product->hamburguesa-pollo-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->hamburguesa-pollo-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -4478,290 +4478,15 @@ export const items: { [key: string]: Info | Product | Menu } = {
     price: { amount: '21.00' },
     number: '15'
   } as Product,
-  'item->product->wines->-16': {
-    id: 'item->product->wines->-16',
-    type: 'product',
-    images: [],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    displayInfo: {
-      es: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      en: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      de: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      nb: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      da: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      sv: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      fr: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      nl: {
-        description: '',
-        title: '',
-        slug: ''
-      }
-    },
-    hasVariants: false,
-    hasAllergens: false,
-    variants: '',
-    price: { amount: '00.00' },
-    number: '16'
-  } as Product,
-  'item->product->wines->-17': {
-    id: 'item->product->wines->-17',
-    type: 'product',
-    images: [],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    displayInfo: {
-      es: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      en: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      de: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      nb: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      da: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      sv: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      fr: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      nl: {
-        description: '',
-        title: '',
-        slug: ''
-      }
-    },
-    hasVariants: false,
-    hasAllergens: false,
-    variants: '',
-    price: { amount: '00.00' },
-    number: '17'
-  } as Product,
-  'item->product->wines->-18': {
-    id: 'item->product->wines->-18',
-    type: 'product',
-    images: [],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    displayInfo: {
-      es: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      en: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      de: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      nb: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      da: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      sv: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      fr: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      nl: {
-        description: '',
-        title: '',
-        slug: ''
-      }
-    },
-    hasVariants: false,
-    hasAllergens: false,
-    variants: '',
-    price: { amount: '00.00' },
-    number: '18'
-  } as Product,
-  'item->product->wines->-19': {
-    id: 'item->product->wines->-19',
-    type: 'product',
-    images: [],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    displayInfo: {
-      es: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      en: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      de: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      nb: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      da: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      sv: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      fr: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      nl: {
-        description: '',
-        title: '',
-        slug: ''
-      }
-    },
-    hasVariants: false,
-    hasAllergens: false,
-    variants: '',
-    price: { amount: '00.00' },
-    number: '19'
-  } as Product,
-  'item->product->wines->-20': {
-    id: 'item->product->wines->-20',
-    type: 'product',
-    images: [],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    displayInfo: {
-      es: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      en: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      de: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      nb: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      da: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      sv: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      fr: {
-        description: '',
-        title: '',
-        slug: ''
-      },
-      nl: {
-        description: '',
-        title: '',
-        slug: ''
-      }
-    },
-    hasVariants: false,
-    hasAllergens: false,
-    variants: '',
-    price: { amount: '00.00' },
-    number: '20'
-  } as Product,
 
   //// meals->desserts->
   'item->product->desserts->-1': {
     id: 'item->product->desserts->-1',
     type: 'product',
-    images: [],
+    images: ['image->item->product->yogurt-con-almendra-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->yogurt-con-almendra-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -4830,10 +4555,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->desserts->-2': {
     id: 'item->product->desserts->-2',
     type: 'product',
-    images: [],
+    images: ['image->item->product->flan-de-datiles-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->flan-de-datiles-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -4902,10 +4627,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->desserts->-3': {
     id: 'item->product->desserts->-3',
     type: 'product',
-    images: [],
+    images: ['image->item->product->volcan-de-chocolate-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->volcan-de-chocolate-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -4974,10 +4699,10 @@ export const items: { [key: string]: Info | Product | Menu } = {
   'item->product->desserts->-4': {
     id: 'item->product->desserts->-4',
     type: 'product',
-    images: [],
+    images: ['image->item->product->tarta-de-queso-1'],
     active: true,
     defaultImg: 'image->item->product->default-1',
-    mainImg: '',
+    mainImg: 'image->item->product->tarta-de-queso-1',
     hasAllergens: false,
     hasVariants: false,
     variants: '',
@@ -5042,150 +4767,6 @@ export const items: { [key: string]: Info | Product | Menu } = {
     },
     price: { amount: '0.00' },
     number: '4'
-  } as Product,
-  'item->product->desserts->-5': {
-    id: 'item->product->desserts->-5',
-    type: 'product',
-    images: [],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    variants: '',
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    allergens: [],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      en: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      de: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      nb: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      da: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      sv: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      fr: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      nl: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      }
-    },
-    price: { amount: '0.00' },
-    number: '5'
-  } as Product,
-  'item->product->desserts->-6': {
-    id: 'item->product->desserts->-6',
-    type: 'product',
-    images: [],
-    active: true,
-    defaultImg: 'image->item->product->default-1',
-    mainImg: '',
-    hasAllergens: false,
-    hasVariants: false,
-    variants: '',
-    selectableAllergens: [
-      'allergenic->fish-1',
-      'allergenic->crustaceans-2',
-      'allergenic->gluten-3',
-      'allergenic->mustard-4',
-      'allergenic->sulphites-5',
-      'allergenic->peanuts-6',
-      'allergenic->nuts-7',
-      'allergenic->sesame-8',
-      'allergenic->dairy-products-10',
-      'allergenic->egg-9',
-      'allergenic->lupins-11',
-      'allergenic->soya-12',
-      'allergenic->moluscs-13',
-      'allergenic->celery-14'
-    ],
-    allergens: [],
-    displayInfo: {
-      es: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      en: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      de: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      nb: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      da: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      sv: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      fr: {
-        description: '',
-        title: 'Desert 5',
-        slug: 'desert-5'
-      },
-      nl: {
-        description: '',
-        title: 'Desert 6',
-        slug: 'desert-6'
-      }
-    },
-    price: { amount: '0.00' },
-    number: '6'
   } as Product,
 
   ///// menu->
