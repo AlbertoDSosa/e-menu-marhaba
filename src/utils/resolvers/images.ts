@@ -14,11 +14,11 @@ export const imageResolvers = () => {
       const newImage: Image = {
         id,
         thumbnail: {
-          src: '',
+          src: image.thumbnail.src,
           title
         },
         full: {
-          src: image,
+          src: image.full.src,
           title
         }
       };

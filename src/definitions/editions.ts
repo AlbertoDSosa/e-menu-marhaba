@@ -1,4 +1,10 @@
 export type ImageSaveParams = {
-  src: string;
-  title: string;
+  full: {
+    src: string;
+    title: string;
+  },
+  thumbnail: {
+    src: string;
+    title: string;
+  }
 };

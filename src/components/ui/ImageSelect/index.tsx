@@ -1,17 +1,16 @@
 import React, { useRef } from 'react';
 import { IonButton, IonGrid, IonRow, IonCol, IonText } from '@ionic/react';
-import { ImageSaveParams } from 'definitions/editions';
 interface ImageSelectProps {
   width: number;
   height: number;
-  setImageResult(imageResult: ImageSaveParams): void;
+  setImage(image: HTMLImageElement): void;
   setWrongImage(wrongImage: boolean): void;
 }
 
 const ImageSelect: React.FC<ImageSelectProps> = ({
   width,
   height,
-  setImageResult,
+  setImage,
   setWrongImage
 }) => {
   const fileInput = useRef<HTMLInputElement>({} as HTMLInputElement);
@@ -21,12 +20,13 @@ const ImageSelect: React.FC<ImageSelectProps> = ({
     const file = files[0];
     const reader = new FileReader();
 
-    setImageResult({} as ImageSaveParams);
-
     reader.onload = function (evt) {
       const imageResult = evt.target?.result as string;
       const image = new Image();
+
       image.src = imageResult;
+      image.alt = file.name;
+
       image.decode().then(() => {
         const imgHeight = image.naturalHeight === height;
         const imgWidth = image.naturalWidth === width;
@@ -37,7 +37,9 @@ const ImageSelect: React.FC<ImageSelectProps> = ({
           setWrongImage(false);
         }
       });
-      setImageResult({ src: imageResult, title: file.name });
+
+      setImage(image);
+
     };
     reader.readAsDataURL(file);
   };

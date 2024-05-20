@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import {
   IonModal,
   IonButton,
@@ -12,27 +12,28 @@ import {
 } from '@ionic/react';
 
 import { closeCircleOutline, checkmarkCircleOutline } from 'ionicons/icons';
+
 import styles from './styles.module.css';
 import ImageSelect from '../../../../components/ui/ImageSelect';
 import { ImageSaveParams } from '../../../../definitions/editions';
+
 interface AddImageModalProps {
   showModal: boolean;
   setShowModal(showModal: boolean): void;
   size: { width: number; height: number };
   doSaveImage(imageSaveParams: ImageSaveParams): void;
+  imageType: string;
 }
 
 const AddImageModal: React.FC<AddImageModalProps> = ({
   size,
   showModal,
   setShowModal,
-  doSaveImage
+  doSaveImage,
+  imageType
 }) => {
-  const [imageResult, setImageResult] = useState<ImageSaveParams>(
-    {} as ImageSaveParams
-  );
+  const [image, setImage] = useState<HTMLImageElement>({} as HTMLImageElement);
   const [wrongImage, setWrongImage] = useState<boolean>(false);
-  const imgRef = useRef<HTMLImageElement>({} as HTMLImageElement);
 
   return (
     <IonModal
@@ -42,7 +43,7 @@ const AddImageModal: React.FC<AddImageModalProps> = ({
     >
       <IonList>
         <IonItem className={styles.imageItem}>
-          {imageResult.src ? (
+          {image.src ? (
             <IonGrid style={{ padding: '0px' }}>
               <IonRow
                 className="ion-justify-content-center"
@@ -57,6 +58,7 @@ const AddImageModal: React.FC<AddImageModalProps> = ({
                   size="6"
                 >
                   <img
+                    src={image.src}
                     style={{
                       display: 'block',
                       margin: '0 auto',
@@ -64,9 +66,6 @@ const AddImageModal: React.FC<AddImageModalProps> = ({
                         ? '2px red solid'
                         : '2px lightgreen solid'
                     }}
-                    ref={imgRef}
-                    src={imageResult.src}
-                    alt="imagen"
                   />
                   <div
                     style={{
@@ -109,7 +108,7 @@ const AddImageModal: React.FC<AddImageModalProps> = ({
                             width={size.width}
                             height={size.height}
                             setWrongImage={setWrongImage}
-                            setImageResult={setImageResult}
+                            setImage={setImage}
                           />
                         </IonRow>
                       </IonGrid>
@@ -130,7 +129,7 @@ const AddImageModal: React.FC<AddImageModalProps> = ({
               width={size.width}
               height={size.height}
               setWrongImage={setWrongImage}
-              setImageResult={setImageResult}
+              setImage={setImage}
             />
           )}
         </IonItem>
@@ -141,7 +140,7 @@ const AddImageModal: React.FC<AddImageModalProps> = ({
             size="default"
             onClick={() => {
               setShowModal(false);
-              setImageResult({} as ImageSaveParams);
+              setImage({} as HTMLImageElement);
             }}
           >
             Cancelar
@@ -151,11 +150,43 @@ const AddImageModal: React.FC<AddImageModalProps> = ({
             size="default"
             expand="block"
             onClick={() => {
-              doSaveImage(imageResult);
+              if(imageType === 'item') {
+                const canvas = document.createElement('canvas');
+                const title = image.alt.split('.')[0];
+                const ctx = canvas.getContext("2d");
+
+                canvas.width = 500;
+                canvas.height = 300;
+
+                ctx?.drawImage(image, 0, 0, 500, 300);
+
+                doSaveImage({
+                  full: {
+                    src: image.src,
+                    title
+                  },
+                  thumbnail: {
+                    src: canvas.toDataURL(),
+                    title
+                  }
+                });
+              } else {
+                doSaveImage({
+                  full: {
+                    src: image.src,
+                    title: image.alt
+                  },
+                  thumbnail: {
+                    src: '',
+                    title: image.alt
+                  }
+                });
+              }
+
               setShowModal(false);
-              setImageResult({} as ImageSaveParams);
+              setImage({} as HTMLImageElement);
             }}
-            disabled={wrongImage || !imageResult.src}
+            disabled={wrongImage || !image.src}
           >
             Guardar
           </IonButton>

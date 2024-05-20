@@ -43,7 +43,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
   return (
     <IonCol size="4" style={{ border: isMainImg ? '2px solid blue' : '' }}>
       <IonCard onClick={doSetMainImage} button={!isMainImg}>
-        <IonImg src={img.full.src} alt={img.full.title} />
+        <IonImg src={img.thumbnail.src} alt={img.thumbnail.title} />
         <IonCardContent>
           <IonButton
             onClick={() => {}}

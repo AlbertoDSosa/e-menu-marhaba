@@ -14,7 +14,7 @@ import {
   IonIcon,
   IonLoading
 } from '@ionic/react';
-import { Slide, DisplayInfo } from 'definitions/models';
+import { Slide } from 'definitions/models';
 
 import {
   // createOutline,

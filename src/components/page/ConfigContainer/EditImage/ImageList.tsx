@@ -31,7 +31,7 @@ const ImageList: React.FC<ImageListProps> = ({
   const defaultImg = images[entity.defaultImg];
   return (
     <>
-      {entity.mainImg ? (
+      {entity.images?.length ? (
         <IonGrid>
           <IonRow>
             {imageList?.map((img: string) => {
@@ -52,8 +52,8 @@ const ImageList: React.FC<ImageListProps> = ({
       ) : (
         <IonImg
           style={{ width: 250, height: 150, margin: '1rem' }}
-          src={defaultImg.full.src}
-          alt={defaultImg.full.title}
+          src={defaultImg.thumbnail.src}
+          alt={defaultImg.thumbnail.title}
         />
       )}
     </>

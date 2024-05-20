@@ -48,11 +48,11 @@ const EditImage: React.FC<EditImageProps> = ({
       entityId: entity.id,
       payload: {
         lang: 'es',
-        image: imageSaveParams.src,
+        image: imageSaveParams,
         displayInfo: {
           es: {
-            title: imageSaveParams.title,
-            slug: imageSaveParams.title
+            title: imageSaveParams.full.title,
+            slug: imageSaveParams.full.title
           }
         }
       }
@@ -74,6 +74,7 @@ const EditImage: React.FC<EditImageProps> = ({
           setShowModal={setShowImageEditor}
           doSaveImage={doSaveImage}
           size={size}
+          imageType={addToEntity}
         />
       </IonListHeader>
       <IonItem>
