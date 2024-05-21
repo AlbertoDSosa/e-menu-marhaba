@@ -1,13 +1,13 @@
 import React from 'react';
 import { IonGrid, IonRow, IonCol, IonLoading } from '@ionic/react';
 import { TemplatesProps } from '../index';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import {
   ProductList,
   InfoList,
   Image,
   SectionTemplate
-} from '../../../../../../../definitions/models';
+} from 'definitions/models';
 
 import ItemList from '../../../List/Templates/ItemList';
 

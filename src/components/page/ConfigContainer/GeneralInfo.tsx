@@ -7,7 +7,7 @@ import {
   IonLoading
 } from '@ionic/react';
 
-import { useQuery } from '../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 const ConfigGeneralInfo: React.FC = () => {
   const { dictionary: generalInfo, isLoading } = useQuery({

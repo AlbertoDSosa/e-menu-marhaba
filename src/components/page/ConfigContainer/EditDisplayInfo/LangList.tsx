@@ -4,8 +4,8 @@ import { IonLabel, IonItem, IonIcon } from '@ionic/react';
 
 import { createOutline } from 'ionicons/icons';
 
-import { useQuery } from '../../../../hooks/useQuery';
-import { useMutation } from '../../../../hooks/useMutation';
+import { useQuery } from 'hooks/useQuery';
+// import { useMutation } from '../../../../hooks/useMutation';
 import { DisplayInfo } from 'definitions/models';
 
 import EditDisplayInfoModal from './Modal';

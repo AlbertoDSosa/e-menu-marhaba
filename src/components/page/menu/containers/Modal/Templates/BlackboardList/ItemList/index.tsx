@@ -3,13 +3,13 @@ import React from 'react';
 
 import { IonText, IonGrid, IonRow, IonCol, IonLoading } from '@ionic/react';
 
-import { useQuery } from '../../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import {
   DisplayInfo,
   ProductListItem,
   Product,
   List
-} from '../../../../../../../../definitions/models';
+} from 'definitions/models';
 
 interface ItemListProps {
   list: List;

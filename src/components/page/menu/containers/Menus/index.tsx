@@ -4,7 +4,7 @@ import { IonContent, IonLoading } from '@ionic/react';
 // import styles from './styles.module.css';
 import CardList from './CardList';
 
-import { useQuery } from '../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 interface MenusProps
   extends RouteComponentProps<{

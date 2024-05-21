@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { useQuery } from '../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import styles from './styles.module.css';
 
-import Modal from '../../../../../../components/page/menu/containers/Modal';
-import { Item, PageMenuItem } from '../../../../../../definitions/models';
+import Modal from 'components/page/menu/containers/Modal';
+import { Item, PageMenuItem } from 'definitions/models';
 import {
   IonCol,
   IonCard,

@@ -1,6 +1,6 @@
 import React from 'react';
-import { useQuery } from '../../../../../../hooks/useQuery';
-import { PageMenuItem } from '../../../../../../definitions/models';
+import { useQuery } from 'hooks/useQuery';
+import { PageMenuItem } from 'definitions/models';
 import MenuCard from '../MenuCard';
 
 import { IonGrid, IonRow, IonLoading } from '@ionic/react';

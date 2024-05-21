@@ -15,11 +15,8 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showDescription: false,
     showTitle: false,
     template: 'template->list->meals->short-title',
-    selectableItems: [
-      'listItem->product->desserts->-5',
-      'listItem->product->desserts->-6'
-    ],
-    editable: false,
+    selectableItems: [],
+    editable: true,
     maxItems: 12,
     categories: ['category->desserts'],
     displayInfo: {
@@ -399,7 +396,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showExtraInfo: false,
     showDescription: false,
     showTitle: false,
-    editable: true,
+    editable: false,
     maxItems: 8,
     template: 'template->list->meals->short-title',
     categories: [],
@@ -530,7 +527,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: true,
     template: 'template->list->meals->short-title',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 6,
     categories: ['category->meals->white-wines'],
     displayInfo: {
@@ -588,7 +585,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: true,
     template: 'template->list->meals->short-title',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 6,
     categories: [''],
     displayInfo: {
@@ -646,7 +643,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: true,
     template: 'template->list->meals->short-title',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 12,
     categories: ['category->meals->red-wines'],
     displayInfo: {
@@ -700,7 +697,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: true,
     template: 'template->list->meals->short-title',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 12,
     categories: ['category->meals->red-wines'],
     displayInfo: {
@@ -761,7 +758,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     defaultImg: '',
     mainImg: '',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 12,
     categories: ['category->meals->rose-wines'],
     displayInfo: {
@@ -804,7 +801,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
   } as ProductList,
   'list->info->allergens': {
     id: 'list->info->allergens',
-    type: 'product',
+    type: 'info',
     active: true,
     defaultImg: '',
     mainImg: '',
@@ -855,10 +852,10 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       }
     },
     items: []
-  } as ProductList,
+  } as InfoList,
   'list->info->gallery': {
     id: 'list->info->gallery',
-    type: 'product',
+    type: 'info',
     active: true,
     defaultImg: '',
     mainImg: '',
@@ -870,8 +867,47 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showExtraInfo: false,
     showDescription: false,
     template: 'template->list->default',
-    selectableItems: [],
-    editable: false,
+    selectableItems: [
+      'listItem->product->desserts->-1',
+      'listItem->product->desserts->-2',
+      'listItem->product->desserts->-3',
+      'listItem->product->desserts->-4',
+      'listItem->product->meals->specials->hamburguesa-de-pollo-7',
+      'listItem->product->meals->specials->hamburguesa-atun-rojo-6',
+      'listItem->product->meals->specials->chuletas-de-cordero-1',
+      'listItem->product->meals->tajin->tajin-con-carne-vegetal-5',
+      'listItem->product->meals->tajin->tajin-de-kafta-4',
+      'listItem->product->meals->tajin->tajin-de-cordero-3',
+      'listItem->product->meals->tajin->tajin-de-pollo-2',
+      'listItem->product->meals->tajin->tajin-de-ternera-1',
+      'listItem->product->meals->cous-cous->cous-cous-de-carne-vegetal-6',
+      'listItem->product->meals->cous-cous->cous-cous-de-marisco-5',
+      'listItem->product->meals->cous-cous->cous-cous-de-cordero-4',
+      'listItem->product->meals->cous-cous->cous-cous-de-ternera-3',
+      'listItem->product->meals->cous-cous->cous-cous-de-pollo-2',
+      'listItem->product->meals->cous-cous->cous-cous-de-verduras-1',
+      'listItem->product->meals->skewers->pinchitos-vegetarianos-4',
+      'listItem->product->meals->starters->gambas-al-pil-pil-28',
+      'listItem->product->meals->starters->marchica-27',
+      'listItem->product->meals->starters->berenjenas-rellenas-de-ternera-23',
+      'listItem->product->meals->starters->ensalada-cous-cous-18',
+      'listItem->product->meals->starters->zaaluk-17',
+      'listItem->product->meals->starters->hummus-15',
+      'listItem->product->meals->starters->croquetas-de-datiles-con-pera-14',
+      'listItem->product->meals->starters->arab-patty-with-meat-and-pinions-8',
+      'listItem->product->meals->starters->pan-arabe-1',
+      'listItem->product->meals->starters->pan-con-alioli-2',
+      'listItem->product->meals->starters->vegetable-and-meat-soup-3',
+      'listItem->product->meals->starters->arab-patty-with-seadfood-10',
+      'listItem->product->meals->starters->arab-patty-with-chicken-and-spices-7',
+      'listItem->product->meals->starters->arab-patty-with-spinach-6',
+      'listItem->product->meals->starters->pastela-de-pollo-con-almendra-11',
+      'listItem->product->meals->starters->spinachs-croquettes-12',
+      'listItem->product->meals->starters->lamb-croquettes-13',
+      'listItem->product->meals->starters->arab-patty-with-vegetables-5'
+
+    ],
+    editable: true,
     maxItems: 50,
     categories: [],
     displayInfo: {
@@ -914,6 +950,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       'listItem->product->meals->specials->t-bone-a-la-brasa-4',
       'listItem->product->meals->specials->atun-rojo-a-la-brasa-3',
       'listItem->product->meals->specials->calamar-a-la-brasa-2',
+      'listItem->product->meals->skewers->pinchitos-de-cordero-3',
       'listItem->product->meals->skewers->mar-y-tierra-5',
       'listItem->product->meals->skewers->pinchitos-de-pollo-1',
       'listItem->product->meals->starters->pulpo-brasa-24',
@@ -926,5 +963,5 @@ export const lists: { [key: string]: ProductList | InfoList } = {
       'listItem->product->meals->starters->arab-patty-with-cheese-and-honey-4',
       'listItem->product->meals->starters->chickpeas-croquettes-9'
     ]
-  } as ProductList
+  } as InfoList
 };

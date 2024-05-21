@@ -8,7 +8,7 @@ import {
   // IonCol,
   IonLoading
 } from '@ionic/react';
-import { useQuery } from '../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import {
   ProductListItem,

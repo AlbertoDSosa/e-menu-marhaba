@@ -18,7 +18,7 @@ import {
 
 import { Collapse } from 'react-collapse';
 
-import { useQuery } from '../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import { UpdateEntity, DisplayInfoEntity, Key } from 'definitions/dataContext';
 

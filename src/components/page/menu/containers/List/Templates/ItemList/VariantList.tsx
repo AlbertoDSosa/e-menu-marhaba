@@ -15,9 +15,9 @@ import {
   Variants,
   ProductList,
   InfoList
-} from '../../../../../../../definitions/models';
+} from 'definitions/models';
 
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 interface VariantListProps {
   list: ProductList | InfoList;

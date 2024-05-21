@@ -3,11 +3,11 @@ import React from 'react';
 import { IonRow, IonCol, IonGrid, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import {
   Image,
   SectionTemplate
-} from '../../../../../../../definitions/models';
+} from 'definitions/models';
 import ItemList from '../../../List/Templates/ItemList';
 
 const OneRowTwoCols: React.FC<TemplatesProps> = ({ section, lang }) => {

@@ -2,10 +2,10 @@ import React from 'react';
 import { SwiperSlide } from 'swiper/react';
 import { IonLoading } from '@ionic/react';
 
-import { useQuery } from '../../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import PageSectionTemplate from '../../../../Section';
-import { PageSection } from '../../../../../../../../definitions/models';
+import { PageSection } from 'definitions/models';
 
 interface SlideListProps {
   sectionIds: string[];

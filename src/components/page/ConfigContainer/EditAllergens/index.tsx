@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { ItemReorderEventDetail } from '@ionic/core';
 
-import { useQuery } from '../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import {
   IonItem,

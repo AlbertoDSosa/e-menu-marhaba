@@ -3,8 +3,8 @@ import React from 'react';
 
 import { IonGrid, IonRow, IonCol, IonText, IonLoading } from '@ionic/react';
 
-import { useQuery } from '../../../../../../../hooks/useQuery';
-import { List, ListItem } from '../../../../../../../definitions/models';
+import { useQuery } from 'hooks/useQuery';
+import { List, ListItem } from 'definitions/models';
 
 import InfoCard from '../../../List/Templates/InfoCardList/InfoCard';
 

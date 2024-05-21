@@ -3,8 +3,8 @@ import React from 'react';
 import { IonCol, IonGrid, IonRow, IonText, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useQuery } from '../../../../../../../hooks/useQuery';
-import { List } from '../../../../../../../definitions/models';
+import { useQuery } from 'hooks/useQuery';
+import { List } from 'definitions/models';
 
 import ChunkItemList from '../../../List/Templates/ChunkItemList';
 

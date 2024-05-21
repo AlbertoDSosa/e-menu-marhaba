@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import { IonLabel, IonText, IonRow, IonCol, IonIcon } from '@ionic/react';
 
@@ -12,9 +12,9 @@ import {
   Product,
   List,
   ListTemplate
-} from '../../../../../../../definitions/models';
+} from 'definitions/models';
 
-import ItemDetailModal from '../../..//Modal/ItemDetail';
+import ItemDetailModal from '../../../Modal/ItemDetail';
 
 interface ChunkListProps {
   list: List;

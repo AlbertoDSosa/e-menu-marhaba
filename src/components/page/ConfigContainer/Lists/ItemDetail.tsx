@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 
-import { useQuery } from '../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import {
   IonContent,
@@ -22,7 +22,7 @@ import {
   Info,
   DisplayInfo
 } from 'definitions/models';
-import ToggleSlide from '../../../../components/ui/ToggleSlide';
+import ToggleSlide from 'components/ui/ToggleSlide';
 
 interface ListItemDetailPageProps
   extends RouteComponentProps<{

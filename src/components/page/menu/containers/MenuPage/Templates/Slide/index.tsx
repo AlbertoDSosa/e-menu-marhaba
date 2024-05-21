@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import styles from '../../styles.module.css';
 import slideStyles from './styles.module.css';
 

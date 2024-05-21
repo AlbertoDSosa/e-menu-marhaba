@@ -4,7 +4,7 @@ import { Product, Price } from 'definitions/models';
 import { IonLabel, IonItem, IonIcon, IonInput } from '@ionic/react';
 
 import { createOutline, saveOutline, closeCircleOutline } from 'ionicons/icons';
-import { useMutation } from '../../../../hooks/useMutation';
+import { useMutation } from 'hooks/useMutation';
 
 interface PriceInputProps {
   product: Product;

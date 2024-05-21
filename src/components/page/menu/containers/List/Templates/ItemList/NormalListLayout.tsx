@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import { IonText, IonGrid, IonRow, IonCol, IonLoading } from '@ionic/react';
 
-import { ProductList, InfoList } from '../../../../../../../definitions/models';
+import { ProductList, InfoList } from 'definitions/models';
 import NormalItemList from './NormalItemList';
 
 interface NormalListProps {

@@ -5,8 +5,8 @@ import styles from '../../styles.module.css';
 import { IonGrid, IonRow, IonCol, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useQuery } from '../../../../../../../hooks/useQuery';
-import { PageSection } from '../../../../../../../definitions/models';
+import { useQuery } from 'hooks/useQuery';
+import { PageSection } from 'definitions/models';
 import PageSectionTemplate from '../../../Section';
 
 const OneRowTwoCols: React.FC<TemplatesProps> = ({ page, lang }) => {

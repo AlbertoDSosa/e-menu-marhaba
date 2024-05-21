@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import { IonLabel, IonText, IonRow, IonCol, IonIcon } from '@ionic/react';
 
@@ -12,7 +12,7 @@ import {
   ProductList,
   InfoList,
   ListTemplate
-} from '../../../../../../../definitions/models';
+} from 'definitions/models';
 
 import ItemDetailModal from '../../../Modal/ItemDetail';
 

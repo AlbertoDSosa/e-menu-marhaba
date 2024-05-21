@@ -1,7 +1,6 @@
-import { useState } from 'react';
 // import styles from './styles.module.css';
 
-import { ProductList, InfoList } from '../../../../../../../definitions/models';
+import { ProductList, InfoList } from 'definitions/models';
 
 import VariantList from './VariantList';
 import NormalList from './NormalListLayout';

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import { Item, PageMenuItem } from 'definitions/models';
 import styles from './styles.module.css';
 

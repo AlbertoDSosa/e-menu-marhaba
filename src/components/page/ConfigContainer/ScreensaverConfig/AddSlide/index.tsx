@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useQuery } from '../../../../../hooks/useQuery';
-import { useMutation } from '../../../../../hooks/useMutation';
+import { useQuery } from 'hooks/useQuery';
+import { useMutation } from 'hooks/useMutation';
 import slugify from 'slugify';
 import styles from './styles.module.css';
 import { Collapse } from 'react-collapse';

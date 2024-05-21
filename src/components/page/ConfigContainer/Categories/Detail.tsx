@@ -10,7 +10,7 @@ import {
   // IonToggle
 } from '@ionic/react';
 
-import { useQuery } from '../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 // import EditDisplayInfo from '../EditDisplayInfo';
 import { Category, Item } from 'definitions/models';

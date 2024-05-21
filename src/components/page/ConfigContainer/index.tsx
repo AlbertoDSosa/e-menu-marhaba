@@ -19,7 +19,7 @@ import { RouteComponentProps, withRouter } from 'react-router-dom';
 
 import ConfigMenu from './ConfigMenu';
 
-import { useQuery } from '../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 type Collection =
   | 'lists'

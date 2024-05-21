@@ -8,7 +8,7 @@ interface ToggleSlideProps {
   show: boolean;
 }
 
-import { useMutation } from '../../../hooks/useMutation';
+import { useMutation } from 'hooks/useMutation';
 
 const ToggleSlide: React.FC<ToggleSlideProps> = ({
   title,

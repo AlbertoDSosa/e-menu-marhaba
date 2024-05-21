@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import { IonText, IonGrid, IonRow, IonCol, IonLoading } from '@ionic/react';
 import {
@@ -10,7 +10,7 @@ import {
   Product,
   ProductListItem,
   Image
-} from '../../../../../../../definitions/models';
+} from 'definitions/models';
 
 interface ItemListProps {
   list: List;

@@ -8,10 +8,10 @@ import {
   IonIcon
 } from '@ionic/react';
 
-import { useMutation } from '../../../../hooks/useMutation';
+import { useMutation } from 'hooks/useMutation';
 
 import { AddToEntityItem, EditImageEntity, Key } from 'definitions/dataContext';
-import { ImageSaveParams } from '../../../../definitions/editions';
+import { ImageSaveParams } from 'definitions/editions';
 import { addOutline } from 'ionicons/icons';
 
 import ImageList from './ImageList';

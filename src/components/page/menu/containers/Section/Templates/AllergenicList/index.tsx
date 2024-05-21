@@ -4,7 +4,7 @@ import { IonRow, IonCol, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
 import ItemList from './ItemList';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 const AllergenicList: React.FC<TemplatesProps> = ({ section, lang }) => {
   const { isLoading: listsIsLoading, dictionary: lists } = useQuery({

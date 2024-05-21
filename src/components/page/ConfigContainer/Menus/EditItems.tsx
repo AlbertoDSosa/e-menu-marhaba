@@ -4,8 +4,8 @@ import { ItemReorderEventDetail } from '@ionic/core';
 
 import { ArrayEditEntity, Key } from 'definitions/dataContext';
 
-import { useQuery } from '../../../../hooks/useQuery';
-import { useMutation } from '../../../../hooks/useMutation';
+import { useQuery } from 'hooks/useQuery';
+import { useMutation } from 'hooks/useMutation';
 import MenuItem from './MenuItem';
 
 import './styles.css';

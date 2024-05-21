@@ -2,8 +2,8 @@ import React from 'react';
 import Templates from './Templates';
 import { IonContent, IonLoading } from '@ionic/react';
 
-import { useQuery } from '../../../../../hooks/useQuery';
-import { Page } from '../../../../../definitions/models';
+import { useQuery } from 'hooks/useQuery';
+import { Page } from 'definitions/models';
 
 interface MenuPageProps {
   lang: string;

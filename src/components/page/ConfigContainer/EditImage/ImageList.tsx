@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image } from 'definitions/models';
 import { AddToEntityItem, EditImageEntity, Key } from 'definitions/dataContext';
-import { useQuery } from '../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import { IonGrid, IonRow, IonLoading, IonImg } from '@ionic/react';
 import ImageCard from './ImageCard';
 

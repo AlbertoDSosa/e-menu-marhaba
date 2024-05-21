@@ -2,10 +2,10 @@ import { useState } from 'react';
 
 import { ItemReorderEventDetail } from '@ionic/core';
 
-import { ArrayEditEntity, Dictionary, Key } from 'definitions/dataContext';
+import { ArrayEditEntity } from 'definitions/dataContext';
 
-import { useQuery } from '../../../../hooks/useQuery';
-import { useMutation } from '../../../../hooks/useMutation';
+import { useQuery } from 'hooks/useQuery';
+import { useMutation } from 'hooks/useMutation';
 
 import './styles.css';
 
@@ -35,14 +35,13 @@ import { List, ListItem, Item, DisplayInfo } from 'definitions/models';
 interface EditItemsProps {
   entityId: string;
   entity: ArrayEditEntity;
-  index: Key;
 }
 
 const customSelectProps = {
   cssClass: 'addItemSelect'
 };
 
-const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
+const EditItems: React.FC<EditItemsProps> = ({ entityId, entity}) => {
   const [disabledReorderItems, setDisabledReorderItems] = useState(true);
   const [itemIdValue, setItemIdValue] = useState<string>('');
   const { mutate: reorder } = useMutation({
@@ -107,9 +106,9 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
     add({ entity, entityId, itemId });
   };
 
-  // const doRemoveItem = (itemId: string) => {
-  //   remove({ entity, entityId, itemId, action: 'one' });
-  // };
+  const doRemoveItem = (itemId: string) => {
+    remove({ entity, entityId, itemId, action: 'one' });
+  };
 
   const doRemoveAllItems = () => {
     remove({ action: 'many', entity, entityId, items: list.items });
@@ -164,6 +163,7 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
               okText="Elegir"
               interfaceOptions={customSelectProps}
               onIonChange={(e) => setItemIdValue(e.detail.value)}
+              disabled={!list.selectableItems.length}
             >
               {list.selectableItems.map((itemId: string) => {
                 const listItem: ListItem = listItems[itemId];
@@ -189,7 +189,7 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
           const info = item?.displayInfo[language];
           return (
             <IonItemSliding key={itemId}>
-              {/* <IonItemOptions side="end">
+              <IonItemOptions side="end">
                 {list.editable && disabledReorderItems && (
                   <IonItemOption
                     onClick={() => {
@@ -201,7 +201,7 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity, index }) => {
                     Borrar
                   </IonItemOption>
                 )}
-              </IonItemOptions> */}
+              </IonItemOptions>
               <IonItem routerLink={`/config/${entity}Item/${itemId}`}>
                 <IonReorder slot="start">
                   <IonIcon icon={reorderFourOutline} />

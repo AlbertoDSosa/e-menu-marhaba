@@ -4,7 +4,7 @@ import { IonRow, IonCol, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
 
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import InfoCardList from '../../../List/Templates/InfoCardList';
 
 const InfoList: React.FC<TemplatesProps> = ({ section, lang }) => {

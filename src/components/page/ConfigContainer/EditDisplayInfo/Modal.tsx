@@ -1,6 +1,4 @@
-import { useState } from 'react';
-
-import { useMutation } from '../../../../hooks/useMutation';
+import { useMutation } from 'hooks/useMutation';
 import styles from './styles.module.css';
 
 import {

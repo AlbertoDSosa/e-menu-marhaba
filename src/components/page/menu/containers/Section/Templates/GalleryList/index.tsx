@@ -3,7 +3,7 @@ import React from 'react';
 import { IonRow, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import Card from './Card';
 
 const GalleryList: React.FC<TemplatesProps> = ({ section, lang }) => {

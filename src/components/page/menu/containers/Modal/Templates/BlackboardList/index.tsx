@@ -3,8 +3,8 @@ import styles from './styles.module.css';
 
 import { TemplatesProps } from '../index';
 
-import { useQuery } from '../../../../../../../hooks/useQuery';
-import { List, ListModal } from '../../../../../../../definitions/models';
+import { useQuery } from 'hooks/useQuery';
+import { List, ListModal } from 'definitions/models';
 
 import ItemList from './ItemList';
 

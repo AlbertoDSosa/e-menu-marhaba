@@ -3,10 +3,10 @@ import { IonLoading } from '@ionic/react';
 import styles from '../../styles.module.css';
 
 import { TemplatesProps } from '../index';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import PageSectionTemplate from '../../../Section';
-import { PageSection } from '../../../../../../../definitions/models';
+import { PageSection } from 'definitions/models';
 
 const SingleSection: React.FC<TemplatesProps> = ({ page, lang }) => {
   const { isLoading: sectionsIsLoading, dictionary: sections } = useQuery({

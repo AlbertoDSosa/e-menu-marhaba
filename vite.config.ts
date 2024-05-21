@@ -9,8 +9,32 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@',
-        replacement: resolve(__dirname, './src')
+        find: 'hooks',
+        replacement: resolve(__dirname, './src/hooks')
+      },
+      {
+        find: 'definitions',
+        replacement: resolve(__dirname, './src/definitions')
+      },
+      {
+        find: 'utils',
+        replacement: resolve(__dirname, './src/utils')
+      },
+      {
+        find: 'components',
+        replacement: resolve(__dirname, './src/components')
+      },
+      {
+        find: 'pages',
+        replacement: resolve(__dirname, './src/pages')
+      },
+      {
+        find: 'assets',
+        replacement: resolve(__dirname, './src/assets')
+      },
+      {
+        find: 'theme',
+        replacement: resolve(__dirname, './src/theme')
       }
     ]
   }

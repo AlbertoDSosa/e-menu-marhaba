@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import styles from './styles.module.css';
 
-import { TripadvisorIcon } from '../../../../components/ui/icons/TripadvisorIcon';
+import { TripadvisorIcon } from 'components/ui/icons/TripadvisorIcon';
 
 import {
   IonHeader,
@@ -23,7 +23,7 @@ import {
   qrCode
 } from 'ionicons/icons';
 
-import { useQuery } from '../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import { Image } from 'definitions/models';
 
 interface MenuHeaderProps

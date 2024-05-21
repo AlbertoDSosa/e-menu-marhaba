@@ -13,8 +13,8 @@ import {
 
 import { createOutline, saveOutline, closeCircleOutline } from 'ionicons/icons';
 
-import { useQuery } from '../../../../hooks/useQuery';
-import { useMutation } from '../../../../hooks/useMutation';
+import { useQuery } from 'hooks/useQuery';
+import { useMutation } from 'hooks/useMutation';
 
 import EditDisplayInfo from '../EditDisplayInfo';
 import EditAllergens from '../EditAllergens';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ItemReorderEventDetail } from '@ionic/core';
-import { useQuery } from '../../../../../hooks/useQuery';
-import { useMutation } from '../../../../../hooks/useMutation';
+import { useQuery } from 'hooks/useQuery';
+import { useMutation } from 'hooks/useMutation';
 import {
   IonList,
   IonListHeader,

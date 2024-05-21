@@ -9,11 +9,11 @@ import {
   IonButton
 } from '@ionic/react';
 
-import { useMutation } from '../../../../hooks/useMutation';
+import { useMutation } from 'hooks/useMutation';
 
-import { Image } from '../../../../definitions/models';
+import { Image } from 'definitions/models';
 import { trashOutline } from 'ionicons/icons';
-import { AddToEntityItem, Key } from '../../../../definitions/dataContext';
+import { AddToEntityItem, Key } from 'definitions/dataContext';
 
 interface ImageCardProps {
   img: Image;

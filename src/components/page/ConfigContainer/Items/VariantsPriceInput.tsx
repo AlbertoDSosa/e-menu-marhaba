@@ -12,8 +12,8 @@ import { IonLabel, IonItem, IonIcon, IonInput, IonLoading } from '@ionic/react';
 
 import { createOutline, saveOutline, closeCircleOutline } from 'ionicons/icons';
 
-import { useQuery } from '../../../../hooks/useQuery';
-import { useMutation } from '../../../../hooks/useMutation';
+import { useQuery } from 'hooks/useQuery';
+import { useMutation } from 'hooks/useMutation';
 
 interface VariantsPriceInputProps {
   product: Product;

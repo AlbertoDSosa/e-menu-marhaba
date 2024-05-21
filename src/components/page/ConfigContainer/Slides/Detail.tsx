@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { useQuery } from '../../../../hooks/useQuery';
-import { useMutation } from '../../../../hooks/useMutation';
+import { useQuery } from 'hooks/useQuery';
+import { useMutation } from 'hooks/useMutation';
 
 import {
   IonContent,

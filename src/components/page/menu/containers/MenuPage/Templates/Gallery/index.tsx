@@ -3,8 +3,8 @@ import React from 'react';
 import { IonGrid, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useQuery } from '../../../../../../../hooks/useQuery';
-import { PageSection } from '../../../../../../../definitions/models';
+import { useQuery } from 'hooks/useQuery';
+import { PageSection } from 'definitions/models';
 import PageSectionTemplate from '../../../Section';
 
 const Gallery: React.FC<TemplatesProps> = ({ page, lang }) => {

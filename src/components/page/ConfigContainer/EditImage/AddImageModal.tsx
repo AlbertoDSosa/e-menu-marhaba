@@ -14,8 +14,8 @@ import {
 import { closeCircleOutline, checkmarkCircleOutline } from 'ionicons/icons';
 
 import styles from './styles.module.css';
-import ImageSelect from '../../../../components/ui/ImageSelect';
-import { ImageSaveParams } from '../../../../definitions/editions';
+import ImageSelect from 'components/ui/ImageSelect';
+import { ImageSaveParams } from 'definitions/editions';
 
 interface AddImageModalProps {
   showModal: boolean;

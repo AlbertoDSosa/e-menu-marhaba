@@ -3,13 +3,13 @@ import React from 'react';
 import { IonGrid, IonRow, IonCol, IonText, IonLoading } from '@ionic/react';
 
 import { TemplatesProps } from '../index';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import {
   List,
   Image,
   SectionTemplate
-} from '../../../../../../../definitions/models';
+} from 'definitions/models';
 
 import ChunkItemList from '../../../List/Templates/ChunkItemList';
 

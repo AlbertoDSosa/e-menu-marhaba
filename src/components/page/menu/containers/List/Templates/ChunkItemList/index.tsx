@@ -1,11 +1,11 @@
 import React from 'react';
 import { chunk } from 'lodash';
 
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 
 import { IonGrid, IonCol, IonLoading } from '@ionic/react';
 
-import { List } from '../../../../../../../definitions/models';
+import { List } from 'definitions/models';
 import ChunkList from './List';
 
 interface ChunkItemListProps {

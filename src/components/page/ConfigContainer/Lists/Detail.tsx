@@ -49,9 +49,6 @@ const ListDetail: React.FC<ListDetailPageProps> = ({ match }) => {
   return (
     <IonContent>
       <EditDisplayInfo entityName="list" entity={list} resource="lists" />
-
-      <EditItems entityId={key} entity="list" index="lists" />
-
       <IonList>
         <IonListHeader color="dark">
           <h3>Opciones de Lista</h3>
@@ -128,6 +125,7 @@ const ListDetail: React.FC<ListDetailPageProps> = ({ match }) => {
           </IonItem>
         )}
       </IonList>
+      <EditItems entityId={key} entity="list" index="lists" />
     </IonContent>
   );
 };

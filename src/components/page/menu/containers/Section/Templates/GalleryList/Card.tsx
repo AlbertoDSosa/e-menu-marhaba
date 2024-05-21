@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useQuery } from '../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import {
   Image,
   Product,
   ProductListItem
-} from '../../../../../../../definitions/models';
+} from 'definitions/models';
 
 import ItemDetailModal from '../../../Modal/ItemDetail';
 import {

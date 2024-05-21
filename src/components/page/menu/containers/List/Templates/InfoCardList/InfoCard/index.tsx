@@ -1,12 +1,12 @@
 import React from 'react';
 import { IonGrid, IonRow, IonCol, IonText, IonLoading } from '@ionic/react';
 
-import { useQuery } from '../../../../../../../../hooks/useQuery';
+import { useQuery } from 'hooks/useQuery';
 import {
   ListItem,
   Info,
   Image
-} from '../../../../../../../../definitions/models';
+} from 'definitions/models';
 
 interface InfoCardProps {
   listItem: ListItem;
