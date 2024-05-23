@@ -287,7 +287,7 @@ export const pageMenuItems: { [key: string]: PageMenuItem } = {
     showTitle: true,
     showDescription: false,
     showExtraInfo: false,
-    show: true,
+    show: false,
     isModalMode: false,
     template: '',
     href: '',

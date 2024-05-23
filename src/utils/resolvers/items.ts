@@ -1,6 +1,7 @@
 import { itemActions } from '../../utils/actions/types';
 
 import { State, Variables, Resolution } from '../../definitions/resolvers';
+import { Product } from 'definitions/models';
 
 export const itemResolvers = () => {
   return {
@@ -65,6 +66,34 @@ export const itemResolvers = () => {
         newState: { ...state, [entityId]: newItem },
         newEntity: newItem
       };
-    }
+    },
+    [itemActions.CREATE_ITEM]: (
+      state: State,
+      variables: Variables
+    ): Resolution => {
+      const { payload } = variables;
+      const { id, displayInfo } = payload;
+
+      const newItem: Product = {
+        id,
+        displayInfo,
+        type: 'product',
+        price: {
+          amount: '0.00'
+        },
+        defaultImg: 'image->item->product->default-1',
+        mainImg: '',
+        images: [],
+        hasVariants: false,
+        hasAllergens: false,
+        number: '0',
+        active: true,
+      };
+
+      return {
+        newState: { ...state, [id]: newItem },
+        newEntity: newItem
+      };
+    },
   };
 };

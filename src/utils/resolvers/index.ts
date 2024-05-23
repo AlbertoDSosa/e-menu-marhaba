@@ -6,6 +6,9 @@ import { allergenicResolvers } from './allergens';
 import { imageResolvers } from './images';
 import { slideResolvers } from './slides';
 import { screensaverResolvers } from './screensaver';
+import { categoryResolvers } from './categories';
+import { listResolvers } from './lists';
+import { listItemResolvers } from './listItems';
 
 export const moveArrayItem = (
   array: Array<string>,
@@ -25,6 +28,9 @@ export const resolvers = (
     ...imageResolvers(),
     ...itemResolvers(),
     ...screensaverResolvers(),
-    ...slideResolvers()
+    ...slideResolvers(),
+    ...categoryResolvers(),
+    ...listResolvers(),
+    ...listItemResolvers()
   };
 };

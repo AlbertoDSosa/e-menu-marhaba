@@ -2,6 +2,7 @@ export const SET_LOADED_STATE = 'init->setloadState';
 
 export enum categoryActions {
   UPDATE_DISPLAY_INFO = 'category->updateDisplayInfo',
+  ADD_ITEM = 'category->addArticle',
   SET_ACTIVE = 'category->setActive'
 }
 
@@ -12,7 +13,8 @@ export enum itemActions {
   UPDATE_DISPLAY_INFO = 'item->updateDisplayInfo',
   SET_ACTIVE = 'item->setActive',
   ADD_IMAGE = 'item->addImage',
-  SET_MAIN_IMAGE = 'item->setMainImage'
+  SET_MAIN_IMAGE = 'item->setMainImage',
+  CREATE_ITEM = 'item->create'
 }
 
 export enum listActions {
@@ -23,6 +25,7 @@ export enum listActions {
   SET_SHOW_DESCRIPTION = 'list->setShowDescription',
   REORDER_ITEMS = 'list->reorderItems',
   ADD_ITEM = 'list->addItem',
+  ADD_SELECTABLE_ITEM = 'list->addSelectableItem',
   REMOVE_ITEM = 'list->deleteItem',
   REMOVE_ALL_ITEMS = 'list->deleteAllItems'
 }
@@ -33,7 +36,8 @@ export enum listItemActions {
   SET_SHOW_TITLE = 'listItem->setShowTitle',
   SET_SHOW_EXTRA_INFO = 'listItem->setShowExtraInfo',
   SET_SHOW_DESCRIPTION = 'listItem->setShowDescription',
-  SET_SHOW_ITEM_DETAIL = 'listItem->setShowItemDetail'
+  SET_SHOW_ITEM_DETAIL = 'listItem->setShowItemDetail',
+  CREATE_ITEM = 'listItem->create'
 }
 
 export enum pageMenuActions {

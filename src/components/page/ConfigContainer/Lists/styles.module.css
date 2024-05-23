@@ -1,3 +1,7 @@
 .addItemSelect {
   --min-width: 800px;
 }
+
+.modal {
+  --height: 650px;
+}

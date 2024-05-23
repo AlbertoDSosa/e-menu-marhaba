@@ -9,12 +9,13 @@ import {
   IonLoading
 } from '@ionic/react';
 
-import { useQuery } from '../../../../hooks/useQuery';
-// import { useMutation } from '../../../../hooks/useMutation';
+import { useQuery } from 'hooks/useQuery';
+// import { useMutation } from 'hooks/useMutation';
 
 import EditDisplayInfo from '../EditDisplayInfo';
 import EditItems from './EditItems';
-import ToggleSlide from '../../../../components/ui/ToggleSlide';
+import ToggleSlide from 'components/ui/ToggleSlide';
+import AddItem from './AddItem';
 
 interface ListDetailPageProps
   extends RouteComponentProps<{
@@ -125,7 +126,8 @@ const ListDetail: React.FC<ListDetailPageProps> = ({ match }) => {
           </IonItem>
         )}
       </IonList>
-      <EditItems entityId={key} entity="list" index="lists" />
+      {list.type === 'info' ? null : <AddItem list={list} />}
+      <EditItems entityId={key} entity="list" />
     </IonContent>
   );
 };

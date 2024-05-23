@@ -38,11 +38,19 @@ export const add = (
 
   const _add: { [key: string]: () => State } = {
     list: () => {
-      return resolver[listActions.ADD_ITEM](state, {
-        type: listActions.ADD_ITEM,
-        entity: entity,
-        payload: { entityId, itemId }
-      });
+      if (addToList === 'selectableItems') {
+        return resolver[listActions.ADD_SELECTABLE_ITEM](state, {
+          type: listActions.ADD_SELECTABLE_ITEM,
+          entity: entity,
+          payload: { entityId, itemId }
+        });
+      } else {
+        return resolver[listActions.ADD_ITEM](state, {
+          type: listActions.ADD_ITEM,
+          entity: entity,
+          payload: { entityId, itemId }
+        });
+      }
     },
     pageMenu: () => {
       return resolver[pageMenuActions.ADD_ITEM](state, {
@@ -92,6 +100,13 @@ export const add = (
         });
       }
       return state;
+    },
+    category: () => {
+      return resolver[categoryActions.ADD_ITEM](state, {
+        type: categoryActions.ADD_ITEM,
+        entity: entity,
+        payload: { itemId, entityId }
+      });
     }
   };
 
@@ -368,15 +383,15 @@ export const set = (state: State, { action, info, entity, id }: SetProps) => {
 
 export const create = (
   state: State,
-  { entity, payload, addToResource }: CreateProps
+  { entity, payload, addToResource, itemId }: CreateProps
 ) => {
   const resolver = resolvers(entity);
   const { displayInfo, lang, image } = payload;
   const { slug }: DisplayInfo = displayInfo[lang];
-  const id = `${entity}->${addToResource}->${slug}->${uid.generate()}`;
 
   const _create: { [key: string]: () => State } = {
     slide: () => {
+      const id = `${entity}->${addToResource}->${slug}->${uid.generate()}`;
       return resolver[slideActions.CREATE_SLIDE](state, {
         type: slideActions.CREATE_SLIDE,
         entity: addToResource,
@@ -384,10 +399,28 @@ export const create = (
       });
     },
     image: () => {
+      const id = `${entity}->${addToResource}->${slug}->${uid.generate()}`;
       return resolver[imageActions.CREATE](state, {
         type: imageActions.CREATE,
-        entity: entity,
+        entity,
         payload: { id, displayInfo, lang, image }
+      });
+    },
+    item: () => {
+      const id = `${entity}->${slug}->${uid.generate()}`;
+      return resolver[itemActions.CREATE_ITEM](state, {
+        type: itemActions.CREATE_ITEM,
+        entity,
+        payload: { id, displayInfo }
+      });
+    },
+    listItem: () => {
+      const id = `${entity}->${slug}->${uid.generate()}`;
+
+      return resolver[listItemActions.CREATE_ITEM](state, {
+        type: listItemActions.CREATE_ITEM,
+        entity,
+        payload: { id,  itemId }
       });
     }
   };

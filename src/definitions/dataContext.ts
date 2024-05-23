@@ -165,9 +165,11 @@ export interface RemoveProps {
 export type AddToEntityItem = 'screensaver' | 'slide' | 'item';
 
 export interface CreateProps {
-  entity: 'slide' | 'image';
+  entity: 'slide' | 'image' | 'item';
   addToResource: AddToEntityItem;
   addToList: 'selectableItems' | 'items' | 'images';
+  addToCategories?: string[];
+  itemId?: string;
   entityId?: string;
   payload: {
     lang: string;

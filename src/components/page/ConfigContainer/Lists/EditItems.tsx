@@ -7,7 +7,7 @@ import { ArrayEditEntity } from 'definitions/dataContext';
 import { useQuery } from 'hooks/useQuery';
 import { useMutation } from 'hooks/useMutation';
 
-import './styles.css';
+import styles from './styles.module.css';
 
 import {
   IonItem,
@@ -38,7 +38,7 @@ interface EditItemsProps {
 }
 
 const customSelectProps = {
-  cssClass: 'addItemSelect'
+  cssClass: styles.addItemSelect
 };
 
 const EditItems: React.FC<EditItemsProps> = ({ entityId, entity}) => {
@@ -155,8 +155,8 @@ const EditItems: React.FC<EditItemsProps> = ({ entityId, entity}) => {
         list.items.length < list.maxItems &&
         disabledReorderItems && (
           <IonItem>
-            <IonLabel>Artículos Disponibles</IonLabel>
             <IonSelect
+              label='Artículos Disponibles'
               value={itemIdValue}
               placeholder="Selecciona Artículo"
               cancelText="Cancelar"

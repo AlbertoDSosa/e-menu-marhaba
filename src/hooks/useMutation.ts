@@ -38,22 +38,75 @@ export const useMutation = ({ resource, action }: MutationsArgs) => {
       });
     },
     onSuccess: async (data, variables) => {
-      await queryClient.invalidateQueries({ queryKey: [resource] });
-
       if (action === 'create') {
-        const { addToResource, addToList, addToEntity, entityId } = variables;
+        const {
+          addToCategories = [],
+          addToResource,
+          addToEntity,
+          addToList,
+          entityId,
+          payload,
+          entity,
+        } = variables;
 
-        await resolveState({
-          resource: addToResource,
-          variables: {
-            entity: addToEntity,
-            itemId: data.id,
-            addToList,
-            entityId
-          },
-          action: 'add'
-        });
-        await queryClient.invalidateQueries({ queryKey: [addToResource] });
+        if (entity === 'item') {
+
+
+          const listItem = await resolveState({
+            resource: 'listItems',
+            variables: {
+              payload,
+              entity: 'listItem',
+              itemId: data.id
+            },
+            action: 'create'
+          });
+
+          await resolveState({
+            resource: 'lists',
+            variables: {
+              entity: 'list',
+              addToList: 'selectableItems',
+              itemId: listItem.id,
+              entityId
+            },
+            action: 'add'
+          });
+
+
+          for(let categoryId of addToCategories) {
+            await resolveState({
+              resource: 'categories',
+              variables: {
+                entity: 'category',
+                addToList: 'items',
+                itemId: data.id,
+                entityId: categoryId
+              },
+              action: 'add'
+            });
+          }
+
+          await queryClient.invalidateQueries({ queryKey: ['items'] });
+          await queryClient.invalidateQueries({ queryKey: ['listItems'] });
+          await queryClient.invalidateQueries({ queryKey: ['lists'] });
+
+        } else {
+
+          await resolveState({
+            resource: addToResource,
+            variables: {
+              entity: addToEntity,
+              itemId: data.id,
+              addToList,
+              entityId
+            },
+            action: 'add'
+          });
+
+          await queryClient.invalidateQueries({ queryKey: [resource] });
+          await queryClient.invalidateQueries({ queryKey: [addToResource] });
+        }
       }
     }
   });

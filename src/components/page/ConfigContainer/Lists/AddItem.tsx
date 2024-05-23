@@ -16,7 +16,8 @@ import {
   // IonItemOption,
   IonModal,
   IonTextarea,
-  IonLoading
+  IonLoading,
+  IonToggle
 } from '@ionic/react';
 
 import {
@@ -24,88 +25,150 @@ import {
   chevronDownCircle,
   chevronForwardCircle
 } from 'ionicons/icons';
-import { DisplayInfo, Slide } from 'definitions/models';
+import { DisplayInfo, Item, List, ListItem } from 'definitions/models';
+import { Dictionary } from 'definitions/dataContext';
 
-export interface AddSlideInfo {
+export interface AddItemInfo {
+  sameInfo: boolean;
   title: string;
-  description: string;
+  description?: string;
   slug: string;
+  extraInfo?: string;
 }
 
-const AddSlide: React.FC = () => {
-  const [showAddSlideModal, setShowAddSlideModal] = useState<boolean>(false);
+export interface AddItemProps {
+  list: List
+}
+
+type getDisplayInfoArgs = {
+  langs: string[];
+  sameInfo: boolean;
+  itemInfo: AddItemInfo
+}
+
+const AddItem: React.FC<AddItemProps> = ({ list }) => {
+  const [showAddItemModal, setShowAddItemModal] = useState<boolean>(false);
   const [collapseList, setCollapseList] = useState<boolean>(false);
-  const [slideInfoValue, setSlideInfoValue] = useState<AddSlideInfo>(
-    {} as AddSlideInfo
-  );
-
-  const { mutate: create } = useMutation({
-    resource: 'slides',
-    action: 'create'
-  });
-
-  // const { mutate: remove } = useMutation({
-  //   resource: 'screensaver',
-  //   action: 'remove'
-  // });
-
-  const { dictionary: screensaver, isLoading: screensaverIsLoading } = useQuery(
+  const [itemInfoValue, setItemInfoValue] = useState<AddItemInfo>(
     {
-      key: 'screensaver'
+      slug: '',
+      title: '',
+      extraInfo: '',
+      description: '',
+      sameInfo: false
     }
   );
 
-  const { dictionary: slides, isLoading: slidesIsLoading } = useQuery({
-    key: 'slides'
+  const [toggleSameInfo, setToggleSameInfo] = useState<boolean>(false);
+
+  const { mutate: create } = useMutation({
+    resource: 'items',
+    action: 'create'
   });
 
-  if (screensaverIsLoading || slidesIsLoading)
+  const { dictionary: generalInfo, isLoading: generalInfoIsLoading } = useQuery(
+    {
+      key: 'generalInfo'
+    }
+  );
+
+  const { dictionary: listItems, isLoading: listItemsIsLoading } = useQuery(
+    {
+      key: 'listItems'
+    }
+  );
+
+  const { dictionary: items, isLoading: itemsIsLoading } = useQuery({
+    key: 'items'
+  });
+
+  if (listItemsIsLoading || itemsIsLoading || generalInfoIsLoading)
     return (
       <IonLoading
         className="custom-loading"
-        message="Loading"
+        message="...Loading"
         spinner="circles"
       />
     );
 
-  const onAddSlide = async () => {
-    await create({
-      entity: 'slide',
-      payload: {
-        lang: 'es',
-        displayInfo: { es: slideInfoValue }
-      },
-      addToResource: 'screensaver',
-      addToList: 'selectableItems',
-      addToEntity: 'screensaver'
+  const getDisplayInfo = ({ langs, sameInfo, itemInfo } : getDisplayInfoArgs) => {
+
+      const displayInfo: Dictionary = {};
+
+      if(sameInfo) {
+        for(let lang of langs) {
+          displayInfo[lang] = itemInfo;
+        }
+      } else {
+        langs = langs.filter((value) => value !== 'es');
+
+        displayInfo['es'] = itemInfo;
+
+        for(let lang of langs) {
+          displayInfo[lang] = {
+            slug: '',
+            title: '',
+            extraInfo: '',
+            description: ''
+          };
+        }
+      }
+      return displayInfo;
+  }
+
+  const onAddItem = async () => {
+    const langs: string[] = generalInfo.appLanguages;
+
+    const displayInfo = getDisplayInfo({
+      langs,
+      itemInfo: itemInfoValue,
+      sameInfo: itemInfoValue.sameInfo
     });
 
-    setShowAddSlideModal(false);
-    setSlideInfoValue({} as AddSlideInfo);
+    await create({
+      entity: 'item',
+      payload: {
+        lang: 'es',
+        displayInfo
+      },
+      addToCategories: list.categories,
+      addToEntity: 'list',
+      entityId: list.id
+    });
+
+    setShowAddItemModal(false);
+    setToggleSameInfo(false);
+    setItemInfoValue({
+      slug: '',
+      title: '',
+      extraInfo: '',
+      description: '',
+      sameInfo: false
+    });
   };
 
   return (
     <IonList>
       <IonListHeader>
         <IonLabel>
-          <h1>Editar Diapositivas Disponibles</h1>
+          <h1>Editar Artículos Disponibles</h1>
         </IonLabel>
         <IonButton
           onClick={() => {
-            setShowAddSlideModal(true);
+            setShowAddItemModal(true);
           }}
         >
           <IonIcon slot="start" icon={addOutline} />
-          Añadir Diapositiva
+          Añadir Artículo
         </IonButton>
         <IonModal
-          isOpen={showAddSlideModal}
+          isOpen={showAddItemModal}
           className={styles.modal}
           backdropDismiss={false}
         >
           <IonList>
             <IonListHeader>
-              <h1>Añadir Diapositiva</h1>
+              <h1>Añadir Artículo</h1>
             </IonListHeader>
             <IonItem>
               <IonTextarea
@@ -114,9 +177,9 @@ const AddSlide: React.FC = () => {
                 label="Título:"
                 cols={30}
                 rows={6}
-                value={slideInfoValue.title}
+                value={itemInfoValue.title}
                 onIonChange={(e) => {
-                  setSlideInfoValue((info: any) => {
+                  setItemInfoValue((info: any) => {
                     return {
                       ...info,
                       title: e.detail.value,
@@ -133,9 +196,9 @@ const AddSlide: React.FC = () => {
                 label="Descripción:"
                 cols={30}
                 rows={6}
-                value={slideInfoValue.description}
+                value={itemInfoValue.description}
                 onIonChange={(e) => {
-                  setSlideInfoValue((info: any) => {
+                  setItemInfoValue((info: any) => {
                     return { ...info, description: e.detail.value };
                   });
                 }}
@@ -148,13 +211,28 @@ const AddSlide: React.FC = () => {
                 wrap="off"
                 cols={30}
                 rows={6}
-                value={slideInfoValue.slug}
+                value={itemInfoValue.slug}
                 onIonChange={(e) => {
-                  setSlideInfoValue((info: any) => {
+                  setItemInfoValue((info: any) => {
                     return { ...info, slug: e.detail.value };
                   });
                 }}
               />
+            </IonItem>
+            <IonItem>
+                <IonToggle
+                  color="dark"
+                  onIonChange={() => {
+                    setItemInfoValue((info: any) => {
+                      setToggleSameInfo(!toggleSameInfo);
+                      return { ...info, sameInfo: toggleSameInfo };
+                    });
+
+                  }}
+                  checked={toggleSameInfo}
+                >
+                  Misma información en todas las lenguas
+                </IonToggle>
             </IonItem>
             <IonItem className="ion-padding-vertical" lines="none">
               <IonButton
@@ -162,7 +240,7 @@ const AddSlide: React.FC = () => {
                 slot="end"
                 size="default"
                 onClick={() => {
-                  setShowAddSlideModal(false);
+                  setShowAddItemModal(false);
                 }}
               >
                 Cancelar
@@ -172,7 +250,7 @@ const AddSlide: React.FC = () => {
                 size="default"
                 expand="block"
                 onClick={() => {
-                  onAddSlide();
+                  onAddItem();
                 }}
               >
                 Guardar
@@ -180,7 +258,7 @@ const AddSlide: React.FC = () => {
             </IonItem>
           </IonList>
         </IonModal>
-        {!!screensaver.selectableSlides.length && (
+        {!!list.selectableItems.length && (
           <IonButton
             color="dark"
             onClick={() => setCollapseList(!collapseList)}
@@ -192,19 +270,20 @@ const AddSlide: React.FC = () => {
         )}
       </IonListHeader>
       <Collapse isOpened={collapseList} checkTimeout={800}>
-        {screensaver.selectableSlides?.map((slideId: string) => {
-          const slide: Slide = slides[slideId];
-          const slideInfo: DisplayInfo = slide?.displayInfo['es'];
+        {list.selectableItems?.map((listItemId: string) => {
+          const listItem: ListItem = listItems[listItemId];
+          const item: Item = items[listItem.itemId];
+          const itemInfo: DisplayInfo = item?.displayInfo['es'];
 
           return (
-            <IonItemSliding key={slideId}>
+            <IonItemSliding key={listItemId}>
               {/* <IonItemOptions side="end">
                 <IonItemOption
                   onClick={() => {
                     remove({
                       action: 'one',
-                      itemId: slideId,
-                      entity: 'screensaverSlide',
+                      itemId: listItemId,
+                      entity: 'listItem',
                       removeToList: 'selectableItems'
                     });
                   }}
@@ -215,8 +294,8 @@ const AddSlide: React.FC = () => {
                 </IonItemOption>
               </IonItemOptions> */}
 
-              <IonItem routerLink={`/config/slides/${slideId}`}>
-                <IonLabel>{slideInfo?.title}</IonLabel>
+              <IonItem routerLink={`/config/listItem/${listItemId}`}>
+                <IonLabel>{itemInfo?.title}</IonLabel>
               </IonItem>
             </IonItemSliding>
           );
@@ -226,4 +305,4 @@ const AddSlide: React.FC = () => {
   );
 };
 
-export default AddSlide;
+export default AddItem;
