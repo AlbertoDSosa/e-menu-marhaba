@@ -76,7 +76,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: false,
     template: 'template->list->meals->short-title',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 12,
     categories: ['category->meals->starters'],
     displayInfo: {
@@ -141,7 +141,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: false,
     template: 'template->list->meals->short-title',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 12,
     categories: ['category->meals->starters'],
     displayInfo: {
@@ -205,7 +205,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: false,
     template: 'template->list->meals->short-title',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 12,
     categories: ['category->meals->starters'],
     displayInfo: {
@@ -269,7 +269,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: false,
     template: 'template->list->meals->short-title',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 12,
     categories: ['category->meals->skewers'],
     displayInfo: {
@@ -337,7 +337,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: false,
     template: 'template->list->meals->short-title',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 12,
     categories: ['category->meals->cous-cous'],
     displayInfo: {
@@ -396,7 +396,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showExtraInfo: false,
     showDescription: false,
     showTitle: false,
-    editable: false,
+    editable: true,
     maxItems: 8,
     template: 'template->list->meals->short-title',
     categories: [],
@@ -458,7 +458,7 @@ export const lists: { [key: string]: ProductList | InfoList } = {
     showTitle: false,
     template: 'template->list->meals->short-title',
     selectableItems: [],
-    editable: false,
+    editable: true,
     maxItems: 12,
     categories: ['category->meals->specials'],
     displayInfo: {

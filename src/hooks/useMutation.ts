@@ -38,6 +38,8 @@ export const useMutation = ({ resource, action }: MutationsArgs) => {
       });
     },
     onSuccess: async (data, variables) => {
+      await queryClient.invalidateQueries({ queryKey: [resource] });
+
       if (action === 'create') {
         const {
           addToCategories = [],
@@ -87,7 +89,6 @@ export const useMutation = ({ resource, action }: MutationsArgs) => {
             });
           }
 
-          await queryClient.invalidateQueries({ queryKey: ['items'] });
           await queryClient.invalidateQueries({ queryKey: ['listItems'] });
           await queryClient.invalidateQueries({ queryKey: ['lists'] });
 
@@ -104,7 +105,6 @@ export const useMutation = ({ resource, action }: MutationsArgs) => {
             action: 'add'
           });
 
-          await queryClient.invalidateQueries({ queryKey: [resource] });
           await queryClient.invalidateQueries({ queryKey: [addToResource] });
         }
       }
