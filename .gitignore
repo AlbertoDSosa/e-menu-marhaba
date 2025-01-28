@@ -9,12 +9,12 @@
 /coverage
 
 # images
-/public/assets/img/item/product/thumbnail/*
-!/public/assets/img/item/product/thumbnail/default-1.png
-/public/assets/img/item/product/full/*
-!/public/assets/img/item/product/full/default-1.png
-/public/assets/img/screensaver/*
-!/public/assets/img/screensaver/default-1.png
+# /public/assets/img/item/product/thumbnail/*
+# !/public/assets/img/item/product/thumbnail/default-1.png
+# /public/assets/img/item/product/full/*
+# !/public/assets/img/item/product/full/default-1.png
+# /public/assets/img/screensaver/*
+# !/public/assets/img/screensaver/default-1.png
 
 # production
 /dist
